@@ -15,6 +15,7 @@ def getplayerId(name, game_mode=3):
     elif game_mode == 4:
         s0 = "https://5-data.amae-koromo.com/api/v2/pl4/"
     pdata = requests.get(f"{s0}search_player/{name}").json()[0]
+    print(pdata["latest_timestamp"])
     return pdata["id"]
 
 

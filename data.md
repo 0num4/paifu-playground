@@ -6,3 +6,9 @@
 ```
 
 この level は豪は 204,聖は 205。03 や 01 は段位。
+
+4 人麻雀のデータを取得する場合
+"https://5-data.amae-koromo.com/api/v2/pl4/"
+
+3 人麻雀のデータを取得する場合
+"https://5-data.amae-koromo.com/api/v2/pl3/"

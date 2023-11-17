@@ -20,3 +20,33 @@ helloworld.proto:3:1: Expected ";".
 ```
 protoc --python_out=./ helloworld.proto
 ```
+
+import hogehoge_pb2 で import して.proto で定義した構造体を読み込める
+
+```
+import hogehoge_pb2
+
+a= hogehoge_bp2.Hoge()
+a.hoge = "hoge"
+```
+
+まとめ
+
+- 最初に.protoc を作る
+- protoc でそれぞれの言語の定義にコンパイルする(.py や.cpp など)
+- それをインポートして使う
+
+go の場合は option go_package = "hogehoge"; でパッケージ名を指定する必要がある
+
+```
+syntax = "proto3";
+
+option go_package = "./gen";
+
+package helloworld;
+message Person {
+  string name = 1;
+  int32 id = 2;
+  string email = 3;
+}
+```

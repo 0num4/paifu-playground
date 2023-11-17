@@ -50,3 +50,5 @@ message Person {
   string email = 3;
 }
 ```
+
+option gopackage の部分は出力したいディレクトリか github.com/hoge みたいな go 特有のパッケージの謎指定方法を書く

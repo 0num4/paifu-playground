@@ -1,11 +1,16 @@
 {
   "name": "login-majsoul-jp-npm",
   "module": "index.ts",
-  "type": "module",
   "devDependencies": {
     "bun-types": "latest"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
+  },
+  "type": "module",
+  "dependencies": {
+    "axios": "^1.6.2",
+    "bar": "../majsoul",
+    "mjsoul": "^2.3.0"
   }
 }

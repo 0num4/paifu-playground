@@ -11,6 +11,13 @@
   "dependencies": {
     "axios": "^1.6.2",
     "bar": "../majsoul",
+    "dotenv": "^16.3.1",
     "mjsoul": "^2.3.0"
+  },
+  "compilerOptions": {
+    "types": [
+      "bun-types",
+      "*.d.ts"
+    ]
   }
 }

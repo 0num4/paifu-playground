@@ -1,5 +1,11 @@
 # login-majsoul-jp-npm
 
+jp 版じゃんたまログイン script
+動くよ！！(変な場所に作ってしまった)
+
+python 版はこちら
+https://github.com/0num4/mahjong_soul_api
+
 To install dependencies:
 
 ```bash

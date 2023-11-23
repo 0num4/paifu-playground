@@ -1,3 +1,5 @@
+// bunはdotenvを自動で読み込む:clap:
+
 export interface Passport {
   accessToken: string;
   uid: string;
@@ -71,7 +73,21 @@ async function config(version: string) {
   console.log(json2);
 }
 
-async function main() {
+type LoginResponse = {
+  result: number;
+  accessToken: string;
+  birth: null;
+  yostar_uid: string;
+  yostar_username: string;
+  transcode: string;
+  current_timestamp_ms: number;
+  channelId: string;
+  kr_kmc_status: number;
+  uid: string;
+  token: string;
+};
+
+async function main(loginUrl: string, uid: string, token: string) {
   const passport = await fetch("https://passport.mahjongsoul.com/user/login", {
     headers: {
       accept: "application/json, text/plain, /",
@@ -83,12 +99,14 @@ async function main() {
       Referer: "https://game.mahjongsoul.com/",
       "Referrer-Policy": "strict-origin-when-cross-origin",
     },
-    body: '{"uid":"44291295","token":"455bdebe50fb434b90a81b90f1f5d030","deviceId":"web|44291295"}',
+    body: `{"uid":"${uid}","token":"${token}","deviceId":"web|${uid}"}`,
     method: "POST",
   });
-  const json = await passport.json();
+  const json: LoginResponse = await passport.json();
   console.log(json);
 }
-// main();
-// setup();
-await config("0.10.302.w");
+
+// await config("0.10.302.w");
+console.log(process.env.uid);
+console.log(process.env.token);
+await main(PASSPORT_HOST, process.env.uid, process.env.token);

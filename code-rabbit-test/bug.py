@@ -1,5 +1,5 @@
 def add(x):
-    return x + y ? z
+    return x + y
 
 
 result = add(5)

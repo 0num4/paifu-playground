@@ -1,5 +1,5 @@
-def add(x):
-    return x + y  # yが未定義
+def add(x, y):
+    return x + y
 
 
 result = add(5)

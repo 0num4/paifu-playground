@@ -9,6 +9,8 @@ on:
     types: [opened, synchronize, reopened]
   pull_request_review_comment:
     types: [created]
+  push:
+  pull_request:
 
 concurrency:
   group: ${{ github.repository }}-${{ github.event.number || github.head_ref ||

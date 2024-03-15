@@ -1,0 +1,2759 @@
+{
+  "code": 0,
+  "data": {
+    "fangFu": 1,
+    "gamePlay": 1003,
+    "handRecord": [
+      {
+        "benChangNum": 0,
+        "changCi": 1,
+        "handCardEncode": "9s9p5z8p5s9p8p8s1s1s6s6p1z7z3z9s4s6p2z2p7s3z9m4z2z6z2s4p3s5p7z2s3z9m1p3z7s1m4z6s9m1s1s8p2p8s2p7s5z1m4z6s2z7p6z4p2z5z4z6z0s8p4p7z7s1m8s6p3p0p9m3p3s4s4s7p5z7p2s1p1z1p3p6p9s4s9p2p3s0s5p1z7z6s1z3p8s0p1m6z7p1p2s9p3s9s5s4p",
+        "handCardsSHA256": "c4cf88e477826d713b12390b697dbe675cf5b758a757a2690a17b39915ab4bad",
+        "handEventRecord": [
+          {
+            "data": "{\"hand_cards\":[25,9,113,8,49,145,81,25,65,129,18,4,23,22],\"dealer_pos\":0,\"dices\":[6,1],\"bao_pai_card\":129,\"ting_list\":[],\"quan_feng\":49,\"chang_ci\":1,\"ben_chang_num\":0,\"li_zhi_bang_num\":0,\"user_info_list\":[{\"user_id\":311677992,\"hand_points\":35000,\"luck_score\":0,\"is_exist_shao_ji\":true,\"room_exist_man_guan\":false},{\"user_id\":612006148,\"hand_points\":35000,\"luck_score\":0,\"is_exist_shao_ji\":true,\"room_exist_man_guan\":false},{\"user_id\":513842906,\"hand_points\":35000,\"luck_score\":0,\"is_exist_shao_ji\":true,\"room_exist_man_guan\":false}],\"hand_cards_sha_256\":\"c4cf88e477826d713b12390b697dbe675cf5b758a757a2690a17b39915ab4bad\"}",
+            "eventPos": 0,
+            "eventType": 1,
+            "handId": "",
+            "startTime": 1709477260430,
+            "userId": 311677992
+          },
+          {
+            "data": "{\"hand_cards\":[21,9,8,24,20,6,65,2,19,5,145,18,33],\"dealer_pos\":0,\"dices\":[6,1],\"bao_pai_card\":129,\"ting_list\":[],\"quan_feng\":49,\"chang_ci\":1,\"ben_chang_num\":0,\"li_zhi_bang_num\":0,\"user_info_list\":[{\"user_id\":311677992,\"hand_points\":35000,\"luck_score\":0,\"is_exist_shao_ji\":true,\"room_exist_man_guan\":false},{\"user_id\":612006148,\"hand_points\":35000,\"luck_score\":0,\"is_exist_shao_ji\":true,\"room_exist_man_guan\":false},{\"user_id\":513842906,\"hand_points\":35000,\"luck_score\":0,\"is_exist_shao_ji\":true,\"room_exist_man_guan\":false}],\"hand_cards_sha_256\":\"c4cf88e477826d713b12390b697dbe675cf5b758a757a2690a17b39915ab4bad\"}",
+            "eventPos": 1,
+            "eventType": 1,
+            "handId": "",
+            "startTime": 1709477260430,
+            "userId": 612006148
+          },
+          {
+            "data": "{\"hand_cards\":[17,17,22,6,23,81,41,97,81,41,1,81,97],\"dealer_pos\":0,\"dices\":[6,1],\"bao_pai_card\":129,\"ting_list\":[],\"quan_feng\":49,\"chang_ci\":1,\"ben_chang_num\":0,\"li_zhi_bang_num\":0,\"user_info_list\":[{\"user_id\":311677992,\"hand_points\":35000,\"luck_score\":0,\"is_exist_shao_ji\":true,\"room_exist_man_guan\":false},{\"user_id\":612006148,\"hand_points\":35000,\"luck_score\":0,\"is_exist_shao_ji\":true,\"room_exist_man_guan\":false},{\"user_id\":513842906,\"hand_points\":35000,\"luck_score\":0,\"is_exist_shao_ji\":true,\"room_exist_man_guan\":false}],\"hand_cards_sha_256\":\"c4cf88e477826d713b12390b697dbe675cf5b758a757a2690a17b39915ab4bad\"}",
+            "eventPos": 2,
+            "eventType": 1,
+            "handId": "",
+            "startTime": 1709477260431,
+            "userId": 513842906
+          },
+          {
+            "data": "{\"in_card\":0,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":false,\"oper_fixed_time\":5,\"oper_var_time\":20,\"in_ting_info\":[],\"is_nine_cards\":false,\"is_kai_li_zhi\":false,\"is_pull_north\":false,\"is_first_xun_in\":true}",
+            "eventPos": 3,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477264367,
+            "userId": 311677992
+          },
+          {
+            "data": "{\"action\":11,\"card\":65,\"move_cards_pos\":[9,5],\"user_id\":311677992,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 4,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477266605,
+            "userId": 311677992
+          },
+          {
+            "data": "{\"in_card\":41,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":false,\"oper_fixed_time\":5,\"oper_var_time\":20,\"in_ting_info\":[],\"is_nine_cards\":false,\"is_kai_li_zhi\":false,\"is_pull_north\":false,\"is_first_xun_in\":true}",
+            "eventPos": 5,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477267315,
+            "userId": 612006148
+          },
+          {
+            "data": "{\"action\":11,\"card\":145,\"move_cards_pos\":[13,2],\"user_id\":612006148,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 6,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477269327,
+            "userId": 612006148
+          },
+          {
+            "data": "{\"in_card\":17,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":false,\"oper_fixed_time\":5,\"oper_var_time\":20,\"in_ting_info\":[],\"is_nine_cards\":false,\"is_kai_li_zhi\":false,\"is_pull_north\":true,\"is_first_xun_in\":true}",
+            "eventPos": 7,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477270032,
+            "userId": 513842906
+          },
+          {
+            "data": "{\"action\":11,\"card\":6,\"move_cards_pos\":[4,6],\"user_id\":513842906,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 8,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477272830,
+            "userId": 513842906
+          },
+          {
+            "data": "{\"in_card\":17,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":false,\"oper_fixed_time\":5,\"oper_var_time\":20,\"in_ting_info\":[],\"is_nine_cards\":false,\"is_kai_li_zhi\":false,\"is_pull_north\":false,\"is_first_xun_in\":false}",
+            "eventPos": 9,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477273556,
+            "userId": 311677992
+          },
+          {
+            "data": "{\"action\":11,\"card\":81,\"move_cards_pos\":[10,4],\"user_id\":311677992,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 10,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477274442,
+            "userId": 311677992
+          },
+          {
+            "data": "{\"out_card\":81,\"action_list\":[5,6],\"oper_fixed_time\":5,\"oper_var_time\":20}",
+            "eventPos": 11,
+            "eventType": 3,
+            "handId": "",
+            "startTime": 1709477275143,
+            "userId": 513842906
+          },
+          {
+            "data": "{\"in_card\":8,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":false,\"oper_fixed_time\":5,\"oper_var_time\":20,\"in_ting_info\":[],\"is_nine_cards\":false,\"is_kai_li_zhi\":false,\"is_pull_north\":false,\"is_first_xun_in\":false}",
+            "eventPos": 12,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477276964,
+            "userId": 612006148
+          },
+          {
+            "data": "{\"action\":11,\"card\":65,\"move_cards_pos\":[13,7],\"user_id\":612006148,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 13,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477278038,
+            "userId": 612006148
+          },
+          {
+            "data": "{\"in_card\":2,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":false,\"oper_fixed_time\":5,\"oper_var_time\":20,\"in_ting_info\":[],\"is_nine_cards\":false,\"is_kai_li_zhi\":false,\"is_pull_north\":true,\"is_first_xun_in\":false}",
+            "eventPos": 14,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477278761,
+            "userId": 513842906
+          },
+          {
+            "data": "{\"action\":11,\"card\":2,\"move_cards_pos\":[14,13],\"user_id\":513842906,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 15,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477281112,
+            "userId": 513842906
+          },
+          {
+            "data": "{\"in_card\":24,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":false,\"oper_fixed_time\":5,\"oper_var_time\":20,\"in_ting_info\":[],\"is_nine_cards\":false,\"is_kai_li_zhi\":false,\"is_pull_north\":false,\"is_first_xun_in\":false}",
+            "eventPos": 16,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477281823,
+            "userId": 311677992
+          },
+          {
+            "data": "{\"action\":11,\"card\":129,\"move_cards_pos\":[12,8],\"user_id\":311677992,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 17,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477282669,
+            "userId": 311677992
+          },
+          {
+            "data": "{\"in_card\":2,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":false,\"oper_fixed_time\":5,\"oper_var_time\":20,\"in_ting_info\":[],\"is_nine_cards\":false,\"is_kai_li_zhi\":false,\"is_pull_north\":false,\"is_first_xun_in\":false}",
+            "eventPos": 18,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477283373,
+            "userId": 612006148
+          },
+          {
+            "data": "{\"action\":11,\"card\":41,\"move_cards_pos\":[2,3],\"user_id\":612006148,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 19,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477284623,
+            "userId": 612006148
+          },
+          {
+            "data": "{\"out_card\":41,\"action_list\":[5],\"oper_fixed_time\":5,\"oper_var_time\":20}",
+            "eventPos": 20,
+            "eventType": 3,
+            "handId": "",
+            "startTime": 1709477285325,
+            "userId": 513842906
+          },
+          {
+            "data": "{\"in_card\":23,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":false,\"oper_fixed_time\":5,\"oper_var_time\":20,\"in_ting_info\":[],\"is_nine_cards\":false,\"is_kai_li_zhi\":false,\"is_pull_north\":true,\"is_first_xun_in\":false}",
+            "eventPos": 21,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477287942,
+            "userId": 513842906
+          },
+          {
+            "data": "{\"action\":11,\"card\":1,\"move_cards_pos\":[3,8],\"user_id\":513842906,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 22,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477290278,
+            "userId": 513842906
+          },
+          {
+            "data": "{\"in_card\":113,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":false,\"oper_fixed_time\":5,\"oper_var_time\":20,\"in_ting_info\":[],\"is_nine_cards\":false,\"is_kai_li_zhi\":false,\"is_pull_north\":false,\"is_first_xun_in\":false}",
+            "eventPos": 23,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477290986,
+            "userId": 311677992
+          },
+          {
+            "data": "{\"action\":11,\"card\":49,\"move_cards_pos\":[11,12],\"user_id\":311677992,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 24,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477292389,
+            "userId": 311677992
+          },
+          {
+            "data": "{\"in_card\":33,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":false,\"oper_fixed_time\":5,\"oper_var_time\":20,\"in_ting_info\":[],\"is_nine_cards\":false,\"is_kai_li_zhi\":false,\"is_pull_north\":false,\"is_first_xun_in\":false}",
+            "eventPos": 25,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477293104,
+            "userId": 612006148
+          },
+          {
+            "data": "{\"action\":11,\"card\":24,\"move_cards_pos\":[13,2],\"user_id\":612006148,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 26,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477295475,
+            "userId": 612006148
+          },
+          {
+            "data": "{\"in_card\":97,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":true,\"oper_fixed_time\":5,\"oper_var_time\":20,\"in_ting_info\":[{\"discard_card\":22,\"ting_list\":[{\"is_zhen_ting\":false,\"is_wu_yi\":false,\"left_num\":1,\"ting_card\":41,\"is_yi_man\":true,\"fang_info\":{\"38\":13},\"ting_type\":5},{\"is_zhen_ting\":false,\"is_wu_yi\":false,\"left_num\":2,\"ting_card\":23,\"is_yi_man\":true,\"fang_info\":{\"38\":13},\"ting_type\":5}]},{\"discard_card\":23,\"ting_list\":[{\"is_zhen_ting\":false,\"is_wu_yi\":false,\"left_num\":4,\"ting_card\":21,\"is_yi_man\":false,\"fang_info\":{\"11\":1,\"18\":2},\"ting_type\":2},{\"is_zhen_ting\":false,\"is_wu_yi\":false,\"left_num\":3,\"ting_card\":24,\"is_yi_man\":false,\"fang_info\":{\"11\":1,\"18\":2},\"ting_type\":2}]}],\"is_nine_cards\":false,\"is_kai_li_zhi\":true,\"is_pull_north\":true,\"is_first_xun_in\":false}",
+            "eventPos": 27,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477296193,
+            "userId": 513842906
+          },
+          {
+            "data": "{\"action\":11,\"card\":22,\"move_cards_pos\":[6,13],\"user_id\":513842906,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 28,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477299582,
+            "userId": 513842906
+          },
+          {
+            "data": "{\"in_card\":22,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":false,\"oper_fixed_time\":5,\"oper_var_time\":20,\"in_ting_info\":[],\"is_nine_cards\":false,\"is_kai_li_zhi\":false,\"is_pull_north\":false,\"is_first_xun_in\":false}",
+            "eventPos": 29,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477300285,
+            "userId": 311677992
+          },
+          {
+            "data": "{\"action\":11,\"card\":145,\"move_cards_pos\":[13,7],\"user_id\":311677992,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 30,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477302049,
+            "userId": 311677992
+          },
+          {
+            "data": "{\"in_card\":65,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":false,\"oper_fixed_time\":5,\"oper_var_time\":20,\"in_ting_info\":[],\"is_nine_cards\":false,\"is_kai_li_zhi\":false,\"is_pull_north\":false,\"is_first_xun_in\":false}",
+            "eventPos": 31,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477302754,
+            "userId": 612006148
+          },
+          {
+            "data": "{\"action\":11,\"card\":65,\"move_cards_pos\":[14,13],\"user_id\":612006148,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 32,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477304367,
+            "userId": 612006148
+          },
+          {
+            "data": "{\"in_card\":7,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":true,\"oper_fixed_time\":5,\"oper_var_time\":20,\"in_ting_info\":[{\"discard_card\":7,\"ting_list\":[{\"is_zhen_ting\":false,\"is_wu_yi\":false,\"left_num\":2,\"ting_card\":23,\"is_yi_man\":true,\"fang_info\":{\"38\":13},\"ting_type\":5},{\"is_zhen_ting\":false,\"is_wu_yi\":false,\"left_num\":1,\"ting_card\":41,\"is_yi_man\":true,\"fang_info\":{\"38\":13},\"ting_type\":5}]}],\"is_nine_cards\":false,\"is_kai_li_zhi\":true,\"is_pull_north\":true,\"is_first_xun_in\":false}",
+            "eventPos": 33,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477305075,
+            "userId": 513842906
+          },
+          {
+            "data": "{\"action\":11,\"card\":7,\"move_cards_pos\":[14,13],\"user_id\":513842906,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 34,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477322323,
+            "userId": 513842906
+          },
+          {
+            "data": "{\"in_card\":129,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":false,\"oper_fixed_time\":5,\"oper_var_time\":20,\"in_ting_info\":[],\"is_nine_cards\":false,\"is_kai_li_zhi\":false,\"is_pull_north\":false,\"is_first_xun_in\":false}",
+            "eventPos": 35,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477323026,
+            "userId": 311677992
+          },
+          {
+            "data": "{\"action\":11,\"card\":129,\"move_cards_pos\":[14,13],\"user_id\":311677992,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 36,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477324552,
+            "userId": 311677992
+          },
+          {
+            "data": "{\"in_card\":4,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":false,\"oper_fixed_time\":5,\"oper_var_time\":20,\"in_ting_info\":[],\"is_nine_cards\":false,\"is_kai_li_zhi\":false,\"is_pull_north\":false,\"is_first_xun_in\":false}",
+            "eventPos": 37,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477325260,
+            "userId": 612006148
+          },
+          {
+            "data": "{\"action\":11,\"card\":9,\"move_cards_pos\":[9,5],\"user_id\":612006148,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 38,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477327057,
+            "userId": 612006148
+          },
+          {
+            "data": "{\"in_card\":65,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":true,\"oper_fixed_time\":5,\"oper_var_time\":8,\"in_ting_info\":[{\"discard_card\":65,\"ting_list\":[{\"is_zhen_ting\":false,\"is_wu_yi\":false,\"left_num\":2,\"ting_card\":23,\"is_yi_man\":true,\"fang_info\":{\"38\":13},\"ting_type\":5},{\"is_zhen_ting\":false,\"is_wu_yi\":false,\"left_num\":1,\"ting_card\":41,\"is_yi_man\":true,\"fang_info\":{\"38\":13},\"ting_type\":5}]}],\"is_nine_cards\":false,\"is_kai_li_zhi\":true,\"is_pull_north\":true,\"is_first_xun_in\":false}",
+            "eventPos": 39,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477327759,
+            "userId": 513842906
+          },
+          {
+            "data": "{\"action\":11,\"card\":65,\"move_cards_pos\":[14,13],\"user_id\":513842906,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 40,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477330033,
+            "userId": 513842906
+          },
+          {
+            "data": "{\"in_card\":113,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":false,\"oper_fixed_time\":5,\"oper_var_time\":20,\"in_ting_info\":[],\"is_nine_cards\":false,\"is_kai_li_zhi\":false,\"is_pull_north\":false,\"is_first_xun_in\":false}",
+            "eventPos": 41,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477330742,
+            "userId": 311677992
+          },
+          {
+            "data": "{\"action\":11,\"card\":4,\"move_cards_pos\":[1,13],\"user_id\":311677992,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 42,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477333095,
+            "userId": 311677992
+          },
+          {
+            "data": "{\"in_card\":97,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":false,\"oper_fixed_time\":5,\"oper_var_time\":20,\"in_ting_info\":[],\"is_nine_cards\":false,\"is_kai_li_zhi\":false,\"is_pull_north\":true,\"is_first_xun_in\":false}",
+            "eventPos": 43,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477333812,
+            "userId": 612006148
+          },
+          {
+            "data": "{\"action\":13,\"card\":97,\"move_cards_pos\":[14],\"user_id\":612006148,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 44,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477335310,
+            "userId": 612006148
+          },
+          {
+            "data": "{\"in_card\":4,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":true,\"is_can_lizhi\":false,\"oper_fixed_time\":5,\"oper_var_time\":20,\"in_ting_info\":[],\"is_nine_cards\":false,\"is_kai_li_zhi\":false,\"is_pull_north\":false,\"is_first_xun_in\":false}",
+            "eventPos": 45,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477336013,
+            "userId": 612006148
+          },
+          {
+            "data": "{\"action\":11,\"card\":18,\"move_cards_pos\":[10,6],\"user_id\":612006148,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 46,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477339047,
+            "userId": 612006148
+          },
+          {
+            "data": "{\"in_card\":129,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":true,\"oper_fixed_time\":5,\"oper_var_time\":8,\"in_ting_info\":[{\"discard_card\":129,\"ting_list\":[{\"is_zhen_ting\":false,\"is_wu_yi\":false,\"left_num\":2,\"ting_card\":23,\"is_yi_man\":true,\"fang_info\":{\"38\":13},\"ting_type\":5},{\"is_zhen_ting\":false,\"is_wu_yi\":false,\"left_num\":1,\"ting_card\":41,\"is_yi_man\":true,\"fang_info\":{\"38\":13},\"ting_type\":5}]}],\"is_nine_cards\":false,\"is_kai_li_zhi\":true,\"is_pull_north\":true,\"is_first_xun_in\":false}",
+            "eventPos": 47,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477339751,
+            "userId": 513842906
+          },
+          {
+            "data": "{\"action\":11,\"card\":129,\"move_cards_pos\":[14,13],\"user_id\":513842906,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 48,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477341625,
+            "userId": 513842906
+          },
+          {
+            "data": "{\"in_card\":277,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":false,\"oper_fixed_time\":5,\"oper_var_time\":20,\"in_ting_info\":[],\"is_nine_cards\":false,\"is_kai_li_zhi\":false,\"is_pull_north\":false,\"is_first_xun_in\":false}",
+            "eventPos": 49,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477342331,
+            "userId": 311677992
+          },
+          {
+            "data": "{\"action\":11,\"card\":8,\"move_cards_pos\":[1,4],\"user_id\":311677992,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 50,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477344109,
+            "userId": 311677992
+          },
+          {
+            "data": "{\"out_card\":8,\"action_list\":[5],\"oper_fixed_time\":5,\"oper_var_time\":20}",
+            "eventPos": 51,
+            "eventType": 3,
+            "handId": "",
+            "startTime": 1709477344810,
+            "userId": 612006148
+          },
+          {
+            "data": "{\"in_card\":8,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":true,\"oper_fixed_time\":5,\"oper_var_time\":20,\"in_ting_info\":[{\"discard_card\":2,\"ting_list\":[{\"is_zhen_ting\":false,\"is_wu_yi\":true,\"left_num\":4,\"ting_card\":3,\"is_yi_man\":false,\"fang_info\":{},\"ting_type\":1}]},{\"discard_card\":4,\"ting_list\":[{\"is_zhen_ting\":false,\"is_wu_yi\":true,\"left_num\":1,\"ting_card\":2,\"is_yi_man\":false,\"fang_info\":{},\"ting_type\":1},{\"is_zhen_ting\":false,\"is_wu_yi\":true,\"left_num\":2,\"ting_card\":33,\"is_yi_man\":false,\"fang_info\":{},\"ting_type\":1}]}],\"is_nine_cards\":false,\"is_kai_li_zhi\":true,\"is_pull_north\":false,\"is_first_xun_in\":false}",
+            "eventPos": 52,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477346723,
+            "userId": 612006148
+          },
+          {
+            "data": "{\"action\":11,\"card\":4,\"move_cards_pos\":[6,10],\"user_id\":612006148,\"hand_cards\":[21,8,20,6,2,19,5,33,8,2,33,4,4,8],\"group_cards\":null,\"is_li_zhi\":true,\"li_zhi_operate\":1,\"li_zhi_type\":3}",
+            "eventPos": 53,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477358989,
+            "userId": 612006148
+          },
+          {
+            "data": "{\"user_id\":612006148,\"is_auto_gang\":false}",
+            "eventPos": 54,
+            "eventType": 8,
+            "handId": "",
+            "startTime": 1709477359694,
+            "userId": 612006148
+          },
+          {
+            "data": "{\"ting_info\":[{\"is_zhen_ting\":false,\"is_wu_yi\":false,\"left_num\":1,\"ting_card\":2,\"is_yi_man\":false,\"fang_info\":{\"52\":2},\"ting_type\":2},{\"is_zhen_ting\":false,\"is_wu_yi\":false,\"left_num\":2,\"ting_card\":33,\"is_yi_man\":false,\"fang_info\":{\"52\":2},\"ting_type\":2}]}",
+            "eventPos": 55,
+            "eventType": 11,
+            "handId": "",
+            "startTime": 1709477359694,
+            "userId": 612006148
+          },
+          {
+            "data": "{\"in_card\":4,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":true,\"oper_fixed_time\":5,\"oper_var_time\":8,\"in_ting_info\":[{\"discard_card\":4,\"ting_list\":[{\"is_zhen_ting\":false,\"is_wu_yi\":false,\"left_num\":1,\"ting_card\":41,\"is_yi_man\":true,\"fang_info\":{\"38\":13},\"ting_type\":5},{\"is_zhen_ting\":false,\"is_wu_yi\":false,\"left_num\":2,\"ting_card\":23,\"is_yi_man\":true,\"fang_info\":{\"38\":13},\"ting_type\":5}]}],\"is_nine_cards\":false,\"is_kai_li_zhi\":true,\"is_pull_north\":true,\"is_first_xun_in\":false}",
+            "eventPos": 56,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477359707,
+            "userId": 513842906
+          },
+          {
+            "data": "{\"action\":11,\"card\":4,\"move_cards_pos\":[14,13],\"user_id\":513842906,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 57,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477372964,
+            "userId": 513842906
+          },
+          {
+            "data": "{\"in_card\":145,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":false,\"oper_fixed_time\":5,\"oper_var_time\":20,\"in_ting_info\":[],\"is_nine_cards\":false,\"is_kai_li_zhi\":false,\"is_pull_north\":false,\"is_first_xun_in\":false}",
+            "eventPos": 58,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477373670,
+            "userId": 311677992
+          },
+          {
+            "data": "{\"action\":11,\"card\":9,\"move_cards_pos\":[1,13],\"user_id\":311677992,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 59,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477375008,
+            "userId": 311677992
+          },
+          {
+            "data": "{\"in_card\":23,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":false,\"oper_fixed_time\":5,\"oper_var_time\":13,\"in_ting_info\":[],\"is_nine_cards\":false,\"is_kai_li_zhi\":false,\"is_pull_north\":false,\"is_first_xun_in\":false}",
+            "eventPos": 60,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477375712,
+            "userId": 612006148
+          },
+          {
+            "data": "{\"action\":11,\"card\":23,\"move_cards_pos\":[14,13],\"user_id\":612006148,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 61,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477376467,
+            "userId": 612006148
+          },
+          {
+            "data": "{\"out_card\":23,\"action_list\":[5,7],\"oper_fixed_time\":5,\"oper_var_time\":0}",
+            "eventPos": 62,
+            "eventType": 3,
+            "handId": "",
+            "startTime": 1709477377168,
+            "userId": 513842906
+          },
+          {
+            "data": "{}",
+            "eventPos": 63,
+            "eventType": 9,
+            "handId": "",
+            "startTime": 1709477379178,
+            "userId": 513842906
+          },
+          {
+            "data": "{\"in_card\":33,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":true,\"oper_fixed_time\":5,\"oper_var_time\":0,\"in_ting_info\":[{\"discard_card\":33,\"ting_list\":[{\"is_zhen_ting\":false,\"is_wu_yi\":false,\"left_num\":1,\"ting_card\":23,\"is_yi_man\":true,\"fang_info\":{\"38\":13},\"ting_type\":5},{\"is_zhen_ting\":false,\"is_wu_yi\":false,\"left_num\":1,\"ting_card\":41,\"is_yi_man\":true,\"fang_info\":{\"38\":13},\"ting_type\":5}]}],\"is_nine_cards\":false,\"is_kai_li_zhi\":true,\"is_pull_north\":true,\"is_first_xun_in\":false}",
+            "eventPos": 64,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477379182,
+            "userId": 513842906
+          },
+          {
+            "data": "{\"action\":11,\"card\":23,\"move_cards_pos\":[7,1],\"user_id\":513842906,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 65,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477382052,
+            "userId": 513842906
+          },
+          {
+            "data": "{\"in_card\":24,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":false,\"oper_fixed_time\":5,\"oper_var_time\":20,\"in_ting_info\":[],\"is_nine_cards\":false,\"is_kai_li_zhi\":false,\"is_pull_north\":false,\"is_first_xun_in\":false}",
+            "eventPos": 66,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477382755,
+            "userId": 311677992
+          },
+          {
+            "data": "{\"action\":11,\"card\":145,\"move_cards_pos\":[13,8],\"user_id\":311677992,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 67,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477384024,
+            "userId": 311677992
+          },
+          {
+            "data": "{\"in_card\":6,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":false,\"oper_fixed_time\":5,\"oper_var_time\":13,\"in_ting_info\":[],\"is_nine_cards\":false,\"is_kai_li_zhi\":false,\"is_pull_north\":false,\"is_first_xun_in\":false}",
+            "eventPos": 68,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477384730,
+            "userId": 612006148
+          },
+          {
+            "data": "{\"action\":11,\"card\":6,\"move_cards_pos\":[14,13],\"user_id\":612006148,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 69,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477385501,
+            "userId": 612006148
+          },
+          {
+            "data": "{\"in_card\":3,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":false,\"oper_fixed_time\":5,\"oper_var_time\":0,\"in_ting_info\":[],\"is_nine_cards\":false,\"is_kai_li_zhi\":false,\"is_pull_north\":true,\"is_first_xun_in\":false}",
+            "eventPos": 70,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477386229,
+            "userId": 513842906
+          },
+          {
+            "data": "{\"action\":11,\"card\":23,\"move_cards_pos\":[7,4],\"user_id\":513842906,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 71,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477389321,
+            "userId": 513842906
+          },
+          {
+            "data": "{\"in_card\":261,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":false,\"oper_fixed_time\":5,\"oper_var_time\":20,\"in_ting_info\":[],\"is_nine_cards\":false,\"is_kai_li_zhi\":false,\"is_pull_north\":false,\"is_first_xun_in\":false}",
+            "eventPos": 72,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477390029,
+            "userId": 311677992
+          },
+          {
+            "data": "{\"action\":11,\"card\":261,\"move_cards_pos\":[14,13],\"user_id\":311677992,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 73,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477391589,
+            "userId": 311677992
+          },
+          {
+            "data": "{\"in_card\":41,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":false,\"oper_fixed_time\":5,\"oper_var_time\":13,\"in_ting_info\":[],\"is_nine_cards\":false,\"is_kai_li_zhi\":false,\"is_pull_north\":false,\"is_first_xun_in\":false}",
+            "eventPos": 74,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477392291,
+            "userId": 612006148
+          },
+          {
+            "data": "{\"action\":11,\"card\":41,\"move_cards_pos\":[14,13],\"user_id\":612006148,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 75,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477393060,
+            "userId": 612006148
+          },
+          {
+            "data": "{\"out_card\":41,\"action_list\":[5],\"oper_fixed_time\":5,\"oper_var_time\":0}",
+            "eventPos": 76,
+            "eventType": 3,
+            "handId": "",
+            "startTime": 1709477393763,
+            "userId": 513842906
+          },
+          {
+            "data": "{\"action\":5,\"card\":41,\"move_cards_pos\":[2,3],\"user_id\":513842906,\"hand_cards\":null,\"group_cards\":[41,41],\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 77,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477399188,
+            "userId": 513842906
+          },
+          {
+            "data": "{\"in_card\":0,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":false,\"oper_fixed_time\":5,\"oper_var_time\":0,\"in_ting_info\":[{\"discard_card\":33,\"ting_list\":[{\"is_zhen_ting\":false,\"is_wu_yi\":false,\"left_num\":3,\"ting_card\":3,\"is_yi_man\":false,\"fang_info\":{\"11\":1,\"16\":2,\"18\":2},\"ting_type\":2}]},{\"discard_card\":3,\"ting_list\":[{\"is_zhen_ting\":false,\"is_wu_yi\":false,\"left_num\":3,\"ting_card\":33,\"is_yi_man\":false,\"fang_info\":{\"11\":1,\"16\":2,\"18\":2,\"20\":2},\"ting_type\":2}]}],\"is_nine_cards\":false,\"is_kai_li_zhi\":false,\"is_pull_north\":false,\"is_first_xun_in\":false}",
+            "eventPos": 78,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477399203,
+            "userId": 513842906
+          },
+          {
+            "data": "{\"action\":11,\"card\":3,\"move_cards_pos\":[2,10],\"user_id\":513842906,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 79,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477401173,
+            "userId": 513842906
+          },
+          {
+            "data": "{\"in_card\":3,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":false,\"oper_fixed_time\":5,\"oper_var_time\":20,\"in_ting_info\":[],\"is_nine_cards\":false,\"is_kai_li_zhi\":false,\"is_pull_north\":false,\"is_first_xun_in\":false}",
+            "eventPos": 80,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477401882,
+            "userId": 311677992
+          },
+          {
+            "data": "{\"action\":11,\"card\":3,\"move_cards_pos\":[14,13],\"user_id\":311677992,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 81,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477403892,
+            "userId": 311677992
+          },
+          {
+            "data": "{\"in_card\":19,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":false,\"oper_fixed_time\":5,\"oper_var_time\":13,\"in_ting_info\":[],\"is_nine_cards\":false,\"is_kai_li_zhi\":false,\"is_pull_north\":false,\"is_first_xun_in\":false}",
+            "eventPos": 82,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477404601,
+            "userId": 612006148
+          },
+          {
+            "data": "{\"action\":11,\"card\":19,\"move_cards_pos\":[14,13],\"user_id\":612006148,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 83,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477405434,
+            "userId": 612006148
+          },
+          {
+            "data": "{\"in_card\":20,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":false,\"oper_fixed_time\":5,\"oper_var_time\":0,\"in_ting_info\":[{\"discard_card\":33,\"ting_list\":[{\"is_zhen_ting\":false,\"is_wu_yi\":false,\"left_num\":3,\"ting_card\":20,\"is_yi_man\":false,\"fang_info\":{\"11\":1,\"16\":2,\"18\":2},\"ting_type\":2}]},{\"discard_card\":20,\"ting_list\":[{\"is_zhen_ting\":false,\"is_wu_yi\":false,\"left_num\":3,\"ting_card\":33,\"is_yi_man\":false,\"fang_info\":{\"11\":1,\"16\":2,\"18\":2,\"20\":2},\"ting_type\":2}]}],\"is_nine_cards\":false,\"is_kai_li_zhi\":false,\"is_pull_north\":true,\"is_first_xun_in\":false}",
+            "eventPos": 84,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477406148,
+            "userId": 513842906
+          },
+          {
+            "data": "{\"action\":11,\"card\":20,\"move_cards_pos\":[11,10],\"user_id\":513842906,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 85,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477410362,
+            "userId": 513842906
+          },
+          {
+            "data": "{\"in_card\":20,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":true,\"oper_fixed_time\":5,\"oper_var_time\":20,\"in_ting_info\":[{\"discard_card\":24,\"ting_list\":[{\"is_zhen_ting\":false,\"is_wu_yi\":false,\"left_num\":3,\"ting_card\":19,\"is_yi_man\":false,\"fang_info\":{\"27\":3,\"9\":1},\"ting_type\":2}]}],\"is_nine_cards\":false,\"is_kai_li_zhi\":true,\"is_pull_north\":false,\"is_first_xun_in\":false}",
+            "eventPos": 86,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477411067,
+            "userId": 311677992
+          },
+          {
+            "data": "{\"action\":11,\"card\":24,\"move_cards_pos\":[7,3],\"user_id\":311677992,\"hand_cards\":[25,113,25,18,23,22,17,24,113,22,113,277,24,20],\"group_cards\":null,\"is_li_zhi\":true,\"li_zhi_operate\":1,\"li_zhi_type\":3}",
+            "eventPos": 87,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477417718,
+            "userId": 311677992
+          },
+          {
+            "data": "{\"user_id\":311677992,\"is_auto_gang\":true}",
+            "eventPos": 88,
+            "eventType": 8,
+            "handId": "",
+            "startTime": 1709477418422,
+            "userId": 311677992
+          },
+          {
+            "data": "{\"ting_info\":[{\"is_zhen_ting\":false,\"is_wu_yi\":false,\"left_num\":3,\"ting_card\":19,\"is_yi_man\":false,\"fang_info\":{\"27\":3,\"52\":2,\"9\":1},\"ting_type\":2}]}",
+            "eventPos": 89,
+            "eventType": 11,
+            "handId": "",
+            "startTime": 1709477418423,
+            "userId": 311677992
+          },
+          {
+            "data": "{\"in_card\":7,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":false,\"oper_fixed_time\":5,\"oper_var_time\":13,\"in_ting_info\":[],\"is_nine_cards\":false,\"is_kai_li_zhi\":false,\"is_pull_north\":false,\"is_first_xun_in\":false}",
+            "eventPos": 90,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477418433,
+            "userId": 612006148
+          },
+          {
+            "data": "{\"action\":11,\"card\":7,\"move_cards_pos\":[14,13],\"user_id\":612006148,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 91,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477419199,
+            "userId": 612006148
+          },
+          {
+            "data": "{\"in_card\":113,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":false,\"oper_fixed_time\":5,\"oper_var_time\":0,\"in_ting_info\":[{\"discard_card\":33,\"ting_list\":[{\"is_zhen_ting\":false,\"is_wu_yi\":false,\"left_num\":3,\"ting_card\":113,\"is_yi_man\":false,\"fang_info\":{\"11\":1,\"16\":2,\"18\":2,\"20\":2},\"ting_type\":2}]},{\"discard_card\":113,\"ting_list\":[{\"is_zhen_ting\":false,\"is_wu_yi\":false,\"left_num\":3,\"ting_card\":33,\"is_yi_man\":false,\"fang_info\":{\"11\":1,\"16\":2,\"18\":2,\"20\":2},\"ting_type\":2}]}],\"is_nine_cards\":false,\"is_kai_li_zhi\":false,\"is_pull_north\":true,\"is_first_xun_in\":false}",
+            "eventPos": 92,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477419907,
+            "userId": 513842906
+          },
+          {
+            "data": "{\"action\":11,\"card\":113,\"move_cards_pos\":[11,10],\"user_id\":513842906,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 93,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477423644,
+            "userId": 513842906
+          },
+          {
+            "data": "{\"in_card\":7,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":false,\"oper_fixed_time\":5,\"oper_var_time\":19,\"in_ting_info\":[],\"is_nine_cards\":false,\"is_kai_li_zhi\":false,\"is_pull_north\":false,\"is_first_xun_in\":false}",
+            "eventPos": 94,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477424357,
+            "userId": 311677992
+          },
+          {
+            "data": "{\"action\":11,\"card\":7,\"move_cards_pos\":[14,13],\"user_id\":311677992,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 95,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477425183,
+            "userId": 311677992
+          },
+          {
+            "data": "{\"in_card\":18,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":false,\"oper_fixed_time\":5,\"oper_var_time\":13,\"in_ting_info\":[],\"is_nine_cards\":false,\"is_kai_li_zhi\":false,\"is_pull_north\":false,\"is_first_xun_in\":false}",
+            "eventPos": 96,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477425907,
+            "userId": 612006148
+          },
+          {
+            "data": "{\"action\":11,\"card\":18,\"move_cards_pos\":[14,13],\"user_id\":612006148,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 97,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477426669,
+            "userId": 612006148
+          },
+          {
+            "data": "{\"in_card\":1,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":false,\"oper_fixed_time\":5,\"oper_var_time\":0,\"in_ting_info\":[{\"discard_card\":33,\"ting_list\":[{\"is_zhen_ting\":true,\"is_wu_yi\":false,\"left_num\":2,\"ting_card\":1,\"is_yi_man\":false,\"fang_info\":{\"11\":1,\"16\":2,\"18\":2,\"20\":2},\"ting_type\":2}]},{\"discard_card\":1,\"ting_list\":[{\"is_zhen_ting\":false,\"is_wu_yi\":false,\"left_num\":3,\"ting_card\":33,\"is_yi_man\":false,\"fang_info\":{\"11\":1,\"16\":2,\"18\":2,\"20\":2},\"ting_type\":2}]}],\"is_nine_cards\":false,\"is_kai_li_zhi\":false,\"is_pull_north\":true,\"is_first_xun_in\":false}",
+            "eventPos": 98,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477427371,
+            "userId": 513842906
+          },
+          {
+            "data": "{\"action\":11,\"card\":1,\"move_cards_pos\":[11,10],\"user_id\":513842906,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 99,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477429276,
+            "userId": 513842906
+          },
+          {
+            "data": "{\"in_card\":49,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":false,\"oper_fixed_time\":5,\"oper_var_time\":19,\"in_ting_info\":[],\"is_nine_cards\":false,\"is_kai_li_zhi\":false,\"is_pull_north\":false,\"is_first_xun_in\":false}",
+            "eventPos": 100,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477429997,
+            "userId": 311677992
+          },
+          {
+            "data": "{\"action\":11,\"card\":49,\"move_cards_pos\":[14,13],\"user_id\":311677992,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 101,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477430941,
+            "userId": 311677992
+          },
+          {
+            "data": "{\"in_card\":1,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":false,\"oper_fixed_time\":5,\"oper_var_time\":13,\"in_ting_info\":[],\"is_nine_cards\":false,\"is_kai_li_zhi\":false,\"is_pull_north\":false,\"is_first_xun_in\":false}",
+            "eventPos": 102,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477431650,
+            "userId": 612006148
+          },
+          {
+            "data": "{\"action\":11,\"card\":1,\"move_cards_pos\":[14,13],\"user_id\":612006148,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 103,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477432440,
+            "userId": 612006148
+          },
+          {
+            "data": "{\"in_card\":3,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":false,\"oper_fixed_time\":5,\"oper_var_time\":0,\"in_ting_info\":[{\"discard_card\":33,\"ting_list\":[{\"is_zhen_ting\":true,\"is_wu_yi\":false,\"left_num\":1,\"ting_card\":3,\"is_yi_man\":false,\"fang_info\":{\"11\":1,\"16\":2,\"18\":2},\"ting_type\":2}]},{\"discard_card\":3,\"ting_list\":[{\"is_zhen_ting\":false,\"is_wu_yi\":false,\"left_num\":3,\"ting_card\":33,\"is_yi_man\":false,\"fang_info\":{\"11\":1,\"16\":2,\"18\":2,\"20\":2},\"ting_type\":2}]}],\"is_nine_cards\":false,\"is_kai_li_zhi\":false,\"is_pull_north\":true,\"is_first_xun_in\":false}",
+            "eventPos": 104,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477433148,
+            "userId": 513842906
+          },
+          {
+            "data": "{\"action\":11,\"card\":3,\"move_cards_pos\":[11,10],\"user_id\":513842906,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 105,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477435531,
+            "userId": 513842906
+          },
+          {
+            "data": "{\"in_card\":6,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":false,\"oper_fixed_time\":5,\"oper_var_time\":19,\"in_ting_info\":[],\"is_nine_cards\":false,\"is_kai_li_zhi\":false,\"is_pull_north\":false,\"is_first_xun_in\":false}",
+            "eventPos": 106,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477436245,
+            "userId": 311677992
+          },
+          {
+            "data": "{\"action\":11,\"card\":6,\"move_cards_pos\":[14,13],\"user_id\":311677992,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 107,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477437085,
+            "userId": 311677992
+          },
+          {
+            "data": "{\"in_card\":25,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":false,\"oper_fixed_time\":5,\"oper_var_time\":13,\"in_ting_info\":[],\"is_nine_cards\":false,\"is_kai_li_zhi\":false,\"is_pull_north\":false,\"is_first_xun_in\":false}",
+            "eventPos": 108,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477437790,
+            "userId": 612006148
+          },
+          {
+            "data": "{\"action\":11,\"card\":25,\"move_cards_pos\":[14,13],\"user_id\":612006148,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 109,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477438559,
+            "userId": 612006148
+          },
+          {
+            "data": "{\"in_card\":20,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":false,\"oper_fixed_time\":5,\"oper_var_time\":0,\"in_ting_info\":[{\"discard_card\":33,\"ting_list\":[{\"is_zhen_ting\":true,\"is_wu_yi\":false,\"left_num\":2,\"ting_card\":20,\"is_yi_man\":false,\"fang_info\":{\"11\":1,\"16\":2,\"18\":2},\"ting_type\":2}]},{\"discard_card\":20,\"ting_list\":[{\"is_zhen_ting\":false,\"is_wu_yi\":false,\"left_num\":3,\"ting_card\":33,\"is_yi_man\":false,\"fang_info\":{\"11\":1,\"16\":2,\"18\":2,\"20\":2},\"ting_type\":2}]}],\"is_nine_cards\":false,\"is_kai_li_zhi\":false,\"is_pull_north\":true,\"is_first_xun_in\":false}",
+            "eventPos": 110,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477439283,
+            "userId": 513842906
+          },
+          {
+            "data": "{\"action\":11,\"card\":20,\"move_cards_pos\":[11,10],\"user_id\":513842906,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 111,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477440752,
+            "userId": 513842906
+          },
+          {
+            "data": "{\"in_card\":9,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":false,\"oper_fixed_time\":5,\"oper_var_time\":19,\"in_ting_info\":[],\"is_nine_cards\":false,\"is_kai_li_zhi\":false,\"is_pull_north\":false,\"is_first_xun_in\":false}",
+            "eventPos": 112,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477441464,
+            "userId": 311677992
+          },
+          {
+            "data": "{\"action\":11,\"card\":9,\"move_cards_pos\":[14,13],\"user_id\":311677992,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 113,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477442290,
+            "userId": 311677992
+          },
+          {
+            "data": "{\"in_card\":2,\"is_zi_mo\":true,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":false,\"oper_fixed_time\":5,\"oper_var_time\":13,\"in_ting_info\":[],\"is_nine_cards\":false,\"is_kai_li_zhi\":false,\"is_pull_north\":false,\"is_first_xun_in\":false}",
+            "eventPos": 114,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477442994,
+            "userId": 612006148
+          },
+          {
+            "data": "{\"action\":10,\"card\":2,\"move_cards_pos\":null,\"user_id\":612006148,\"hand_cards\":[21,8,20,2,5,33,8,2,33,4,8,6,19,2],\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 115,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477443050,
+            "userId": 612006148
+          },
+          {
+            "data": "{\"end_type\":1,\"win_info\":[{\"fang_info\":[{\"fang_type\":52,\"fang_num\":2},{\"fang_type\":1,\"fang_num\":1},{\"fang_type\":55,\"fang_num\":1}],\"all_fang_num\":4,\"all_fu\":30,\"all_point\":7800,\"user_cards\":[21,8,20,2,5,33,8,2,33,4,8,6,19,2],\"li_bao_card\":[33],\"user_id\":612006148,\"ting_card_list\":null,\"bash_points\":1920,\"luck_score\":0}],\"user_profit\":[{\"user_id\":311677992,\"point_profit\":-7800,\"li_zhi_profit\":-1000,\"is_bao_pai\":false,\"user_point\":26200},{\"user_id\":612006148,\"point_profit\":13700,\"li_zhi_profit\":1000,\"is_bao_pai\":false,\"user_point\":47700},{\"user_id\":513842906,\"point_profit\":-3900,\"li_zhi_profit\":0,\"is_bao_pai\":false,\"user_point\":31100}],\"zhong_liu_info\":[],\"cheat_info_list\":[]}",
+            "eventPos": 116,
+            "eventType": 5,
+            "handId": "",
+            "startTime": 1709477443053,
+            "userId": 0
+          }
+        ],
+        "handID": "cni8r269nc78kahoitag_1",
+        "handPos": 1,
+        "paiShan": [
+          41, 17, 17, 8, 2, 24, 2, 23, 113, 33, 97, 22, 65, 7, 129, 4, 65, 113,
+          97, 129, 277, 8, 4, 145, 23, 33, 24, 6, 3, 261, 41, 3, 19, 20, 20, 7,
+          113, 7, 18, 1, 49, 1, 3, 6, 25, 20, 9, 2, 19, 277, 5, 49, 145, 22, 49,
+          3, 24, 261, 33, 129, 7, 1, 18, 9, 19, 25, 21, 4
+        ],
+        "players": [
+          {
+            "cardBackID": 14098,
+            "gameMusicId": 19005,
+            "headTag": 0,
+            "identity": 0,
+            "matchMusicId": 19005,
+            "model": 0,
+            "nickname": "Repulica",
+            "points": 35000,
+            "position": 0,
+            "profileFrameId": 30507,
+            "riichiEffectID": 17006,
+            "riichiMusicId": 20001,
+            "riichiStickID": 13020,
+            "roleID": 10007,
+            "skinID": 1000701,
+            "specialEffectID": 16008,
+            "tableclothID": 15026,
+            "titleID": 10304,
+            "userId": 311677992
+          },
+          {
+            "cardBackID": 14114,
+            "gameMusicId": 19006,
+            "headTag": 0,
+            "identity": 0,
+            "matchMusicId": 19006,
+            "model": 0,
+            "nickname": "\u9ebb\u96c0\u52c7\u8005\uff20\u914d\u4fe1\u4e2d",
+            "points": 35000,
+            "position": 1,
+            "profileFrameId": 30504,
+            "riichiEffectID": 17001,
+            "riichiMusicId": 20001,
+            "riichiStickID": 13034,
+            "roleID": 10002,
+            "skinID": 1000201,
+            "specialEffectID": 16007,
+            "tableclothID": 15059,
+            "titleID": 12103,
+            "userId": 612006148
+          },
+          {
+            "cardBackID": 14114,
+            "gameMusicId": 19006,
+            "headTag": 0,
+            "identity": 0,
+            "matchMusicId": 19006,
+            "model": 0,
+            "nickname": "\u30e9\u30d7dark",
+            "points": 35000,
+            "position": 2,
+            "profileFrameId": 30409,
+            "riichiEffectID": 17004,
+            "riichiMusicId": 20001,
+            "riichiStickID": 13027,
+            "roleID": 10017,
+            "skinID": 0,
+            "specialEffectID": 16016,
+            "tableclothID": 15025,
+            "titleID": 10904,
+            "userId": 513842906
+          }
+        ],
+        "quanFeng": 49
+      },
+      {
+        "benChangNum": 0,
+        "changCi": 2,
+        "handCardEncode": "6s2p8p1p2z6p1m4z7s4s1m9p3p3z2z1z3p5z2p4s2s9s3z4s8s8s7p4p7p0p1s8s9p1p6z7z9m3s7s3p2p5p6p1z3z4z5s1m2z2z6z7z7s9s5z1m7z8p2s9p6z8p9p1p2s0p6p2s5p3s6p0s8p6z1s9m7z4p2p1s1z6s8s4z7p9m4z7s9s3p4s3s1s1p9m5z5s9s6s3s0s4p3z6s7p4p5z1z",
+        "handCardsSHA256": "9daa244f73a75453ce7ab57d5eb0ff6a2300314a36e7097ab5070aed22b605fb",
+        "handEventRecord": [
+          {
+            "data": "{\"hand_cards\":[23,20,33,9,18,25,81,20,9,1,129,145,23],\"dealer_pos\":1,\"dices\":[2,6],\"bao_pai_card\":19,\"ting_list\":[],\"quan_feng\":49,\"chang_ci\":2,\"ben_chang_num\":0,\"li_zhi_bang_num\":0,\"user_info_list\":[{\"user_id\":311677992,\"hand_points\":26200,\"luck_score\":0,\"is_exist_shao_ji\":true,\"room_exist_man_guan\":false},{\"user_id\":612006148,\"hand_points\":47700,\"luck_score\":0,\"is_exist_shao_ji\":false,\"room_exist_man_guan\":false},{\"user_id\":513842906,\"hand_points\":31100,\"luck_score\":0,\"is_exist_shao_ji\":true,\"room_exist_man_guan\":false}],\"hand_cards_sha_256\":\"9daa244f73a75453ce7ab57d5eb0ff6a2300314a36e7097ab5070aed22b605fb\"}",
+            "eventPos": 117,
+            "eventType": 1,
+            "handId": "",
+            "startTime": 1709477461967,
+            "userId": 311677992
+          },
+          {
+            "data": "{\"hand_cards\":[22,2,8,1,3,81,65,49,24,24,7,4,41,3],\"dealer_pos\":1,\"dices\":[2,6],\"bao_pai_card\":19,\"ting_list\":[],\"quan_feng\":49,\"chang_ci\":2,\"ben_chang_num\":0,\"li_zhi_bang_num\":0,\"user_info_list\":[{\"user_id\":311677992,\"hand_points\":26200,\"luck_score\":0,\"is_exist_shao_ji\":true,\"room_exist_man_guan\":false},{\"user_id\":612006148,\"hand_points\":47700,\"luck_score\":0,\"is_exist_shao_ji\":false,\"room_exist_man_guan\":false},{\"user_id\":513842906,\"hand_points\":31100,\"luck_score\":0,\"is_exist_shao_ji\":true,\"room_exist_man_guan\":false}],\"hand_cards_sha_256\":\"9daa244f73a75453ce7ab57d5eb0ff6a2300314a36e7097ab5070aed22b605fb\"}",
+            "eventPos": 118,
+            "eventType": 1,
+            "handId": "",
+            "startTime": 1709477461967,
+            "userId": 612006148
+          },
+          {
+            "data": "{\"hand_cards\":[65,6,33,97,3,113,2,20,7,261,17,24,19],\"dealer_pos\":1,\"dices\":[2,6],\"bao_pai_card\":19,\"ting_list\":[],\"quan_feng\":49,\"chang_ci\":2,\"ben_chang_num\":0,\"li_zhi_bang_num\":0,\"user_info_list\":[{\"user_id\":311677992,\"hand_points\":26200,\"luck_score\":0,\"is_exist_shao_ji\":true,\"room_exist_man_guan\":false},{\"user_id\":612006148,\"hand_points\":47700,\"luck_score\":0,\"is_exist_shao_ji\":false,\"room_exist_man_guan\":false},{\"user_id\":513842906,\"hand_points\":31100,\"luck_score\":0,\"is_exist_shao_ji\":true,\"room_exist_man_guan\":false}],\"hand_cards_sha_256\":\"9daa244f73a75453ce7ab57d5eb0ff6a2300314a36e7097ab5070aed22b605fb\"}",
+            "eventPos": 119,
+            "eventType": 1,
+            "handId": "",
+            "startTime": 1709477461968,
+            "userId": 513842906
+          },
+          {
+            "data": "{\"in_card\":0,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":false,\"oper_fixed_time\":5,\"oper_var_time\":20,\"in_ting_info\":[],\"is_nine_cards\":false,\"is_kai_li_zhi\":false,\"is_pull_north\":false,\"is_first_xun_in\":true}",
+            "eventPos": 120,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477464975,
+            "userId": 612006148
+          },
+          {
+            "data": "{\"action\":11,\"card\":41,\"move_cards_pos\":[1,4],\"user_id\":612006148,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 121,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477467148,
+            "userId": 612006148
+          },
+          {
+            "data": "{\"in_card\":2,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":false,\"oper_fixed_time\":5,\"oper_var_time\":20,\"in_ting_info\":[],\"is_nine_cards\":false,\"is_kai_li_zhi\":false,\"is_pull_north\":true,\"is_first_xun_in\":true}",
+            "eventPos": 122,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477467850,
+            "userId": 513842906
+          },
+          {
+            "data": "{\"action\":13,\"card\":97,\"move_cards_pos\":[12],\"user_id\":513842906,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 123,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477468661,
+            "userId": 513842906
+          },
+          {
+            "data": "{\"in_card\":49,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":true,\"is_can_lizhi\":false,\"oper_fixed_time\":5,\"oper_var_time\":20,\"in_ting_info\":[],\"is_nine_cards\":false,\"is_kai_li_zhi\":false,\"is_pull_north\":false,\"is_first_xun_in\":false}",
+            "eventPos": 124,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477469366,
+            "userId": 513842906
+          },
+          {
+            "data": "{\"action\":11,\"card\":33,\"move_cards_pos\":[1,11],\"user_id\":513842906,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 125,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477472384,
+            "userId": 513842906
+          },
+          {
+            "data": "{\"in_card\":5,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":false,\"oper_fixed_time\":5,\"oper_var_time\":20,\"in_ting_info\":[],\"is_nine_cards\":false,\"is_kai_li_zhi\":false,\"is_pull_north\":false,\"is_first_xun_in\":false}",
+            "eventPos": 126,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477473090,
+            "userId": 311677992
+          },
+          {
+            "data": "{\"action\":11,\"card\":33,\"move_cards_pos\":[1,2],\"user_id\":311677992,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 127,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477474591,
+            "userId": 311677992
+          },
+          {
+            "data": "{\"in_card\":6,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":false,\"oper_fixed_time\":5,\"oper_var_time\":20,\"in_ting_info\":[],\"is_nine_cards\":false,\"is_kai_li_zhi\":false,\"is_pull_north\":false,\"is_first_xun_in\":false}",
+            "eventPos": 128,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477475298,
+            "userId": 612006148
+          },
+          {
+            "data": "{\"action\":11,\"card\":65,\"move_cards_pos\":[12,6],\"user_id\":612006148,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 129,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477478773,
+            "userId": 612006148
+          },
+          {
+            "data": "{\"in_card\":49,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":false,\"oper_fixed_time\":5,\"oper_var_time\":20,\"in_ting_info\":[],\"is_nine_cards\":false,\"is_kai_li_zhi\":false,\"is_pull_north\":false,\"is_first_xun_in\":false}",
+            "eventPos": 130,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477479478,
+            "userId": 513842906
+          },
+          {
+            "data": "{\"action\":11,\"card\":65,\"move_cards_pos\":[12,12],\"user_id\":513842906,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 131,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477481400,
+            "userId": 513842906
+          },
+          {
+            "data": "{\"in_card\":81,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":false,\"oper_fixed_time\":5,\"oper_var_time\":20,\"in_ting_info\":[],\"is_nine_cards\":false,\"is_kai_li_zhi\":false,\"is_pull_north\":false,\"is_first_xun_in\":false}",
+            "eventPos": 132,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477482102,
+            "userId": 311677992
+          },
+          {
+            "data": "{\"action\":11,\"card\":129,\"move_cards_pos\":[12,12],\"user_id\":311677992,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 133,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477485014,
+            "userId": 311677992
+          },
+          {
+            "data": "{\"in_card\":97,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":false,\"oper_fixed_time\":5,\"oper_var_time\":20,\"in_ting_info\":[],\"is_nine_cards\":false,\"is_kai_li_zhi\":false,\"is_pull_north\":true,\"is_first_xun_in\":false}",
+            "eventPos": 134,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477485716,
+            "userId": 612006148
+          },
+          {
+            "data": "{\"action\":13,\"card\":97,\"move_cards_pos\":[14],\"user_id\":612006148,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 135,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477487111,
+            "userId": 612006148
+          },
+          {
+            "data": "{\"in_card\":113,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":true,\"is_can_lizhi\":false,\"oper_fixed_time\":5,\"oper_var_time\":20,\"in_ting_info\":[],\"is_nine_cards\":false,\"is_kai_li_zhi\":false,\"is_pull_north\":false,\"is_first_xun_in\":false}",
+            "eventPos": 136,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477487826,
+            "userId": 612006148
+          },
+          {
+            "data": "{\"action\":11,\"card\":113,\"move_cards_pos\":[14,13],\"user_id\":612006148,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 137,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477489207,
+            "userId": 612006148
+          },
+          {
+            "data": "{\"in_card\":21,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":false,\"oper_fixed_time\":5,\"oper_var_time\":20,\"in_ting_info\":[],\"is_nine_cards\":false,\"is_kai_li_zhi\":false,\"is_pull_north\":false,\"is_first_xun_in\":false}",
+            "eventPos": 138,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477489921,
+            "userId": 513842906
+          },
+          {
+            "data": "{\"action\":11,\"card\":113,\"move_cards_pos\":[13,10],\"user_id\":513842906,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 139,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477491408,
+            "userId": 513842906
+          },
+          {
+            "data": "{\"in_card\":33,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":false,\"oper_fixed_time\":5,\"oper_var_time\":20,\"in_ting_info\":[],\"is_nine_cards\":false,\"is_kai_li_zhi\":false,\"is_pull_north\":false,\"is_first_xun_in\":false}",
+            "eventPos": 140,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477492114,
+            "userId": 311677992
+          },
+          {
+            "data": "{\"action\":11,\"card\":33,\"move_cards_pos\":[14,13],\"user_id\":311677992,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 141,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477493353,
+            "userId": 311677992
+          },
+          {
+            "data": "{\"in_card\":65,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":false,\"oper_fixed_time\":5,\"oper_var_time\":20,\"in_ting_info\":[],\"is_nine_cards\":false,\"is_kai_li_zhi\":false,\"is_pull_north\":false,\"is_first_xun_in\":false}",
+            "eventPos": 142,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477494059,
+            "userId": 612006148
+          },
+          {
+            "data": "{\"action\":11,\"card\":65,\"move_cards_pos\":[14,13],\"user_id\":612006148,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 143,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477495180,
+            "userId": 612006148
+          },
+          {
+            "data": "{\"in_card\":65,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":false,\"oper_fixed_time\":5,\"oper_var_time\":20,\"in_ting_info\":[],\"is_nine_cards\":false,\"is_kai_li_zhi\":false,\"is_pull_north\":false,\"is_first_xun_in\":false}",
+            "eventPos": 144,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477495898,
+            "userId": 513842906
+          },
+          {
+            "data": "{\"action\":11,\"card\":65,\"move_cards_pos\":[14,13],\"user_id\":513842906,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 145,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477500541,
+            "userId": 513842906
+          },
+          {
+            "data": "{\"in_card\":129,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":false,\"oper_fixed_time\":5,\"oper_var_time\":20,\"in_ting_info\":[],\"is_nine_cards\":false,\"is_kai_li_zhi\":false,\"is_pull_north\":false,\"is_first_xun_in\":false}",
+            "eventPos": 146,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477501247,
+            "userId": 311677992
+          },
+          {
+            "data": "{\"action\":11,\"card\":129,\"move_cards_pos\":[14,13],\"user_id\":311677992,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 147,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477502697,
+            "userId": 311677992
+          },
+          {
+            "data": "{\"in_card\":145,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":false,\"oper_fixed_time\":5,\"oper_var_time\":20,\"in_ting_info\":[],\"is_nine_cards\":false,\"is_kai_li_zhi\":false,\"is_pull_north\":false,\"is_first_xun_in\":false}",
+            "eventPos": 148,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477503400,
+            "userId": 612006148
+          },
+          {
+            "data": "{\"action\":11,\"card\":145,\"move_cards_pos\":[14,13],\"user_id\":612006148,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 149,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477505037,
+            "userId": 612006148
+          },
+          {
+            "data": "{\"in_card\":23,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":false,\"oper_fixed_time\":5,\"oper_var_time\":20,\"in_ting_info\":[],\"is_nine_cards\":false,\"is_kai_li_zhi\":false,\"is_pull_north\":false,\"is_first_xun_in\":false}",
+            "eventPos": 150,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477505744,
+            "userId": 513842906
+          },
+          {
+            "data": "{\"action\":11,\"card\":17,\"move_cards_pos\":[7,10],\"user_id\":513842906,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 151,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477508360,
+            "userId": 513842906
+          },
+          {
+            "data": "{\"in_card\":25,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":false,\"oper_fixed_time\":5,\"oper_var_time\":20,\"in_ting_info\":[],\"is_nine_cards\":false,\"is_kai_li_zhi\":false,\"is_pull_north\":false,\"is_first_xun_in\":false}",
+            "eventPos": 152,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477509068,
+            "userId": 311677992
+          },
+          {
+            "data": "{\"action\":11,\"card\":145,\"move_cards_pos\":[13,11],\"user_id\":311677992,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 153,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477513013,
+            "userId": 311677992
+          },
+          {
+            "data": "{\"in_card\":113,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":false,\"oper_fixed_time\":5,\"oper_var_time\":20,\"in_ting_info\":[],\"is_nine_cards\":false,\"is_kai_li_zhi\":false,\"is_pull_north\":false,\"is_first_xun_in\":false}",
+            "eventPos": 154,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477513719,
+            "userId": 612006148
+          },
+          {
+            "data": "{\"action\":11,\"card\":113,\"move_cards_pos\":[14,13],\"user_id\":612006148,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 155,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477515432,
+            "userId": 612006148
+          },
+          {
+            "data": "{\"in_card\":33,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":false,\"oper_fixed_time\":5,\"oper_var_time\":20,\"in_ting_info\":[],\"is_nine_cards\":false,\"is_kai_li_zhi\":false,\"is_pull_north\":false,\"is_first_xun_in\":false}",
+            "eventPos": 156,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477516144,
+            "userId": 513842906
+          },
+          {
+            "data": "{\"action\":11,\"card\":33,\"move_cards_pos\":[14,13],\"user_id\":513842906,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 157,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477517640,
+            "userId": 513842906
+          },
+          {
+            "data": "{\"in_card\":145,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":false,\"oper_fixed_time\":5,\"oper_var_time\":20,\"in_ting_info\":[],\"is_nine_cards\":false,\"is_kai_li_zhi\":false,\"is_pull_north\":false,\"is_first_xun_in\":false}",
+            "eventPos": 158,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477518353,
+            "userId": 311677992
+          },
+          {
+            "data": "{\"action\":11,\"card\":145,\"move_cards_pos\":[14,13],\"user_id\":311677992,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 159,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477520249,
+            "userId": 311677992
+          },
+          {
+            "data": "{\"in_card\":8,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":false,\"oper_fixed_time\":5,\"oper_var_time\":20,\"in_ting_info\":[],\"is_nine_cards\":false,\"is_kai_li_zhi\":false,\"is_pull_north\":false,\"is_first_xun_in\":false}",
+            "eventPos": 160,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477520952,
+            "userId": 612006148
+          },
+          {
+            "data": "{\"action\":11,\"card\":49,\"move_cards_pos\":[12,9],\"user_id\":612006148,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 161,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477522590,
+            "userId": 612006148
+          },
+          {
+            "data": "{\"out_card\":49,\"action_list\":[5],\"oper_fixed_time\":5,\"oper_var_time\":20}",
+            "eventPos": 162,
+            "eventType": 3,
+            "handId": "",
+            "startTime": 1709477523291,
+            "userId": 513842906
+          },
+          {
+            "data": "{\"action\":5,\"card\":49,\"move_cards_pos\":[12,13],\"user_id\":513842906,\"hand_cards\":null,\"group_cards\":[49,49],\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 163,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477529917,
+            "userId": 513842906
+          },
+          {
+            "data": "{\"in_card\":0,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":false,\"oper_fixed_time\":5,\"oper_var_time\":19,\"in_ting_info\":[{\"discard_card\":3,\"ting_list\":[{\"is_zhen_ting\":false,\"is_wu_yi\":false,\"left_num\":4,\"ting_card\":25,\"is_yi_man\":false,\"fang_info\":{\"10\":1},\"ting_type\":2},{\"is_zhen_ting\":false,\"is_wu_yi\":false,\"left_num\":4,\"ting_card\":22,\"is_yi_man\":false,\"fang_info\":{\"10\":1},\"ting_type\":2}]}],\"is_nine_cards\":false,\"is_kai_li_zhi\":false,\"is_pull_north\":false,\"is_first_xun_in\":false}",
+            "eventPos": 164,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477529940,
+            "userId": 513842906
+          },
+          {
+            "data": "{\"action\":11,\"card\":3,\"move_cards_pos\":[3,10],\"user_id\":513842906,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 165,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477532819,
+            "userId": 513842906
+          },
+          {
+            "data": "{\"out_card\":3,\"action_list\":[5],\"oper_fixed_time\":5,\"oper_var_time\":20}",
+            "eventPos": 166,
+            "eventType": 3,
+            "handId": "",
+            "startTime": 1709477533520,
+            "userId": 612006148
+          },
+          {
+            "data": "{\"in_card\":18,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":true,\"oper_fixed_time\":5,\"oper_var_time\":20,\"in_ting_info\":[{\"discard_card\":1,\"ting_list\":[{\"is_zhen_ting\":false,\"is_wu_yi\":false,\"left_num\":3,\"ting_card\":5,\"is_yi_man\":false,\"fang_info\":{\"17\":2},\"ting_type\":2}]},{\"discard_card\":5,\"ting_list\":[{\"is_zhen_ting\":false,\"is_wu_yi\":false,\"left_num\":3,\"ting_card\":1,\"is_yi_man\":false,\"fang_info\":{\"17\":2},\"ting_type\":2}]}],\"is_nine_cards\":false,\"is_kai_li_zhi\":true,\"is_pull_north\":false,\"is_first_xun_in\":false}",
+            "eventPos": 167,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477533729,
+            "userId": 311677992
+          },
+          {
+            "data": "{\"action\":11,\"card\":5,\"move_cards_pos\":[2,5],\"user_id\":311677992,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":true,\"li_zhi_operate\":0,\"li_zhi_type\":1}",
+            "eventPos": 168,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477537358,
+            "userId": 311677992
+          },
+          {
+            "data": "{\"user_id\":311677992,\"is_auto_gang\":false}",
+            "eventPos": 169,
+            "eventType": 8,
+            "handId": "",
+            "startTime": 1709477538060,
+            "userId": 311677992
+          },
+          {
+            "data": "{\"ting_info\":[{\"is_zhen_ting\":false,\"is_wu_yi\":false,\"left_num\":3,\"ting_card\":1,\"is_yi_man\":false,\"fang_info\":{\"0\":1,\"17\":2},\"ting_type\":2}]}",
+            "eventPos": 170,
+            "eventType": 11,
+            "handId": "",
+            "startTime": 1709477538061,
+            "userId": 311677992
+          },
+          {
+            "data": "{\"in_card\":9,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":false,\"oper_fixed_time\":5,\"oper_var_time\":20,\"in_ting_info\":[],\"is_nine_cards\":false,\"is_kai_li_zhi\":false,\"is_pull_north\":false,\"is_first_xun_in\":false}",
+            "eventPos": 171,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477538076,
+            "userId": 612006148
+          },
+          {
+            "data": "{\"action\":11,\"card\":81,\"move_cards_pos\":[13,10],\"user_id\":612006148,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 172,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477540678,
+            "userId": 612006148
+          },
+          {
+            "data": "{\"in_card\":129,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":false,\"oper_fixed_time\":5,\"oper_var_time\":19,\"in_ting_info\":[{\"discard_card\":129,\"ting_list\":[{\"is_zhen_ting\":false,\"is_wu_yi\":false,\"left_num\":4,\"ting_card\":25,\"is_yi_man\":false,\"fang_info\":{\"10\":1},\"ting_type\":2},{\"is_zhen_ting\":false,\"is_wu_yi\":false,\"left_num\":4,\"ting_card\":22,\"is_yi_man\":false,\"fang_info\":{\"10\":1},\"ting_type\":2}]}],\"is_nine_cards\":false,\"is_kai_li_zhi\":false,\"is_pull_north\":false,\"is_first_xun_in\":false}",
+            "eventPos": 173,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477541382,
+            "userId": 513842906
+          },
+          {
+            "data": "{\"action\":11,\"card\":129,\"move_cards_pos\":[11,10],\"user_id\":513842906,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 174,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477543273,
+            "userId": 513842906
+          },
+          {
+            "data": "{\"in_card\":8,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":false,\"oper_fixed_time\":5,\"oper_var_time\":20,\"in_ting_info\":[],\"is_nine_cards\":false,\"is_kai_li_zhi\":false,\"is_pull_north\":false,\"is_first_xun_in\":false}",
+            "eventPos": 175,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477543982,
+            "userId": 311677992
+          },
+          {
+            "data": "{\"action\":11,\"card\":8,\"move_cards_pos\":[14,13],\"user_id\":311677992,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 176,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477544897,
+            "userId": 311677992
+          },
+          {
+            "data": "{\"out_card\":8,\"action_list\":[5],\"oper_fixed_time\":5,\"oper_var_time\":20}",
+            "eventPos": 177,
+            "eventType": 3,
+            "handId": "",
+            "startTime": 1709477545600,
+            "userId": 612006148
+          },
+          {
+            "data": "{\"in_card\":9,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":false,\"oper_fixed_time\":5,\"oper_var_time\":20,\"in_ting_info\":[],\"is_nine_cards\":false,\"is_kai_li_zhi\":false,\"is_pull_north\":false,\"is_first_xun_in\":false}",
+            "eventPos": 178,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477545809,
+            "userId": 612006148
+          },
+          {
+            "data": "{\"action\":11,\"card\":22,\"move_cards_pos\":[11,11],\"user_id\":612006148,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 179,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477547221,
+            "userId": 612006148
+          },
+          {
+            "data": "{\"out_card\":22,\"action_list\":[7],\"oper_fixed_time\":5,\"oper_var_time\":19}",
+            "eventPos": 180,
+            "eventType": 3,
+            "handId": "",
+            "startTime": 1709477547923,
+            "userId": 513842906
+          },
+          {
+            "data": "{\"action\":7,\"card\":22,\"move_cards_pos\":null,\"user_id\":513842906,\"hand_cards\":[6,2,20,7,261,24,19,2,21,23],\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 181,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477548830,
+            "userId": 513842906
+          },
+          {
+            "data": "{\"end_type\":0,\"win_info\":[{\"fang_info\":[{\"fang_type\":10,\"fang_num\":1},{\"fang_type\":49,\"fang_num\":1},{\"fang_type\":50,\"fang_num\":1},{\"fang_type\":55,\"fang_num\":1}],\"all_fang_num\":4,\"all_fu\":30,\"all_point\":7700,\"user_cards\":[6,2,20,7,261,24,19,2,21,23],\"li_bao_card\":null,\"user_id\":513842906,\"ting_card_list\":null,\"bash_points\":1920,\"luck_score\":1}],\"user_profit\":[{\"user_id\":311677992,\"point_profit\":0,\"li_zhi_profit\":-1000,\"is_bao_pai\":false,\"user_point\":25200},{\"user_id\":612006148,\"point_profit\":-15400,\"li_zhi_profit\":0,\"is_bao_pai\":false,\"user_point\":32300},{\"user_id\":513842906,\"point_profit\":16400,\"li_zhi_profit\":1000,\"is_bao_pai\":false,\"user_point\":47500}],\"zhong_liu_info\":[],\"cheat_info_list\":[]}",
+            "eventPos": 182,
+            "eventType": 5,
+            "handId": "",
+            "startTime": 1709477548849,
+            "userId": 0
+          }
+        ],
+        "handID": "cni8r269nc78kahoitag_2",
+        "handPos": 2,
+        "paiShan": [
+          2, 5, 6, 49, 81, 97, 21, 33, 65, 65, 129, 145, 23, 25, 113, 33, 145,
+          8, 18, 9, 129, 8, 9, 1, 18, 261, 6, 18, 5, 19, 6, 277, 8, 129, 17, 41,
+          145, 4, 2, 17, 49, 22, 24, 97, 7, 41, 97, 23, 25, 3, 20, 19, 17, 1,
+          41, 113, 21, 25, 22, 19, 277, 4, 81, 22, 7, 4, 113, 49
+        ],
+        "players": [
+          {
+            "cardBackID": 14098,
+            "gameMusicId": 19005,
+            "headTag": 0,
+            "identity": 0,
+            "matchMusicId": 19005,
+            "model": 0,
+            "nickname": "Repulica",
+            "points": 26200,
+            "position": 0,
+            "profileFrameId": 30507,
+            "riichiEffectID": 17006,
+            "riichiMusicId": 20001,
+            "riichiStickID": 13020,
+            "roleID": 10007,
+            "skinID": 1000701,
+            "specialEffectID": 16008,
+            "tableclothID": 15026,
+            "titleID": 10304,
+            "userId": 311677992
+          },
+          {
+            "cardBackID": 14114,
+            "gameMusicId": 19006,
+            "headTag": 0,
+            "identity": 0,
+            "matchMusicId": 19006,
+            "model": 0,
+            "nickname": "\u9ebb\u96c0\u52c7\u8005\uff20\u914d\u4fe1\u4e2d",
+            "points": 47700,
+            "position": 1,
+            "profileFrameId": 30504,
+            "riichiEffectID": 17001,
+            "riichiMusicId": 20001,
+            "riichiStickID": 13034,
+            "roleID": 10002,
+            "skinID": 1000201,
+            "specialEffectID": 16007,
+            "tableclothID": 15059,
+            "titleID": 12103,
+            "userId": 612006148
+          },
+          {
+            "cardBackID": 14114,
+            "gameMusicId": 19006,
+            "headTag": 0,
+            "identity": 0,
+            "matchMusicId": 19006,
+            "model": 0,
+            "nickname": "\u30e9\u30d7dark",
+            "points": 31100,
+            "position": 2,
+            "profileFrameId": 30409,
+            "riichiEffectID": 17004,
+            "riichiMusicId": 20001,
+            "riichiStickID": 13027,
+            "roleID": 10017,
+            "skinID": 0,
+            "specialEffectID": 16016,
+            "tableclothID": 15025,
+            "titleID": 10904,
+            "userId": 513842906
+          }
+        ],
+        "quanFeng": 49
+      },
+      {
+        "benChangNum": 0,
+        "changCi": 3,
+        "handCardEncode": "6s3z1z3z4p1p0p6z4z5z3s5z0p1z4z6z9p8p6p7s7z1s8p9p4z5z1s9p3p1p9m9m3p8s4p6p2z1m1z9s9m3s6z2p4s1p7z0s1m4p3s2z2p9s6z4s7p7s7z6p3p1m7p2s2p7z8p7s3s2z1m3z7s6s4s1z2s9m3z1s2p8s8s1p2s6p6s7p2z5z9s4z9p3p8s7p4s6s8p5s9s2s1s5p5p5s4p0s",
+        "handCardsSHA256": "2af1f076ece504ab21695d44e70d6b706a19a2786ee2a0a1edfb92374e9a9078",
+        "handEventRecord": [
+          {
+            "data": "{\"hand_cards\":[4,1,261,129,9,8,6,23,3,1,41,41,33],\"dealer_pos\":2,\"dices\":[6,1],\"bao_pai_card\":21,\"ting_list\":[],\"quan_feng\":49,\"chang_ci\":3,\"ben_chang_num\":0,\"li_zhi_bang_num\":0,\"user_info_list\":[{\"user_id\":311677992,\"hand_points\":25200,\"luck_score\":0,\"is_exist_shao_ji\":true,\"room_exist_man_guan\":false},{\"user_id\":612006148,\"hand_points\":32300,\"luck_score\":-1,\"is_exist_shao_ji\":false,\"room_exist_man_guan\":false},{\"user_id\":513842906,\"hand_points\":47500,\"luck_score\":1,\"is_exist_shao_ji\":false,\"room_exist_man_guan\":false}],\"hand_cards_sha_256\":\"2af1f076ece504ab21695d44e70d6b706a19a2786ee2a0a1edfb92374e9a9078\"}",
+            "eventPos": 183,
+            "eventType": 1,
+            "handId": "",
+            "startTime": 1709477570684,
+            "userId": 311677992
+          },
+          {
+            "data": "{\"hand_cards\":[97,113,19,113,145,17,8,9,3,24,4,6,49],\"dealer_pos\":2,\"dices\":[6,1],\"bao_pai_card\":21,\"ting_list\":[],\"quan_feng\":49,\"chang_ci\":3,\"ben_chang_num\":0,\"li_zhi_bang_num\":0,\"user_info_list\":[{\"user_id\":311677992,\"hand_points\":25200,\"luck_score\":0,\"is_exist_shao_ji\":true,\"room_exist_man_guan\":false},{\"user_id\":612006148,\"hand_points\":32300,\"luck_score\":-1,\"is_exist_shao_ji\":false,\"room_exist_man_guan\":false},{\"user_id\":513842906,\"hand_points\":47500,\"luck_score\":1,\"is_exist_shao_ji\":false,\"room_exist_man_guan\":false}],\"hand_cards_sha_256\":\"2af1f076ece504ab21695d44e70d6b706a19a2786ee2a0a1edfb92374e9a9078\"}",
+            "eventPos": 184,
+            "eventType": 1,
+            "handId": "",
+            "startTime": 1709477570684,
+            "userId": 612006148
+          },
+          {
+            "data": "{\"hand_cards\":[22,81,49,81,261,49,97,129,97,113,17,9,65,25],\"dealer_pos\":2,\"dices\":[6,1],\"bao_pai_card\":21,\"ting_list\":[],\"quan_feng\":49,\"chang_ci\":3,\"ben_chang_num\":0,\"li_zhi_bang_num\":0,\"user_info_list\":[{\"user_id\":311677992,\"hand_points\":25200,\"luck_score\":0,\"is_exist_shao_ji\":true,\"room_exist_man_guan\":false},{\"user_id\":612006148,\"hand_points\":32300,\"luck_score\":-1,\"is_exist_shao_ji\":false,\"room_exist_man_guan\":false},{\"user_id\":513842906,\"hand_points\":47500,\"luck_score\":1,\"is_exist_shao_ji\":false,\"room_exist_man_guan\":false}],\"hand_cards_sha_256\":\"2af1f076ece504ab21695d44e70d6b706a19a2786ee2a0a1edfb92374e9a9078\"}",
+            "eventPos": 185,
+            "eventType": 1,
+            "handId": "",
+            "startTime": 1709477570688,
+            "userId": 513842906
+          },
+          {
+            "data": "{\"in_card\":0,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":false,\"oper_fixed_time\":5,\"oper_var_time\":20,\"in_ting_info\":[],\"is_nine_cards\":true,\"is_kai_li_zhi\":false,\"is_pull_north\":true,\"is_first_xun_in\":true}",
+            "eventPos": 186,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477573695,
+            "userId": 513842906
+          },
+          {
+            "data": "{\"action\":11,\"card\":22,\"move_cards_pos\":[4,4],\"user_id\":513842906,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 187,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477585923,
+            "userId": 513842906
+          },
+          {
+            "data": "{\"in_card\":41,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":false,\"oper_fixed_time\":5,\"oper_var_time\":20,\"in_ting_info\":[],\"is_nine_cards\":false,\"is_kai_li_zhi\":false,\"is_pull_north\":false,\"is_first_xun_in\":true}",
+            "eventPos": 188,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477586627,
+            "userId": 311677992
+          },
+          {
+            "data": "{\"action\":11,\"card\":33,\"move_cards_pos\":[1,3],\"user_id\":311677992,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 189,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477587815,
+            "userId": 311677992
+          },
+          {
+            "data": "{\"in_card\":19,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":false,\"oper_fixed_time\":5,\"oper_var_time\":20,\"in_ting_info\":[],\"is_nine_cards\":false,\"is_kai_li_zhi\":false,\"is_pull_north\":true,\"is_first_xun_in\":true}",
+            "eventPos": 190,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477588521,
+            "userId": 612006148
+          },
+          {
+            "data": "{\"action\":13,\"card\":97,\"move_cards_pos\":[10],\"user_id\":612006148,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 191,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477590930,
+            "userId": 612006148
+          },
+          {
+            "data": "{\"in_card\":277,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":true,\"is_can_lizhi\":false,\"oper_fixed_time\":5,\"oper_var_time\":20,\"in_ting_info\":[],\"is_nine_cards\":false,\"is_kai_li_zhi\":false,\"is_pull_north\":false,\"is_first_xun_in\":false}",
+            "eventPos": 192,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477591641,
+            "userId": 612006148
+          },
+          {
+            "data": "{\"action\":11,\"card\":145,\"move_cards_pos\":[13,9],\"user_id\":612006148,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 193,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477592971,
+            "userId": 612006148
+          },
+          {
+            "data": "{\"in_card\":129,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":false,\"oper_fixed_time\":5,\"oper_var_time\":13,\"in_ting_info\":[],\"is_nine_cards\":false,\"is_kai_li_zhi\":false,\"is_pull_north\":true,\"is_first_xun_in\":false}",
+            "eventPos": 194,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477593693,
+            "userId": 513842906
+          },
+          {
+            "data": "{\"action\":11,\"card\":261,\"move_cards_pos\":[1,13],\"user_id\":513842906,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 195,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477600364,
+            "userId": 513842906
+          },
+          {
+            "data": "{\"in_card\":2,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":false,\"oper_fixed_time\":5,\"oper_var_time\":20,\"in_ting_info\":[],\"is_nine_cards\":false,\"is_kai_li_zhi\":false,\"is_pull_north\":false,\"is_first_xun_in\":false}",
+            "eventPos": 196,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477601068,
+            "userId": 311677992
+          },
+          {
+            "data": "{\"action\":11,\"card\":23,\"move_cards_pos\":[12,6],\"user_id\":311677992,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 197,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477602295,
+            "userId": 311677992
+          },
+          {
+            "data": "{\"in_card\":20,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":false,\"oper_fixed_time\":5,\"oper_var_time\":20,\"in_ting_info\":[],\"is_nine_cards\":false,\"is_kai_li_zhi\":false,\"is_pull_north\":false,\"is_first_xun_in\":false}",
+            "eventPos": 198,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477603001,
+            "userId": 612006148
+          },
+          {
+            "data": "{\"action\":11,\"card\":49,\"move_cards_pos\":[11,9],\"user_id\":612006148,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 199,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477604656,
+            "userId": 612006148
+          },
+          {
+            "data": "{\"out_card\":49,\"action_list\":[5],\"oper_fixed_time\":5,\"oper_var_time\":12}",
+            "eventPos": 200,
+            "eventType": 3,
+            "handId": "",
+            "startTime": 1709477605357,
+            "userId": 513842906
+          },
+          {
+            "data": "{\"action\":5,\"card\":49,\"move_cards_pos\":[4,5],\"user_id\":513842906,\"hand_cards\":null,\"group_cards\":[49,49],\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 201,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477607569,
+            "userId": 513842906
+          },
+          {
+            "data": "{\"in_card\":0,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":false,\"oper_fixed_time\":5,\"oper_var_time\":12,\"in_ting_info\":[],\"is_nine_cards\":false,\"is_kai_li_zhi\":false,\"is_pull_north\":false,\"is_first_xun_in\":false}",
+            "eventPos": 202,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477607578,
+            "userId": 513842906
+          },
+          {
+            "data": "{\"action\":11,\"card\":9,\"move_cards_pos\":[1,10],\"user_id\":513842906,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 203,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477609314,
+            "userId": 513842906
+          },
+          {
+            "data": "{\"in_card\":1,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":true,\"oper_fixed_time\":5,\"oper_var_time\":20,\"in_ting_info\":[{\"discard_card\":129,\"ting_list\":[{\"is_zhen_ting\":false,\"is_wu_yi\":false,\"left_num\":4,\"ting_card\":7,\"is_yi_man\":false,\"fang_info\":{\"22\":2},\"ting_type\":2}]}],\"is_nine_cards\":false,\"is_kai_li_zhi\":true,\"is_pull_north\":false,\"is_first_xun_in\":false}",
+            "eventPos": 204,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477610017,
+            "userId": 311677992
+          },
+          {
+            "data": "{\"action\":11,\"card\":41,\"move_cards_pos\":[1,5],\"user_id\":311677992,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 205,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477614899,
+            "userId": 311677992
+          },
+          {
+            "data": "{\"in_card\":145,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":false,\"oper_fixed_time\":5,\"oper_var_time\":20,\"in_ting_info\":[],\"is_nine_cards\":false,\"is_kai_li_zhi\":false,\"is_pull_north\":false,\"is_first_xun_in\":false}",
+            "eventPos": 206,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477615604,
+            "userId": 612006148
+          },
+          {
+            "data": "{\"action\":11,\"card\":145,\"move_cards_pos\":[14,13],\"user_id\":612006148,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 207,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477617276,
+            "userId": 612006148
+          },
+          {
+            "data": "{\"in_card\":277,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":false,\"oper_fixed_time\":5,\"oper_var_time\":12,\"in_ting_info\":[],\"is_nine_cards\":false,\"is_kai_li_zhi\":false,\"is_pull_north\":true,\"is_first_xun_in\":false}",
+            "eventPos": 208,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477617993,
+            "userId": 513842906
+          },
+          {
+            "data": "{\"action\":11,\"card\":277,\"move_cards_pos\":[11,10],\"user_id\":513842906,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 209,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477622843,
+            "userId": 513842906
+          },
+          {
+            "data": "{\"in_card\":33,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":false,\"oper_fixed_time\":5,\"oper_var_time\":20,\"in_ting_info\":[],\"is_nine_cards\":false,\"is_kai_li_zhi\":false,\"is_pull_north\":false,\"is_first_xun_in\":false}",
+            "eventPos": 210,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477623566,
+            "userId": 311677992
+          },
+          {
+            "data": "{\"action\":11,\"card\":41,\"move_cards_pos\":[1,1],\"user_id\":311677992,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 211,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477623914,
+            "userId": 311677992
+          },
+          {
+            "data": "{\"in_card\":4,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":false,\"oper_fixed_time\":5,\"oper_var_time\":20,\"in_ting_info\":[],\"is_nine_cards\":false,\"is_kai_li_zhi\":false,\"is_pull_north\":false,\"is_first_xun_in\":false}",
+            "eventPos": 212,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477624619,
+            "userId": 612006148
+          },
+          {
+            "data": "{\"action\":11,\"card\":17,\"move_cards_pos\":[6,3],\"user_id\":612006148,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 213,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477627109,
+            "userId": 612006148
+          },
+          {
+            "data": "{\"in_card\":19,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":false,\"oper_fixed_time\":5,\"oper_var_time\":12,\"in_ting_info\":[],\"is_nine_cards\":false,\"is_kai_li_zhi\":false,\"is_pull_north\":true,\"is_first_xun_in\":false}",
+            "eventPos": 214,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477627815,
+            "userId": 513842906
+          },
+          {
+            "data": "{\"action\":11,\"card\":17,\"move_cards_pos\":[1,1],\"user_id\":513842906,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 215,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477630923,
+            "userId": 513842906
+          },
+          {
+            "data": "{\"in_card\":65,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":false,\"oper_fixed_time\":5,\"oper_var_time\":20,\"in_ting_info\":[],\"is_nine_cards\":false,\"is_kai_li_zhi\":false,\"is_pull_north\":false,\"is_first_xun_in\":false}",
+            "eventPos": 216,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477631643,
+            "userId": 311677992
+          },
+          {
+            "data": "{\"action\":11,\"card\":41,\"move_cards_pos\":[2,12],\"user_id\":311677992,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 217,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477631901,
+            "userId": 311677992
+          },
+          {
+            "data": "{\"in_card\":2,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":false,\"oper_fixed_time\":5,\"oper_var_time\":20,\"in_ting_info\":[],\"is_nine_cards\":false,\"is_kai_li_zhi\":false,\"is_pull_north\":false,\"is_first_xun_in\":false}",
+            "eventPos": 218,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477632612,
+            "userId": 612006148
+          },
+          {
+            "data": "{\"action\":11,\"card\":24,\"move_cards_pos\":[11,1],\"user_id\":612006148,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 219,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477636584,
+            "userId": 612006148
+          },
+          {
+            "data": "{\"in_card\":25,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":false,\"oper_fixed_time\":5,\"oper_var_time\":12,\"in_ting_info\":[],\"is_nine_cards\":false,\"is_kai_li_zhi\":false,\"is_pull_north\":true,\"is_first_xun_in\":false}",
+            "eventPos": 220,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477637299,
+            "userId": 513842906
+          },
+          {
+            "data": "{\"action\":11,\"card\":19,\"move_cards_pos\":[1,2],\"user_id\":513842906,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 221,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477638962,
+            "userId": 513842906
+          },
+          {
+            "data": "{\"out_card\":19,\"action_list\":[5],\"oper_fixed_time\":5,\"oper_var_time\":20}",
+            "eventPos": 222,
+            "eventType": 3,
+            "handId": "",
+            "startTime": 1709477639663,
+            "userId": 612006148
+          },
+          {
+            "data": "{\"in_card\":129,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":false,\"oper_fixed_time\":5,\"oper_var_time\":20,\"in_ting_info\":[],\"is_nine_cards\":false,\"is_kai_li_zhi\":false,\"is_pull_north\":false,\"is_first_xun_in\":false}",
+            "eventPos": 223,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477639778,
+            "userId": 311677992
+          },
+          {
+            "data": "{\"action\":11,\"card\":33,\"move_cards_pos\":[1,13],\"user_id\":311677992,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 224,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477640766,
+            "userId": 311677992
+          },
+          {
+            "data": "{\"in_card\":20,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":false,\"oper_fixed_time\":5,\"oper_var_time\":20,\"in_ting_info\":[],\"is_nine_cards\":false,\"is_kai_li_zhi\":false,\"is_pull_north\":false,\"is_first_xun_in\":false}",
+            "eventPos": 225,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477641473,
+            "userId": 612006148
+          },
+          {
+            "data": "{\"action\":11,\"card\":9,\"move_cards_pos\":[7,10],\"user_id\":612006148,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 226,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477643045,
+            "userId": 612006148
+          },
+          {
+            "data": "{\"in_card\":7,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":false,\"oper_fixed_time\":5,\"oper_var_time\":12,\"in_ting_info\":[],\"is_nine_cards\":false,\"is_kai_li_zhi\":false,\"is_pull_north\":true,\"is_first_xun_in\":false}",
+            "eventPos": 227,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477643760,
+            "userId": 513842906
+          },
+          {
+            "data": "{\"action\":11,\"card\":7,\"move_cards_pos\":[11,10],\"user_id\":513842906,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 228,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477645314,
+            "userId": 513842906
+          },
+          {
+            "data": "{\"in_card\":23,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":false,\"oper_fixed_time\":5,\"oper_var_time\":20,\"in_ting_info\":[],\"is_nine_cards\":false,\"is_kai_li_zhi\":false,\"is_pull_north\":false,\"is_first_xun_in\":false}",
+            "eventPos": 229,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477646020,
+            "userId": 311677992
+          },
+          {
+            "data": "{\"action\":11,\"card\":23,\"move_cards_pos\":[14,13],\"user_id\":311677992,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 230,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477647297,
+            "userId": 311677992
+          },
+          {
+            "data": "{\"in_card\":145,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":false,\"oper_fixed_time\":5,\"oper_var_time\":20,\"in_ting_info\":[],\"is_nine_cards\":false,\"is_kai_li_zhi\":false,\"is_pull_north\":false,\"is_first_xun_in\":false}",
+            "eventPos": 231,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477648002,
+            "userId": 612006148
+          },
+          {
+            "data": "{\"action\":11,\"card\":145,\"move_cards_pos\":[14,13],\"user_id\":612006148,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 232,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477649778,
+            "userId": 612006148
+          },
+          {
+            "data": "{\"in_card\":6,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":false,\"oper_fixed_time\":5,\"oper_var_time\":12,\"in_ting_info\":[],\"is_nine_cards\":false,\"is_kai_li_zhi\":false,\"is_pull_north\":true,\"is_first_xun_in\":false}",
+            "eventPos": 233,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477650489,
+            "userId": 513842906
+          },
+          {
+            "data": "{\"action\":11,\"card\":6,\"move_cards_pos\":[11,10],\"user_id\":513842906,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 234,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477653259,
+            "userId": 513842906
+          },
+          {
+            "data": "{\"in_card\":3,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":false,\"oper_fixed_time\":5,\"oper_var_time\":20,\"in_ting_info\":[],\"is_nine_cards\":false,\"is_kai_li_zhi\":false,\"is_pull_north\":false,\"is_first_xun_in\":false}",
+            "eventPos": 235,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477653969,
+            "userId": 311677992
+          },
+          {
+            "data": "{\"action\":11,\"card\":65,\"move_cards_pos\":[11,6],\"user_id\":311677992,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 236,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477655523,
+            "userId": 311677992
+          },
+          {
+            "data": "{\"in_card\":33,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":false,\"oper_fixed_time\":5,\"oper_var_time\":20,\"in_ting_info\":[],\"is_nine_cards\":false,\"is_kai_li_zhi\":false,\"is_pull_north\":false,\"is_first_xun_in\":false}",
+            "eventPos": 237,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477656233,
+            "userId": 612006148
+          },
+          {
+            "data": "{\"action\":11,\"card\":33,\"move_cards_pos\":[14,13],\"user_id\":612006148,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 238,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477657394,
+            "userId": 612006148
+          },
+          {
+            "data": "{\"in_card\":7,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":false,\"oper_fixed_time\":5,\"oper_var_time\":12,\"in_ting_info\":[],\"is_nine_cards\":false,\"is_kai_li_zhi\":false,\"is_pull_north\":true,\"is_first_xun_in\":false}",
+            "eventPos": 239,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477658096,
+            "userId": 513842906
+          },
+          {
+            "data": "{\"action\":11,\"card\":7,\"move_cards_pos\":[11,10],\"user_id\":513842906,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 240,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477659828,
+            "userId": 513842906
+          },
+          {
+            "data": "{\"in_card\":18,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":false,\"oper_fixed_time\":5,\"oper_var_time\":20,\"in_ting_info\":[],\"is_nine_cards\":false,\"is_kai_li_zhi\":false,\"is_pull_north\":false,\"is_first_xun_in\":false}",
+            "eventPos": 241,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477660536,
+            "userId": 311677992
+          },
+          {
+            "data": "{\"action\":11,\"card\":18,\"move_cards_pos\":[14,13],\"user_id\":311677992,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 242,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477661767,
+            "userId": 311677992
+          },
+          {
+            "data": "{\"in_card\":2,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":false,\"oper_fixed_time\":5,\"oper_var_time\":20,\"in_ting_info\":[],\"is_nine_cards\":false,\"is_kai_li_zhi\":false,\"is_pull_north\":false,\"is_first_xun_in\":false}",
+            "eventPos": 243,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477662472,
+            "userId": 612006148
+          },
+          {
+            "data": "{\"action\":11,\"card\":8,\"move_cards_pos\":[6,2],\"user_id\":612006148,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 244,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477664456,
+            "userId": 612006148
+          },
+          {
+            "data": "{\"in_card\":145,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":false,\"oper_fixed_time\":5,\"oper_var_time\":12,\"in_ting_info\":[],\"is_nine_cards\":false,\"is_kai_li_zhi\":false,\"is_pull_north\":true,\"is_first_xun_in\":false}",
+            "eventPos": 245,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477665159,
+            "userId": 513842906
+          },
+          {
+            "data": "{\"action\":11,\"card\":25,\"move_cards_pos\":[2,10],\"user_id\":513842906,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 246,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477668347,
+            "userId": 513842906
+          },
+          {
+            "data": "{\"in_card\":8,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":false,\"oper_fixed_time\":5,\"oper_var_time\":20,\"in_ting_info\":[],\"is_nine_cards\":false,\"is_kai_li_zhi\":false,\"is_pull_north\":false,\"is_first_xun_in\":false}",
+            "eventPos": 247,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477669054,
+            "userId": 311677992
+          },
+          {
+            "data": "{\"action\":11,\"card\":129,\"move_cards_pos\":[13,11],\"user_id\":311677992,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 248,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477673176,
+            "userId": 311677992
+          },
+          {
+            "data": "{\"out_card\":129,\"action_list\":[5],\"oper_fixed_time\":5,\"oper_var_time\":12}",
+            "eventPos": 249,
+            "eventType": 3,
+            "handId": "",
+            "startTime": 1709477673878,
+            "userId": 513842906
+          },
+          {
+            "data": "{\"action\":5,\"card\":129,\"move_cards_pos\":[8,9],\"user_id\":513842906,\"hand_cards\":null,\"group_cards\":[129,129],\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 250,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477678802,
+            "userId": 513842906
+          },
+          {
+            "data": "{\"in_card\":0,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":false,\"oper_fixed_time\":5,\"oper_var_time\":12,\"in_ting_info\":[],\"is_nine_cards\":false,\"is_kai_li_zhi\":false,\"is_pull_north\":false,\"is_first_xun_in\":false}",
+            "eventPos": 251,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477678803,
+            "userId": 513842906
+          },
+          {
+            "data": "{\"action\":11,\"card\":25,\"move_cards_pos\":[1,7],\"user_id\":513842906,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 252,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477680359,
+            "userId": 513842906
+          },
+          {
+            "data": "{\"in_card\":23,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":false,\"oper_fixed_time\":5,\"oper_var_time\":20,\"in_ting_info\":[],\"is_nine_cards\":false,\"is_kai_li_zhi\":false,\"is_pull_north\":false,\"is_first_xun_in\":false}",
+            "eventPos": 253,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477681062,
+            "userId": 311677992
+          },
+          {
+            "data": "{\"action\":11,\"card\":129,\"move_cards_pos\":[13,13],\"user_id\":311677992,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 254,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477682187,
+            "userId": 311677992
+          },
+          {
+            "data": "{\"in_card\":19,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":false,\"oper_fixed_time\":5,\"oper_var_time\":20,\"in_ting_info\":[],\"is_nine_cards\":false,\"is_kai_li_zhi\":false,\"is_pull_north\":false,\"is_first_xun_in\":false}",
+            "eventPos": 255,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477682903,
+            "userId": 612006148
+          },
+          {
+            "data": "{\"action\":11,\"card\":6,\"move_cards_pos\":[6,8],\"user_id\":612006148,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 256,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477685047,
+            "userId": 612006148
+          },
+          {
+            "data": "{\"in_card\":65,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":false,\"oper_fixed_time\":5,\"oper_var_time\":12,\"in_ting_info\":[],\"is_nine_cards\":false,\"is_kai_li_zhi\":false,\"is_pull_north\":true,\"is_first_xun_in\":false}",
+            "eventPos": 257,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477685753,
+            "userId": 513842906
+          },
+          {
+            "data": "{\"action\":11,\"card\":113,\"move_cards_pos\":[6,2],\"user_id\":513842906,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 258,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477691319,
+            "userId": 513842906
+          },
+          {
+            "data": "{\"out_card\":113,\"action_list\":[5],\"oper_fixed_time\":5,\"oper_var_time\":20}",
+            "eventPos": 259,
+            "eventType": 3,
+            "handId": "",
+            "startTime": 1709477692020,
+            "userId": 612006148
+          },
+          {
+            "data": "{\"in_card\":33,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":false,\"oper_fixed_time\":5,\"oper_var_time\":20,\"in_ting_info\":[],\"is_nine_cards\":false,\"is_kai_li_zhi\":false,\"is_pull_north\":false,\"is_first_xun_in\":false}",
+            "eventPos": 260,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477692145,
+            "userId": 311677992
+          },
+          {
+            "data": "{\"action\":11,\"card\":23,\"move_cards_pos\":[13,1],\"user_id\":311677992,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 261,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477693090,
+            "userId": 311677992
+          },
+          {
+            "data": "{\"in_card\":81,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":false,\"oper_fixed_time\":5,\"oper_var_time\":20,\"in_ting_info\":[],\"is_nine_cards\":false,\"is_kai_li_zhi\":false,\"is_pull_north\":false,\"is_first_xun_in\":false}",
+            "eventPos": 262,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477693797,
+            "userId": 612006148
+          },
+          {
+            "data": "{\"action\":11,\"card\":81,\"move_cards_pos\":[14,13],\"user_id\":612006148,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 263,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477696401,
+            "userId": 612006148
+          },
+          {
+            "data": "{\"out_card\":81,\"action_list\":[5],\"oper_fixed_time\":5,\"oper_var_time\":12}",
+            "eventPos": 264,
+            "eventType": 3,
+            "handId": "",
+            "startTime": 1709477697102,
+            "userId": 513842906
+          },
+          {
+            "data": "{\"action\":5,\"card\":81,\"move_cards_pos\":[3,4],\"user_id\":513842906,\"hand_cards\":null,\"group_cards\":[81,81],\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 265,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477698009,
+            "userId": 513842906
+          },
+          {
+            "data": "{\"in_card\":0,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":false,\"oper_fixed_time\":5,\"oper_var_time\":12,\"in_ting_info\":[{\"discard_card\":145,\"ting_list\":[{\"is_zhen_ting\":false,\"is_wu_yi\":false,\"left_num\":1,\"ting_card\":65,\"is_yi_man\":true,\"fang_info\":{\"42\":13,\"44\":13},\"ting_type\":3},{\"is_zhen_ting\":false,\"is_wu_yi\":false,\"left_num\":1,\"ting_card\":97,\"is_yi_man\":true,\"fang_info\":{\"42\":13,\"44\":13},\"ting_type\":3}]}],\"is_nine_cards\":false,\"is_kai_li_zhi\":false,\"is_pull_north\":false,\"is_first_xun_in\":false}",
+            "eventPos": 266,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477698020,
+            "userId": 513842906
+          },
+          {
+            "data": "{\"action\":11,\"card\":145,\"move_cards_pos\":[5,4],\"user_id\":513842906,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 267,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477699868,
+            "userId": 513842906
+          },
+          {
+            "data": "{\"in_card\":23,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":false,\"oper_fixed_time\":5,\"oper_var_time\":20,\"in_ting_info\":[],\"is_nine_cards\":false,\"is_kai_li_zhi\":false,\"is_pull_north\":false,\"is_first_xun_in\":false}",
+            "eventPos": 268,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477700572,
+            "userId": 311677992
+          },
+          {
+            "data": "{\"action\":11,\"card\":23,\"move_cards_pos\":[14,13],\"user_id\":311677992,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 269,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477702296,
+            "userId": 311677992
+          },
+          {
+            "data": "{\"in_card\":22,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":true,\"oper_fixed_time\":5,\"oper_var_time\":20,\"in_ting_info\":[{\"discard_card\":20,\"ting_list\":[{\"is_zhen_ting\":false,\"is_wu_yi\":false,\"left_num\":3,\"ting_card\":3,\"is_yi_man\":false,\"fang_info\":{\"12\":1},\"ting_type\":2}]}],\"is_nine_cards\":false,\"is_kai_li_zhi\":true,\"is_pull_north\":false,\"is_first_xun_in\":false}",
+            "eventPos": 270,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477703012,
+            "userId": 612006148
+          },
+          {
+            "data": "{\"action\":11,\"card\":20,\"move_cards_pos\":[10,11],\"user_id\":612006148,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":true,\"li_zhi_operate\":0,\"li_zhi_type\":1}",
+            "eventPos": 271,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477707816,
+            "userId": 612006148
+          },
+          {
+            "data": "{\"user_id\":612006148,\"is_auto_gang\":false}",
+            "eventPos": 272,
+            "eventType": 8,
+            "handId": "",
+            "startTime": 1709477708518,
+            "userId": 612006148
+          },
+          {
+            "data": "{\"ting_info\":[{\"is_zhen_ting\":false,\"is_wu_yi\":false,\"left_num\":3,\"ting_card\":3,\"is_yi_man\":false,\"fang_info\":{\"0\":1,\"12\":1},\"ting_type\":2}]}",
+            "eventPos": 273,
+            "eventType": 11,
+            "handId": "",
+            "startTime": 1709477708518,
+            "userId": 612006148
+          },
+          {
+            "data": "{\"in_card\":20,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":false,\"oper_fixed_time\":5,\"oper_var_time\":12,\"in_ting_info\":[{\"discard_card\":20,\"ting_list\":[{\"is_zhen_ting\":false,\"is_wu_yi\":false,\"left_num\":1,\"ting_card\":65,\"is_yi_man\":true,\"fang_info\":{\"42\":13,\"44\":13},\"ting_type\":3},{\"is_zhen_ting\":false,\"is_wu_yi\":false,\"left_num\":1,\"ting_card\":97,\"is_yi_man\":true,\"fang_info\":{\"42\":13,\"44\":13},\"ting_type\":3}]}],\"is_nine_cards\":false,\"is_kai_li_zhi\":false,\"is_pull_north\":true,\"is_first_xun_in\":false}",
+            "eventPos": 274,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477708526,
+            "userId": 513842906
+          },
+          {
+            "data": "{\"action\":11,\"card\":20,\"move_cards_pos\":[5,4],\"user_id\":513842906,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 275,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477710377,
+            "userId": 513842906
+          },
+          {
+            "data": "{\"in_card\":49,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":false,\"oper_fixed_time\":5,\"oper_var_time\":20,\"in_ting_info\":[],\"is_nine_cards\":false,\"is_kai_li_zhi\":false,\"is_pull_north\":false,\"is_first_xun_in\":false}",
+            "eventPos": 276,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477711080,
+            "userId": 311677992
+          },
+          {
+            "data": "{\"action\":11,\"card\":33,\"move_cards_pos\":[1,13],\"user_id\":311677992,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 277,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477713229,
+            "userId": 311677992
+          },
+          {
+            "data": "{\"in_card\":18,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":false,\"oper_fixed_time\":5,\"oper_var_time\":20,\"in_ting_info\":[],\"is_nine_cards\":false,\"is_kai_li_zhi\":false,\"is_pull_north\":false,\"is_first_xun_in\":false}",
+            "eventPos": 278,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477713939,
+            "userId": 612006148
+          },
+          {
+            "data": "{\"action\":11,\"card\":18,\"move_cards_pos\":[14,13],\"user_id\":612006148,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 279,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477715070,
+            "userId": 612006148
+          },
+          {
+            "data": "{\"in_card\":41,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":false,\"oper_fixed_time\":5,\"oper_var_time\":12,\"in_ting_info\":[{\"discard_card\":41,\"ting_list\":[{\"is_zhen_ting\":false,\"is_wu_yi\":false,\"left_num\":1,\"ting_card\":65,\"is_yi_man\":true,\"fang_info\":{\"42\":13,\"44\":13},\"ting_type\":3},{\"is_zhen_ting\":false,\"is_wu_yi\":false,\"left_num\":1,\"ting_card\":97,\"is_yi_man\":true,\"fang_info\":{\"42\":13,\"44\":13},\"ting_type\":3}]}],\"is_nine_cards\":false,\"is_kai_li_zhi\":false,\"is_pull_north\":true,\"is_first_xun_in\":false}",
+            "eventPos": 280,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477715775,
+            "userId": 513842906
+          },
+          {
+            "data": "{\"action\":11,\"card\":41,\"move_cards_pos\":[5,4],\"user_id\":513842906,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 281,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477717979,
+            "userId": 513842906
+          },
+          {
+            "data": "{\"in_card\":81,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":false,\"oper_fixed_time\":5,\"oper_var_time\":20,\"in_ting_info\":[],\"is_nine_cards\":false,\"is_kai_li_zhi\":false,\"is_pull_north\":false,\"is_first_xun_in\":false}",
+            "eventPos": 282,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477718684,
+            "userId": 311677992
+          },
+          {
+            "data": "{\"action\":11,\"card\":49,\"move_cards_pos\":[13,13],\"user_id\":311677992,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 283,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477719728,
+            "userId": 311677992
+          },
+          {
+            "data": "{\"in_card\":17,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":false,\"oper_fixed_time\":5,\"oper_var_time\":20,\"in_ting_info\":[],\"is_nine_cards\":false,\"is_kai_li_zhi\":false,\"is_pull_north\":false,\"is_first_xun_in\":false}",
+            "eventPos": 284,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477720439,
+            "userId": 612006148
+          },
+          {
+            "data": "{\"action\":11,\"card\":17,\"move_cards_pos\":[14,13],\"user_id\":612006148,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 285,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477721194,
+            "userId": 612006148
+          },
+          {
+            "data": "{\"in_card\":2,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":false,\"oper_fixed_time\":5,\"oper_var_time\":12,\"in_ting_info\":[{\"discard_card\":2,\"ting_list\":[{\"is_zhen_ting\":false,\"is_wu_yi\":false,\"left_num\":1,\"ting_card\":65,\"is_yi_man\":true,\"fang_info\":{\"42\":13,\"44\":13},\"ting_type\":3},{\"is_zhen_ting\":false,\"is_wu_yi\":false,\"left_num\":1,\"ting_card\":97,\"is_yi_man\":true,\"fang_info\":{\"42\":13,\"44\":13},\"ting_type\":3}]}],\"is_nine_cards\":false,\"is_kai_li_zhi\":false,\"is_pull_north\":true,\"is_first_xun_in\":false}",
+            "eventPos": 286,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477721913,
+            "userId": 513842906
+          },
+          {
+            "data": "{\"action\":11,\"card\":2,\"move_cards_pos\":[5,4],\"user_id\":513842906,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 287,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477727388,
+            "userId": 513842906
+          },
+          {
+            "data": "{\"in_card\":24,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":false,\"oper_fixed_time\":5,\"oper_var_time\":20,\"in_ting_info\":[],\"is_nine_cards\":false,\"is_kai_li_zhi\":false,\"is_pull_north\":false,\"is_first_xun_in\":false}",
+            "eventPos": 288,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477728099,
+            "userId": 311677992
+          },
+          {
+            "data": "{\"action\":11,\"card\":81,\"move_cards_pos\":[13,13],\"user_id\":311677992,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 289,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477729178,
+            "userId": 311677992
+          },
+          {
+            "data": "{\"in_card\":24,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":false,\"oper_fixed_time\":5,\"oper_var_time\":20,\"in_ting_info\":[],\"is_nine_cards\":false,\"is_kai_li_zhi\":false,\"is_pull_north\":false,\"is_first_xun_in\":false}",
+            "eventPos": 290,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477729885,
+            "userId": 612006148
+          },
+          {
+            "data": "{\"action\":11,\"card\":24,\"move_cards_pos\":[14,13],\"user_id\":612006148,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 291,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477730631,
+            "userId": 612006148
+          },
+          {
+            "data": "{\"in_card\":1,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":false,\"oper_fixed_time\":5,\"oper_var_time\":12,\"in_ting_info\":[{\"discard_card\":1,\"ting_list\":[{\"is_zhen_ting\":false,\"is_wu_yi\":false,\"left_num\":1,\"ting_card\":65,\"is_yi_man\":true,\"fang_info\":{\"42\":13,\"44\":13},\"ting_type\":3},{\"is_zhen_ting\":false,\"is_wu_yi\":false,\"left_num\":1,\"ting_card\":97,\"is_yi_man\":true,\"fang_info\":{\"42\":13,\"44\":13},\"ting_type\":3}]}],\"is_nine_cards\":false,\"is_kai_li_zhi\":false,\"is_pull_north\":true,\"is_first_xun_in\":false}",
+            "eventPos": 292,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477731338,
+            "userId": 513842906
+          },
+          {
+            "data": "{\"action\":11,\"card\":1,\"move_cards_pos\":[5,4],\"user_id\":513842906,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 293,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477732609,
+            "userId": 513842906
+          },
+          {
+            "data": "{\"out_card\":1,\"action_list\":[5,6],\"oper_fixed_time\":5,\"oper_var_time\":20}",
+            "eventPos": 294,
+            "eventType": 3,
+            "handId": "",
+            "startTime": 1709477733314,
+            "userId": 311677992
+          },
+          {
+            "data": "{\"action\":5,\"card\":1,\"move_cards_pos\":[1,2],\"user_id\":311677992,\"hand_cards\":null,\"group_cards\":[1,1],\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 295,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477736529,
+            "userId": 311677992
+          },
+          {
+            "data": "{\"in_card\":0,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":false,\"oper_fixed_time\":5,\"oper_var_time\":20,\"in_ting_info\":[],\"is_nine_cards\":false,\"is_kai_li_zhi\":false,\"is_pull_north\":false,\"is_first_xun_in\":false}",
+            "eventPos": 296,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477736536,
+            "userId": 311677992
+          },
+          {
+            "data": "{\"action\":11,\"card\":24,\"move_cards_pos\":[11,10],\"user_id\":311677992,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 297,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477737535,
+            "userId": 311677992
+          },
+          {
+            "data": "{\"in_card\":18,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":false,\"oper_fixed_time\":5,\"oper_var_time\":20,\"in_ting_info\":[],\"is_nine_cards\":false,\"is_kai_li_zhi\":false,\"is_pull_north\":false,\"is_first_xun_in\":false}",
+            "eventPos": 298,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477738246,
+            "userId": 612006148
+          },
+          {
+            "data": "{\"action\":11,\"card\":18,\"move_cards_pos\":[14,13],\"user_id\":612006148,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 299,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477739007,
+            "userId": 612006148
+          },
+          {
+            "data": "{\"in_card\":6,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":false,\"oper_fixed_time\":5,\"oper_var_time\":12,\"in_ting_info\":[{\"discard_card\":6,\"ting_list\":[{\"is_zhen_ting\":false,\"is_wu_yi\":false,\"left_num\":1,\"ting_card\":65,\"is_yi_man\":true,\"fang_info\":{\"42\":13,\"44\":13},\"ting_type\":3},{\"is_zhen_ting\":false,\"is_wu_yi\":false,\"left_num\":1,\"ting_card\":97,\"is_yi_man\":true,\"fang_info\":{\"42\":13,\"44\":13},\"ting_type\":3}]}],\"is_nine_cards\":false,\"is_kai_li_zhi\":false,\"is_pull_north\":true,\"is_first_xun_in\":false}",
+            "eventPos": 300,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477739710,
+            "userId": 513842906
+          },
+          {
+            "data": "{\"action\":11,\"card\":6,\"move_cards_pos\":[5,4],\"user_id\":513842906,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 301,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477741383,
+            "userId": 513842906
+          },
+          {
+            "data": "{\"in_card\":22,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[1],\"is_gang_incard\":false,\"is_can_lizhi\":false,\"oper_fixed_time\":5,\"oper_var_time\":20,\"in_ting_info\":[],\"is_nine_cards\":false,\"is_kai_li_zhi\":false,\"is_pull_north\":false,\"is_first_xun_in\":false}",
+            "eventPos": 302,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477742088,
+            "userId": 311677992
+          },
+          {
+            "data": "{\"action\":11,\"card\":9,\"move_cards_pos\":[10,10],\"user_id\":311677992,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 303,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477751006,
+            "userId": 311677992
+          },
+          {
+            "data": "{\"in_card\":7,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":false,\"oper_fixed_time\":5,\"oper_var_time\":20,\"in_ting_info\":[],\"is_nine_cards\":false,\"is_kai_li_zhi\":false,\"is_pull_north\":false,\"is_first_xun_in\":false}",
+            "eventPos": 304,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477751720,
+            "userId": 612006148
+          },
+          {
+            "data": "{\"action\":11,\"card\":7,\"move_cards_pos\":[14,13],\"user_id\":612006148,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 305,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477752487,
+            "userId": 612006148
+          },
+          {
+            "data": "{\"in_card\":65,\"is_zi_mo\":true,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":false,\"oper_fixed_time\":5,\"oper_var_time\":12,\"in_ting_info\":[{\"discard_card\":97,\"ting_list\":[{\"is_zhen_ting\":false,\"is_wu_yi\":false,\"left_num\":1,\"ting_card\":97,\"is_yi_man\":true,\"fang_info\":{\"42\":13,\"44\":13},\"ting_type\":3}]},{\"discard_card\":65,\"ting_list\":[{\"is_zhen_ting\":false,\"is_wu_yi\":false,\"left_num\":0,\"ting_card\":65,\"is_yi_man\":true,\"fang_info\":{\"42\":13,\"44\":13},\"ting_type\":3},{\"is_zhen_ting\":false,\"is_wu_yi\":false,\"left_num\":1,\"ting_card\":97,\"is_yi_man\":true,\"fang_info\":{\"42\":13,\"44\":13},\"ting_type\":3}]}],\"is_nine_cards\":false,\"is_kai_li_zhi\":false,\"is_pull_north\":true,\"is_first_xun_in\":false}",
+            "eventPos": 306,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1709477753199,
+            "userId": 513842906
+          },
+          {
+            "data": "{\"action\":10,\"card\":65,\"move_cards_pos\":null,\"user_id\":513842906,\"hand_cards\":[97,97,65,65,65],\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 307,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1709477755342,
+            "userId": 513842906
+          },
+          {
+            "data": "{\"end_type\":1,\"win_info\":[{\"fang_info\":[{\"fang_type\":42,\"fang_num\":13},{\"fang_type\":44,\"fang_num\":13}],\"all_fang_num\":26,\"all_fu\":50,\"all_point\":96000,\"user_cards\":[97,97,65,65,65],\"li_bao_card\":null,\"user_id\":513842906,\"ting_card_list\":null,\"bash_points\":16000,\"luck_score\":10}],\"user_profit\":[{\"user_id\":311677992,\"point_profit\":-96000,\"li_zhi_profit\":0,\"is_bao_pai\":false,\"user_point\":-70800},{\"user_id\":612006148,\"point_profit\":-96000,\"li_zhi_profit\":-1000,\"is_bao_pai\":false,\"user_point\":-64700},{\"user_id\":513842906,\"point_profit\":193000,\"li_zhi_profit\":1000,\"is_bao_pai\":false,\"user_point\":240500}],\"zhong_liu_info\":[],\"cheat_info_list\":[]}",
+            "eventPos": 308,
+            "eventType": 5,
+            "handId": "",
+            "startTime": 1709477755344,
+            "userId": 0
+          },
+          {
+            "data": "{\"user_data\":[{\"user_id\":513842906,\"point_num\":240500,\"score\":2355,\"coin\":0,\"rate_value\":0,\"pt_value\":0,\"user_pt_value\":0,\"next_pt_value\":0,\"last_user_pt\":0,\"last_next_pt\":0,\"is_shao_ji\":false,\"shao_ji_score\":10,\"luck_score\":11,\"StageLevel\":0},{\"user_id\":612006148,\"point_num\":-64700,\"score\":-1047,\"coin\":0,\"rate_value\":0,\"pt_value\":0,\"user_pt_value\":0,\"next_pt_value\":0,\"last_user_pt\":0,\"last_next_pt\":0,\"is_shao_ji\":false,\"shao_ji_score\":10,\"luck_score\":-6,\"StageLevel\":0},{\"user_id\":311677992,\"point_num\":-70800,\"score\":-1308,\"coin\":0,\"rate_value\":0,\"pt_value\":0,\"user_pt_value\":0,\"next_pt_value\":0,\"last_user_pt\":0,\"last_next_pt\":0,\"is_shao_ji\":true,\"shao_ji_score\":-20,\"luck_score\":-5,\"StageLevel\":0}],\"pai_pu_id\":\"cni8r269nc78kahoitb0\",\"is_exist_room\":false}",
+            "eventPos": 309,
+            "eventType": 6,
+            "handId": "",
+            "startTime": 1709477755362,
+            "userId": 0
+          }
+        ],
+        "handID": "cni8r269nc78kahoitag_3",
+        "handPos": 3,
+        "paiShan": [
+          41, 19, 129, 2, 20, 1, 145, 277, 33, 4, 19, 65, 2, 25, 129, 20, 7, 23,
+          145, 6, 3, 33, 7, 18, 2, 145, 8, 23, 19, 65, 33, 81, 23, 22, 20, 49,
+          18, 41, 81, 17, 2, 24, 24, 1, 18, 6, 22, 7, 65, 113, 25, 97, 9, 3, 24,
+          7, 20, 22, 8, 21, 25, 18, 17, 5, 5, 21, 4, 277
+        ],
+        "players": [
+          {
+            "cardBackID": 14098,
+            "gameMusicId": 19005,
+            "headTag": 0,
+            "identity": 0,
+            "matchMusicId": 19005,
+            "model": 0,
+            "nickname": "Repulica",
+            "points": 25200,
+            "position": 0,
+            "profileFrameId": 30507,
+            "riichiEffectID": 17006,
+            "riichiMusicId": 20001,
+            "riichiStickID": 13020,
+            "roleID": 10007,
+            "skinID": 1000701,
+            "specialEffectID": 16008,
+            "tableclothID": 15026,
+            "titleID": 10304,
+            "userId": 311677992
+          },
+          {
+            "cardBackID": 14114,
+            "gameMusicId": 19006,
+            "headTag": 0,
+            "identity": 0,
+            "matchMusicId": 19006,
+            "model": 0,
+            "nickname": "\u9ebb\u96c0\u52c7\u8005\uff20\u914d\u4fe1\u4e2d",
+            "points": 32300,
+            "position": 1,
+            "profileFrameId": 30504,
+            "riichiEffectID": 17001,
+            "riichiMusicId": 20001,
+            "riichiStickID": 13034,
+            "roleID": 10002,
+            "skinID": 1000201,
+            "specialEffectID": 16007,
+            "tableclothID": 15059,
+            "titleID": 12103,
+            "userId": 612006148
+          },
+          {
+            "cardBackID": 14114,
+            "gameMusicId": 19006,
+            "headTag": 0,
+            "identity": 0,
+            "matchMusicId": 19006,
+            "model": 0,
+            "nickname": "\u30e9\u30d7dark",
+            "points": 47500,
+            "position": 2,
+            "profileFrameId": 30409,
+            "riichiEffectID": 17004,
+            "riichiMusicId": 20001,
+            "riichiStickID": 13027,
+            "roleID": 10017,
+            "skinID": 0,
+            "specialEffectID": 16016,
+            "tableclothID": 15025,
+            "titleID": 10904,
+            "userId": 513842906
+          }
+        ],
+        "quanFeng": 49
+      }
+    ],
+    "initPoints": 35000,
+    "isCollect": false,
+    "isGangPay": false,
+    "isGeMu": true,
+    "isKaiLiZhi": true,
+    "isLuck": true,
+    "isNotEffect": false,
+    "isNotShowHand": false,
+    "isObserve": false,
+    "isShaoJi": true,
+    "isWithUser": true,
+    "keyValue": "cni8r269nc78kahoitb0",
+    "matchStage": 0,
+    "matchType": 0,
+    "northOperateType": 0,
+    "nowTime": 1710428611,
+    "period": 0,
+    "playerCount": 3,
+    "remark": "",
+    "roomId": "cni8r269nc78kahoitag",
+    "round": 1,
+    "stageNum": 0,
+    "stageType": 0
+  },
+  "message": "ok"
+}

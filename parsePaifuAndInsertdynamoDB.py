@@ -25,10 +25,34 @@ paifu.code
 
 response = table.put_item(
     Item={
-        "id": paifu.data.keyValue,
-        "period": paifu.data.period,
-        "roomId": paifu.data.roomId,
-        "nowTime": paifu.data.nowTime,
+        "id": paifu["data"]["keyValue"],
+        "period": paifu["data"]["period"],
+        "roomId": paifu["data"]["roomId"],
+        "nowTime": paifu["data"]["nowTime"],
+        "remark": paifu["data"]["remark"],
+        "fangFu": paifu["data"]["fangFu"],
+        "gamePlay": paifu["data"]["gamePlay"],
+        "handRecord": paifu["data"]["handRecord"],
+        "initPoints": paifu["data"]["initPoints"],
+        "isCollect": paifu["data"]["isCollect"],
+        "isGangPay": paifu["data"]["isGangPay"],
+        "isGeMu": paifu["data"]["isGeMu"],
+        "isKaiLiZhi": paifu["data"]["isKaiLiZhi"],
+        "isLuck": paifu["data"]["isLuck"],
+        "isNotEffect": paifu["data"]["isNotEffect"],
+        "isNotShowHand": paifu["data"]["isNotShowHand"],
+        "isObserve": paifu["data"]["isObserve"],
+        "isShaoJi": paifu["data"]["isShaoJi"],
+        "isWithUser": paifu["data"]["isWithUser"],
+        "matchStage": paifu["data"]["matchStage"],
+        "matchType": paifu["data"]["matchType"],
+        "northOperateType": paifu["data"]["northOperateType"],
+        "playerCount": paifu["data"]["playerCount"],
+        "round": paifu["data"]["round"],
+        "stageNum": paifu["data"]["stageNum"],
+        "stageType": paifu["data"]["stageType"],
+        "code": paifu["code"],
+        "message": paifu["message"],
     }
 )
 print(response)

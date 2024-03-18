@@ -88,7 +88,7 @@ class UserProfit(pydantic.BaseModel):
 
 
 class GameResult(pydantic.BaseModel):
-    end_type: int
+    end_type: int # 8は友人線で途中終了
     win_info: list[WinInfo]
     user_profit: list[UserProfit]
     zhong_liu_info: list[dict]

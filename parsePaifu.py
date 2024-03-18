@@ -9,13 +9,11 @@ import pydantic
 from pydantic import ValidationError
 import boto3
 
-# dynamodb = boto3.resource("dynamodb")
-# hand_event_playground_table = dynamodb.Table("paifu_hands_event_playground")
-
-# from typing import TypedDict  # not working when importing typing.TypedDict
+dynamodb = boto3.resource("dynamodb")
+hand_event_playground_table = dynamodb.Table("paifu_hands_event_playground2")
 
 
-paifu = "gameDataSample.json"
+paifu = "cnrkj069nc7ajnvadk30.json"
 json_file = open(paifu, "r")
 json_data = json.load(json_file)
 
@@ -48,15 +46,28 @@ def analyze_hand_record(hand_event_records: list[PaifuTypesPydanticWithInternal.
                     PaifuTypeInternalPydantic.GameInfo,  # user_data
                     PaifuTypeInternalPydantic.IsAutoGangInfo,  # user_id & is_auto_gang
                     PaifuTypeInternalPydantic.TingInfo,  # ting_info
-                    #dict[Never, Never], # 他の型にもかかってしまう
-                    # Mapping[Any, Any]
+                    #dict[Never, Never], # 他の型にもかかってしまうので関数で省く
         ])
         b = paifuInternalAdapter.validate_python(hand_event_record_data_json, strict=True)
-        print(b)
+        # print(b)
+        metadata = {
+            "hand_id": hand_id,
+            "paifu_id": paifu_id,
+            "room_id": room_id,
+            "count_id": str(count)
+        }
+        res = hand_event_playground_table.put_item(
+            Item={**b.model_dump(), **metadata}
+        )
+        if res["ResponseMetadata"]["HTTPStatusCode"] == 200:
+            print("put_item success")
+        else:
+            print("put_item failed")
         print(f"count: {count}")
         count += 1
         # print(f"hand_event_record_data_json: {hand_event_record_data_json['hand_cards']}") # 当然keyerrorが起こることがある
         # print(f"hand_record: {hand_event_record.data}")
+
 
 keyvalue = a.data.keyValue
 room_id = a.data.roomId

@@ -1,0 +1,4882 @@
+[
+  {
+    "hand_cards": [25, 9, 113, 8, 49, 145, 81, 25, 65, 129, 18, 4, 23, 22],
+    "dealer_pos": 0,
+    "dices": [6, 1],
+    "bao_pai_card": 129,
+    "ting_list": [],
+    "quan_feng": 49,
+    "chang_ci": 1,
+    "ben_chang_num": 0,
+    "li_zhi_bang_num": 0,
+    "user_info_list": [
+      {
+        "user_id": 311677992,
+        "hand_points": 35000,
+        "luck_score": 0,
+        "is_exist_shao_ji": true,
+        "room_exist_man_guan": false
+      },
+      {
+        "user_id": 612006148,
+        "hand_points": 35000,
+        "luck_score": 0,
+        "is_exist_shao_ji": true,
+        "room_exist_man_guan": false
+      },
+      {
+        "user_id": 513842906,
+        "hand_points": 35000,
+        "luck_score": 0,
+        "is_exist_shao_ji": true,
+        "room_exist_man_guan": false
+      }
+    ],
+    "hand_cards_sha_256": "c4cf88e477826d713b12390b697dbe675cf5b758a757a2690a17b39915ab4bad"
+  },
+  {
+    "hand_cards": [21, 9, 8, 24, 20, 6, 65, 2, 19, 5, 145, 18, 33],
+    "dealer_pos": 0,
+    "dices": [6, 1],
+    "bao_pai_card": 129,
+    "ting_list": [],
+    "quan_feng": 49,
+    "chang_ci": 1,
+    "ben_chang_num": 0,
+    "li_zhi_bang_num": 0,
+    "user_info_list": [
+      {
+        "user_id": 311677992,
+        "hand_points": 35000,
+        "luck_score": 0,
+        "is_exist_shao_ji": true,
+        "room_exist_man_guan": false
+      },
+      {
+        "user_id": 612006148,
+        "hand_points": 35000,
+        "luck_score": 0,
+        "is_exist_shao_ji": true,
+        "room_exist_man_guan": false
+      },
+      {
+        "user_id": 513842906,
+        "hand_points": 35000,
+        "luck_score": 0,
+        "is_exist_shao_ji": true,
+        "room_exist_man_guan": false
+      }
+    ],
+    "hand_cards_sha_256": "c4cf88e477826d713b12390b697dbe675cf5b758a757a2690a17b39915ab4bad"
+  },
+  {
+    "hand_cards": [17, 17, 22, 6, 23, 81, 41, 97, 81, 41, 1, 81, 97],
+    "dealer_pos": 0,
+    "dices": [6, 1],
+    "bao_pai_card": 129,
+    "ting_list": [],
+    "quan_feng": 49,
+    "chang_ci": 1,
+    "ben_chang_num": 0,
+    "li_zhi_bang_num": 0,
+    "user_info_list": [
+      {
+        "user_id": 311677992,
+        "hand_points": 35000,
+        "luck_score": 0,
+        "is_exist_shao_ji": true,
+        "room_exist_man_guan": false
+      },
+      {
+        "user_id": 612006148,
+        "hand_points": 35000,
+        "luck_score": 0,
+        "is_exist_shao_ji": true,
+        "room_exist_man_guan": false
+      },
+      {
+        "user_id": 513842906,
+        "hand_points": 35000,
+        "luck_score": 0,
+        "is_exist_shao_ji": true,
+        "room_exist_man_guan": false
+      }
+    ],
+    "hand_cards_sha_256": "c4cf88e477826d713b12390b697dbe675cf5b758a757a2690a17b39915ab4bad"
+  },
+  {
+    "in_card": 0,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": false,
+    "oper_fixed_time": 5,
+    "oper_var_time": 20,
+    "in_ting_info": [],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": false,
+    "is_pull_north": false,
+    "is_first_xun_in": true
+  },
+  {
+    "action": 11,
+    "card": 65,
+    "move_cards_pos": [9, 5],
+    "user_id": 311677992,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "in_card": 41,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": false,
+    "oper_fixed_time": 5,
+    "oper_var_time": 20,
+    "in_ting_info": [],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": false,
+    "is_pull_north": false,
+    "is_first_xun_in": true
+  },
+  {
+    "action": 11,
+    "card": 145,
+    "move_cards_pos": [13, 2],
+    "user_id": 612006148,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "in_card": 17,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": false,
+    "oper_fixed_time": 5,
+    "oper_var_time": 20,
+    "in_ting_info": [],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": false,
+    "is_pull_north": true,
+    "is_first_xun_in": true
+  },
+  {
+    "action": 11,
+    "card": 6,
+    "move_cards_pos": [4, 6],
+    "user_id": 513842906,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "in_card": 17,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": false,
+    "oper_fixed_time": 5,
+    "oper_var_time": 20,
+    "in_ting_info": [],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": false,
+    "is_pull_north": false,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 11,
+    "card": 81,
+    "move_cards_pos": [10, 4],
+    "user_id": 311677992,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "out_card": 81,
+    "action_list": [5, 6],
+    "oper_fixed_time": 5,
+    "oper_var_time": 20
+  },
+  {
+    "in_card": 8,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": false,
+    "oper_fixed_time": 5,
+    "oper_var_time": 20,
+    "in_ting_info": [],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": false,
+    "is_pull_north": false,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 11,
+    "card": 65,
+    "move_cards_pos": [13, 7],
+    "user_id": 612006148,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "in_card": 2,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": false,
+    "oper_fixed_time": 5,
+    "oper_var_time": 20,
+    "in_ting_info": [],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": false,
+    "is_pull_north": true,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 11,
+    "card": 2,
+    "move_cards_pos": [14, 13],
+    "user_id": 513842906,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "in_card": 24,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": false,
+    "oper_fixed_time": 5,
+    "oper_var_time": 20,
+    "in_ting_info": [],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": false,
+    "is_pull_north": false,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 11,
+    "card": 129,
+    "move_cards_pos": [12, 8],
+    "user_id": 311677992,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "in_card": 2,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": false,
+    "oper_fixed_time": 5,
+    "oper_var_time": 20,
+    "in_ting_info": [],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": false,
+    "is_pull_north": false,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 11,
+    "card": 41,
+    "move_cards_pos": [2, 3],
+    "user_id": 612006148,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "out_card": 41,
+    "action_list": [5],
+    "oper_fixed_time": 5,
+    "oper_var_time": 20
+  },
+  {
+    "in_card": 23,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": false,
+    "oper_fixed_time": 5,
+    "oper_var_time": 20,
+    "in_ting_info": [],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": false,
+    "is_pull_north": true,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 11,
+    "card": 1,
+    "move_cards_pos": [3, 8],
+    "user_id": 513842906,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "in_card": 113,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": false,
+    "oper_fixed_time": 5,
+    "oper_var_time": 20,
+    "in_ting_info": [],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": false,
+    "is_pull_north": false,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 11,
+    "card": 49,
+    "move_cards_pos": [11, 12],
+    "user_id": 311677992,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "in_card": 33,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": false,
+    "oper_fixed_time": 5,
+    "oper_var_time": 20,
+    "in_ting_info": [],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": false,
+    "is_pull_north": false,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 11,
+    "card": 24,
+    "move_cards_pos": [13, 2],
+    "user_id": 612006148,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "in_card": 97,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": true,
+    "oper_fixed_time": 5,
+    "oper_var_time": 20,
+    "in_ting_info": [
+      {
+        "discard_card": 22,
+        "ting_list": [
+          {
+            "is_zhen_ting": false,
+            "is_wu_yi": false,
+            "left_num": 1,
+            "ting_card": 41,
+            "is_yi_man": true,
+            "fang_info": { "38": 13 },
+            "ting_type": 5
+          },
+          {
+            "is_zhen_ting": false,
+            "is_wu_yi": false,
+            "left_num": 2,
+            "ting_card": 23,
+            "is_yi_man": true,
+            "fang_info": { "38": 13 },
+            "ting_type": 5
+          }
+        ]
+      },
+      {
+        "discard_card": 23,
+        "ting_list": [
+          {
+            "is_zhen_ting": false,
+            "is_wu_yi": false,
+            "left_num": 4,
+            "ting_card": 21,
+            "is_yi_man": false,
+            "fang_info": { "11": 1, "18": 2 },
+            "ting_type": 2
+          },
+          {
+            "is_zhen_ting": false,
+            "is_wu_yi": false,
+            "left_num": 3,
+            "ting_card": 24,
+            "is_yi_man": false,
+            "fang_info": { "11": 1, "18": 2 },
+            "ting_type": 2
+          }
+        ]
+      }
+    ],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": true,
+    "is_pull_north": true,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 11,
+    "card": 22,
+    "move_cards_pos": [6, 13],
+    "user_id": 513842906,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "in_card": 22,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": false,
+    "oper_fixed_time": 5,
+    "oper_var_time": 20,
+    "in_ting_info": [],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": false,
+    "is_pull_north": false,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 11,
+    "card": 145,
+    "move_cards_pos": [13, 7],
+    "user_id": 311677992,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "in_card": 65,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": false,
+    "oper_fixed_time": 5,
+    "oper_var_time": 20,
+    "in_ting_info": [],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": false,
+    "is_pull_north": false,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 11,
+    "card": 65,
+    "move_cards_pos": [14, 13],
+    "user_id": 612006148,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "in_card": 7,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": true,
+    "oper_fixed_time": 5,
+    "oper_var_time": 20,
+    "in_ting_info": [
+      {
+        "discard_card": 7,
+        "ting_list": [
+          {
+            "is_zhen_ting": false,
+            "is_wu_yi": false,
+            "left_num": 2,
+            "ting_card": 23,
+            "is_yi_man": true,
+            "fang_info": { "38": 13 },
+            "ting_type": 5
+          },
+          {
+            "is_zhen_ting": false,
+            "is_wu_yi": false,
+            "left_num": 1,
+            "ting_card": 41,
+            "is_yi_man": true,
+            "fang_info": { "38": 13 },
+            "ting_type": 5
+          }
+        ]
+      }
+    ],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": true,
+    "is_pull_north": true,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 11,
+    "card": 7,
+    "move_cards_pos": [14, 13],
+    "user_id": 513842906,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "in_card": 129,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": false,
+    "oper_fixed_time": 5,
+    "oper_var_time": 20,
+    "in_ting_info": [],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": false,
+    "is_pull_north": false,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 11,
+    "card": 129,
+    "move_cards_pos": [14, 13],
+    "user_id": 311677992,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "in_card": 4,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": false,
+    "oper_fixed_time": 5,
+    "oper_var_time": 20,
+    "in_ting_info": [],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": false,
+    "is_pull_north": false,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 11,
+    "card": 9,
+    "move_cards_pos": [9, 5],
+    "user_id": 612006148,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "in_card": 65,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": true,
+    "oper_fixed_time": 5,
+    "oper_var_time": 8,
+    "in_ting_info": [
+      {
+        "discard_card": 65,
+        "ting_list": [
+          {
+            "is_zhen_ting": false,
+            "is_wu_yi": false,
+            "left_num": 2,
+            "ting_card": 23,
+            "is_yi_man": true,
+            "fang_info": { "38": 13 },
+            "ting_type": 5
+          },
+          {
+            "is_zhen_ting": false,
+            "is_wu_yi": false,
+            "left_num": 1,
+            "ting_card": 41,
+            "is_yi_man": true,
+            "fang_info": { "38": 13 },
+            "ting_type": 5
+          }
+        ]
+      }
+    ],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": true,
+    "is_pull_north": true,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 11,
+    "card": 65,
+    "move_cards_pos": [14, 13],
+    "user_id": 513842906,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "in_card": 113,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": false,
+    "oper_fixed_time": 5,
+    "oper_var_time": 20,
+    "in_ting_info": [],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": false,
+    "is_pull_north": false,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 11,
+    "card": 4,
+    "move_cards_pos": [1, 13],
+    "user_id": 311677992,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "in_card": 97,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": false,
+    "oper_fixed_time": 5,
+    "oper_var_time": 20,
+    "in_ting_info": [],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": false,
+    "is_pull_north": true,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 13,
+    "card": 97,
+    "move_cards_pos": [14],
+    "user_id": 612006148,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "in_card": 4,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": true,
+    "is_can_lizhi": false,
+    "oper_fixed_time": 5,
+    "oper_var_time": 20,
+    "in_ting_info": [],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": false,
+    "is_pull_north": false,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 11,
+    "card": 18,
+    "move_cards_pos": [10, 6],
+    "user_id": 612006148,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "in_card": 129,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": true,
+    "oper_fixed_time": 5,
+    "oper_var_time": 8,
+    "in_ting_info": [
+      {
+        "discard_card": 129,
+        "ting_list": [
+          {
+            "is_zhen_ting": false,
+            "is_wu_yi": false,
+            "left_num": 2,
+            "ting_card": 23,
+            "is_yi_man": true,
+            "fang_info": { "38": 13 },
+            "ting_type": 5
+          },
+          {
+            "is_zhen_ting": false,
+            "is_wu_yi": false,
+            "left_num": 1,
+            "ting_card": 41,
+            "is_yi_man": true,
+            "fang_info": { "38": 13 },
+            "ting_type": 5
+          }
+        ]
+      }
+    ],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": true,
+    "is_pull_north": true,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 11,
+    "card": 129,
+    "move_cards_pos": [14, 13],
+    "user_id": 513842906,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "in_card": 277,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": false,
+    "oper_fixed_time": 5,
+    "oper_var_time": 20,
+    "in_ting_info": [],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": false,
+    "is_pull_north": false,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 11,
+    "card": 8,
+    "move_cards_pos": [1, 4],
+    "user_id": 311677992,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "out_card": 8,
+    "action_list": [5],
+    "oper_fixed_time": 5,
+    "oper_var_time": 20
+  },
+  {
+    "in_card": 8,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": true,
+    "oper_fixed_time": 5,
+    "oper_var_time": 20,
+    "in_ting_info": [
+      {
+        "discard_card": 2,
+        "ting_list": [
+          {
+            "is_zhen_ting": false,
+            "is_wu_yi": true,
+            "left_num": 4,
+            "ting_card": 3,
+            "is_yi_man": false,
+            "fang_info": {},
+            "ting_type": 1
+          }
+        ]
+      },
+      {
+        "discard_card": 4,
+        "ting_list": [
+          {
+            "is_zhen_ting": false,
+            "is_wu_yi": true,
+            "left_num": 1,
+            "ting_card": 2,
+            "is_yi_man": false,
+            "fang_info": {},
+            "ting_type": 1
+          },
+          {
+            "is_zhen_ting": false,
+            "is_wu_yi": true,
+            "left_num": 2,
+            "ting_card": 33,
+            "is_yi_man": false,
+            "fang_info": {},
+            "ting_type": 1
+          }
+        ]
+      }
+    ],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": true,
+    "is_pull_north": false,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 11,
+    "card": 4,
+    "move_cards_pos": [6, 10],
+    "user_id": 612006148,
+    "hand_cards": [21, 8, 20, 6, 2, 19, 5, 33, 8, 2, 33, 4, 4, 8],
+    "group_cards": null,
+    "is_li_zhi": true,
+    "li_zhi_operate": 1,
+    "li_zhi_type": 3
+  },
+  { "user_id": 612006148, "is_auto_gang": false },
+  {
+    "ting_info": [
+      {
+        "is_zhen_ting": false,
+        "is_wu_yi": false,
+        "left_num": 1,
+        "ting_card": 2,
+        "is_yi_man": false,
+        "fang_info": { "52": 2 },
+        "ting_type": 2
+      },
+      {
+        "is_zhen_ting": false,
+        "is_wu_yi": false,
+        "left_num": 2,
+        "ting_card": 33,
+        "is_yi_man": false,
+        "fang_info": { "52": 2 },
+        "ting_type": 2
+      }
+    ]
+  },
+  {
+    "in_card": 4,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": true,
+    "oper_fixed_time": 5,
+    "oper_var_time": 8,
+    "in_ting_info": [
+      {
+        "discard_card": 4,
+        "ting_list": [
+          {
+            "is_zhen_ting": false,
+            "is_wu_yi": false,
+            "left_num": 1,
+            "ting_card": 41,
+            "is_yi_man": true,
+            "fang_info": { "38": 13 },
+            "ting_type": 5
+          },
+          {
+            "is_zhen_ting": false,
+            "is_wu_yi": false,
+            "left_num": 2,
+            "ting_card": 23,
+            "is_yi_man": true,
+            "fang_info": { "38": 13 },
+            "ting_type": 5
+          }
+        ]
+      }
+    ],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": true,
+    "is_pull_north": true,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 11,
+    "card": 4,
+    "move_cards_pos": [14, 13],
+    "user_id": 513842906,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "in_card": 145,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": false,
+    "oper_fixed_time": 5,
+    "oper_var_time": 20,
+    "in_ting_info": [],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": false,
+    "is_pull_north": false,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 11,
+    "card": 9,
+    "move_cards_pos": [1, 13],
+    "user_id": 311677992,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "in_card": 23,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": false,
+    "oper_fixed_time": 5,
+    "oper_var_time": 13,
+    "in_ting_info": [],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": false,
+    "is_pull_north": false,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 11,
+    "card": 23,
+    "move_cards_pos": [14, 13],
+    "user_id": 612006148,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "out_card": 23,
+    "action_list": [5, 7],
+    "oper_fixed_time": 5,
+    "oper_var_time": 0
+  },
+  {
+    "in_card": 33,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": true,
+    "oper_fixed_time": 5,
+    "oper_var_time": 0,
+    "in_ting_info": [
+      {
+        "discard_card": 33,
+        "ting_list": [
+          {
+            "is_zhen_ting": false,
+            "is_wu_yi": false,
+            "left_num": 1,
+            "ting_card": 23,
+            "is_yi_man": true,
+            "fang_info": { "38": 13 },
+            "ting_type": 5
+          },
+          {
+            "is_zhen_ting": false,
+            "is_wu_yi": false,
+            "left_num": 1,
+            "ting_card": 41,
+            "is_yi_man": true,
+            "fang_info": { "38": 13 },
+            "ting_type": 5
+          }
+        ]
+      }
+    ],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": true,
+    "is_pull_north": true,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 11,
+    "card": 23,
+    "move_cards_pos": [7, 1],
+    "user_id": 513842906,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "in_card": 24,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": false,
+    "oper_fixed_time": 5,
+    "oper_var_time": 20,
+    "in_ting_info": [],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": false,
+    "is_pull_north": false,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 11,
+    "card": 145,
+    "move_cards_pos": [13, 8],
+    "user_id": 311677992,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "in_card": 6,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": false,
+    "oper_fixed_time": 5,
+    "oper_var_time": 13,
+    "in_ting_info": [],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": false,
+    "is_pull_north": false,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 11,
+    "card": 6,
+    "move_cards_pos": [14, 13],
+    "user_id": 612006148,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "in_card": 3,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": false,
+    "oper_fixed_time": 5,
+    "oper_var_time": 0,
+    "in_ting_info": [],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": false,
+    "is_pull_north": true,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 11,
+    "card": 23,
+    "move_cards_pos": [7, 4],
+    "user_id": 513842906,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "in_card": 261,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": false,
+    "oper_fixed_time": 5,
+    "oper_var_time": 20,
+    "in_ting_info": [],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": false,
+    "is_pull_north": false,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 11,
+    "card": 261,
+    "move_cards_pos": [14, 13],
+    "user_id": 311677992,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "in_card": 41,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": false,
+    "oper_fixed_time": 5,
+    "oper_var_time": 13,
+    "in_ting_info": [],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": false,
+    "is_pull_north": false,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 11,
+    "card": 41,
+    "move_cards_pos": [14, 13],
+    "user_id": 612006148,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "out_card": 41,
+    "action_list": [5],
+    "oper_fixed_time": 5,
+    "oper_var_time": 0
+  },
+  {
+    "action": 5,
+    "card": 41,
+    "move_cards_pos": [2, 3],
+    "user_id": 513842906,
+    "hand_cards": null,
+    "group_cards": [41, 41],
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "in_card": 0,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": false,
+    "oper_fixed_time": 5,
+    "oper_var_time": 0,
+    "in_ting_info": [
+      {
+        "discard_card": 33,
+        "ting_list": [
+          {
+            "is_zhen_ting": false,
+            "is_wu_yi": false,
+            "left_num": 3,
+            "ting_card": 3,
+            "is_yi_man": false,
+            "fang_info": { "11": 1, "16": 2, "18": 2 },
+            "ting_type": 2
+          }
+        ]
+      },
+      {
+        "discard_card": 3,
+        "ting_list": [
+          {
+            "is_zhen_ting": false,
+            "is_wu_yi": false,
+            "left_num": 3,
+            "ting_card": 33,
+            "is_yi_man": false,
+            "fang_info": { "11": 1, "16": 2, "18": 2, "20": 2 },
+            "ting_type": 2
+          }
+        ]
+      }
+    ],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": false,
+    "is_pull_north": false,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 11,
+    "card": 3,
+    "move_cards_pos": [2, 10],
+    "user_id": 513842906,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "in_card": 3,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": false,
+    "oper_fixed_time": 5,
+    "oper_var_time": 20,
+    "in_ting_info": [],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": false,
+    "is_pull_north": false,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 11,
+    "card": 3,
+    "move_cards_pos": [14, 13],
+    "user_id": 311677992,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "in_card": 19,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": false,
+    "oper_fixed_time": 5,
+    "oper_var_time": 13,
+    "in_ting_info": [],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": false,
+    "is_pull_north": false,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 11,
+    "card": 19,
+    "move_cards_pos": [14, 13],
+    "user_id": 612006148,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "in_card": 20,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": false,
+    "oper_fixed_time": 5,
+    "oper_var_time": 0,
+    "in_ting_info": [
+      {
+        "discard_card": 33,
+        "ting_list": [
+          {
+            "is_zhen_ting": false,
+            "is_wu_yi": false,
+            "left_num": 3,
+            "ting_card": 20,
+            "is_yi_man": false,
+            "fang_info": { "11": 1, "16": 2, "18": 2 },
+            "ting_type": 2
+          }
+        ]
+      },
+      {
+        "discard_card": 20,
+        "ting_list": [
+          {
+            "is_zhen_ting": false,
+            "is_wu_yi": false,
+            "left_num": 3,
+            "ting_card": 33,
+            "is_yi_man": false,
+            "fang_info": { "11": 1, "16": 2, "18": 2, "20": 2 },
+            "ting_type": 2
+          }
+        ]
+      }
+    ],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": false,
+    "is_pull_north": true,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 11,
+    "card": 20,
+    "move_cards_pos": [11, 10],
+    "user_id": 513842906,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "in_card": 20,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": true,
+    "oper_fixed_time": 5,
+    "oper_var_time": 20,
+    "in_ting_info": [
+      {
+        "discard_card": 24,
+        "ting_list": [
+          {
+            "is_zhen_ting": false,
+            "is_wu_yi": false,
+            "left_num": 3,
+            "ting_card": 19,
+            "is_yi_man": false,
+            "fang_info": { "27": 3, "9": 1 },
+            "ting_type": 2
+          }
+        ]
+      }
+    ],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": true,
+    "is_pull_north": false,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 11,
+    "card": 24,
+    "move_cards_pos": [7, 3],
+    "user_id": 311677992,
+    "hand_cards": [25, 113, 25, 18, 23, 22, 17, 24, 113, 22, 113, 277, 24, 20],
+    "group_cards": null,
+    "is_li_zhi": true,
+    "li_zhi_operate": 1,
+    "li_zhi_type": 3
+  },
+  { "user_id": 311677992, "is_auto_gang": true },
+  {
+    "ting_info": [
+      {
+        "is_zhen_ting": false,
+        "is_wu_yi": false,
+        "left_num": 3,
+        "ting_card": 19,
+        "is_yi_man": false,
+        "fang_info": { "27": 3, "52": 2, "9": 1 },
+        "ting_type": 2
+      }
+    ]
+  },
+  {
+    "in_card": 7,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": false,
+    "oper_fixed_time": 5,
+    "oper_var_time": 13,
+    "in_ting_info": [],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": false,
+    "is_pull_north": false,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 11,
+    "card": 7,
+    "move_cards_pos": [14, 13],
+    "user_id": 612006148,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "in_card": 113,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": false,
+    "oper_fixed_time": 5,
+    "oper_var_time": 0,
+    "in_ting_info": [
+      {
+        "discard_card": 33,
+        "ting_list": [
+          {
+            "is_zhen_ting": false,
+            "is_wu_yi": false,
+            "left_num": 3,
+            "ting_card": 113,
+            "is_yi_man": false,
+            "fang_info": { "11": 1, "16": 2, "18": 2, "20": 2 },
+            "ting_type": 2
+          }
+        ]
+      },
+      {
+        "discard_card": 113,
+        "ting_list": [
+          {
+            "is_zhen_ting": false,
+            "is_wu_yi": false,
+            "left_num": 3,
+            "ting_card": 33,
+            "is_yi_man": false,
+            "fang_info": { "11": 1, "16": 2, "18": 2, "20": 2 },
+            "ting_type": 2
+          }
+        ]
+      }
+    ],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": false,
+    "is_pull_north": true,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 11,
+    "card": 113,
+    "move_cards_pos": [11, 10],
+    "user_id": 513842906,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "in_card": 7,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": false,
+    "oper_fixed_time": 5,
+    "oper_var_time": 19,
+    "in_ting_info": [],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": false,
+    "is_pull_north": false,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 11,
+    "card": 7,
+    "move_cards_pos": [14, 13],
+    "user_id": 311677992,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "in_card": 18,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": false,
+    "oper_fixed_time": 5,
+    "oper_var_time": 13,
+    "in_ting_info": [],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": false,
+    "is_pull_north": false,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 11,
+    "card": 18,
+    "move_cards_pos": [14, 13],
+    "user_id": 612006148,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "in_card": 1,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": false,
+    "oper_fixed_time": 5,
+    "oper_var_time": 0,
+    "in_ting_info": [
+      {
+        "discard_card": 33,
+        "ting_list": [
+          {
+            "is_zhen_ting": true,
+            "is_wu_yi": false,
+            "left_num": 2,
+            "ting_card": 1,
+            "is_yi_man": false,
+            "fang_info": { "11": 1, "16": 2, "18": 2, "20": 2 },
+            "ting_type": 2
+          }
+        ]
+      },
+      {
+        "discard_card": 1,
+        "ting_list": [
+          {
+            "is_zhen_ting": false,
+            "is_wu_yi": false,
+            "left_num": 3,
+            "ting_card": 33,
+            "is_yi_man": false,
+            "fang_info": { "11": 1, "16": 2, "18": 2, "20": 2 },
+            "ting_type": 2
+          }
+        ]
+      }
+    ],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": false,
+    "is_pull_north": true,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 11,
+    "card": 1,
+    "move_cards_pos": [11, 10],
+    "user_id": 513842906,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "in_card": 49,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": false,
+    "oper_fixed_time": 5,
+    "oper_var_time": 19,
+    "in_ting_info": [],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": false,
+    "is_pull_north": false,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 11,
+    "card": 49,
+    "move_cards_pos": [14, 13],
+    "user_id": 311677992,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "in_card": 1,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": false,
+    "oper_fixed_time": 5,
+    "oper_var_time": 13,
+    "in_ting_info": [],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": false,
+    "is_pull_north": false,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 11,
+    "card": 1,
+    "move_cards_pos": [14, 13],
+    "user_id": 612006148,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "in_card": 3,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": false,
+    "oper_fixed_time": 5,
+    "oper_var_time": 0,
+    "in_ting_info": [
+      {
+        "discard_card": 33,
+        "ting_list": [
+          {
+            "is_zhen_ting": true,
+            "is_wu_yi": false,
+            "left_num": 1,
+            "ting_card": 3,
+            "is_yi_man": false,
+            "fang_info": { "11": 1, "16": 2, "18": 2 },
+            "ting_type": 2
+          }
+        ]
+      },
+      {
+        "discard_card": 3,
+        "ting_list": [
+          {
+            "is_zhen_ting": false,
+            "is_wu_yi": false,
+            "left_num": 3,
+            "ting_card": 33,
+            "is_yi_man": false,
+            "fang_info": { "11": 1, "16": 2, "18": 2, "20": 2 },
+            "ting_type": 2
+          }
+        ]
+      }
+    ],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": false,
+    "is_pull_north": true,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 11,
+    "card": 3,
+    "move_cards_pos": [11, 10],
+    "user_id": 513842906,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "in_card": 6,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": false,
+    "oper_fixed_time": 5,
+    "oper_var_time": 19,
+    "in_ting_info": [],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": false,
+    "is_pull_north": false,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 11,
+    "card": 6,
+    "move_cards_pos": [14, 13],
+    "user_id": 311677992,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "in_card": 25,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": false,
+    "oper_fixed_time": 5,
+    "oper_var_time": 13,
+    "in_ting_info": [],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": false,
+    "is_pull_north": false,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 11,
+    "card": 25,
+    "move_cards_pos": [14, 13],
+    "user_id": 612006148,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "in_card": 20,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": false,
+    "oper_fixed_time": 5,
+    "oper_var_time": 0,
+    "in_ting_info": [
+      {
+        "discard_card": 33,
+        "ting_list": [
+          {
+            "is_zhen_ting": true,
+            "is_wu_yi": false,
+            "left_num": 2,
+            "ting_card": 20,
+            "is_yi_man": false,
+            "fang_info": { "11": 1, "16": 2, "18": 2 },
+            "ting_type": 2
+          }
+        ]
+      },
+      {
+        "discard_card": 20,
+        "ting_list": [
+          {
+            "is_zhen_ting": false,
+            "is_wu_yi": false,
+            "left_num": 3,
+            "ting_card": 33,
+            "is_yi_man": false,
+            "fang_info": { "11": 1, "16": 2, "18": 2, "20": 2 },
+            "ting_type": 2
+          }
+        ]
+      }
+    ],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": false,
+    "is_pull_north": true,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 11,
+    "card": 20,
+    "move_cards_pos": [11, 10],
+    "user_id": 513842906,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "in_card": 9,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": false,
+    "oper_fixed_time": 5,
+    "oper_var_time": 19,
+    "in_ting_info": [],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": false,
+    "is_pull_north": false,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 11,
+    "card": 9,
+    "move_cards_pos": [14, 13],
+    "user_id": 311677992,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "in_card": 2,
+    "is_zi_mo": true,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": false,
+    "oper_fixed_time": 5,
+    "oper_var_time": 13,
+    "in_ting_info": [],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": false,
+    "is_pull_north": false,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 10,
+    "card": 2,
+    "move_cards_pos": null,
+    "user_id": 612006148,
+    "hand_cards": [21, 8, 20, 2, 5, 33, 8, 2, 33, 4, 8, 6, 19, 2],
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "end_type": 1,
+    "win_info": [
+      {
+        "fang_info": [
+          { "fang_type": 52, "fang_num": 2 },
+          { "fang_type": 1, "fang_num": 1 },
+          { "fang_type": 55, "fang_num": 1 }
+        ],
+        "all_fang_num": 4,
+        "all_fu": 30,
+        "all_point": 7800,
+        "user_cards": [21, 8, 20, 2, 5, 33, 8, 2, 33, 4, 8, 6, 19, 2],
+        "li_bao_card": [33],
+        "user_id": 612006148,
+        "ting_card_list": null,
+        "bash_points": 1920,
+        "luck_score": 0
+      }
+    ],
+    "user_profit": [
+      {
+        "user_id": 311677992,
+        "point_profit": -7800,
+        "li_zhi_profit": -1000,
+        "is_bao_pai": false,
+        "user_point": 26200
+      },
+      {
+        "user_id": 612006148,
+        "point_profit": 13700,
+        "li_zhi_profit": 1000,
+        "is_bao_pai": false,
+        "user_point": 47700
+      },
+      {
+        "user_id": 513842906,
+        "point_profit": -3900,
+        "li_zhi_profit": 0,
+        "is_bao_pai": false,
+        "user_point": 31100
+      }
+    ],
+    "zhong_liu_info": [],
+    "cheat_info_list": []
+  },
+  {
+    "hand_cards": [23, 20, 33, 9, 18, 25, 81, 20, 9, 1, 129, 145, 23],
+    "dealer_pos": 1,
+    "dices": [2, 6],
+    "bao_pai_card": 19,
+    "ting_list": [],
+    "quan_feng": 49,
+    "chang_ci": 2,
+    "ben_chang_num": 0,
+    "li_zhi_bang_num": 0,
+    "user_info_list": [
+      {
+        "user_id": 311677992,
+        "hand_points": 26200,
+        "luck_score": 0,
+        "is_exist_shao_ji": true,
+        "room_exist_man_guan": false
+      },
+      {
+        "user_id": 612006148,
+        "hand_points": 47700,
+        "luck_score": 0,
+        "is_exist_shao_ji": false,
+        "room_exist_man_guan": false
+      },
+      {
+        "user_id": 513842906,
+        "hand_points": 31100,
+        "luck_score": 0,
+        "is_exist_shao_ji": true,
+        "room_exist_man_guan": false
+      }
+    ],
+    "hand_cards_sha_256": "9daa244f73a75453ce7ab57d5eb0ff6a2300314a36e7097ab5070aed22b605fb"
+  },
+  {
+    "hand_cards": [22, 2, 8, 1, 3, 81, 65, 49, 24, 24, 7, 4, 41, 3],
+    "dealer_pos": 1,
+    "dices": [2, 6],
+    "bao_pai_card": 19,
+    "ting_list": [],
+    "quan_feng": 49,
+    "chang_ci": 2,
+    "ben_chang_num": 0,
+    "li_zhi_bang_num": 0,
+    "user_info_list": [
+      {
+        "user_id": 311677992,
+        "hand_points": 26200,
+        "luck_score": 0,
+        "is_exist_shao_ji": true,
+        "room_exist_man_guan": false
+      },
+      {
+        "user_id": 612006148,
+        "hand_points": 47700,
+        "luck_score": 0,
+        "is_exist_shao_ji": false,
+        "room_exist_man_guan": false
+      },
+      {
+        "user_id": 513842906,
+        "hand_points": 31100,
+        "luck_score": 0,
+        "is_exist_shao_ji": true,
+        "room_exist_man_guan": false
+      }
+    ],
+    "hand_cards_sha_256": "9daa244f73a75453ce7ab57d5eb0ff6a2300314a36e7097ab5070aed22b605fb"
+  },
+  {
+    "hand_cards": [65, 6, 33, 97, 3, 113, 2, 20, 7, 261, 17, 24, 19],
+    "dealer_pos": 1,
+    "dices": [2, 6],
+    "bao_pai_card": 19,
+    "ting_list": [],
+    "quan_feng": 49,
+    "chang_ci": 2,
+    "ben_chang_num": 0,
+    "li_zhi_bang_num": 0,
+    "user_info_list": [
+      {
+        "user_id": 311677992,
+        "hand_points": 26200,
+        "luck_score": 0,
+        "is_exist_shao_ji": true,
+        "room_exist_man_guan": false
+      },
+      {
+        "user_id": 612006148,
+        "hand_points": 47700,
+        "luck_score": 0,
+        "is_exist_shao_ji": false,
+        "room_exist_man_guan": false
+      },
+      {
+        "user_id": 513842906,
+        "hand_points": 31100,
+        "luck_score": 0,
+        "is_exist_shao_ji": true,
+        "room_exist_man_guan": false
+      }
+    ],
+    "hand_cards_sha_256": "9daa244f73a75453ce7ab57d5eb0ff6a2300314a36e7097ab5070aed22b605fb"
+  },
+  {
+    "in_card": 0,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": false,
+    "oper_fixed_time": 5,
+    "oper_var_time": 20,
+    "in_ting_info": [],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": false,
+    "is_pull_north": false,
+    "is_first_xun_in": true
+  },
+  {
+    "action": 11,
+    "card": 41,
+    "move_cards_pos": [1, 4],
+    "user_id": 612006148,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "in_card": 2,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": false,
+    "oper_fixed_time": 5,
+    "oper_var_time": 20,
+    "in_ting_info": [],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": false,
+    "is_pull_north": true,
+    "is_first_xun_in": true
+  },
+  {
+    "action": 13,
+    "card": 97,
+    "move_cards_pos": [12],
+    "user_id": 513842906,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "in_card": 49,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": true,
+    "is_can_lizhi": false,
+    "oper_fixed_time": 5,
+    "oper_var_time": 20,
+    "in_ting_info": [],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": false,
+    "is_pull_north": false,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 11,
+    "card": 33,
+    "move_cards_pos": [1, 11],
+    "user_id": 513842906,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "in_card": 5,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": false,
+    "oper_fixed_time": 5,
+    "oper_var_time": 20,
+    "in_ting_info": [],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": false,
+    "is_pull_north": false,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 11,
+    "card": 33,
+    "move_cards_pos": [1, 2],
+    "user_id": 311677992,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "in_card": 6,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": false,
+    "oper_fixed_time": 5,
+    "oper_var_time": 20,
+    "in_ting_info": [],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": false,
+    "is_pull_north": false,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 11,
+    "card": 65,
+    "move_cards_pos": [12, 6],
+    "user_id": 612006148,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "in_card": 49,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": false,
+    "oper_fixed_time": 5,
+    "oper_var_time": 20,
+    "in_ting_info": [],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": false,
+    "is_pull_north": false,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 11,
+    "card": 65,
+    "move_cards_pos": [12, 12],
+    "user_id": 513842906,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "in_card": 81,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": false,
+    "oper_fixed_time": 5,
+    "oper_var_time": 20,
+    "in_ting_info": [],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": false,
+    "is_pull_north": false,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 11,
+    "card": 129,
+    "move_cards_pos": [12, 12],
+    "user_id": 311677992,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "in_card": 97,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": false,
+    "oper_fixed_time": 5,
+    "oper_var_time": 20,
+    "in_ting_info": [],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": false,
+    "is_pull_north": true,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 13,
+    "card": 97,
+    "move_cards_pos": [14],
+    "user_id": 612006148,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "in_card": 113,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": true,
+    "is_can_lizhi": false,
+    "oper_fixed_time": 5,
+    "oper_var_time": 20,
+    "in_ting_info": [],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": false,
+    "is_pull_north": false,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 11,
+    "card": 113,
+    "move_cards_pos": [14, 13],
+    "user_id": 612006148,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "in_card": 21,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": false,
+    "oper_fixed_time": 5,
+    "oper_var_time": 20,
+    "in_ting_info": [],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": false,
+    "is_pull_north": false,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 11,
+    "card": 113,
+    "move_cards_pos": [13, 10],
+    "user_id": 513842906,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "in_card": 33,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": false,
+    "oper_fixed_time": 5,
+    "oper_var_time": 20,
+    "in_ting_info": [],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": false,
+    "is_pull_north": false,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 11,
+    "card": 33,
+    "move_cards_pos": [14, 13],
+    "user_id": 311677992,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "in_card": 65,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": false,
+    "oper_fixed_time": 5,
+    "oper_var_time": 20,
+    "in_ting_info": [],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": false,
+    "is_pull_north": false,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 11,
+    "card": 65,
+    "move_cards_pos": [14, 13],
+    "user_id": 612006148,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "in_card": 65,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": false,
+    "oper_fixed_time": 5,
+    "oper_var_time": 20,
+    "in_ting_info": [],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": false,
+    "is_pull_north": false,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 11,
+    "card": 65,
+    "move_cards_pos": [14, 13],
+    "user_id": 513842906,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "in_card": 129,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": false,
+    "oper_fixed_time": 5,
+    "oper_var_time": 20,
+    "in_ting_info": [],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": false,
+    "is_pull_north": false,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 11,
+    "card": 129,
+    "move_cards_pos": [14, 13],
+    "user_id": 311677992,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "in_card": 145,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": false,
+    "oper_fixed_time": 5,
+    "oper_var_time": 20,
+    "in_ting_info": [],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": false,
+    "is_pull_north": false,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 11,
+    "card": 145,
+    "move_cards_pos": [14, 13],
+    "user_id": 612006148,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "in_card": 23,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": false,
+    "oper_fixed_time": 5,
+    "oper_var_time": 20,
+    "in_ting_info": [],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": false,
+    "is_pull_north": false,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 11,
+    "card": 17,
+    "move_cards_pos": [7, 10],
+    "user_id": 513842906,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "in_card": 25,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": false,
+    "oper_fixed_time": 5,
+    "oper_var_time": 20,
+    "in_ting_info": [],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": false,
+    "is_pull_north": false,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 11,
+    "card": 145,
+    "move_cards_pos": [13, 11],
+    "user_id": 311677992,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "in_card": 113,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": false,
+    "oper_fixed_time": 5,
+    "oper_var_time": 20,
+    "in_ting_info": [],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": false,
+    "is_pull_north": false,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 11,
+    "card": 113,
+    "move_cards_pos": [14, 13],
+    "user_id": 612006148,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "in_card": 33,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": false,
+    "oper_fixed_time": 5,
+    "oper_var_time": 20,
+    "in_ting_info": [],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": false,
+    "is_pull_north": false,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 11,
+    "card": 33,
+    "move_cards_pos": [14, 13],
+    "user_id": 513842906,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "in_card": 145,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": false,
+    "oper_fixed_time": 5,
+    "oper_var_time": 20,
+    "in_ting_info": [],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": false,
+    "is_pull_north": false,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 11,
+    "card": 145,
+    "move_cards_pos": [14, 13],
+    "user_id": 311677992,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "in_card": 8,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": false,
+    "oper_fixed_time": 5,
+    "oper_var_time": 20,
+    "in_ting_info": [],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": false,
+    "is_pull_north": false,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 11,
+    "card": 49,
+    "move_cards_pos": [12, 9],
+    "user_id": 612006148,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "out_card": 49,
+    "action_list": [5],
+    "oper_fixed_time": 5,
+    "oper_var_time": 20
+  },
+  {
+    "action": 5,
+    "card": 49,
+    "move_cards_pos": [12, 13],
+    "user_id": 513842906,
+    "hand_cards": null,
+    "group_cards": [49, 49],
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "in_card": 0,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": false,
+    "oper_fixed_time": 5,
+    "oper_var_time": 19,
+    "in_ting_info": [
+      {
+        "discard_card": 3,
+        "ting_list": [
+          {
+            "is_zhen_ting": false,
+            "is_wu_yi": false,
+            "left_num": 4,
+            "ting_card": 25,
+            "is_yi_man": false,
+            "fang_info": { "10": 1 },
+            "ting_type": 2
+          },
+          {
+            "is_zhen_ting": false,
+            "is_wu_yi": false,
+            "left_num": 4,
+            "ting_card": 22,
+            "is_yi_man": false,
+            "fang_info": { "10": 1 },
+            "ting_type": 2
+          }
+        ]
+      }
+    ],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": false,
+    "is_pull_north": false,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 11,
+    "card": 3,
+    "move_cards_pos": [3, 10],
+    "user_id": 513842906,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "out_card": 3,
+    "action_list": [5],
+    "oper_fixed_time": 5,
+    "oper_var_time": 20
+  },
+  {
+    "in_card": 18,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": true,
+    "oper_fixed_time": 5,
+    "oper_var_time": 20,
+    "in_ting_info": [
+      {
+        "discard_card": 1,
+        "ting_list": [
+          {
+            "is_zhen_ting": false,
+            "is_wu_yi": false,
+            "left_num": 3,
+            "ting_card": 5,
+            "is_yi_man": false,
+            "fang_info": { "17": 2 },
+            "ting_type": 2
+          }
+        ]
+      },
+      {
+        "discard_card": 5,
+        "ting_list": [
+          {
+            "is_zhen_ting": false,
+            "is_wu_yi": false,
+            "left_num": 3,
+            "ting_card": 1,
+            "is_yi_man": false,
+            "fang_info": { "17": 2 },
+            "ting_type": 2
+          }
+        ]
+      }
+    ],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": true,
+    "is_pull_north": false,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 11,
+    "card": 5,
+    "move_cards_pos": [2, 5],
+    "user_id": 311677992,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": true,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 1
+  },
+  { "user_id": 311677992, "is_auto_gang": false },
+  {
+    "ting_info": [
+      {
+        "is_zhen_ting": false,
+        "is_wu_yi": false,
+        "left_num": 3,
+        "ting_card": 1,
+        "is_yi_man": false,
+        "fang_info": { "0": 1, "17": 2 },
+        "ting_type": 2
+      }
+    ]
+  },
+  {
+    "in_card": 9,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": false,
+    "oper_fixed_time": 5,
+    "oper_var_time": 20,
+    "in_ting_info": [],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": false,
+    "is_pull_north": false,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 11,
+    "card": 81,
+    "move_cards_pos": [13, 10],
+    "user_id": 612006148,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "in_card": 129,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": false,
+    "oper_fixed_time": 5,
+    "oper_var_time": 19,
+    "in_ting_info": [
+      {
+        "discard_card": 129,
+        "ting_list": [
+          {
+            "is_zhen_ting": false,
+            "is_wu_yi": false,
+            "left_num": 4,
+            "ting_card": 25,
+            "is_yi_man": false,
+            "fang_info": { "10": 1 },
+            "ting_type": 2
+          },
+          {
+            "is_zhen_ting": false,
+            "is_wu_yi": false,
+            "left_num": 4,
+            "ting_card": 22,
+            "is_yi_man": false,
+            "fang_info": { "10": 1 },
+            "ting_type": 2
+          }
+        ]
+      }
+    ],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": false,
+    "is_pull_north": false,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 11,
+    "card": 129,
+    "move_cards_pos": [11, 10],
+    "user_id": 513842906,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "in_card": 8,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": false,
+    "oper_fixed_time": 5,
+    "oper_var_time": 20,
+    "in_ting_info": [],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": false,
+    "is_pull_north": false,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 11,
+    "card": 8,
+    "move_cards_pos": [14, 13],
+    "user_id": 311677992,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "out_card": 8,
+    "action_list": [5],
+    "oper_fixed_time": 5,
+    "oper_var_time": 20
+  },
+  {
+    "in_card": 9,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": false,
+    "oper_fixed_time": 5,
+    "oper_var_time": 20,
+    "in_ting_info": [],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": false,
+    "is_pull_north": false,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 11,
+    "card": 22,
+    "move_cards_pos": [11, 11],
+    "user_id": 612006148,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "out_card": 22,
+    "action_list": [7],
+    "oper_fixed_time": 5,
+    "oper_var_time": 19
+  },
+  {
+    "action": 7,
+    "card": 22,
+    "move_cards_pos": null,
+    "user_id": 513842906,
+    "hand_cards": [6, 2, 20, 7, 261, 24, 19, 2, 21, 23],
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "end_type": 0,
+    "win_info": [
+      {
+        "fang_info": [
+          { "fang_type": 10, "fang_num": 1 },
+          { "fang_type": 49, "fang_num": 1 },
+          { "fang_type": 50, "fang_num": 1 },
+          { "fang_type": 55, "fang_num": 1 }
+        ],
+        "all_fang_num": 4,
+        "all_fu": 30,
+        "all_point": 7700,
+        "user_cards": [6, 2, 20, 7, 261, 24, 19, 2, 21, 23],
+        "li_bao_card": null,
+        "user_id": 513842906,
+        "ting_card_list": null,
+        "bash_points": 1920,
+        "luck_score": 1
+      }
+    ],
+    "user_profit": [
+      {
+        "user_id": 311677992,
+        "point_profit": 0,
+        "li_zhi_profit": -1000,
+        "is_bao_pai": false,
+        "user_point": 25200
+      },
+      {
+        "user_id": 612006148,
+        "point_profit": -15400,
+        "li_zhi_profit": 0,
+        "is_bao_pai": false,
+        "user_point": 32300
+      },
+      {
+        "user_id": 513842906,
+        "point_profit": 16400,
+        "li_zhi_profit": 1000,
+        "is_bao_pai": false,
+        "user_point": 47500
+      }
+    ],
+    "zhong_liu_info": [],
+    "cheat_info_list": []
+  },
+  {
+    "hand_cards": [4, 1, 261, 129, 9, 8, 6, 23, 3, 1, 41, 41, 33],
+    "dealer_pos": 2,
+    "dices": [6, 1],
+    "bao_pai_card": 21,
+    "ting_list": [],
+    "quan_feng": 49,
+    "chang_ci": 3,
+    "ben_chang_num": 0,
+    "li_zhi_bang_num": 0,
+    "user_info_list": [
+      {
+        "user_id": 311677992,
+        "hand_points": 25200,
+        "luck_score": 0,
+        "is_exist_shao_ji": true,
+        "room_exist_man_guan": false
+      },
+      {
+        "user_id": 612006148,
+        "hand_points": 32300,
+        "luck_score": -1,
+        "is_exist_shao_ji": false,
+        "room_exist_man_guan": false
+      },
+      {
+        "user_id": 513842906,
+        "hand_points": 47500,
+        "luck_score": 1,
+        "is_exist_shao_ji": false,
+        "room_exist_man_guan": false
+      }
+    ],
+    "hand_cards_sha_256": "2af1f076ece504ab21695d44e70d6b706a19a2786ee2a0a1edfb92374e9a9078"
+  },
+  {
+    "hand_cards": [97, 113, 19, 113, 145, 17, 8, 9, 3, 24, 4, 6, 49],
+    "dealer_pos": 2,
+    "dices": [6, 1],
+    "bao_pai_card": 21,
+    "ting_list": [],
+    "quan_feng": 49,
+    "chang_ci": 3,
+    "ben_chang_num": 0,
+    "li_zhi_bang_num": 0,
+    "user_info_list": [
+      {
+        "user_id": 311677992,
+        "hand_points": 25200,
+        "luck_score": 0,
+        "is_exist_shao_ji": true,
+        "room_exist_man_guan": false
+      },
+      {
+        "user_id": 612006148,
+        "hand_points": 32300,
+        "luck_score": -1,
+        "is_exist_shao_ji": false,
+        "room_exist_man_guan": false
+      },
+      {
+        "user_id": 513842906,
+        "hand_points": 47500,
+        "luck_score": 1,
+        "is_exist_shao_ji": false,
+        "room_exist_man_guan": false
+      }
+    ],
+    "hand_cards_sha_256": "2af1f076ece504ab21695d44e70d6b706a19a2786ee2a0a1edfb92374e9a9078"
+  },
+  {
+    "hand_cards": [22, 81, 49, 81, 261, 49, 97, 129, 97, 113, 17, 9, 65, 25],
+    "dealer_pos": 2,
+    "dices": [6, 1],
+    "bao_pai_card": 21,
+    "ting_list": [],
+    "quan_feng": 49,
+    "chang_ci": 3,
+    "ben_chang_num": 0,
+    "li_zhi_bang_num": 0,
+    "user_info_list": [
+      {
+        "user_id": 311677992,
+        "hand_points": 25200,
+        "luck_score": 0,
+        "is_exist_shao_ji": true,
+        "room_exist_man_guan": false
+      },
+      {
+        "user_id": 612006148,
+        "hand_points": 32300,
+        "luck_score": -1,
+        "is_exist_shao_ji": false,
+        "room_exist_man_guan": false
+      },
+      {
+        "user_id": 513842906,
+        "hand_points": 47500,
+        "luck_score": 1,
+        "is_exist_shao_ji": false,
+        "room_exist_man_guan": false
+      }
+    ],
+    "hand_cards_sha_256": "2af1f076ece504ab21695d44e70d6b706a19a2786ee2a0a1edfb92374e9a9078"
+  },
+  {
+    "in_card": 0,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": false,
+    "oper_fixed_time": 5,
+    "oper_var_time": 20,
+    "in_ting_info": [],
+    "is_nine_cards": true,
+    "is_kai_li_zhi": false,
+    "is_pull_north": true,
+    "is_first_xun_in": true
+  },
+  {
+    "action": 11,
+    "card": 22,
+    "move_cards_pos": [4, 4],
+    "user_id": 513842906,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "in_card": 41,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": false,
+    "oper_fixed_time": 5,
+    "oper_var_time": 20,
+    "in_ting_info": [],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": false,
+    "is_pull_north": false,
+    "is_first_xun_in": true
+  },
+  {
+    "action": 11,
+    "card": 33,
+    "move_cards_pos": [1, 3],
+    "user_id": 311677992,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "in_card": 19,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": false,
+    "oper_fixed_time": 5,
+    "oper_var_time": 20,
+    "in_ting_info": [],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": false,
+    "is_pull_north": true,
+    "is_first_xun_in": true
+  },
+  {
+    "action": 13,
+    "card": 97,
+    "move_cards_pos": [10],
+    "user_id": 612006148,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "in_card": 277,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": true,
+    "is_can_lizhi": false,
+    "oper_fixed_time": 5,
+    "oper_var_time": 20,
+    "in_ting_info": [],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": false,
+    "is_pull_north": false,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 11,
+    "card": 145,
+    "move_cards_pos": [13, 9],
+    "user_id": 612006148,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "in_card": 129,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": false,
+    "oper_fixed_time": 5,
+    "oper_var_time": 13,
+    "in_ting_info": [],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": false,
+    "is_pull_north": true,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 11,
+    "card": 261,
+    "move_cards_pos": [1, 13],
+    "user_id": 513842906,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "in_card": 2,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": false,
+    "oper_fixed_time": 5,
+    "oper_var_time": 20,
+    "in_ting_info": [],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": false,
+    "is_pull_north": false,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 11,
+    "card": 23,
+    "move_cards_pos": [12, 6],
+    "user_id": 311677992,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "in_card": 20,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": false,
+    "oper_fixed_time": 5,
+    "oper_var_time": 20,
+    "in_ting_info": [],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": false,
+    "is_pull_north": false,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 11,
+    "card": 49,
+    "move_cards_pos": [11, 9],
+    "user_id": 612006148,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "out_card": 49,
+    "action_list": [5],
+    "oper_fixed_time": 5,
+    "oper_var_time": 12
+  },
+  {
+    "action": 5,
+    "card": 49,
+    "move_cards_pos": [4, 5],
+    "user_id": 513842906,
+    "hand_cards": null,
+    "group_cards": [49, 49],
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "in_card": 0,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": false,
+    "oper_fixed_time": 5,
+    "oper_var_time": 12,
+    "in_ting_info": [],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": false,
+    "is_pull_north": false,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 11,
+    "card": 9,
+    "move_cards_pos": [1, 10],
+    "user_id": 513842906,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "in_card": 1,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": true,
+    "oper_fixed_time": 5,
+    "oper_var_time": 20,
+    "in_ting_info": [
+      {
+        "discard_card": 129,
+        "ting_list": [
+          {
+            "is_zhen_ting": false,
+            "is_wu_yi": false,
+            "left_num": 4,
+            "ting_card": 7,
+            "is_yi_man": false,
+            "fang_info": { "22": 2 },
+            "ting_type": 2
+          }
+        ]
+      }
+    ],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": true,
+    "is_pull_north": false,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 11,
+    "card": 41,
+    "move_cards_pos": [1, 5],
+    "user_id": 311677992,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "in_card": 145,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": false,
+    "oper_fixed_time": 5,
+    "oper_var_time": 20,
+    "in_ting_info": [],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": false,
+    "is_pull_north": false,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 11,
+    "card": 145,
+    "move_cards_pos": [14, 13],
+    "user_id": 612006148,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "in_card": 277,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": false,
+    "oper_fixed_time": 5,
+    "oper_var_time": 12,
+    "in_ting_info": [],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": false,
+    "is_pull_north": true,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 11,
+    "card": 277,
+    "move_cards_pos": [11, 10],
+    "user_id": 513842906,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "in_card": 33,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": false,
+    "oper_fixed_time": 5,
+    "oper_var_time": 20,
+    "in_ting_info": [],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": false,
+    "is_pull_north": false,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 11,
+    "card": 41,
+    "move_cards_pos": [1, 1],
+    "user_id": 311677992,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "in_card": 4,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": false,
+    "oper_fixed_time": 5,
+    "oper_var_time": 20,
+    "in_ting_info": [],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": false,
+    "is_pull_north": false,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 11,
+    "card": 17,
+    "move_cards_pos": [6, 3],
+    "user_id": 612006148,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "in_card": 19,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": false,
+    "oper_fixed_time": 5,
+    "oper_var_time": 12,
+    "in_ting_info": [],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": false,
+    "is_pull_north": true,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 11,
+    "card": 17,
+    "move_cards_pos": [1, 1],
+    "user_id": 513842906,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "in_card": 65,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": false,
+    "oper_fixed_time": 5,
+    "oper_var_time": 20,
+    "in_ting_info": [],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": false,
+    "is_pull_north": false,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 11,
+    "card": 41,
+    "move_cards_pos": [2, 12],
+    "user_id": 311677992,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "in_card": 2,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": false,
+    "oper_fixed_time": 5,
+    "oper_var_time": 20,
+    "in_ting_info": [],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": false,
+    "is_pull_north": false,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 11,
+    "card": 24,
+    "move_cards_pos": [11, 1],
+    "user_id": 612006148,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "in_card": 25,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": false,
+    "oper_fixed_time": 5,
+    "oper_var_time": 12,
+    "in_ting_info": [],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": false,
+    "is_pull_north": true,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 11,
+    "card": 19,
+    "move_cards_pos": [1, 2],
+    "user_id": 513842906,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "out_card": 19,
+    "action_list": [5],
+    "oper_fixed_time": 5,
+    "oper_var_time": 20
+  },
+  {
+    "in_card": 129,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": false,
+    "oper_fixed_time": 5,
+    "oper_var_time": 20,
+    "in_ting_info": [],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": false,
+    "is_pull_north": false,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 11,
+    "card": 33,
+    "move_cards_pos": [1, 13],
+    "user_id": 311677992,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "in_card": 20,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": false,
+    "oper_fixed_time": 5,
+    "oper_var_time": 20,
+    "in_ting_info": [],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": false,
+    "is_pull_north": false,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 11,
+    "card": 9,
+    "move_cards_pos": [7, 10],
+    "user_id": 612006148,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "in_card": 7,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": false,
+    "oper_fixed_time": 5,
+    "oper_var_time": 12,
+    "in_ting_info": [],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": false,
+    "is_pull_north": true,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 11,
+    "card": 7,
+    "move_cards_pos": [11, 10],
+    "user_id": 513842906,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "in_card": 23,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": false,
+    "oper_fixed_time": 5,
+    "oper_var_time": 20,
+    "in_ting_info": [],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": false,
+    "is_pull_north": false,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 11,
+    "card": 23,
+    "move_cards_pos": [14, 13],
+    "user_id": 311677992,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "in_card": 145,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": false,
+    "oper_fixed_time": 5,
+    "oper_var_time": 20,
+    "in_ting_info": [],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": false,
+    "is_pull_north": false,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 11,
+    "card": 145,
+    "move_cards_pos": [14, 13],
+    "user_id": 612006148,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "in_card": 6,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": false,
+    "oper_fixed_time": 5,
+    "oper_var_time": 12,
+    "in_ting_info": [],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": false,
+    "is_pull_north": true,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 11,
+    "card": 6,
+    "move_cards_pos": [11, 10],
+    "user_id": 513842906,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "in_card": 3,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": false,
+    "oper_fixed_time": 5,
+    "oper_var_time": 20,
+    "in_ting_info": [],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": false,
+    "is_pull_north": false,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 11,
+    "card": 65,
+    "move_cards_pos": [11, 6],
+    "user_id": 311677992,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "in_card": 33,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": false,
+    "oper_fixed_time": 5,
+    "oper_var_time": 20,
+    "in_ting_info": [],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": false,
+    "is_pull_north": false,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 11,
+    "card": 33,
+    "move_cards_pos": [14, 13],
+    "user_id": 612006148,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "in_card": 7,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": false,
+    "oper_fixed_time": 5,
+    "oper_var_time": 12,
+    "in_ting_info": [],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": false,
+    "is_pull_north": true,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 11,
+    "card": 7,
+    "move_cards_pos": [11, 10],
+    "user_id": 513842906,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "in_card": 18,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": false,
+    "oper_fixed_time": 5,
+    "oper_var_time": 20,
+    "in_ting_info": [],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": false,
+    "is_pull_north": false,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 11,
+    "card": 18,
+    "move_cards_pos": [14, 13],
+    "user_id": 311677992,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "in_card": 2,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": false,
+    "oper_fixed_time": 5,
+    "oper_var_time": 20,
+    "in_ting_info": [],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": false,
+    "is_pull_north": false,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 11,
+    "card": 8,
+    "move_cards_pos": [6, 2],
+    "user_id": 612006148,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "in_card": 145,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": false,
+    "oper_fixed_time": 5,
+    "oper_var_time": 12,
+    "in_ting_info": [],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": false,
+    "is_pull_north": true,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 11,
+    "card": 25,
+    "move_cards_pos": [2, 10],
+    "user_id": 513842906,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "in_card": 8,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": false,
+    "oper_fixed_time": 5,
+    "oper_var_time": 20,
+    "in_ting_info": [],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": false,
+    "is_pull_north": false,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 11,
+    "card": 129,
+    "move_cards_pos": [13, 11],
+    "user_id": 311677992,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "out_card": 129,
+    "action_list": [5],
+    "oper_fixed_time": 5,
+    "oper_var_time": 12
+  },
+  {
+    "action": 5,
+    "card": 129,
+    "move_cards_pos": [8, 9],
+    "user_id": 513842906,
+    "hand_cards": null,
+    "group_cards": [129, 129],
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "in_card": 0,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": false,
+    "oper_fixed_time": 5,
+    "oper_var_time": 12,
+    "in_ting_info": [],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": false,
+    "is_pull_north": false,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 11,
+    "card": 25,
+    "move_cards_pos": [1, 7],
+    "user_id": 513842906,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "in_card": 23,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": false,
+    "oper_fixed_time": 5,
+    "oper_var_time": 20,
+    "in_ting_info": [],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": false,
+    "is_pull_north": false,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 11,
+    "card": 129,
+    "move_cards_pos": [13, 13],
+    "user_id": 311677992,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "in_card": 19,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": false,
+    "oper_fixed_time": 5,
+    "oper_var_time": 20,
+    "in_ting_info": [],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": false,
+    "is_pull_north": false,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 11,
+    "card": 6,
+    "move_cards_pos": [6, 8],
+    "user_id": 612006148,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "in_card": 65,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": false,
+    "oper_fixed_time": 5,
+    "oper_var_time": 12,
+    "in_ting_info": [],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": false,
+    "is_pull_north": true,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 11,
+    "card": 113,
+    "move_cards_pos": [6, 2],
+    "user_id": 513842906,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "out_card": 113,
+    "action_list": [5],
+    "oper_fixed_time": 5,
+    "oper_var_time": 20
+  },
+  {
+    "in_card": 33,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": false,
+    "oper_fixed_time": 5,
+    "oper_var_time": 20,
+    "in_ting_info": [],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": false,
+    "is_pull_north": false,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 11,
+    "card": 23,
+    "move_cards_pos": [13, 1],
+    "user_id": 311677992,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "in_card": 81,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": false,
+    "oper_fixed_time": 5,
+    "oper_var_time": 20,
+    "in_ting_info": [],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": false,
+    "is_pull_north": false,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 11,
+    "card": 81,
+    "move_cards_pos": [14, 13],
+    "user_id": 612006148,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "out_card": 81,
+    "action_list": [5],
+    "oper_fixed_time": 5,
+    "oper_var_time": 12
+  },
+  {
+    "action": 5,
+    "card": 81,
+    "move_cards_pos": [3, 4],
+    "user_id": 513842906,
+    "hand_cards": null,
+    "group_cards": [81, 81],
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "in_card": 0,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": false,
+    "oper_fixed_time": 5,
+    "oper_var_time": 12,
+    "in_ting_info": [
+      {
+        "discard_card": 145,
+        "ting_list": [
+          {
+            "is_zhen_ting": false,
+            "is_wu_yi": false,
+            "left_num": 1,
+            "ting_card": 65,
+            "is_yi_man": true,
+            "fang_info": { "42": 13, "44": 13 },
+            "ting_type": 3
+          },
+          {
+            "is_zhen_ting": false,
+            "is_wu_yi": false,
+            "left_num": 1,
+            "ting_card": 97,
+            "is_yi_man": true,
+            "fang_info": { "42": 13, "44": 13 },
+            "ting_type": 3
+          }
+        ]
+      }
+    ],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": false,
+    "is_pull_north": false,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 11,
+    "card": 145,
+    "move_cards_pos": [5, 4],
+    "user_id": 513842906,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "in_card": 23,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": false,
+    "oper_fixed_time": 5,
+    "oper_var_time": 20,
+    "in_ting_info": [],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": false,
+    "is_pull_north": false,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 11,
+    "card": 23,
+    "move_cards_pos": [14, 13],
+    "user_id": 311677992,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "in_card": 22,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": true,
+    "oper_fixed_time": 5,
+    "oper_var_time": 20,
+    "in_ting_info": [
+      {
+        "discard_card": 20,
+        "ting_list": [
+          {
+            "is_zhen_ting": false,
+            "is_wu_yi": false,
+            "left_num": 3,
+            "ting_card": 3,
+            "is_yi_man": false,
+            "fang_info": { "12": 1 },
+            "ting_type": 2
+          }
+        ]
+      }
+    ],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": true,
+    "is_pull_north": false,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 11,
+    "card": 20,
+    "move_cards_pos": [10, 11],
+    "user_id": 612006148,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": true,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 1
+  },
+  { "user_id": 612006148, "is_auto_gang": false },
+  {
+    "ting_info": [
+      {
+        "is_zhen_ting": false,
+        "is_wu_yi": false,
+        "left_num": 3,
+        "ting_card": 3,
+        "is_yi_man": false,
+        "fang_info": { "0": 1, "12": 1 },
+        "ting_type": 2
+      }
+    ]
+  },
+  {
+    "in_card": 20,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": false,
+    "oper_fixed_time": 5,
+    "oper_var_time": 12,
+    "in_ting_info": [
+      {
+        "discard_card": 20,
+        "ting_list": [
+          {
+            "is_zhen_ting": false,
+            "is_wu_yi": false,
+            "left_num": 1,
+            "ting_card": 65,
+            "is_yi_man": true,
+            "fang_info": { "42": 13, "44": 13 },
+            "ting_type": 3
+          },
+          {
+            "is_zhen_ting": false,
+            "is_wu_yi": false,
+            "left_num": 1,
+            "ting_card": 97,
+            "is_yi_man": true,
+            "fang_info": { "42": 13, "44": 13 },
+            "ting_type": 3
+          }
+        ]
+      }
+    ],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": false,
+    "is_pull_north": true,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 11,
+    "card": 20,
+    "move_cards_pos": [5, 4],
+    "user_id": 513842906,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "in_card": 49,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": false,
+    "oper_fixed_time": 5,
+    "oper_var_time": 20,
+    "in_ting_info": [],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": false,
+    "is_pull_north": false,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 11,
+    "card": 33,
+    "move_cards_pos": [1, 13],
+    "user_id": 311677992,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "in_card": 18,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": false,
+    "oper_fixed_time": 5,
+    "oper_var_time": 20,
+    "in_ting_info": [],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": false,
+    "is_pull_north": false,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 11,
+    "card": 18,
+    "move_cards_pos": [14, 13],
+    "user_id": 612006148,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "in_card": 41,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": false,
+    "oper_fixed_time": 5,
+    "oper_var_time": 12,
+    "in_ting_info": [
+      {
+        "discard_card": 41,
+        "ting_list": [
+          {
+            "is_zhen_ting": false,
+            "is_wu_yi": false,
+            "left_num": 1,
+            "ting_card": 65,
+            "is_yi_man": true,
+            "fang_info": { "42": 13, "44": 13 },
+            "ting_type": 3
+          },
+          {
+            "is_zhen_ting": false,
+            "is_wu_yi": false,
+            "left_num": 1,
+            "ting_card": 97,
+            "is_yi_man": true,
+            "fang_info": { "42": 13, "44": 13 },
+            "ting_type": 3
+          }
+        ]
+      }
+    ],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": false,
+    "is_pull_north": true,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 11,
+    "card": 41,
+    "move_cards_pos": [5, 4],
+    "user_id": 513842906,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "in_card": 81,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": false,
+    "oper_fixed_time": 5,
+    "oper_var_time": 20,
+    "in_ting_info": [],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": false,
+    "is_pull_north": false,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 11,
+    "card": 49,
+    "move_cards_pos": [13, 13],
+    "user_id": 311677992,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "in_card": 17,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": false,
+    "oper_fixed_time": 5,
+    "oper_var_time": 20,
+    "in_ting_info": [],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": false,
+    "is_pull_north": false,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 11,
+    "card": 17,
+    "move_cards_pos": [14, 13],
+    "user_id": 612006148,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "in_card": 2,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": false,
+    "oper_fixed_time": 5,
+    "oper_var_time": 12,
+    "in_ting_info": [
+      {
+        "discard_card": 2,
+        "ting_list": [
+          {
+            "is_zhen_ting": false,
+            "is_wu_yi": false,
+            "left_num": 1,
+            "ting_card": 65,
+            "is_yi_man": true,
+            "fang_info": { "42": 13, "44": 13 },
+            "ting_type": 3
+          },
+          {
+            "is_zhen_ting": false,
+            "is_wu_yi": false,
+            "left_num": 1,
+            "ting_card": 97,
+            "is_yi_man": true,
+            "fang_info": { "42": 13, "44": 13 },
+            "ting_type": 3
+          }
+        ]
+      }
+    ],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": false,
+    "is_pull_north": true,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 11,
+    "card": 2,
+    "move_cards_pos": [5, 4],
+    "user_id": 513842906,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "in_card": 24,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": false,
+    "oper_fixed_time": 5,
+    "oper_var_time": 20,
+    "in_ting_info": [],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": false,
+    "is_pull_north": false,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 11,
+    "card": 81,
+    "move_cards_pos": [13, 13],
+    "user_id": 311677992,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "in_card": 24,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": false,
+    "oper_fixed_time": 5,
+    "oper_var_time": 20,
+    "in_ting_info": [],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": false,
+    "is_pull_north": false,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 11,
+    "card": 24,
+    "move_cards_pos": [14, 13],
+    "user_id": 612006148,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "in_card": 1,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": false,
+    "oper_fixed_time": 5,
+    "oper_var_time": 12,
+    "in_ting_info": [
+      {
+        "discard_card": 1,
+        "ting_list": [
+          {
+            "is_zhen_ting": false,
+            "is_wu_yi": false,
+            "left_num": 1,
+            "ting_card": 65,
+            "is_yi_man": true,
+            "fang_info": { "42": 13, "44": 13 },
+            "ting_type": 3
+          },
+          {
+            "is_zhen_ting": false,
+            "is_wu_yi": false,
+            "left_num": 1,
+            "ting_card": 97,
+            "is_yi_man": true,
+            "fang_info": { "42": 13, "44": 13 },
+            "ting_type": 3
+          }
+        ]
+      }
+    ],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": false,
+    "is_pull_north": true,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 11,
+    "card": 1,
+    "move_cards_pos": [5, 4],
+    "user_id": 513842906,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "out_card": 1,
+    "action_list": [5, 6],
+    "oper_fixed_time": 5,
+    "oper_var_time": 20
+  },
+  {
+    "action": 5,
+    "card": 1,
+    "move_cards_pos": [1, 2],
+    "user_id": 311677992,
+    "hand_cards": null,
+    "group_cards": [1, 1],
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "in_card": 0,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": false,
+    "oper_fixed_time": 5,
+    "oper_var_time": 20,
+    "in_ting_info": [],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": false,
+    "is_pull_north": false,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 11,
+    "card": 24,
+    "move_cards_pos": [11, 10],
+    "user_id": 311677992,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "in_card": 18,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": false,
+    "oper_fixed_time": 5,
+    "oper_var_time": 20,
+    "in_ting_info": [],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": false,
+    "is_pull_north": false,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 11,
+    "card": 18,
+    "move_cards_pos": [14, 13],
+    "user_id": 612006148,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "in_card": 6,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": false,
+    "oper_fixed_time": 5,
+    "oper_var_time": 12,
+    "in_ting_info": [
+      {
+        "discard_card": 6,
+        "ting_list": [
+          {
+            "is_zhen_ting": false,
+            "is_wu_yi": false,
+            "left_num": 1,
+            "ting_card": 65,
+            "is_yi_man": true,
+            "fang_info": { "42": 13, "44": 13 },
+            "ting_type": 3
+          },
+          {
+            "is_zhen_ting": false,
+            "is_wu_yi": false,
+            "left_num": 1,
+            "ting_card": 97,
+            "is_yi_man": true,
+            "fang_info": { "42": 13, "44": 13 },
+            "ting_type": 3
+          }
+        ]
+      }
+    ],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": false,
+    "is_pull_north": true,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 11,
+    "card": 6,
+    "move_cards_pos": [5, 4],
+    "user_id": 513842906,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "in_card": 22,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [1],
+    "is_gang_incard": false,
+    "is_can_lizhi": false,
+    "oper_fixed_time": 5,
+    "oper_var_time": 20,
+    "in_ting_info": [],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": false,
+    "is_pull_north": false,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 11,
+    "card": 9,
+    "move_cards_pos": [10, 10],
+    "user_id": 311677992,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "in_card": 7,
+    "is_zi_mo": false,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": false,
+    "oper_fixed_time": 5,
+    "oper_var_time": 20,
+    "in_ting_info": [],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": false,
+    "is_pull_north": false,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 11,
+    "card": 7,
+    "move_cards_pos": [14, 13],
+    "user_id": 612006148,
+    "hand_cards": null,
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "in_card": 65,
+    "is_zi_mo": true,
+    "gang_cards": [],
+    "bu_gang_cards": [],
+    "is_gang_incard": false,
+    "is_can_lizhi": false,
+    "oper_fixed_time": 5,
+    "oper_var_time": 12,
+    "in_ting_info": [
+      {
+        "discard_card": 97,
+        "ting_list": [
+          {
+            "is_zhen_ting": false,
+            "is_wu_yi": false,
+            "left_num": 1,
+            "ting_card": 97,
+            "is_yi_man": true,
+            "fang_info": { "42": 13, "44": 13 },
+            "ting_type": 3
+          }
+        ]
+      },
+      {
+        "discard_card": 65,
+        "ting_list": [
+          {
+            "is_zhen_ting": false,
+            "is_wu_yi": false,
+            "left_num": 0,
+            "ting_card": 65,
+            "is_yi_man": true,
+            "fang_info": { "42": 13, "44": 13 },
+            "ting_type": 3
+          },
+          {
+            "is_zhen_ting": false,
+            "is_wu_yi": false,
+            "left_num": 1,
+            "ting_card": 97,
+            "is_yi_man": true,
+            "fang_info": { "42": 13, "44": 13 },
+            "ting_type": 3
+          }
+        ]
+      }
+    ],
+    "is_nine_cards": false,
+    "is_kai_li_zhi": false,
+    "is_pull_north": true,
+    "is_first_xun_in": false
+  },
+  {
+    "action": 10,
+    "card": 65,
+    "move_cards_pos": null,
+    "user_id": 513842906,
+    "hand_cards": [97, 97, 65, 65, 65],
+    "group_cards": null,
+    "is_li_zhi": false,
+    "li_zhi_operate": 0,
+    "li_zhi_type": 0
+  },
+  {
+    "end_type": 1,
+    "win_info": [
+      {
+        "fang_info": [
+          { "fang_type": 42, "fang_num": 13 },
+          { "fang_type": 44, "fang_num": 13 }
+        ],
+        "all_fang_num": 26,
+        "all_fu": 50,
+        "all_point": 96000,
+        "user_cards": [97, 97, 65, 65, 65],
+        "li_bao_card": null,
+        "user_id": 513842906,
+        "ting_card_list": null,
+        "bash_points": 16000,
+        "luck_score": 10
+      }
+    ],
+    "user_profit": [
+      {
+        "user_id": 311677992,
+        "point_profit": -96000,
+        "li_zhi_profit": 0,
+        "is_bao_pai": false,
+        "user_point": -70800
+      },
+      {
+        "user_id": 612006148,
+        "point_profit": -96000,
+        "li_zhi_profit": -1000,
+        "is_bao_pai": false,
+        "user_point": -64700
+      },
+      {
+        "user_id": 513842906,
+        "point_profit": 193000,
+        "li_zhi_profit": 1000,
+        "is_bao_pai": false,
+        "user_point": 240500
+      }
+    ],
+    "zhong_liu_info": [],
+    "cheat_info_list": []
+  },
+  {
+    "user_data": [
+      {
+        "user_id": 513842906,
+        "point_num": 240500,
+        "score": 2355,
+        "coin": 0,
+        "rate_value": 0,
+        "pt_value": 0,
+        "user_pt_value": 0,
+        "next_pt_value": 0,
+        "last_user_pt": 0,
+        "last_next_pt": 0,
+        "is_shao_ji": false,
+        "shao_ji_score": 10,
+        "luck_score": 11,
+        "StageLevel": 0
+      },
+      {
+        "user_id": 612006148,
+        "point_num": -64700,
+        "score": -1047,
+        "coin": 0,
+        "rate_value": 0,
+        "pt_value": 0,
+        "user_pt_value": 0,
+        "next_pt_value": 0,
+        "last_user_pt": 0,
+        "last_next_pt": 0,
+        "is_shao_ji": false,
+        "shao_ji_score": 10,
+        "luck_score": -6,
+        "StageLevel": 0
+      },
+      {
+        "user_id": 311677992,
+        "point_num": -70800,
+        "score": -1308,
+        "coin": 0,
+        "rate_value": 0,
+        "pt_value": 0,
+        "user_pt_value": 0,
+        "next_pt_value": 0,
+        "last_user_pt": 0,
+        "last_next_pt": 0,
+        "is_shao_ji": true,
+        "shao_ji_score": -20,
+        "luck_score": -5,
+        "StageLevel": 0
+      }
+    ],
+    "pai_pu_id": "cni8r269nc78kahoitb0",
+    "is_exist_room": false
+  }
+]

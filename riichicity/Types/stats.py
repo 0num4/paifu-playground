@@ -117,3 +117,64 @@ class UserBaseDataResponse(BaseModel):
     code: int
     data: UserBaseDataResponseData
     message: str
+
+
+class FavorRole(BaseModel):
+    cultivateStatus: int
+    feelValue: int
+    model: int
+    oathValue: int
+    roleId: int
+    skinId: int
+
+
+class Collect(BaseModel):
+    equipCount: int
+    roleCount: int
+    skinCount: int
+    titleCount: int
+
+
+class HighLightHu(BaseModel):
+    benChangShu: int
+    changCi: int
+    custom: bool
+    fangList: list[int]
+    handId: str
+    isExistYiMan: bool
+    maxHuBashPoints: int
+    maxHuCard: int
+    maxHuFang: int
+    maxHuFuLouList: list
+    maxHuHandCards: list[int]
+    maxHuPoints: int
+    paipuId: str
+    quanFeng: int
+
+
+class UserBriefData(BaseModel):
+    certificated: bool
+    championNum: int
+    collect: Collect
+    favorRoleList: list[FavorRole]
+    fourPt: int
+    fourStage: int
+    highLightHu: HighLightHu
+    isBlock: bool
+    isCanApply: bool
+    model: int
+    nickname: str
+    profileFrameID: int
+    roleID: int
+    sign: str
+    skinID: int
+    threePT: int
+    threeStage: int
+    titleID: int
+    userID: int
+
+
+class UserBriefResponse(BaseModel):
+    code: int
+    data: UserBriefData
+    message: str

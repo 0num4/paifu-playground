@@ -191,11 +191,12 @@ def get_user_base_data(headers: dict, userID: str, gameplay: int, playerCount: i
 # end
 
 
-def get_user_brief(headers: dict, userId: str) -> dict:
+def get_user_brief(headers: dict, userId: str) -> Types.stats.UserBriefResponse:
     payload = {"userId": userId}
     userBriefRes = requests.post("https://alicdn.mahjong-jp.net/users/userBrief", json=payload, headers=headers)
     userBriefRes = userBriefRes.json()
     print(userBriefRes)
+    userBriefRes = Types.stats.UserBriefResponse(**userBriefRes, strict=True)
     return userBriefRes
 
 
@@ -326,7 +327,7 @@ def main():
     headers = get_headers(emailLoginRes)
     res = get_user_brief(headers, userId="617696847")
     print(res)
-    save_json(res, "get_user_brief.json")
+    # save_json(res, "get_user_brief.json")
 
 
 if __name__ == "__main__":

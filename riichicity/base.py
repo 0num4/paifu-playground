@@ -5,6 +5,8 @@ import time
 
 import pydantic
 import Types.stats
+import Types.commonConsts
+import Types.importantConsts
 
 
 def login_riichi_city() -> dict:
@@ -115,6 +117,7 @@ def get_user_detail_stats(
     return userDetailStatsRes
 
 
+# TODO: 段位戦のデータを取得する
 def get_user_detail_stats_v2(
     headers: dict,
     userID: str,
@@ -139,9 +142,110 @@ def get_user_detail_stats_v2(
         "https://alicdn.mahjong-jp.net/stats/userDetailStatsV2", json=payload, headers=headers
     )
     userDetailStatsRes = userDetailStatsRes.json()
-    userDetailStatsRes = Types.stats.UserDetailStatsV2Response(**userDetailStatsRes, strict=True)
+    # userDetailStatsRes = Types.stats.UserDetailStatsV2Response(**userDetailStatsRes, strict=True)
     print(userDetailStatsRes)
     return userDetailStatsRes
+
+
+# TODO: 動かない
+def get_user_detail_stats_v2_info(
+    headers: dict,
+    userID: str,
+    gameplay: int,
+    playerCount: int,
+    round: int = 2,
+    stageType: int = 4,
+) -> dict:
+    payload = {
+        "userID": userID,
+        "playerCount": playerCount,
+        "gameplay": gameplay,
+        "round": round,
+        "stageType": stageType,
+    }
+    userDetailStatsV2InfoRes = requests.post(
+        "https://alicdn.mahjong-jp.net/stats/userDetailStatsV2Info", json=payload, headers=headers
+    )
+    userDetailStatsV2InfoRes = userDetailStatsV2InfoRes.json()
+    print(userDetailStatsV2InfoRes)
+    return userDetailStatsV2InfoRes
+
+
+# -- 牌谱对局数据
+# function M:getPaipuUserGames(paipuId)
+#     local data = {paipuId = paipuId}
+#     HttpUtil.MjGamePost("stats/getPaipuUserGames", data, RSP.getPaipuUserGamesRsp, data)
+# end
+
+
+# 動かない、ログインしたユーザーの牌譜しか取れない
+def get_paipu_user_games(headers: dict, paipuId: str) -> dict:
+    payload = {"paipuId": paipuId}
+    getPaipuUserGamesRes = requests.post(
+        "https://alicdn.mahjong-jp.net/stats/getPaipuUserGames", json=payload, headers=headers
+    )
+    getPaipuUserGamesRes = getPaipuUserGamesRes.json()
+    print(getPaipuUserGamesRes)
+    return getPaipuUserGamesRes
+
+
+# --[[
+#     不限制都为0
+#     classifyID:比赛为房间id（字符串）,其他不用传
+#     matchID:大奖赛 匹配ID  其他玩法可不传
+# ]]--这里有时间可以改下，太多参数了
+# function M:readPaiPuList(startTime, enTime, gamePlay, classifyID, skip, limit, isSelf,matchID,stageType,matchType)
+#     local data = {startTime = startTime, endTime = enTime, gamePlay = gamePlay, classifyID = classifyID, skip = skip, limit = limit, isSelf = isSelf,matchID=matchID,stageType = stageType,matchType = matchType}
+#     HttpUtil.MjGamePost("record/readPaiPuList", data, RSP.readPaiPuList, data)
+# end
+
+
+def read_pai_pu_list(
+    headers: dict,
+    startTime: int,
+    enTime: int,
+    gamePlay: int,
+    classifyID: str,
+    skip: int,
+    limit: int,
+    isSelf: bool,
+    matchID: str,
+    stageType: int,
+    matchType: int,
+) -> dict:
+    payload = {
+        "startTime": startTime,
+        "endTime": enTime,
+        "gamePlay": gamePlay,
+        "classifyID": classifyID,
+        "skip": skip,
+        "limit": limit,
+        "isSelf": isSelf,
+        "matchID": matchID,
+        "stageType": stageType,
+        "matchType": matchType,
+    }
+    readPaiPuListRes = requests.post(
+        "https://alicdn.mahjong-jp.net/record/readPaiPuList", json=payload, headers=headers
+    )
+    readPaiPuListRes = readPaiPuListRes.json()
+    print(readPaiPuListRes)
+    return readPaiPuListRes
+
+
+# function M:collectPaiPu(paiPuId, isCancel, remark)
+#     local data = {paiPuId = paiPuId, isCancel = isCancel, remark = remark}
+#     HttpUtil.MjGamePost("record/collectPaiPu", data, RSP.collectPaiPu, data, true)
+# end
+
+
+def collect_pai_pu(headers: dict, paiPuId: str, isCancel: bool, remark: str) -> Types.stats.CollectPaiPuResponse:
+    payload = {"paiPuId": paiPuId, "isCancel": isCancel, "remark": remark}
+    collectPaiPuRes = requests.post("https://alicdn.mahjong-jp.net/record/collectPaiPu", json=payload, headers=headers)
+    collectPaiPuRes = collectPaiPuRes.json()
+    print(collectPaiPuRes)
+    collectPaiPuRes = Types.stats.CollectPaiPuResponse(**collectPaiPuRes, strict=True)
+    return collectPaiPuRes
 
 
 playerCountDict = {3: "三麻", 4: "四麻"}
@@ -160,8 +264,8 @@ def save_json(data: dict, filename: str):
 def main():
     emailLoginRes = login_riichi_city()
     headers = get_headers(emailLoginRes)
-    res = get_user_detail_stats_v2(headers, "618112137", 1002, 3)
-    save_json(res.model_dump_json(), "userDetailStatsv2.json")
+    res = collect_pai_pu(headers, "cnvf06eai0897qshfp10", False, "test")
+    save_json(res, "collect_pai_pu.json")
 
 
 if __name__ == "__main__":

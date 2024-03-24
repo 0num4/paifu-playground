@@ -185,6 +185,22 @@ def get_user_base_data(headers: dict, userID: str, gameplay: int, playerCount: i
     return userBaseDataRes
 
 
+# function M:userBrief(userId)
+#     local data = {userId = userId}
+#     HttpUtil.MjGamePost("users/userBrief", data, RSP.userBriefRsp, data)
+# end
+
+
+def get_user_brief(headers: dict, userId: str) -> dict:
+    payload = {"userId": userId}
+    userBriefRes = requests.post("https://alicdn.mahjong-jp.net/users/userBrief", json=payload, headers=headers)
+    userBriefRes = userBriefRes.json()
+    print(userBriefRes)
+    return userBriefRes
+
+
+# その他/activity/achiveUserInfoなどがプロフ欄から飛べるやつ
+
 # -- 牌谱对局数据
 # function M:getPaipuUserGames(paipuId)
 #     local data = {paipuId = paipuId}
@@ -308,11 +324,9 @@ def save_json(data: dict, filename: str):
 def main():
     emailLoginRes = login_riichi_city()
     headers = get_headers(emailLoginRes)
-    res = get_user_detail_stats_v2(
-        headers, userID="617696847", gameplay=1001, playerCount=3, round=[1, 2], stageType=[1, 2, 3, 4], dataType=0
-    )
+    res = get_user_brief(headers, userId="617696847")
     print(res)
-    save_json(res, "get_user_detail_stats_v2_rank.json")
+    save_json(res, "get_user_brief.json")
 
 
 if __name__ == "__main__":

@@ -1,6 +1,5 @@
 import PaifuTypesPydantic
 import PaifuTypesPydanticWithInternal
-import PaifuTypeInternalPydantic
 import PaifuType
 import json
 import os
@@ -25,40 +24,37 @@ paifuAdapter = pydantic.TypeAdapter(PaifuTypesPydantic.Paifu)
 a = paifuAdapter.validate_python(json_data, strict=True)
 
 
-def analyze_hand_record(hand_event_records: list[PaifuTypesPydanticWithInternal.HandEventRecord], hand_id: str, paifu_id: str, room_id: str):
+def analyze_hand_record(
+    hand_event_records: list[PaifuTypesPydanticWithInternal.HandEventRecord], hand_id: str, paifu_id: str, room_id: str
+):
     print(f"hand_id: {hand_id}")
     print(f"paifu_id: {paifu_id}")
     print(f"room_id: {room_id}")
     count = 0
     for hand_event_record in hand_event_records:
-        print(f"hand_record type: {type(hand_event_record.data)}") #hand_record type: <class 'str'>
+        print(f"hand_record type: {type(hand_event_record.data)}")  # hand_record type: <class 'str'>
         hand_event_record_data_json = json.loads(hand_event_record.data)
         print(f"hand_event_record_data_json: {hand_event_record_data_json}")
         if hand_event_record_data_json == {}:
             print("hand_event_record_data_json is null")
             continue
-        paifuInternalAdapter = pydantic.TypeAdapter(Union[
-                    PaifuTypeInternalPydantic.HandInfo,  # hand_cards
-                    PaifuTypeInternalPydantic.OperationInfo,  # in_card
-                    PaifuTypeInternalPydantic.ActionInfo,  # action
-                    PaifuTypeInternalPydantic.OutCardInfo,  # out_card
-                    PaifuTypeInternalPydantic.GameResult,  # end_type
-                    PaifuTypeInternalPydantic.GameInfo,  # user_data
-                    PaifuTypeInternalPydantic.IsAutoGangInfo,  # user_id & is_auto_gang
-                    PaifuTypeInternalPydantic.TingInfo,  # ting_info
-                    #dict[Never, Never], # 他の型にもかかってしまうので関数で省く
-        ])
+        paifuInternalAdapter = pydantic.TypeAdapter(
+            Union[
+                PaifuTypesPydanticWithInternal.HandInfo,  # hand_cards
+                PaifuTypesPydanticWithInternal.OperationInfo,  # in_card
+                PaifuTypesPydanticWithInternal.ActionInfo,  # action
+                PaifuTypesPydanticWithInternal.OutCardInfo,  # out_card
+                PaifuTypesPydanticWithInternal.GameResult,  # end_type
+                PaifuTypesPydanticWithInternal.GameInfo,  # user_data
+                PaifuTypesPydanticWithInternal.IsAutoGangInfo,  # user_id & is_auto_gang
+                PaifuTypesPydanticWithInternal.TingInfo,  # ting_info
+                # dict[Never, Never], # 他の型にもかかってしまうので関数で省く
+            ]
+        )
         b = paifuInternalAdapter.validate_python(hand_event_record_data_json, strict=True)
         # print(b)
-        metadata = {
-            "hand_id": hand_id,
-            "paifu_id": paifu_id,
-            "room_id": room_id,
-            "count_id": str(count)
-        }
-        res = hand_event_playground_table.put_item(
-            Item={**b.model_dump(), **metadata}
-        )
+        metadata = {"hand_id": hand_id, "paifu_id": paifu_id, "room_id": room_id, "count_id": str(count)}
+        res = hand_event_playground_table.put_item(Item={**b.model_dump(), **metadata})
         if res["ResponseMetadata"]["HTTPStatusCode"] == 200:
             print("put_item success")
         else:

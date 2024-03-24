@@ -8,17 +8,43 @@ import random
 import datetime
 import pytz
 import PaifuTypesPydantic
+import PaifuTypesPydanticWithInternal
 import pydantic
 from decimal import Decimal
 
 dotenv.load_dotenv()
 
 
-# handrecordsの中身が
+# def assignDictToHandEventRecordDataLiteral(handEventRecord: dict) -> HandEventRecordDataLiteral:
 def parse_hand_record(hand_record: PaifuTypesPydantic.HandRecord) -> list[any]:
     HandRecordAdapter = pydantic.TypeAdapter(PaifuTypesPydantic.HandRecord)
     hand_record = HandRecordAdapter.validate_python(hand_record)
-    print(hand_record)
+    for hand_event_record in hand_record.handEventRecord:
+        event_data_str: str = hand_event_record.data
+        event_data = json.loads(event_data_str)
+        if event_data == {}:
+            print("hand_event_record_data_json is null")
+            continue
+        ada = pydantic.TypeAdapter(PaifuTypesPydanticWithInternal.HandEventRecordDataLiteral)
+        s = ada.validate_python(event_data)
+        if isinstance(s, PaifuTypesPydanticWithInternal.HandInfo):
+            print("HandInfo")
+        elif isinstance(s, PaifuTypesPydanticWithInternal.OperationInfo):
+            print("OperationInfo")
+        elif isinstance(s, PaifuTypesPydanticWithInternal.ActionInfo):
+            print("ActionInfo")
+        elif isinstance(s, PaifuTypesPydanticWithInternal.OutCardInfo):
+            print("OutCardInfo")
+        elif isinstance(s, PaifuTypesPydanticWithInternal.GameResult):
+            print("GameResult")
+        elif isinstance(s, PaifuTypesPydanticWithInternal.GameInfo):
+            print("GameInfo")
+        elif isinstance(s, PaifuTypesPydanticWithInternal.UserInfo):
+            print("UserInfo")
+        elif isinstance(s, PaifuTypesPydanticWithInternal.IsAutoGangInfo):
+            print("IsAutoGangInfo")
+        elif isinstance(s, PaifuTypesPydanticWithInternal.TingInfo):
+            print("TingInfo")
 
 
 def decimal_default(obj):

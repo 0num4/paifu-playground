@@ -75,3 +75,45 @@ class GetGameDataResponse(BaseModel):
     code: int
     data: dict
     message: str
+
+
+class UserBaseDataResponseData(BaseModel):
+    headTag: int
+    honorOpen: bool
+    isBlock: bool
+    isCanApply: bool
+    isNewerCertificated: bool
+    lastRankList: list[int]
+    lastScoreList: list[int]
+    maxHuAddUpYiMan: bool
+    maxHuBashPoints: int
+    maxHuCard: int
+    maxHuFang: int
+    maxHuFuLouList: list
+    maxHuHandCards: list[int]
+    maxHuPoints: int
+    medal: bool
+    model: int
+    nickname: str
+    paiFengDiDian: int
+    paiFengFang: int
+    paiFengFuLou: int
+    paiFengGaoDian: int
+    paiFengGong: int
+    paiFengLiZhi: int
+    paiFengMenQing: int
+    paiFengMoTing: int
+    profileFrameID: int
+    rValue: int
+    roleID: int
+    skinID: int
+    stageLevel: int
+    stageNextPt: int
+    stagePt: int
+    titleID: int
+
+
+class UserBaseDataResponse(BaseModel):
+    code: int
+    data: UserBaseDataResponseData
+    message: str

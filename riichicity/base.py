@@ -123,8 +123,8 @@ def get_user_detail_stats_v2(
     userID: str,
     gameplay: int,
     playerCount: int,
-    round: int = 2,
-    stageType: int = 4,
+    round: list[int] = [1, 2],
+    stageType: list[int] = [1, 2, 3, 4],
     dataType: int = 0,
 ) -> Types.stats.UserDetailStatsV2Response:
     if gameplay == 1001:
@@ -169,6 +169,21 @@ def get_user_detail_stats_v2_info(
     userDetailStatsV2InfoRes = userDetailStatsV2InfoRes.json()
     print(userDetailStatsV2InfoRes)
     return userDetailStatsV2InfoRes
+
+
+# function M:userBaseData(userID, gameplay, playerCount)
+#     local data = {userID = userID, gameplay = gameplay, playerCount = playerCount}
+#     HttpUtil.MjGamePost("users/userBaseData", data, RSP.userBaseData, data)
+# end
+
+
+def get_user_base_data(headers: dict, userID: str, gameplay: int, playerCount: int) -> Types.stats.UserBaseDataResponse:
+    payload = {"userID": userID, "gameplay": gameplay, "playerCount": playerCount}
+    userBaseDataRes = requests.post("https://alicdn.mahjong-jp.net/users/userBaseData", json=payload, headers=headers)
+    userBaseDataRes = userBaseDataRes.json()
+    print(userBaseDataRes)
+    userBaseDataRes = Types.stats.UserBaseDataResponse(**userBaseDataRes, strict=True)
+    return userBaseDataRes
 
 
 # -- 牌谱对局数据
@@ -294,8 +309,11 @@ def save_json(data: dict, filename: str):
 def main():
     emailLoginRes = login_riichi_city()
     headers = get_headers(emailLoginRes)
-    res = get_game_data(headers, "cnrkj069nc7ajnvadk2g", 75)
-    save_json(res, "get_game_data.json")
+    res = get_user_detail_stats_v2(
+        headers, userID="617696847", gameplay=1001, playerCount=3, round=[1, 2], stageType=[1, 2, 3, 4], dataType=0
+    )
+    print(res)
+    save_json(res, "get_user_detail_stats_v2_rank.json")
 
 
 if __name__ == "__main__":

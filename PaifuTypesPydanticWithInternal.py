@@ -26,14 +26,16 @@ class HandInfo(pydantic.BaseModel):
 
 class OperationInfo(pydantic.BaseModel):
     in_card: Optional[int]
-    is_zi_mo: bool
-    gang_cards: list[int]
-    bu_gang_cards: list[int]
+    is_zi_mo: bool  # 上がれる状態の手かどうか
+    gang_cards: list[int]  # ほぼ0
+    bu_gang_cards: list[int]  # ほぼ0
     is_gang_incard: bool
     is_can_lizhi: bool
-    oper_fixed_time: int
-    oper_var_time: int
-    in_ting_info: list[dict]
+    oper_fixed_time: Literal[5]  # ほぼ5秒固定
+    oper_var_time: Literal[
+        0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20
+    ]  # 20+5秒だと思うけど12が謎
+    in_ting_info: list[dict]  # 鳴くとそれ以降一生データが入るので
     is_nine_cards: bool
     is_kai_li_zhi: bool
     is_pull_north: bool
@@ -175,9 +177,9 @@ class Player(pydantic.BaseModel):
 
 
 class HandRecord(pydantic.BaseModel):
-    benChangNum: int
-    changCi: int
-    handCardEncode: str
+    benChangNum: int  # 0始まり。8連荘までなので普通は0-7
+    changCi: Literal[1, 2, 3, 4]  # 3人麻雀の場合は1, 2, 3
+    handCardEncode: str  # その局の牌山
     handCardsSHA256: str
     handEventRecord: list[HandEventRecord]
     handID: str

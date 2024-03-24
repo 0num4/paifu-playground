@@ -81,6 +81,8 @@ else:
 
 # exit(0)
 
+players = [player.userId for player in paifu.data.handRecord[0].players]
+
 # 必要最低限のデータだけいれる
 response = table.put_item(
     Item={
@@ -134,24 +136,24 @@ response = table.put_item(
                 ],
                 "players": [
                     {
-                        "cardBackID": player.cardBackID,
-                        "gameMusicId": player.gameMusicId,
-                        "headTag": player.headTag,
-                        "identity": player.identity,
-                        "matchMusicId": player.matchMusicId,
-                        "model": player.model,
+                        # "cardBackID": player.cardBackID,
+                        # "gameMusicId": player.gameMusicId,
+                        # "headTag": player.headTag,
+                        # "identity": player.identity,
+                        # "matchMusicId": player.matchMusicId,
+                        # "model": player.model,
                         "nickname": player.nickname,
-                        "points": player.points,
-                        "position": player.position,
-                        "profileFrameId": player.profileFrameId,
-                        "riichiEffectID": player.riichiEffectID,
-                        "riichiMusicId": player.riichiMusicId,
-                        "riichiStickID": player.riichiStickID,
-                        "roleID": player.roleID,
-                        "skinID": player.skinID,
-                        "specialEffectID": player.specialEffectID,
-                        "tableclothID": player.tableclothID,
-                        "titleID": player.titleID,
+                        # "points": player.points,
+                        # "position": player.position,
+                        # "profileFrameId": player.profileFrameId,
+                        # "riichiEffectID": player.riichiEffectID,
+                        # "riichiMusicId": player.riichiMusicId,
+                        # "riichiStickID": player.riichiStickID,
+                        # "roleID": player.roleID,
+                        # "skinID": player.skinID,
+                        # "specialEffectID": player.specialEffectID,
+                        # "tableclothID": player.tableclothID,
+                        # "titleID": player.titleID,
                         "userId": player.userId,
                     }
                     for player in record.players

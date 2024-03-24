@@ -239,6 +239,7 @@ def read_pai_pu_list(
 # end
 
 
+# ブックマーク。isCancelがtrueだとブックマーク解除。当然ですがisCollectの値はユーザー単位で見え方が違う(別のユーザーの別のブックマークは違うので)
 def collect_pai_pu(headers: dict, paiPuId: str, isCancel: bool, remark: str) -> Types.stats.CollectPaiPuResponse:
     payload = {"paiPuId": paiPuId, "isCancel": isCancel, "remark": remark}
     collectPaiPuRes = requests.post("https://alicdn.mahjong-jp.net/record/collectPaiPu", json=payload, headers=headers)
@@ -246,6 +247,35 @@ def collect_pai_pu(headers: dict, paiPuId: str, isCancel: bool, remark: str) -> 
     print(collectPaiPuRes)
     collectPaiPuRes = Types.stats.CollectPaiPuResponse(**collectPaiPuRes, strict=True)
     return collectPaiPuRes
+
+
+# function M:getRoomData(isObserve, keyValue,handID)
+#     local data = {isObserve = isObserve, keyValue = keyValue,handID = handID}
+#     HttpUtil.MjGamePost("record/getRoomData", data, RSP.getRoomData, data, true)
+# end
+
+# function M:getGameData(roomId, eventStartPos)
+#     local data = {roomId = roomId, eventStartPos = eventStartPos}
+#     HttpUtil.MjGamePost("record/getGameData", data, RSP.getGameData, data, true)
+# end
+
+
+# いつもの牌譜データ取得のやつ！！
+def get_room_data(headers: dict, isObserve: bool, keyValue: str, handID: str) -> dict:
+    payload = {"isObserve": isObserve, "keyValue": keyValue, "handID": handID}
+    getRoomDataRes = requests.post("https://alicdn.mahjong-jp.net/record/getRoomData", json=payload, headers=headers)
+    getRoomDataRes = getRoomDataRes.json()
+    print(getRoomDataRes)
+    return getRoomDataRes
+
+
+# 動いたけど、[]になってる
+def get_game_data(headers: dict, roomId: str, eventStartPos: int) -> dict:
+    payload = {"roomId": roomId, "eventStartPos": eventStartPos}
+    getGameDataRes = requests.post("https://alicdn.mahjong-jp.net/record/getGameData", json=payload, headers=headers)
+    getGameDataRes = getGameDataRes.json()
+    print(getGameDataRes)
+    return getGameDataRes
 
 
 playerCountDict = {3: "三麻", 4: "四麻"}
@@ -264,8 +294,8 @@ def save_json(data: dict, filename: str):
 def main():
     emailLoginRes = login_riichi_city()
     headers = get_headers(emailLoginRes)
-    res = collect_pai_pu(headers, "cnvf06eai0897qshfp10", False, "test")
-    save_json(res, "collect_pai_pu.json")
+    res = get_game_data(headers, "cnrkj069nc7ajnvadk2g", 75)
+    save_json(res, "get_game_data.json")
 
 
 if __name__ == "__main__":

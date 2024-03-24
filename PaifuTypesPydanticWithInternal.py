@@ -11,8 +11,10 @@ class HandEventRecord(pydantic.BaseModel):
         PaifuTypeInternalPydantic.OutCardInfo,  # out_card
         PaifuTypeInternalPydantic.GameResult,  # end_type
         PaifuTypeInternalPydantic.GameInfo,  # user_data
+        PaifuTypeInternalPydantic.UserInfo,
         PaifuTypeInternalPydantic.IsAutoGangInfo,  # user_id & is_auto_gang
-        ]
+        PaifuTypeInternalPydantic.TingInfo,  # ting_info
+    ]
     eventPos: int
     eventType: int
     handId: str

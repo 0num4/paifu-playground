@@ -116,7 +116,7 @@ response = table.put_item(
                 "benChangNum": record.benChangNum,
                 "changCi": record.changCi,
                 "handCardEncode": record.handCardEncode,
-                "handCardsSHA256": record.handCardsSHA256,
+                # "handCardsSHA256": record.handCardsSHA256, sha256.pyで生成できることを確認
                 "handID": record.handID,
                 "handPos": record.handPos,
                 "paiShan": record.paiShan,

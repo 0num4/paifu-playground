@@ -117,7 +117,6 @@ def get_user_detail_stats(
     return userDetailStatsRes
 
 
-# TODO: 段位戦のデータを取得する
 def get_user_detail_stats_v2(
     headers: dict,
     userID: str,

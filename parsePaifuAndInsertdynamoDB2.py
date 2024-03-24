@@ -14,6 +14,13 @@ from decimal import Decimal
 dotenv.load_dotenv()
 
 
+# handrecordsの中身が
+def parse_hand_record(hand_record: PaifuTypesPydantic.HandRecord) -> list[any]:
+    HandRecordAdapter = pydantic.TypeAdapter(PaifuTypesPydantic.HandRecord)
+    hand_record = HandRecordAdapter.validate_python(hand_record)
+    print(hand_record)
+
+
 def decimal_default(obj):
     if isinstance(obj, Decimal):
         return float(obj)  # または str(obj) によって文字列に変換
@@ -80,21 +87,27 @@ else:
 
 
 # exit(0)
+# hr = [hr for hr in paifu.data.handRecord]
+for hand_record in paifu.data.handRecord:
+    parse_hand_record(hand_record)
+
+exit(0)
 
 players = [player.userId for player in paifu.data.handRecord[0].players]
-
+print(players)
 # 必要最低限のデータだけいれる
 response = table.put_item(
     Item={
         # "code": paifu.code, errorのデータは別で入れる
         # "message": paifu.message,
         "id": paifu.data.keyValue,
-        "period": paifu.data.period,
+        # "period": paifu.data.period,
         "roomId": paifu.data.roomId,
+        "players": players,
         # "nowTime": paifu.data.nowTime,
         # "remark": paifu.data.remark, # 謎の値(ほぼ常に空白)。おそらくブックマークのコメント
         # "fangFu": paifu.data.fangFu, # 友人戦の翻数縛り
-        "gamePlay": paifu.data.gamePlay,  # 1003とか
+        # "gamePlay": paifu.data.gamePlay,  # 1003とか
         # "initPoints": paifu.data.initPoints, # 初期点数 段位なら35000固定
         # "isCollect": paifu.data.isCollect, # ブックマーク済みかどうか。マジでいらん。
         # "isGangPay": paifu.data.isGangPay, # パオの設定(槍カンか？)、段位ではfalse、友人線でも設定できなくね？
@@ -116,7 +129,7 @@ response = table.put_item(
         "handRecord": [
             {
                 "benChangNum": record.benChangNum,
-                "changCi": record.changCi,
+                "changCi": record.changCi,  # 巡目
                 "handCardEncode": record.handCardEncode,
                 # "handCardsSHA256": record.handCardsSHA256, sha256.pyで生成できることを確認
                 "handID": record.handID,
@@ -134,30 +147,30 @@ response = table.put_item(
                     }
                     for event in record.handEventRecord
                 ],
-                "players": [
-                    {
-                        # "cardBackID": player.cardBackID,
-                        # "gameMusicId": player.gameMusicId,
-                        # "headTag": player.headTag,
-                        # "identity": player.identity,
-                        # "matchMusicId": player.matchMusicId,
-                        # "model": player.model,
-                        "nickname": player.nickname,
-                        # "points": player.points,
-                        # "position": player.position,
-                        # "profileFrameId": player.profileFrameId,
-                        # "riichiEffectID": player.riichiEffectID,
-                        # "riichiMusicId": player.riichiMusicId,
-                        # "riichiStickID": player.riichiStickID,
-                        # "roleID": player.roleID,
-                        # "skinID": player.skinID,
-                        # "specialEffectID": player.specialEffectID,
-                        # "tableclothID": player.tableclothID,
-                        # "titleID": player.titleID,
-                        "userId": player.userId,
-                    }
-                    for player in record.players
-                ],
+                # "players": [
+                #     {
+                #         # "cardBackID": player.cardBackID,
+                #         # "gameMusicId": player.gameMusicId,
+                #         # "headTag": player.headTag,
+                #         # "identity": player.identity,
+                #         # "matchMusicId": player.matchMusicId,
+                #         # "model": player.model,
+                #         "nickname": player.nickname,
+                #         # "points": player.points,
+                #         # "position": player.position,
+                #         # "profileFrameId": player.profileFrameId,
+                #         # "riichiEffectID": player.riichiEffectID,
+                #         # "riichiMusicId": player.riichiMusicId,
+                #         # "riichiStickID": player.riichiStickID,
+                #         # "roleID": player.roleID,
+                #         # "skinID": player.skinID,
+                #         # "specialEffectID": player.specialEffectID,
+                #         # "tableclothID": player.tableclothID,
+                #         # "titleID": player.titleID,
+                #         "userId": player.userId,
+                #     }
+                #     for player in record.players
+                # ],
             }
             for record in paifu.data.handRecord
         ],

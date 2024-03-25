@@ -1,4 +1,4 @@
-from typing import List, Literal
+from typing import Literal
 import pydantic
 
 
@@ -38,18 +38,18 @@ class HandRecord(pydantic.BaseModel):
     changCi: int
     handCardEncode: str
     handCardsSHA256: str
-    handEventRecord: List[HandEventRecord]
+    handEventRecord: list[HandEventRecord]
     handID: str
     handPos: int
-    paiShan: List[int]
-    players: List[Player]
+    paiShan: list[int]
+    players: list[Player]
     quanFeng: int
 
 
 class PaifuData(pydantic.BaseModel):
     fangFu: int
     gamePlay: int
-    handRecord: List[HandRecord]
+    handRecord: list[HandRecord]
     initPoints: int
     isCollect: bool
     isGangPay: bool

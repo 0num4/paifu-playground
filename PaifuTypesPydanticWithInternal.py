@@ -1,5 +1,9 @@
+import json
 from typing import Literal, Union, TypeAlias, Optional
 import pydantic
+import PaifuTypesPydantic
+import decimal
+import boto3.dynamodb.types
 
 
 class UserInfo(pydantic.BaseModel):
@@ -43,9 +47,11 @@ class OperationInfo(pydantic.BaseModel):
 
 
 class ActionInfo(pydantic.BaseModel):
-    action: int
+    action: int  # EMjActionType
     card: int
-    move_cards_pos: Optional[list[int]]
+    move_cards_pos: Optional[
+        list[int]
+    ]  # だいたい[int, int]。北抜きの場合は手配の左からどこを抜いたか。普通の打牌の場合は[手配の左からどこを捨てたか,ツモ牌をどこにいれるか]
     user_id: int
     hand_cards: Optional[list[int]]
     group_cards: Optional[list[int]]
@@ -222,3 +228,75 @@ class Paifu(pydantic.BaseModel):
     code: int
     data: PaifuData
     message: str  # ok
+
+
+# deserializer = boto3.dynamodb.types.TypeDeserializer()
+
+
+def deserialize_number(number: str) -> int:
+    return int(number)
+
+
+# setattr(deserializer, "N", deserialize_number)
+setattr(boto3.dynamodb.types.TypeDeserializer, "_deserialize_n", lambda _, number: deserialize_number(number))
+
+
+# def assignDictToHandEventRecordDataLiteral(handEventRecord: dict) -> HandEventRecordDataLiteral:
+def parse_hand_record(hand_record: PaifuTypesPydantic.HandRecord) -> list[any]:
+    HandRecordAdapter = pydantic.TypeAdapter(PaifuTypesPydantic.HandRecord)
+    hand_record = HandRecordAdapter.validate_python(hand_record)
+    # hand_info_list = []
+    # operation_info_list = []
+    # action_info_list = []
+    # out_card_info_list = []
+    # game_result_list = []
+    # game_info_list = []
+    # user_info_list = []
+    # is_auto_gang_info_list = []
+    # ting_info_list = []
+
+    for hand_event_record in hand_record.handEventRecord:
+        # print(f"hand_event_record.eventType {hand_event_record.eventType}")
+        # continue
+        # if hand_event_record.userId == 813942315:
+        #     event_data_str: str = hand_event_record.data
+        #     event_data = json.loads(event_data_str)
+        #     print(event_data)
+        # else:
+        #     continue
+        # continue
+        print(hand_event_record.userId)
+        event_data_str: str = hand_event_record.data
+        event_data = json.loads(event_data_str)
+        ada = pydantic.TypeAdapter(HandEventRecordDataLiteral)
+        s = ada.validate_python(event_data)
+        if isinstance(s, ActionInfo):
+            # print("OperationInfo")
+            print(s.user_id)
+            print(s.hand_cards)
+            print(s.group_cards)
+            continue
+            # elif isinstance(s, PaifuTypesPydanticWithInternal.HandInfo):
+            #     print("HandInfo")
+            # continue
+        continue
+        if isinstance(s, HandInfo):
+            print("HandInfo")
+            # print(s)
+            # playerid,hand_cardsだけでい
+        elif isinstance(s, OperationInfo):
+            print("OperationInfo")
+        elif isinstance(s, ActionInfo):
+            print("ActionInfo")
+        elif isinstance(s, OutCardInfo):
+            print("OutCardInfo")
+        elif isinstance(s, GameResult):
+            print("GameResult")
+        elif isinstance(s, GameInfo):
+            print("GameInfo")
+        elif isinstance(s, UserInfo):
+            print("UserInfo")
+        elif isinstance(s, IsAutoGangInfo):
+            print("IsAutoGangInfo")
+        elif isinstance(s, TingInfo):
+            print("TingInfo")

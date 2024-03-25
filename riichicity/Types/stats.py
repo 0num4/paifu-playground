@@ -1,4 +1,3 @@
-from typing import Dict
 from pydantic import BaseModel
 
 
@@ -7,7 +6,7 @@ class Data(BaseModel):
     addUpYiManCount: int
     beiManCount: int
     chiHuTotalCount: int
-    chongCardList: Dict[str, int]
+    chongCardList: dict[str, int]
     chongFuLouCount: int
     chongLiZhiCount: int
     chongMoTingCount: int
@@ -15,7 +14,7 @@ class Data(BaseModel):
     chongTotalScore: int
     existFuLouCount: int
     existLiZhiCount: int
-    fangList: Dict[str, int]
+    fangList: dict[str, int]
     firstTimes: int
     flowCount: int
     fourFangCount: int
@@ -24,7 +23,7 @@ class Data(BaseModel):
     heFuLouCount: int
     heLiZhiCount: int
     heMoTingCount: int
-    huCardList: Dict[str, int]
+    huCardList: dict[str, int]
     huRoundTotal: int
     huTotalCount: int
     huTotalScore: int

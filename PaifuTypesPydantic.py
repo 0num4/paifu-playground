@@ -4,9 +4,9 @@ import pydantic
 
 class HandEventRecord(pydantic.BaseModel):
     data: str
-    eventPos: int
-    eventType: int
-    handId: str
+    eventPos: int  # eventのindex。0始まり
+    eventType: Literal[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]  # EMjReplayEventType, HandInfoなどのtype
+    handId: str  # だいたい空。謎。まじでいらん
     startTime: int
     userId: int
 

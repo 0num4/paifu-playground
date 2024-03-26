@@ -1,6 +1,7 @@
 from typing import Literal, Annotated
 import typing
 import pydantic
+import riichicity.Types.commonConsts
 import datetime
 
 KeyValueType: typing.TypeAlias = typing.Annotated[str, pydantic.StringConstraints(pattern=r"^cn[0-9a-f]{18}$")]
@@ -54,7 +55,7 @@ class HandRecord(pydantic.BaseModel):
 
 
 class PaifuData(pydantic.BaseModel):
-    fangFu: int
+    fangFu: riichicity.Types.commonConsts.EMFanFuType2
     gamePlay: int
     handRecord: list[HandRecord]
     initPoints: int

@@ -1,9 +1,12 @@
 import json
-from typing import Literal, Union, TypeAlias, Optional
+from typing import Literal, Union, TypeAlias, Optional, Annotated
+import riichicity.Types.commonConsts
 import pydantic
 import PaifuTypesPydantic
-import decimal
 import boto3.dynamodb.types
+import datetime
+
+UserIdType: TypeAlias = Annotated[int, pydantic.Field(strict=True, ge=100000000, le=999999999)]
 
 
 class UserInfo(pydantic.BaseModel):
@@ -47,7 +50,7 @@ class OperationInfo(pydantic.BaseModel):
 
 
 class ActionInfo(pydantic.BaseModel):
-    action: int  # EMjActionType
+    action: riichicity.Types.commonConsts.EMjActionType2
     card: int
     move_cards_pos: Optional[
         list[int]
@@ -157,7 +160,7 @@ class HandEventRecord(pydantic.BaseModel):
     eventType: int
     handId: str
     startTime: int
-    userId: int
+    userId: UserIdType
 
 
 class Player(pydantic.BaseModel):
@@ -179,7 +182,7 @@ class Player(pydantic.BaseModel):
     specialEffectID: int
     tableclothID: int
     titleID: int
-    userId: int
+    userId: UserIdType
 
 
 class HandRecord(pydantic.BaseModel):
@@ -196,7 +199,7 @@ class HandRecord(pydantic.BaseModel):
 
 
 class PaifuData(pydantic.BaseModel):
-    fangFu: int
+    fangFu: riichicity.Types.commonConsts.EMFanFuType2
     gamePlay: int
     handRecord: list[HandRecord]
     initPoints: int
@@ -210,16 +213,16 @@ class PaifuData(pydantic.BaseModel):
     isObserve: bool
     isShaoJi: bool
     isWithUser: bool
-    keyValue: str
+    keyValue: Annotated[str, pydantic.Field(pattern=r"^[0-9a-z]{20}$")]
     matchStage: int
     matchType: int
     northOperateType: int
-    nowTime: int
+    nowTime: datetime.date
     period: int
     playerCount: Literal[2, 3, 4]
     remark: str
     roomId: str
-    round: int
+    round: Literal[1, 2]
     stageNum: int
     stageType: int
 
@@ -265,7 +268,7 @@ def parse_hand_record(hand_record: PaifuTypesPydantic.HandRecord) -> list[any]:
         # else:
         #     continue
         # continue
-        print(hand_event_record.userId)
+        print(hand_event_record)
         event_data_str: str = hand_event_record.data
         event_data = json.loads(event_data_str)
         ada = pydantic.TypeAdapter(HandEventRecordDataLiteral)

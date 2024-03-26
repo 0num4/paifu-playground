@@ -1,5 +1,10 @@
-from typing import Literal
+from typing import Literal, Annotated
+import typing
 import pydantic
+import datetime
+
+KeyValueType: typing.TypeAlias = typing.Annotated[str, pydantic.StringConstraints(pattern=r"^cn[0-9a-f]{18}$")]
+benChangNumType: typing.TypeAlias = typing.Annotated[int, pydantic.Field(strict=True, ge=0, le=4)]
 
 
 class HandEventRecord(pydantic.BaseModel):
@@ -34,7 +39,7 @@ class Player(pydantic.BaseModel):
 
 
 class HandRecord(pydantic.BaseModel):
-    benChangNum: int
+    benChangNum: benChangNumType
     changCi: int
     handCardEncode: str
     handCardsSHA256: str
@@ -61,11 +66,11 @@ class PaifuData(pydantic.BaseModel):
     isObserve: bool
     isShaoJi: bool
     isWithUser: bool
-    keyValue: str
+    keyValue: KeyValueType
     matchStage: int
     matchType: int
     northOperateType: int
-    nowTime: int
+    nowTime: datetime.date
     period: int
     playerCount: Literal[2, 3, 4]
     remark: str

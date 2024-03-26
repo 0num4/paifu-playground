@@ -1,12 +1,8 @@
 import os
 import json
 import requests
-import time
-
-import pydantic
 import Types.stats
 import Types.commonConsts
-import Types.importantConsts
 
 
 def login_riichi_city() -> dict:

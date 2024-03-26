@@ -177,3 +177,38 @@ class UserBriefResponse(BaseModel):
     code: int
     data: UserBriefData
     message: str
+
+
+class EmailLoginResponseDataUser(BaseModel):
+    avatar: str
+    email: str
+    id: int
+    nickname: str
+    registerAt: int
+    status: int
+
+
+class EmailLoginResponseData(BaseModel):
+    banStartAt: int
+    banUntil: int
+    cancelContactEmail: str
+    cancelEndAt: int
+    country: str
+    honorRed: bool
+    init: bool
+    ipCountry: str
+    isCompleteCourse: bool
+    isCompleteGive: bool
+    isCompleteNew: bool
+    isCompleteNewRole: bool
+    loginQueue: list[any]
+    serverTime: int
+    tokenTypes: list[int]
+    user: EmailLoginResponseDataUser
+    violationAction: int
+
+
+class EmailLoginResponse(BaseModel):
+    code: int
+    data: EmailLoginResponseData
+    message: str

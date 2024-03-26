@@ -5,7 +5,7 @@ import Types.stats
 import Types.commonConsts
 
 
-def login_riichi_city() -> dict:
+def login_riichi_city() -> Types.stats.EmailLoginResponse:
     # リクエストヘッダーを設定
     headers = {
         "Content-Type": "application/json",
@@ -21,6 +21,7 @@ def login_riichi_city() -> dict:
     # レスポンスを表示
     print(response.text)
     emailLoginRes = response.json()
+    # json.dump(emailLoginRes, open("emailLoginRes.json", "w"))
     if emailLoginRes["code"] == 0:
         print("Logged into Riichi city as " + emailLoginRes["data"]["user"]["nickname"])
 
@@ -319,11 +320,11 @@ def save_json(data: dict, filename: str):
 
 
 def main():
-    emailLoginRes = login_riichi_city()
+    login_riichi_city()
     headers = get_headers(emailLoginRes)
     res = get_user_brief(headers, userId="617696847")
     print(res)
-    # save_json(res, "get_user_brief.json")
+    save_json(res, "get_user_brief.json")
 
 
 if __name__ == "__main__":

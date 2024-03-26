@@ -188,8 +188,8 @@ class Player(pydantic.BaseModel):
 class HandRecord(pydantic.BaseModel):
     benChangNum: int  # 0始まり。8連荘までなので普通は0-7
     changCi: Literal[1, 2, 3, 4]  # 3人麻雀の場合は1, 2, 3
-    handCardEncode: str  # その局の牌山
-    handCardsSHA256: str
+    handCardEncode: PaifuTypesPydantic.handCardEncodeType  # その局の牌山
+    handCardsSHA256: PaifuTypesPydantic.handCardsSHA256Type
     handEventRecord: list[HandEventRecord]
     handID: str
     handPos: int

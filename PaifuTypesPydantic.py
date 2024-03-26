@@ -8,6 +8,8 @@ KeyValueType: typing.TypeAlias = typing.Annotated[str, pydantic.StringConstraint
 benChangNumType: typing.TypeAlias = typing.Annotated[int, pydantic.Field(strict=True, ge=0, le=4)]
 UserIdType: typing.TypeAlias = Annotated[int, pydantic.Field(strict=True, ge=100000000, le=999999999)]
 eventTypeType: typing.TypeAlias = Annotated[int, pydantic.Field(strict=True, ge=1, le=11)]
+handCardEncodeType: typing.TypeAlias = Annotated[str, pydantic.Field(strict=True, pattern=r"^[0-9mpsz]*$")]
+handCardsSHA256Type: typing.TypeAlias = Annotated[str, pydantic.Field(strict=True, pattern=r"^[a-z\d]{64}$")]
 
 
 class HandEventRecord(pydantic.BaseModel):
@@ -44,8 +46,8 @@ class Player(pydantic.BaseModel):
 class HandRecord(pydantic.BaseModel):
     benChangNum: benChangNumType
     changCi: int
-    handCardEncode: str
-    handCardsSHA256: str
+    handCardEncode: handCardEncodeType  # 256文字にならないことがある
+    handCardsSHA256: handCardsSHA256Type
     handEventRecord: list[HandEventRecord]
     handID: str
     handPos: int

@@ -5,15 +5,17 @@ import datetime
 
 KeyValueType: typing.TypeAlias = typing.Annotated[str, pydantic.StringConstraints(pattern=r"^cn[0-9a-f]{18}$")]
 benChangNumType: typing.TypeAlias = typing.Annotated[int, pydantic.Field(strict=True, ge=0, le=4)]
+UserIdType: typing.TypeAlias = Annotated[int, pydantic.Field(strict=True, ge=100000000, le=999999999)]
+eventTypeType: typing.TypeAlias = Annotated[int, pydantic.Field(strict=True, ge=1, le=11)]
 
 
 class HandEventRecord(pydantic.BaseModel):
     data: str
     eventPos: int  # eventのindex。0始まり
-    eventType: Literal[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]  # EMjReplayEventType, HandInfoなどのtype
+    eventType: eventTypeType
     handId: str  # だいたい空。謎。まじでいらん
     startTime: int
-    userId: int
+    userId: UserIdType | Literal[0]  # eventTypeが5のときだけ0がある
 
 
 class Player(pydantic.BaseModel):

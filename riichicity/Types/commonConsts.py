@@ -1,3 +1,5 @@
+import enum
+
 # ゲーム内で使用される一般的な定義
 EGameType = {"Normal": 1, "Match": 2, "Replay": 3, "PlayGuide": 4}  # 普通  # 段位  # replay  # ガイド
 
@@ -26,8 +28,8 @@ EMjActionType = {
     "ActionChiHu": 7,
     "ActionAnGang": 8,
     "ActionBuGang": 9,
-    "ActionZiMo": 10,
-    "ActionOutCard": 11,
+    "ActionZiMo": 10,  # ツモ
+    "ActionOutCard": 11,  # 打牌
     "ActionEndGame": 12,
     "ActionPullNorth": 13,  # 北抜き
     "ActionNextInCard": 100,  # gmテスト命令
@@ -38,6 +40,31 @@ EMjActionType = {
     "ActionOfficalFinal": 204,
     "ActionKaiLiZhi": 205,
 }
+
+
+class EMjActionType2(enum.IntEnum):
+    ActionNotOperate = 0
+    ActionCheck = 1
+    ActionZuoChi = 2
+    ActionZhongChi = 3
+    ActionYouChi = 4
+    ActionPeng = 5
+    ActionMingGang = 6
+    ActionChiHu = 7
+    ActionAnGang = 8
+    ActionBuGang = 9
+    ActionZiMo = 10
+    ActionOutCard = 11
+    ActionEndGame = 12
+    ActionPullNorth = 13
+    ActionNextInCard = 100
+    ActionLiZhi = 200
+    ActionDrawCard = 201
+    ActionOfficalEnter = 202
+    ActionOfficalPromotion = 203
+    ActionOfficalFinal = 204
+    ActionKaiLiZhi = 205
+
 
 EMjLayer = {"MjTable": 0, "MjTile": 1, "LockMjTile": 2}  # 麻将卓  # 麻雀牌  # 自分の手牌として表示される麻雀牌
 
@@ -294,3 +321,12 @@ EMFanFuType = {
     "ManGuanFu": 4,  # 満貫符
     "MenQingFu": 5,  # 門前清符
 }
+
+
+class EMFanFuType2(enum.IntEnum):
+    WuFanFu = 0
+    OneFangFu = 1
+    TwoFangFu = 2
+    SiFangfu = 3
+    ManGuanFu = 4
+    MenQingFu = 5

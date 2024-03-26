@@ -330,3 +330,91 @@ class EMFanFuType2(enum.IntEnum):
     SiFangfu = 3
     ManGuanFu = 4
     MenQingFu = 5
+
+
+####################
+
+# ゲームタイプ
+GamePlayType = {
+    "All": 0,
+    "Rank": 1001,  # 段位戦
+    "Match": 1002,  # 大会
+    "Friend": 1003,  # 友人戦
+    "OneRoundFight": 1004,  # ワンラウンド戦
+    "OneRoundFightLobby": 1005,  # ワンラウンド戦ロビー
+}
+
+# 一局戦ランクタイプ
+OneRoundFightRankType = {
+    "FangCoupon": 1,  # 一番券
+    "OwlCoin": 2,  # 梟コイン
+}
+
+# プレイヤー人数
+PlayerCount = {
+    "Three": 3,
+    "Four": 4,
+    "Two": 2,
+}
+
+# ランクタイプ
+StateType = {
+    "NewStar": 1,  # 新星
+    "BrightMoon": 2,  # 輝月
+    "HotSun": 3,  # 炎陽
+    "MilkyWay": 4,  # 銀河
+}
+
+RoundType = {
+    "East": 1,  # 東場
+    "South": 2,  # 南場
+    "One": 3,  # 一局
+    "Total": 4,
+}
+
+# ユーザートークンタイプ
+UserTokenType = {
+    "Unknown": 0,
+    "Guest": 1,  # 匿名
+    "FaceBook": 2,  # Facebook
+    "Google": 3,  # Google
+    "Apple": 4,  # Apple
+    "Twitter": 5,  # Twitter
+    "Email": 6,
+    "Line": 7,
+    "Steam": 8,
+}
+
+
+# ユーザーステータス
+UserStatus = {
+    "Normarl": 0,
+    "Frozen": 1,
+    "Deleted": 2,
+    "ApplyPass": 3,
+    "ApplyReject": 4,
+}
+
+# 和了の役種
+HuSizeType = {
+    "Not": 0,  # なし
+    "One": 1,  # 1翻
+    "Two": 2,  # 2翻
+    "Three": 3,  # 3翻
+    "Four": 4,  # 4翻
+    "ManGuan": 5,  # 満貫
+    "TiaoMan": 6,  # 跳満
+    "BeiMan": 7,  # 倍満
+    "ThreeBeiMan": 8,  # 三倍満
+    "YiMan": 9,  # 役満
+    "TwoYiMan": 10,  # ダブル役満
+}
+
+# 大会タイプ
+MatchType = {
+    "None": 0,  # なし
+    "SelfBuild": 1,  # 自作大会
+    "Full": 2,  # 満員開始大会
+    "GrandPrix": 3,  # グランプリ
+    "FLHSRace": 4,  # 風雷火山大会
+}

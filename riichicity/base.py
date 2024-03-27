@@ -401,28 +401,29 @@ def backpack_recycle_gift(headers: dict, isAll: bool = False, itemID: int = 1100
 # ランキングの情報を取得。デフォルト値は4麻
 def activity_read_ranks(
     headers: dict, index: int = 0, kind: int = 1, limit: int = 100, scope: int = 1, skip: int = 0
-) -> dict:
+) -> Types.stats.ActivityReadRanksResponse:
     payload = {"index": index, "kind": kind, "limit": limit, "scope": scope, "skip": skip}
-    payload_4ma = {
-        "index": 0,
-        "kind": 1,
-        "limit": 100,
-        "scope": 1,
-        "skip": 0,
-    }
-    payload_3ma = {
-        "index": 0,
-        "kind": 3,
-        "limit": 100,
-        "scope": 1,
-        "skip": 0,
-    }
+    # payload_4ma = {
+    #     "index": 0,
+    #     "kind": 1,
+    #     "limit": 100,
+    #     "scope": 1,
+    #     "skip": 0,
+    # }
+    # payload_3ma = {
+    #     "index": 0,
+    #     "kind": 3,
+    #     "limit": 100,
+    #     "scope": 1,
+    #     "skip": 0,
+    # }
     activityReadRanksRes = requests.post(
-        "https://alicdn.mahjong-jp.net/activity/readRanks", json=payload_3ma, headers=headers
+        "https://alicdn.mahjong-jp.net/activity/readRanks", json=payload, headers=headers
     )
     activityReadRanksRes = activityReadRanksRes.json()
-    json.dump(activityReadRanksRes, open("activity_read_ranks_3ma.json", "w"))
+    # json.dump(activityReadRanksRes, open("activity_read_ranks_3ma.json", "w"))
     print(activityReadRanksRes)
+    activityReadRanksRes = Types.stats.ActivityReadRanksResponse(**activityReadRanksRes, strict=True)
     return activityReadRanksRes
 
 

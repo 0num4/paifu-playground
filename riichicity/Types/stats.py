@@ -614,3 +614,31 @@ class EXTeamTaskResponse(BaseModel):
     code: int
     data: EXTeamTaskResponseData
     message: str
+
+
+class ActivityReadRanksResponseDataItem(BaseModel):
+    alphaValue: int
+    level: int
+    model: int
+    nickname: str
+    profileFrameID: int
+    rank: int
+    roleID: int
+    skinID: int
+    titleID: int
+    userID: int
+    value: int
+
+
+class ActivityReadRanksResponseData(BaseModel):
+    items: list[ActivityReadRanksResponseDataItem]
+    kind: int
+    scopeValue: int
+    selfItem: ActivityReadRanksResponseDataItem
+    totalCount: int
+
+
+class ActivityReadRanksResponse(BaseModel):
+    code: int
+    data: ActivityReadRanksResponseData
+    message: str

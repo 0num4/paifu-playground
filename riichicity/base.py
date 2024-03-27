@@ -229,6 +229,27 @@ def get_activity_collect_task_award(headers: dict, typeList: list[int] = [1, 3])
     return activityCollectTaskAwardRes
 
 
+def get_product_list(headers: dict, firstLabel: int = 3, isCheckSkin: bool = True, secondLabel: int = 0) -> dict[any]:
+    payload = {
+        "firstLabel": firstLabel,
+        "isCheckSkin": isCheckSkin,
+        "secondLabel": secondLabel,
+    }
+    productRes = requests.post("https://alicdn.mahjong-jp.net/store/getProductList", json=payload, headers=headers)
+    productRes = productRes.json()
+    print(productRes)
+    return productRes
+
+
+# 動作未確認
+def get_store_buy_product(headers: dict, productID: int = 579, num: int = 1) -> dict[any]:  # 579は毎日の無料ボーナス
+    payload = {"productID": productID, "num": num}
+    storeBuyProductRes = requests.post("https://alicdn.mahjong-jp.net/store/buyProduct", json=payload, headers=headers)
+    storeBuyProductRes = storeBuyProductRes.json()
+    print(storeBuyProductRes)
+    return storeBuyProductRes
+
+
 # その他/activity/achiveUserInfoなどがプロフ欄から飛べるやつ
 
 # -- 牌谱对局数据
@@ -354,9 +375,9 @@ def save_json(data: dict, filename: str):
 def main():
     emailLoginRes = login_riichi_city()
     headers = get_headers(emailLoginRes)
-    res = get_user_tasks(headers)
+    res = get_product_list(headers)
     print(res)
-    save_json(res, "get_user_tasks.json")
+    save_json(res, "get_product_list.json")
 
 
 if __name__ == "__main__":

@@ -1,4 +1,5 @@
 from pydantic import BaseModel
+from typing import Any
 
 
 # 友人戦の詳細のみ。一位率とかはフロントでやってる
@@ -201,7 +202,7 @@ class EmailLoginResponseData(BaseModel):
     isCompleteGive: bool
     isCompleteNew: bool
     isCompleteNewRole: bool
-    loginQueue: list[any]
+    loginQueue: list[Any]
     serverTime: int
     tokenTypes: list[int]
     user: EmailLoginResponseDataUser
@@ -211,4 +212,18 @@ class EmailLoginResponseData(BaseModel):
 class EmailLoginResponse(BaseModel):
     code: int
     data: EmailLoginResponseData
+    message: str
+
+
+class Award(BaseModel):
+    category: int
+    count: int
+    isEquip: bool
+    itemId: int
+
+
+class userTaskAwardResponse(BaseModel):
+    awards: list[Award]
+    boxAwards: list[Any]
+    code: int
     message: str

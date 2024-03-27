@@ -205,6 +205,18 @@ def get_user_tasks(headers: dict) -> dict[any]:
     return userTasksRes
 
 
+# get_user_tasksでtaskを持ってきて個別のawardはget_user_task_awardで獲得できる。
+# ログインしてないので動作未確認
+def get_user_task_award(headers: dict, taskId: int = 12004, type: int = 1) -> dict[any]:
+    payload = {"taskId": taskId, "type": type}
+    userTaskAwardRes = requests.post(
+        "https://alicdn.mahjong-jp.net/activity/userTaskAward", json=payload, headers=headers
+    )
+    userTaskAwardRes = userTaskAwardRes.json()
+    print(userTaskAwardRes)
+    return userTaskAwardRes
+
+
 # その他/activity/achiveUserInfoなどがプロフ欄から飛べるやつ
 
 # -- 牌谱对局数据

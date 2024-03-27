@@ -53,7 +53,14 @@ headers = {
 # paifu id is tmp paifu id
 # payload = {"isObserve": True, "keyValue": "cnpp08m9nc7ajnusdol0"}
 # payload = {"isObserve": False, "keyValue": "cnrkj069nc7ajnvadk30"}
-payload = {"isObserve": False, "keyValue": "cnrlatu9nc7ajnvagcq0"}
+# payload = {"isObserve": False, "keyValue": "cnrlatu9nc7ajnvagcq0"}
+# payload = {"isObserve": False, "keyValue": "cnvbk1uai0897qsgduc0"}
+# payload = {"isObserve": False, "keyValue": "cnvefreai0897qshaii0"}  # 割れ目
+# payload = {"isObserve": False, "keyValue": "cnveknuai0897qshc4m0"}  # 焼き鳥
+# payload = {"isObserve": False, "keyValue": "cnves7mai0897qshei9g"}  # 祝儀
+# payload = {"isObserve": False, "keyValue": "cnvf06eai0897qshfp10"}  # 三麻
+# payload = {"isObserve": False, "keyValue": "cnvnmj6ai0897qsis3gg"}  # collectTest
+payload = {"isObserve": False, "keyValue": "co22hduai0897qt1uocg"}  # collectTest
 
 # readOnlineRoomRes = requests.post("https://alicdn.mahjong-jp.net/record/readOnlineRoom", json=payload, headers=headers)
 # readOnlineRoomResJson = readOnlineRoomRes.json()
@@ -72,7 +79,7 @@ payload = {"isObserve": False, "keyValue": "cnrlatu9nc7ajnvagcq0"}
 getRoomDataRes = requests.post("https://alicdn.mahjong-jp.net/record/getRoomData", json=payload, headers=headers)
 getRoomDataResJson = getRoomDataRes.json()
 print(getRoomDataResJson)
-with open("stampsample.json", "w") as f:
+with open("4ma_gin_han_sample.json", "w") as f:
     json.dump(getRoomDataResJson, f)
     f.close()
 

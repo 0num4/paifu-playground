@@ -341,16 +341,19 @@ def get_message_receive_award(headers: dict, mailID: str, userID: str) -> dict:
     return messageReceiveAwardRes
 
 
+# stageごとのオンラインの人数が取れる
 def lobbys_read_stage_classifies(
     headers: dict,
-) -> dict[any]:
+) -> Types.stats.LobbysReadStageClassifiesResponse:
     lobbysReadStageClassifiesRes = requests.post(
         "https://alicdn.mahjong-jp.net/lobbys/readStageClassifies", headers=headers
     )
     lobbysReadStageClassifiesRes = lobbysReadStageClassifiesRes.json()
     print(lobbysReadStageClassifiesRes)
-    json.dump(lobbysReadStageClassifiesRes, open("lobbys_read_stage_classifies.json", "w"))
-    # lobbysReadStageClassifiesRes = Types.stats.ReadStageClassifiesResponse(**lobbysReadStageClassifiesRes, strict=True)
+    # json.dump(lobbysReadStageClassifiesRes, open("lobbys_read_stage_classifies.json", "w"))
+    lobbysReadStageClassifiesRes = Types.stats.LobbysReadStageClassifiesResponse(
+        **lobbysReadStageClassifiesRes, strict=True
+    )
     return lobbysReadStageClassifiesRes
 
 

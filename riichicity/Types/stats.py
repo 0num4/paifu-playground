@@ -513,3 +513,40 @@ class MessageReceiveAwardResponse(BaseModel):
     awards: list[MessageReceiveAward]
     code: int
     message: str
+
+
+class LobbysReadStageClassifiesResponseData(BaseModel):
+    highRank: int
+    id: str
+    isLock: bool
+    lowCoins: int
+    lowRank: int
+    lowRate: dict[str, int] = {}
+    onlinePlayers: int
+    playerCount: int
+    round: int
+    stageType: int
+
+
+class LobbysReadStageClassifiesResponseUserInfoStage(BaseModel):
+    isRedDot: bool
+    rValue: int
+    stageLevel: int
+    stageNextPt: int
+    stagePt: int
+    timingStart: int
+
+
+class LobbysReadStageClassifiesResponseUserInfo(BaseModel):
+    player_3: LobbysReadStageClassifiesResponseUserInfoStage = None
+    player_4: LobbysReadStageClassifiesResponseUserInfoStage = None
+
+    class Config:
+        fields = {"player_3": "3", "player_4": "4"}
+
+
+class LobbysReadStageClassifiesResponse(BaseModel):
+    code: int
+    data: list[LobbysReadStageClassifiesResponseData]
+    message: str
+    userInfo: LobbysReadStageClassifiesResponseUserInfo

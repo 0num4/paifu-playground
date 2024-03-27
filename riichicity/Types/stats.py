@@ -277,3 +277,31 @@ class GetProductListResponse(BaseModel):
     code: int
     data: GetProductListResponseData
     message: str
+
+
+class GiftContent(BaseModel):
+    pass
+
+
+class StoreBuyProductResponseData(BaseModel):
+    createTime: int
+    expiredAt: int
+    feelValue: int
+    giftContent: list[GiftContent]
+    isCanEquip: bool
+    isEquip: bool
+    isExpired: bool
+    isLock: bool
+    itemID: int
+    itemType: int
+    label: int
+    name: str
+    num: int
+    recycleNum: int
+    source: int
+
+
+class StoreBuyProductResponse(BaseModel):
+    code: int
+    data: list[StoreBuyProductResponseData]
+    message: str

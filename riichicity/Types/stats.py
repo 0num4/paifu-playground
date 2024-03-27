@@ -587,3 +587,30 @@ class EXTeamDailyAwardResponse(BaseModel):
     code: int
     data: EXTeamDailyAwardResponseData
     message: str
+
+
+class EXTeamTaskResponseDataTaskAward(BaseModel):
+    category: int
+    count: int
+    isEquip: bool
+    itemId: int
+
+
+class EXTeamTaskResponseDataTask(BaseModel):
+    action: int
+    award: list[EXTeamTaskResponseDataTaskAward]
+    awardTimes: int
+    id: int
+    status: int
+    times: int
+
+
+class EXTeamTaskResponseData(BaseModel):
+    monthly: list[EXTeamTaskResponseDataTask]
+    week: list[EXTeamTaskResponseDataTask]
+
+
+class EXTeamTaskResponse(BaseModel):
+    code: int
+    data: EXTeamTaskResponseData
+    message: str

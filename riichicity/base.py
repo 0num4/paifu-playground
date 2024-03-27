@@ -229,18 +229,6 @@ def get_activity_collect_task_award(headers: dict, typeList: list[int] = [1, 3])
     return activityCollectTaskAwardRes
 
 
-def get_product_list(headers: dict, firstLabel: int = 3, isCheckSkin: bool = True, secondLabel: int = 0) -> dict[any]:
-    payload = {
-        "firstLabel": firstLabel,
-        "isCheckSkin": isCheckSkin,
-        "secondLabel": secondLabel,
-    }
-    productRes = requests.post("https://alicdn.mahjong-jp.net/store/getProductList", json=payload, headers=headers)
-    productRes = productRes.json()
-    print(productRes)
-    return productRes
-
-
 # 動作未確認
 def get_store_buy_product(headers: dict, productID: int = 579, num: int = 1) -> dict[any]:  # 579は毎日の無料ボーナス
     payload = {"productID": productID, "num": num}
@@ -248,6 +236,21 @@ def get_store_buy_product(headers: dict, productID: int = 579, num: int = 1) -> 
     storeBuyProductRes = storeBuyProductRes.json()
     print(storeBuyProductRes)
     return storeBuyProductRes
+
+
+def get_product_list(
+    headers: dict, firstLabel: int = 3, isCheckSkin: bool = True, secondLabel: int = 0
+) -> Types.stats.GetProductListResponse:
+    payload = {
+        "firstLabel": firstLabel,
+        "isCheckSkin": isCheckSkin,
+        "secondLabel": secondLabel,
+    }
+    productRes = requests.post("https://alicdn.mahjong-jp.net/store/getProductList", json=payload, headers=headers)
+    productRes = productRes.json()
+    productRes = Types.stats.GetProductListResponse(**productRes, strict=True)
+    print(productRes)
+    return productRes
 
 
 # その他/activity/achiveUserInfoなどがプロフ欄から飛べるやつ
@@ -376,8 +379,12 @@ def main():
     emailLoginRes = login_riichi_city()
     headers = get_headers(emailLoginRes)
     res = get_product_list(headers)
-    print(res)
-    save_json(res, "get_product_list.json")
+    if res.code == 0:
+        print("Successfully got product list")
+        res2 = get_store_buy_product(headers, productID=579, num=1)
+        print(res2)
+        save_json(res2, "get_store_buy_product.json")
+    print("end")
 
 
 if __name__ == "__main__":

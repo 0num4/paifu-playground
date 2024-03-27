@@ -222,7 +222,7 @@ class Award(BaseModel):
     itemId: int
 
 
-class collectTaskAwardResponse(BaseModel):
+class CollectTaskAwardResponse(BaseModel):
     awards: list[Award]
     boxAwards: list[Any]
     code: int
@@ -231,3 +231,49 @@ class collectTaskAwardResponse(BaseModel):
 
 class collectTaskAwardRequest(BaseModel):
     typelist: list[int]
+
+
+class DiscountBag(BaseModel):
+    pass
+
+
+class ProductList(BaseModel):
+    currencyID: int
+    currencyNum: int
+    discount: int
+    discountBag: list[DiscountBag]
+    exchangeLeft: int
+    iconType: int
+    isExchangeLimit: bool
+    isLimit: bool
+    itemID: int
+    labelType: int
+    leftTime: int
+    num: int
+    productID: int
+    productPrice: int
+    productSKU: str
+    secondLabel: int
+
+
+class GetProductListResponseData(BaseModel):
+    firstLabel: int
+    isExistSkin: bool
+    isFirstBag: bool
+    isShowDouble: bool
+    leftFreeTimes: int
+    leftTime: int
+    productList: list[ProductList]
+    refreshItemID: int
+    refreshItemNum: int
+    secondLabel: int
+    skinLabels: list[int]
+    storeActivity: int
+    version: int
+    versionNotify: bool
+
+
+class GetProductListResponse(BaseModel):
+    code: int
+    data: GetProductListResponseData
+    message: str

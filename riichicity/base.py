@@ -277,6 +277,7 @@ def lobbys_read_official_match(headers: dict, lang: str = "ja") -> Types.stats.R
     return lobbysReadOfficialMatchRes
 
 
+# TODO: やる。型をつける
 def lobbys_sign_official_match(headers: dict, isCancel: bool = False, officialID: str = "") -> dict[any]:
     payload = {"isCancel": isCancel, "officialID": officialID}
     lobbysSignOfficialMatchRes = requests.post(
@@ -285,8 +286,8 @@ def lobbys_sign_official_match(headers: dict, isCancel: bool = False, officialID
     lobbysSignOfficialMatchRes = lobbysSignOfficialMatchRes.json()
     print(lobbysSignOfficialMatchRes)
     json.dump(lobbysSignOfficialMatchRes, open("lobbys_sign_official_match.json", "w"))
-    # lobbysReadOfficialMatchRes = Types.stats.ReadOfficialMatchResponse(**lobbysReadOfficialMatchRes, strict=True)
-    return lobbysReadOfficialMatchRes
+    # lobbysReadOfficialMatchRes = Types.stats.SignOfficialMatchResponse(**lobbysReadOfficialMatchRes, strict=True)
+    return lobbysSignOfficialMatchRes
 
 
 # 日時設定されてるグランプリ(週間大会とか)の情報を取得
@@ -312,8 +313,21 @@ def lobbys_ready_official_next(
     )
     lobbysReadyOfficialNextRes = lobbysReadyOfficialNextRes.json()
     print(lobbysReadyOfficialNextRes)
-    json.dump(lobbysReadyOfficialNextRes, open("lobbys_read_official_match.json", "w"))
+    json.dump(lobbysReadyOfficialNextRes, open("lobbys_ready_official_next.json", "w"))
     return lobbysReadyOfficialNextRes
+
+
+# TODO: 検証
+def lobbys_sign_timing_match(
+    headers: dict, isCancel: bool = False, signItemID: int = 10002, timingID: str = ""
+) -> dict:
+    payload = {"isCancel": isCancel, "signItemID": signItemID, "timingID": timingID}
+    lobbysSignTimingMatchRes = requests.post(
+        "https://alicdn.mahjong-jp.net/lobbys/signTimingMatch", json=payload, headers=headers
+    )
+    lobbysSignTimingMatchRes = lobbysSignTimingMatchRes.json()
+    print(lobbysSignTimingMatchRes)
+    return lobbysSignTimingMatchRes
 
 
 # その他/activity/achiveUserInfoなどがプロフ欄から飛べるやつ
@@ -451,8 +465,8 @@ def main():
     emailLoginRes = login_riichi_city()
     headers = get_headers(emailLoginRes)
     # get_activity_ex_team_daily_award(headers)
-    lobbys_read_timing_match(headers)
-    print("end")
+    res = lobbys_read_official_match(headers)
+    print(res)
     # save_json(res, "get_activity_ex_team_daily_award.json")
     # dailybonus(headers) # 明日試す
 

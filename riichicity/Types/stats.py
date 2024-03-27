@@ -478,3 +478,14 @@ class ReadTimingMatchResponse(BaseModel):
     code: int
     data: list[ReadTimingMatchResponseData]
     message: str
+
+
+class SignOfficialMatchResponseData(BaseModel):
+    signNum: int
+    totalJoinNum: int
+
+
+class SignOfficialMatchResponse(BaseModel):
+    code: int
+    data: SignOfficialMatchResponseData
+    message: str

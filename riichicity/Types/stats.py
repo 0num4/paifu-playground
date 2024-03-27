@@ -434,3 +434,47 @@ class ReadyOfficialNextResponse(BaseModel):
     code: int
     data: bool
     message: str
+
+
+class ReadTimingMatchRankAward(BaseModel):
+    itemID: int
+    itemModule: int
+    itemType: int
+    num: int
+
+
+class ReadTimingMatchRankAwardList(BaseModel):
+    awardList: list[ReadTimingMatchRankAward]
+    maxRank: int
+    minRank: int
+
+
+class ReadTimingMatchSignItemList(BaseModel):
+    itemID: int
+    itemModule: int
+    itemType: int
+    num: int
+
+
+class ReadTimingMatchResponseData(BaseModel):
+    isSign: bool
+    label: int
+    matchJoinNum: int
+    matchStage: int
+    officialID: str
+    period: int
+    playerCount: int
+    qualifiedNum: int
+    rankAwardList: list[ReadTimingMatchRankAwardList]
+    signItemList: list[ReadTimingMatchSignItemList]
+    signNum: int
+    signTimes: int
+    signUpEndTime: int
+    signUpStartTime: int
+    startTime: int
+
+
+class ReadTimingMatchResponse(BaseModel):
+    code: int
+    data: list[ReadTimingMatchResponseData]
+    message: str

@@ -290,15 +290,15 @@ def lobbys_sign_official_match(headers: dict, isCancel: bool = False, officialID
 
 
 # 日時設定されてるグランプリ(週間大会とか)の情報を取得
-def lobbys_read_timing_match(headers: dict) -> dict[any]:
+def lobbys_read_timing_match(headers: dict) -> Types.stats.ReadTimingMatchResponse:
     payload = {}
     lobbysReadTimingMatchRes = requests.post(
         "https://alicdn.mahjong-jp.net/lobbys/readTimingMatch", json=payload, headers=headers
     )
     lobbysReadTimingMatchRes = lobbysReadTimingMatchRes.json()
     print(lobbysReadTimingMatchRes)
-    json.dump(lobbysReadTimingMatchRes, open("lobbys_read_timing_match.json", "w"))
-    # lobbysReadOfficialMatchRes = Types.stats.ReadOfficialMatchResponse(**lobbysReadOfficialMatchRes, strict=True)
+    # json.dump(lobbysReadTimingMatchRes, open("lobbys_read_timing_match.json", "w"))
+    lobbysReadTimingMatchRes = Types.stats.ReadTimingMatchResponse(**lobbysReadTimingMatchRes, strict=True)
     return lobbysReadTimingMatchRes
 
 

@@ -1,0 +1,212 @@
+{
+  "code": 0,
+  "data": {
+    "dailyDetail": {
+      "boxs": [
+        { "activeNum": 50, "boxId": 1, "boxType": 1, "status": 1 },
+        { "activeNum": 100, "boxId": 2, "boxType": 1, "status": 1 },
+        { "activeNum": 150, "boxId": 3, "boxType": 1, "status": 1 },
+        { "activeNum": 330, "boxId": 4, "boxType": 1, "status": 1 },
+        { "activeNum": 1600, "boxId": 5, "boxType": 2, "status": 1 },
+        { "activeNum": 1950, "boxId": 6, "boxType": 2, "status": 1 }
+      ],
+      "dailyActiveNum": 0,
+      "tasks": [
+        {
+          "action": 99,
+          "activeNum": 50,
+          "award": [
+            { "category": 0, "count": 300, "isEquip": false, "itemId": 10002 }
+          ],
+          "isVip": false,
+          "status": 1,
+          "taskId": 11051,
+          "taskTimes": 1,
+          "usetTimes": 0
+        },
+        {
+          "action": 996,
+          "activeNum": 50,
+          "award": [
+            { "category": 0, "count": 300, "isEquip": false, "itemId": 10002 }
+          ],
+          "isVip": false,
+          "status": 1,
+          "taskId": 11015,
+          "taskTimes": 2,
+          "usetTimes": 0
+        },
+        {
+          "action": 4002,
+          "activeNum": 50,
+          "award": [
+            { "category": 0, "count": 300, "isEquip": false, "itemId": 10002 }
+          ],
+          "isVip": false,
+          "status": 1,
+          "taskId": 13011,
+          "taskTimes": 1,
+          "usetTimes": 0
+        },
+        {
+          "action": 2003,
+          "activeNum": 50,
+          "award": [
+            { "category": 0, "count": 300, "isEquip": false, "itemId": 10002 }
+          ],
+          "isVip": false,
+          "status": 1,
+          "taskId": 13005,
+          "taskTimes": 1,
+          "usetTimes": 0
+        },
+        {
+          "action": 2005,
+          "activeNum": 50,
+          "award": [
+            { "category": 0, "count": 300, "isEquip": false, "itemId": 10002 }
+          ],
+          "isVip": false,
+          "status": 1,
+          "taskId": 12004,
+          "taskTimes": 1,
+          "usetTimes": 0
+        },
+        {
+          "action": 2040,
+          "activeNum": 60,
+          "award": [
+            { "category": 0, "count": 400, "isEquip": false, "itemId": 10002 }
+          ],
+          "isVip": false,
+          "status": 1,
+          "taskId": 12006,
+          "taskTimes": 1,
+          "usetTimes": 0
+        },
+        {
+          "action": 1047,
+          "activeNum": 120,
+          "award": [
+            { "category": 0, "count": 500, "isEquip": false, "itemId": 10002 }
+          ],
+          "isVip": false,
+          "status": 1,
+          "taskId": 10006,
+          "taskTimes": 2,
+          "usetTimes": 0
+        }
+      ],
+      "weekActiveNum": 0
+    },
+    "growthDetail": { "tasks": [] },
+    "weeklyDetail": {
+      "boxs": [
+        { "activeNum": 200, "boxId": 1, "boxType": 3, "status": 1 },
+        { "activeNum": 400, "boxId": 2, "boxType": 3, "status": 1 },
+        { "activeNum": 600, "boxId": 3, "boxType": 3, "status": 1 },
+        { "activeNum": 800, "boxId": 4, "boxType": 3, "status": 1 }
+      ],
+      "tasks": [
+        {
+          "action": 1044,
+          "activeNum": 100,
+          "award": [
+            { "category": 0, "count": 1000, "isEquip": false, "itemId": 10002 }
+          ],
+          "isVip": false,
+          "status": 1,
+          "taskId": 2,
+          "taskTimes": 1,
+          "usetTimes": 0
+        },
+        {
+          "action": 1044,
+          "activeNum": 100,
+          "award": [
+            { "category": 0, "count": 1000, "isEquip": false, "itemId": 10002 }
+          ],
+          "isVip": false,
+          "status": 1,
+          "taskId": 3,
+          "taskTimes": 2,
+          "usetTimes": 0
+        },
+        {
+          "action": 1044,
+          "activeNum": 100,
+          "award": [
+            { "category": 0, "count": 1000, "isEquip": false, "itemId": 10002 }
+          ],
+          "isVip": false,
+          "status": 1,
+          "taskId": 4,
+          "taskTimes": 3,
+          "usetTimes": 0
+        },
+        {
+          "action": 1044,
+          "activeNum": 100,
+          "award": [
+            { "category": 0, "count": 1000, "isEquip": false, "itemId": 10002 }
+          ],
+          "isVip": false,
+          "status": 1,
+          "taskId": 5,
+          "taskTimes": 4,
+          "usetTimes": 0
+        },
+        {
+          "action": 1044,
+          "activeNum": 100,
+          "award": [
+            { "category": 0, "count": 1000, "isEquip": false, "itemId": 10002 }
+          ],
+          "isVip": false,
+          "status": 1,
+          "taskId": 6,
+          "taskTimes": 5,
+          "usetTimes": 0
+        },
+        {
+          "action": 1044,
+          "activeNum": 100,
+          "award": [
+            { "category": 0, "count": 1000, "isEquip": false, "itemId": 10002 }
+          ],
+          "isVip": false,
+          "status": 1,
+          "taskId": 7,
+          "taskTimes": 6,
+          "usetTimes": 0
+        },
+        {
+          "action": 1044,
+          "activeNum": 100,
+          "award": [
+            { "category": 0, "count": 1000, "isEquip": false, "itemId": 10002 }
+          ],
+          "isVip": false,
+          "status": 1,
+          "taskId": 8,
+          "taskTimes": 7,
+          "usetTimes": 0
+        },
+        {
+          "action": 3101,
+          "activeNum": 100,
+          "award": [
+            { "category": 0, "count": 1000, "isEquip": false, "itemId": 10002 }
+          ],
+          "isVip": false,
+          "status": 1,
+          "taskId": 10,
+          "taskTimes": 5,
+          "usetTimes": 0
+        }
+      ],
+      "weekActiveNum": 0
+    }
+  },
+  "message": "ok"
+}

@@ -197,6 +197,14 @@ def get_user_brief(headers: dict, userId: str) -> Types.stats.UserBriefResponse:
     return userBriefRes
 
 
+def get_user_tasks(headers: dict) -> dict[any]:
+    userTasksRes = requests.post("https://alicdn.mahjong-jp.net/activity/userTask", headers=headers)
+    userTasksRes = userTasksRes.json()
+    print(userTasksRes)
+    # userBriefRes = Types.stats.UserBriefResponse(**userBriefRes, strict=True)
+    return userTasksRes
+
+
 # その他/activity/achiveUserInfoなどがプロフ欄から飛べるやつ
 
 # -- 牌谱对局数据
@@ -320,11 +328,11 @@ def save_json(data: dict, filename: str):
 
 
 def main():
-    login_riichi_city()
+    emailLoginRes = login_riichi_city()
     headers = get_headers(emailLoginRes)
-    res = get_user_brief(headers, userId="617696847")
+    res = get_user_tasks(headers)
     print(res)
-    save_json(res, "get_user_brief.json")
+    save_json(res, "get_user_tasks.json")
 
 
 if __name__ == "__main__":

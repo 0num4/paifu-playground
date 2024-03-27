@@ -3,6 +3,7 @@ import json
 import requests
 import Types.stats
 import Types.commonConsts
+import Types.readPaiPuList
 
 
 def login_riichi_city() -> Types.stats.EmailLoginResponse:
@@ -529,12 +530,25 @@ def dailybonus(headers: dict):
         save_json(res2, "get_store_buy_product.json")
 
 
+def readAllPaiPu(headers: dict):
+    payload = {
+        "startTime": 0,
+    }
+    readPaiPuListRes = requests.post(
+        "https://alicdn.mahjong-jp.net/record/readPaiPuList", json=payload, headers=headers
+    )
+    readPaiPuListRes = readPaiPuListRes.json()
+    # json.dump(readPaiPuListRes, open("readPaiPuListRes_type1.json", "w"))
+    readPaiPuListRes = Types.readPaiPuList.ReadPaiPuListType1(**readPaiPuListRes, strict=True)
+    print(readPaiPuListRes)
+
+
 def main():
     emailLoginRes = login_riichi_city()
     headers = get_headers(emailLoginRes)
+    readAllPaiPu(headers)
     # get_activity_ex_team_daily_award(headers)
-    res = lobbys_read_stage_classifies(headers)
-    print(res)
+    # res = lobbys_read_stage_classifies(headers)
     # save_json(res, "get_activity_ex_team_daily_award.json")
     # dailybonus(headers) # 明日試す
 

@@ -265,16 +265,55 @@ def get_activity_ex_team_daily_award(headers: dict) -> dict:
     return activityEXTeamDailyAwardRes
 
 
-def lobbys_read_official_match(headers: dict, lang: str = "ja") -> dict:
+def lobbys_read_official_match(headers: dict, lang: str = "ja") -> Types.stats.ReadOfficialMatchResponse:
     payload = {"lang": lang}
     lobbysReadOfficialMatchRes = requests.post(
         "https://alicdn.mahjong-jp.net/lobbys/readOfficialMatch", json=payload, headers=headers
     )
     lobbysReadOfficialMatchRes = lobbysReadOfficialMatchRes.json()
     print(lobbysReadOfficialMatchRes)
-    json.dump(lobbysReadOfficialMatchRes, open("lobbys_read_official_match.json", "w"))
-
+    # json.dump(lobbysReadOfficialMatchRes, open("lobbys_read_official_match.json", "w"))
+    lobbysReadOfficialMatchRes = Types.stats.ReadOfficialMatchResponse(**lobbysReadOfficialMatchRes, strict=True)
     return lobbysReadOfficialMatchRes
+
+
+def lobbys_sign_official_match(headers: dict, isCancel: bool = False, officialID: str = "") -> dict[any]:
+    payload = {"isCancel": isCancel, "officialID": officialID}
+    lobbysSignOfficialMatchRes = requests.post(
+        "https://alicdn.mahjong-jp.net/lobbys/signOfficialMatch", json=payload, headers=headers
+    )
+    lobbysSignOfficialMatchRes = lobbysSignOfficialMatchRes.json()
+    print(lobbysSignOfficialMatchRes)
+    json.dump(lobbysSignOfficialMatchRes, open("lobbys_sign_official_match.json", "w"))
+    # lobbysReadOfficialMatchRes = Types.stats.ReadOfficialMatchResponse(**lobbysReadOfficialMatchRes, strict=True)
+    return lobbysReadOfficialMatchRes
+
+
+# 日時設定されてるグランプリ(週間大会とか)の情報を取得
+def lobbys_read_timing_match(headers: dict) -> dict[any]:
+    payload = {}
+    lobbysReadTimingMatchRes = requests.post(
+        "https://alicdn.mahjong-jp.net/lobbys/readTimingMatch", json=payload, headers=headers
+    )
+    lobbysReadTimingMatchRes = lobbysReadTimingMatchRes.json()
+    print(lobbysReadTimingMatchRes)
+    json.dump(lobbysReadTimingMatchRes, open("lobbys_read_timing_match.json", "w"))
+    # lobbysReadOfficialMatchRes = Types.stats.ReadOfficialMatchResponse(**lobbysReadOfficialMatchRes, strict=True)
+    return lobbysReadTimingMatchRes
+
+
+# TODO: 検証
+def lobbys_ready_official_next(
+    headers: dict, matchID: str = "", matchStage: int = 2, officialID: str = ""
+) -> Types.stats.ReadyOfficialNextResponse:
+    payload = {"matchID": matchID, "matchStage": matchStage, "officialID": officialID}
+    lobbysReadyOfficialNextRes = requests.post(
+        "https://alicdn.mahjong-jp.net/lobbys/readyOfficialNext", json=payload, headers=headers
+    )
+    lobbysReadyOfficialNextRes = lobbysReadyOfficialNextRes.json()
+    print(lobbysReadyOfficialNextRes)
+    json.dump(lobbysReadyOfficialNextRes, open("lobbys_read_official_match.json", "w"))
+    return lobbysReadyOfficialNextRes
 
 
 # その他/activity/achiveUserInfoなどがプロフ欄から飛べるやつ
@@ -412,7 +451,7 @@ def main():
     emailLoginRes = login_riichi_city()
     headers = get_headers(emailLoginRes)
     # get_activity_ex_team_daily_award(headers)
-    lobbys_read_official_match(headers, lang="ja")
+    lobbys_read_timing_match(headers)
     print("end")
     # save_json(res, "get_activity_ex_team_daily_award.json")
     # dailybonus(headers) # 明日試す

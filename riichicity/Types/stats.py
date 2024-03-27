@@ -428,3 +428,9 @@ class ReadOfficialMatchResponse(BaseModel):
     data: list[ReadOfficialMatchResponseData]
     message: str
     userInfo: UserInfo
+
+
+class ReadyOfficialNextResponse(BaseModel):
+    code: int
+    data: bool
+    message: str

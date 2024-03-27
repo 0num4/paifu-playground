@@ -500,3 +500,16 @@ class SignTimingMatchResponse(BaseModel):
     code: int
     data: SignTimingMatchResponseData
     message: str
+
+
+class MessageReceiveAward(BaseModel):
+    category: int
+    count: int
+    expireTime: int
+    itemId: int
+
+
+class MessageReceiveAwardResponse(BaseModel):
+    awards: list[MessageReceiveAward]
+    code: int
+    message: str

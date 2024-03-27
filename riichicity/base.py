@@ -330,6 +330,17 @@ def lobbys_sign_timing_match(
     return lobbysSignTimingMatchRes
 
 
+# TODO: 検証
+def get_message_receive_award(headers: dict, mailID: str, userID: str) -> dict:
+    payload = {"mailID": mailID, "userID": userID}
+    messageReceiveAwardRes = requests.post(
+        "https://alicdn.mahjong-jp.net/message/receiveAward", json=payload, headers=headers
+    )
+    messageReceiveAwardRes = messageReceiveAwardRes.json()
+    print(messageReceiveAwardRes)
+    return messageReceiveAwardRes
+
+
 # その他/activity/achiveUserInfoなどがプロフ欄から飛べるやつ
 
 # -- 牌谱对局数据

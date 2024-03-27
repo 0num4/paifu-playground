@@ -7,6 +7,7 @@ import Types.commonConsts
 import Types.readPaiPuList
 import datetime
 import time
+import pydantic
 
 
 def login_riichi_city() -> Types.stats.EmailLoginResponse:
@@ -234,12 +235,15 @@ def get_activity_collect_task_award(headers: dict, typeList: list[int] = [1, 3])
 
 
 # 動作未確認
-def get_store_buy_product(headers: dict, productID: int = 579, num: int = 1) -> dict[any]:  # 579は毎日の無料ボーナス
+def get_store_buy_product(
+    headers: dict, productID: int = 579, num: int = 1
+) -> Types.stats.StoreBuyProductResponse:  # 579は毎日の無料ボーナス
     payload = {"productID": productID, "num": num}
     storeBuyProductRes = requests.post("https://alicdn.mahjong-jp.net/store/buyProduct", json=payload, headers=headers)
     storeBuyProductRes = storeBuyProductRes.json()
     print(storeBuyProductRes)
-    json.dump(storeBuyProductRes, open("get_store_buy_product.json", "w"))
+    storeBuyProductRes = Types.stats.StoreBuyProductResponse(**storeBuyProductRes, strict=True)
+    # json.dump(storeBuyProductRes, open("get_store_buy_product.json", "w"))
     return storeBuyProductRes
 
 
@@ -520,6 +524,8 @@ stageTypeDict = {3: "陽炎", 4: "銀河"}
 
 
 def save_json(data: dict, filename: str):
+    if isinstance(data, pydantic.BaseModel):
+        data = data.model_dump_json()
     with open(filename, "w") as f:
         json.dump(data, f)
         f.close()

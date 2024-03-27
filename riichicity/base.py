@@ -253,6 +253,7 @@ def get_product_list(
     return productRes
 
 
+# 風林火山イベ
 def get_activity_ex_team_daily_award(headers: dict) -> dict:
     payload = {}
     activityEXTeamDailyAwardRes = requests.post(
@@ -262,6 +263,18 @@ def get_activity_ex_team_daily_award(headers: dict) -> dict:
     json.dump(activityEXTeamDailyAwardAwardRes, open("activityEXTeamDailyAwardAwardRes.json", "w"))
     print(activityEXTeamDailyAwardAwardRes)
     return activityEXTeamDailyAwardRes
+
+
+def lobbys_read_official_match(headers: dict, lang: str = "ja") -> dict:
+    payload = {"lang": lang}
+    lobbysReadOfficialMatchRes = requests.post(
+        "https://alicdn.mahjong-jp.net/lobbys/readOfficialMatch", json=payload, headers=headers
+    )
+    lobbysReadOfficialMatchRes = lobbysReadOfficialMatchRes.json()
+    print(lobbysReadOfficialMatchRes)
+    json.dump(lobbysReadOfficialMatchRes, open("lobbys_read_official_match.json", "w"))
+
+    return lobbysReadOfficialMatchRes
 
 
 # その他/activity/achiveUserInfoなどがプロフ欄から飛べるやつ
@@ -398,7 +411,8 @@ def dailybonus(headers: dict):
 def main():
     emailLoginRes = login_riichi_city()
     headers = get_headers(emailLoginRes)
-    get_activity_ex_team_daily_award(headers)
+    # get_activity_ex_team_daily_award(headers)
+    lobbys_read_official_match(headers, lang="ja")
     print("end")
     # save_json(res, "get_activity_ex_team_daily_award.json")
     # dailybonus(headers) # 明日試す

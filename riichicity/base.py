@@ -1,9 +1,12 @@
 import os
 import json
+import random
 import requests
 import Types.stats
 import Types.commonConsts
 import Types.readPaiPuList
+import datetime
+import time
 
 
 def login_riichi_city() -> Types.stats.EmailLoginResponse:
@@ -530,17 +533,36 @@ def dailybonus(headers: dict):
         save_json(res2, "get_store_buy_product.json")
 
 
-def readAllPaiPu(headers: dict):
-    payload = {
-        "startTime": 0,
-    }
-    readPaiPuListRes = requests.post(
-        "https://alicdn.mahjong-jp.net/record/readPaiPuList", json=payload, headers=headers
-    )
-    readPaiPuListRes = readPaiPuListRes.json()
-    # json.dump(readPaiPuListRes, open("readPaiPuListRes_type1.json", "w"))
-    readPaiPuListRes = Types.readPaiPuList.ReadPaiPuListType1(**readPaiPuListRes, strict=True)
-    print(readPaiPuListRes)
+def readAllPaiPu(headers: dict) -> list[Types.readPaiPuList.ReadPaiPuListType1 | None]:
+    all_pai_pu = []
+    end_time = int(datetime.datetime.now().timestamp())
+    while True:
+        payload = {
+            "friendID": 813942315,
+            "endTime": end_time,
+        }
+        readPaiPuListRes = requests.post(
+            "https://alicdn.mahjong-jp.net/record/readPaiPuList", json=payload, headers=headers
+        )
+        readPaiPuListRes = readPaiPuListRes.json()
+        if len(readPaiPuListRes["data"]) == 0:
+            break
+        elif readPaiPuListRes["code"] != 0:
+            print("Failed to get pai pu list")
+            break
+        elif not readPaiPuListRes["data"]:
+            break
+        earliest_date = min(data["endTime"] for data in readPaiPuListRes["data"])
+        latest_date = max(data["endTime"] for data in readPaiPuListRes["data"])
+        print(f"readPaiPuListRes count {len(readPaiPuListRes['data'])}")
+        print(f"earliest_date: {datetime.datetime.fromtimestamp(earliest_date)} {earliest_date}")
+        print(f"latest_date: {datetime.datetime.fromtimestamp(latest_date)} {latest_date}")
+        readPaiPuListRes = Types.readPaiPuList.ReadPaiPuListType1(**readPaiPuListRes, strict=True)
+        all_pai_pu.append(readPaiPuListRes)
+        end_time = earliest_date - 1
+        time.sleep(random.uniform(3, 5))
+
+    return all_pai_pu
 
 
 def main():

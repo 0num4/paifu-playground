@@ -196,7 +196,7 @@ class EmailLoginResponseData(BaseModel):
     country: str
     honorRed: bool
     init: bool
-    ipCountry: str
+    ipCountry: str  # CountryCode
     isCompleteCourse: bool
     isCompleteGive: bool
     isCompleteNew: bool

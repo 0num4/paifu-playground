@@ -275,14 +275,15 @@ def get_activity_ex_team_daily_award(headers: dict) -> Types.stats.EXTeamDailyAw
     return activityEXTeamDailyAwardRes
 
 
-def activity_ex_team_task(headers: dict) -> dict:
+def activity_ex_team_task(headers: dict) -> Types.stats.EXTeamTaskResponse:
     payload = {}
     activityEXTeamTaskRes = requests.post(
         "https://alicdn.mahjong-jp.net/activity/eXTeamTask", json=payload, headers=headers
     )
     activityEXTeamTaskRes = activityEXTeamTaskRes.json()
-    json.dump(activityEXTeamTaskRes, open("activity_ex_team_task.json", "w"))
+    # json.dump(activityEXTeamTaskRes, open("activity_ex_team_task.json", "w"))
     print(activityEXTeamTaskRes)
+    activityEXTeamTaskRes = Types.stats.EXTeamTaskResponse(**activityEXTeamTaskRes, strict=True)
     return activityEXTeamTaskRes
 
 
@@ -588,7 +589,7 @@ def main():
     emailLoginRes = login_riichi_city()
     headers = get_headers(emailLoginRes)
     # backpack_recycle_gift(headers)
-    get_activity_ex_team_daily_award(headers)
+    activity_ex_team_task(headers)
     # res = lobbys_read_stage_classifies(headers)
     # save_json(res, "get_activity_ex_team_daily_award.json")
     # dailybonus(headers) # 明日試す

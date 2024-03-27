@@ -489,3 +489,14 @@ class SignOfficialMatchResponse(BaseModel):
     code: int
     data: SignOfficialMatchResponseData
     message: str
+
+
+class SignTimingMatchResponseData(BaseModel):
+    signCount: int
+    signTimes: int
+
+
+class SignTimingMatchResponse(BaseModel):
+    code: int
+    data: SignTimingMatchResponseData
+    message: str

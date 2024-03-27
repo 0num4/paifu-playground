@@ -1,0 +1,30 @@
+{
+  "code": 0,
+  "data": {
+    "banStartAt": 0,
+    "banUntil": 0,
+    "cancelContactEmail": "",
+    "cancelEndAt": 0,
+    "country": "jp",
+    "honorRed": false,
+    "init": false,
+    "ipCountry": "jp",
+    "isCompleteCourse": true,
+    "isCompleteGive": false,
+    "isCompleteNew": true,
+    "isCompleteNewRole": true,
+    "loginQueue": [],
+    "serverTime": 1711463304,
+    "tokenTypes": [6],
+    "user": {
+      "avatar": "",
+      "email": "rootsarveradomin@gmail.com",
+      "id": 615235015,
+      "nickname": "\u6697\u523b\u533a\u5f79\u6240",
+      "registerAt": 1700479320,
+      "status": 0
+    },
+    "violationAction": 0
+  },
+  "message": "ok"
+}

@@ -51,7 +51,9 @@ headers = {
 }
 # payload = {"isObserve": True, "keyValue": "clec9ou9nc758r6i5gdg"}
 # paifu id is tmp paifu id
-payload = {"isObserve": False, "keyValue": "ccetv969nc7di8ola31g"}
+# payload = {"isObserve": True, "keyValue": "cnpp08m9nc7ajnusdol0"}
+# payload = {"isObserve": False, "keyValue": "cnrkj069nc7ajnvadk30"}
+payload = {"isObserve": False, "keyValue": "cnrlatu9nc7ajnvagcq0"}
 
 # readOnlineRoomRes = requests.post("https://alicdn.mahjong-jp.net/record/readOnlineRoom", json=payload, headers=headers)
 # readOnlineRoomResJson = readOnlineRoomRes.json()
@@ -67,12 +69,12 @@ payload = {"isObserve": False, "keyValue": "ccetv969nc7di8ola31g"}
 #     print(f"対局中のプレイヤー: {', '.join(nicknames)}")
 
 
-# getRoomDataRes = requests.post("https://alicdn.mahjong-jp.net/record/getRoomData", json=payload, headers=headers)
-# getRoomDataResJson = getRoomDataRes.json()
-# print(getRoomDataResJson)
-# with open("gameDataSample.json", "w") as f:
-#     json.dump(getRoomDataResJson, f)
-#     f.close()
+getRoomDataRes = requests.post("https://alicdn.mahjong-jp.net/record/getRoomData", json=payload, headers=headers)
+getRoomDataResJson = getRoomDataRes.json()
+print(getRoomDataResJson)
+with open("stampsample.json", "w") as f:
+    json.dump(getRoomDataResJson, f)
+    f.close()
 
 # if getRoomDataResJson["code"] == 156:
 #     # 対局終了してて観覧期限も切れている(牌譜データではなく行動リストなので)

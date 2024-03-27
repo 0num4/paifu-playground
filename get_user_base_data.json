@@ -1,0 +1,41 @@
+{
+  "code": 0,
+  "data": {
+    "headTag": 0,
+    "honorOpen": true,
+    "isBlock": false,
+    "isCanApply": true,
+    "isNewerCertificated": true,
+    "lastRankList": [3, 1, 2, 1, 2, 1, 1, 2, 1, 2],
+    "lastScoreList": [
+      26200, 46200, 30900, 45700, 40000, 46600, 44000, 40000, 62800, 30200
+    ],
+    "maxHuAddUpYiMan": false,
+    "maxHuBashPoints": 16000,
+    "maxHuCard": 25,
+    "maxHuFang": 26,
+    "maxHuFuLouList": [],
+    "maxHuHandCards": [81, 9, 129, 97, 49, 33, 145, 25, 17, 113, 65, 1, 41, 25],
+    "maxHuPoints": 48000,
+    "medal": false,
+    "model": 0,
+    "nickname": "\u30ad\u30e9\uff20Vtuber",
+    "paiFengDiDian": 14197,
+    "paiFengFang": 96739,
+    "paiFengFuLou": 29744,
+    "paiFengGaoDian": 17193,
+    "paiFengGong": 51049,
+    "paiFengLiZhi": 21305,
+    "paiFengMenQing": 71054,
+    "paiFengMoTing": 12650,
+    "profileFrameID": 30401,
+    "rValue": 12693932,
+    "roleID": 10025,
+    "skinID": 0,
+    "stageLevel": 21,
+    "stageNextPt": 0,
+    "stagePt": 16046,
+    "titleID": 10601
+  },
+  "message": "ok"
+}

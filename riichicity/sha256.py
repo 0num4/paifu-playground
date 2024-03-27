@@ -1,0 +1,14 @@
+import hashlib
+
+
+input_string = "2z2s8p9m9m2z5z9p1m9s9p8s1m5z6z9s2p3s6p4p4z9m5s5z5s3z8s3p6p1z3s1p4z1p4s8p5p3s4s7z1z1s7z3z1p2p7z8s7s3p6s4p7p6z6z1z1p0s2s9s3p4z7p4p6s8s2z4p7s2s0p3p7p5s2p6z4s6p5z5p1s7p8p4s3z2p4z2s6s6s5p1s7z1z9m1m9p3z8p7s3s9p1s7s9s1m2z6p"
+# expect = "54e3445e5068c11fcd8c99a1501a6a2079f485769d6390935391f4375278b141"
+# SHA256ハッシュ値を計算
+hashed_text = hashlib.sha256(input_string.encode()).hexdigest()
+print("SHA-256 hash:", hashed_text)
+# assert hashed_text == expect
+"""
+2z2s8p9m9m2z5z9p1m9s9p8s1m5z6z9s2p3s6p4p4z9m5s5z5s3z8s3p6p1z3s1p4z1p4s8p5p3s4s7z1z1s7z3z1p2p7z8s7s3p6s4p7p6z6z1z1p0s2s9s3p4z7p4p6s8s2z4p7s2s0p3p7p5s2p6z4s6p5z5p1s7p8p4s3z2p4z2s6s6s5p1s7z1z9m1m9p3z8p7s3s9p1s7s9s1m2z6p
+
+expected: 54e3445e5068c11fcd8c99a1501a6a2079f485769d6390935391f4375278b141
+"""

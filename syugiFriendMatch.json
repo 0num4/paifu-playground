@@ -1,0 +1,179 @@
+{
+  "code": 0,
+  "data": {
+    "fangFu": 1,
+    "gamePlay": 1003,
+    "handRecord": [
+      {
+        "benChangNum": 0,
+        "changCi": 1,
+        "handCardEncode": "7s1m2z4s3z3s9p4z3s6s4p5s5p1p7p1m5z4z1s2p5p1z5z9m2s3s5s3p8s2p1m8s3z7z1m9p7p2z4p6s4s3p6z7p0s7s6p4p7s6p5p2s2s5s5z6p4s2s0p9s9s3s7z1z9p3p6p3z6z2z8s9m2z9m1s6s5z7z7p4z6s8p4z9p1s1z8s8p9s1z1p1p4s3z8p9m6z2p2p9s4p1s7s6z3p8p1p7z",
+        "handCardsSHA256": "1a4450cc1de5e95f1f45af354cebaf6a90e25b343c20c1de0ce91a91ad604949",
+        "handEventRecord": [
+          {
+            "data": "{\"hand_cards\":[23,33,65,20,5,1,7,33,18,19,21,3,7,22],\"dealer_pos\":0,\"dices\":[3,5],\"bao_pai_card\":25,\"ting_list\":[],\"quan_feng\":49,\"chang_ci\":1,\"ben_chang_num\":0,\"li_zhi_bang_num\":0,\"user_info_list\":[{\"user_id\":311113302,\"hand_points\":30000,\"luck_score\":0,\"is_exist_shao_ji\":false,\"room_exist_man_guan\":false},{\"user_id\":813942315,\"hand_points\":30000,\"luck_score\":0,\"is_exist_shao_ji\":false,\"room_exist_man_guan\":false},{\"user_id\":311633333,\"hand_points\":30000,\"luck_score\":0,\"is_exist_shao_ji\":false,\"room_exist_man_guan\":false}],\"hand_cards_sha_256\":\"1a4450cc1de5e95f1f45af354cebaf6a90e25b343c20c1de0ce91a91ad604949\"}",
+            "eventPos": 0,
+            "eventType": 1,
+            "handId": "",
+            "startTime": 1711205920364,
+            "userId": 311113302
+          },
+          {
+            "data": "{\"hand_cards\":[81,19,9,97,113,97,17,2,24,2,33,24,65],\"dealer_pos\":0,\"dices\":[3,5],\"bao_pai_card\":25,\"ting_list\":[],\"quan_feng\":49,\"chang_ci\":1,\"ben_chang_num\":0,\"li_zhi_bang_num\":0,\"user_info_list\":[{\"user_id\":311113302,\"hand_points\":30000,\"luck_score\":0,\"is_exist_shao_ji\":false,\"room_exist_man_guan\":false},{\"user_id\":813942315,\"hand_points\":30000,\"luck_score\":0,\"is_exist_shao_ji\":false,\"room_exist_man_guan\":false},{\"user_id\":311633333,\"hand_points\":30000,\"luck_score\":0,\"is_exist_shao_ji\":false,\"room_exist_man_guan\":false}],\"hand_cards_sha_256\":\"1a4450cc1de5e95f1f45af354cebaf6a90e25b343c20c1de0ce91a91ad604949\"}",
+            "eventPos": 1,
+            "eventType": 1,
+            "handId": "",
+            "startTime": 1711205920365,
+            "userId": 813942315
+          },
+          {
+            "data": "{\"hand_cards\":[19,22,4,21,5,49,113,41,81,145,33,9,4],\"dealer_pos\":0,\"dices\":[3,5],\"bao_pai_card\":25,\"ting_list\":[],\"quan_feng\":49,\"chang_ci\":1,\"ben_chang_num\":0,\"li_zhi_bang_num\":0,\"user_info_list\":[{\"user_id\":311113302,\"hand_points\":30000,\"luck_score\":0,\"is_exist_shao_ji\":false,\"room_exist_man_guan\":false},{\"user_id\":813942315,\"hand_points\":30000,\"luck_score\":0,\"is_exist_shao_ji\":false,\"room_exist_man_guan\":false},{\"user_id\":311633333,\"hand_points\":30000,\"luck_score\":0,\"is_exist_shao_ji\":false,\"room_exist_man_guan\":false}],\"hand_cards_sha_256\":\"1a4450cc1de5e95f1f45af354cebaf6a90e25b343c20c1de0ce91a91ad604949\"}",
+            "eventPos": 2,
+            "eventType": 1,
+            "handId": "",
+            "startTime": 1711205920365,
+            "userId": 311633333
+          },
+          {
+            "data": "{\"in_card\":0,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":false,\"oper_fixed_time\":300,\"oper_var_time\":0,\"in_ting_info\":[],\"is_nine_cards\":false,\"is_kai_li_zhi\":false,\"is_pull_north\":false,\"is_first_xun_in\":true}",
+            "eventPos": 3,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1711205920439,
+            "userId": 311113302
+          },
+          {
+            "data": "{\"action\":11,\"card\":7,\"move_cards_pos\":[7],\"user_id\":311113302,\"hand_cards\":null,\"group_cards\":null,\"is_li_zhi\":false,\"li_zhi_operate\":0,\"li_zhi_type\":0}",
+            "eventPos": 4,
+            "eventType": 4,
+            "handId": "",
+            "startTime": 1711205920948,
+            "userId": 311113302
+          },
+          {
+            "data": "{\"in_card\":20,\"is_zi_mo\":false,\"gang_cards\":[],\"bu_gang_cards\":[],\"is_gang_incard\":false,\"is_can_lizhi\":false,\"oper_fixed_time\":300,\"oper_var_time\":0,\"in_ting_info\":[],\"is_nine_cards\":false,\"is_kai_li_zhi\":false,\"is_pull_north\":true,\"is_first_xun_in\":true}",
+            "eventPos": 5,
+            "eventType": 2,
+            "handId": "",
+            "startTime": 1711205921649,
+            "userId": 813942315
+          },
+          {
+            "data": "{\"end_type\":8,\"win_info\":[],\"user_profit\":[],\"zhong_liu_info\":[],\"cheat_info_list\":[]}",
+            "eventPos": 6,
+            "eventType": 5,
+            "handId": "",
+            "startTime": 1711205924966,
+            "userId": 0
+          },
+          {
+            "data": "{\"user_data\":[{\"user_id\":311113302,\"point_num\":30000,\"score\":400,\"coin\":0,\"rate_value\":0,\"pt_value\":0,\"user_pt_value\":0,\"next_pt_value\":0,\"last_user_pt\":0,\"last_next_pt\":0,\"is_shao_ji\":false,\"shao_ji_score\":0,\"luck_score\":0,\"StageLevel\":0},{\"user_id\":813942315,\"point_num\":30000,\"score\":-100,\"coin\":0,\"rate_value\":0,\"pt_value\":0,\"user_pt_value\":0,\"next_pt_value\":0,\"last_user_pt\":0,\"last_next_pt\":0,\"is_shao_ji\":false,\"shao_ji_score\":0,\"luck_score\":0,\"StageLevel\":0},{\"user_id\":311633333,\"point_num\":30000,\"score\":-300,\"coin\":0,\"rate_value\":0,\"pt_value\":0,\"user_pt_value\":0,\"next_pt_value\":0,\"last_user_pt\":0,\"last_next_pt\":0,\"is_shao_ji\":false,\"shao_ji_score\":0,\"luck_score\":0,\"StageLevel\":0}],\"pai_pu_id\":\"cnves7mai0897qshei9g\",\"is_exist_room\":false}",
+            "eventPos": 7,
+            "eventType": 6,
+            "handId": "",
+            "startTime": 1711205924979,
+            "userId": 0
+          }
+        ],
+        "handID": "cnves7mai0897qshei90_1",
+        "handPos": 1,
+        "paiShan": [
+          20, 3, 129, 7, 277, 23, 6, 4, 23, 6, 5, 18, 18, 21, 113, 6, 20, 18,
+          261, 25, 25, 19, 145, 49, 9, 3, 6, 81, 129, 65, 24, 41, 65, 41, 17,
+          22, 113, 145, 7, 97, 22, 8, 97, 9, 17, 49, 24, 8, 25, 49, 1, 1, 20,
+          81, 8, 41, 129, 2, 2, 25, 4, 17, 23, 129, 3, 8, 1, 145
+        ],
+        "players": [
+          {
+            "cardBackID": 14001,
+            "gameMusicId": 19001,
+            "headTag": 0,
+            "identity": 1,
+            "matchMusicId": 19001,
+            "model": 0,
+            "nickname": "Buruco___",
+            "points": 30000,
+            "position": 0,
+            "profileFrameId": 30000,
+            "riichiEffectID": 17001,
+            "riichiMusicId": 20001,
+            "riichiStickID": 13001,
+            "roleID": 10008,
+            "skinID": 0,
+            "specialEffectID": 16001,
+            "tableclothID": 15001,
+            "titleID": 0,
+            "userId": 311113302
+          },
+          {
+            "cardBackID": 14001,
+            "gameMusicId": 19001,
+            "headTag": 0,
+            "identity": 0,
+            "matchMusicId": 19001,
+            "model": 0,
+            "nickname": "levena_evenas",
+            "points": 30000,
+            "position": 1,
+            "profileFrameId": 30306,
+            "riichiEffectID": 17001,
+            "riichiMusicId": 20002,
+            "riichiStickID": 13031,
+            "roleID": 10002,
+            "skinID": 0,
+            "specialEffectID": 16001,
+            "tableclothID": 15061,
+            "titleID": 10902,
+            "userId": 813942315
+          },
+          {
+            "cardBackID": 14001,
+            "gameMusicId": 19001,
+            "headTag": 0,
+            "identity": 1,
+            "matchMusicId": 19001,
+            "model": 0,
+            "nickname": "puuko",
+            "points": 30000,
+            "position": 2,
+            "profileFrameId": 30000,
+            "riichiEffectID": 17001,
+            "riichiMusicId": 20001,
+            "riichiStickID": 13001,
+            "roleID": 10008,
+            "skinID": 0,
+            "specialEffectID": 16001,
+            "tableclothID": 15001,
+            "titleID": 0,
+            "userId": 311633333
+          }
+        ],
+        "quanFeng": 49
+      }
+    ],
+    "initPoints": 30000,
+    "isCollect": false,
+    "isGangPay": false,
+    "isGeMu": false,
+    "isKaiLiZhi": false,
+    "isLuck": true,
+    "isNotEffect": false,
+    "isNotShowHand": true,
+    "isObserve": false,
+    "isShaoJi": false,
+    "isWithUser": true,
+    "keyValue": "cnves7mai0897qshei9g",
+    "matchStage": 0,
+    "matchType": 0,
+    "northOperateType": 0,
+    "nowTime": 1711206039,
+    "period": 0,
+    "playerCount": 3,
+    "remark": "",
+    "roomId": "cnves7mai0897qshei90",
+    "round": 2,
+    "stageNum": 0,
+    "stageType": 0
+  },
+  "message": "ok"
+}

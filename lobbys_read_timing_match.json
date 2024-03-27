@@ -1,0 +1,310 @@
+{
+  "code": 0,
+  "data": [
+    {
+      "isSign": false,
+      "label": 0,
+      "matchJoinNum": 256,
+      "matchStage": 7,
+      "officialID": "635ba77e8d9a705521d92bd6",
+      "period": 2,
+      "playerCount": 4,
+      "qualifiedNum": 2,
+      "rankAwardList": [
+        {
+          "awardList": [
+            { "itemID": 10025, "itemModule": 0, "itemType": 0, "num": 300 }
+          ],
+          "maxRank": 1,
+          "minRank": 1
+        },
+        {
+          "awardList": [
+            { "itemID": 10025, "itemModule": 0, "itemType": 0, "num": 150 }
+          ],
+          "maxRank": 2,
+          "minRank": 2
+        },
+        {
+          "awardList": [
+            { "itemID": 10025, "itemModule": 0, "itemType": 0, "num": 70 }
+          ],
+          "maxRank": 3,
+          "minRank": 3
+        },
+        {
+          "awardList": [
+            { "itemID": 10025, "itemModule": 0, "itemType": 0, "num": 40 }
+          ],
+          "maxRank": 4,
+          "minRank": 4
+        },
+        {
+          "awardList": [
+            { "itemID": 10025, "itemModule": 0, "itemType": 0, "num": 20 }
+          ],
+          "maxRank": 8,
+          "minRank": 5
+        },
+        {
+          "awardList": [
+            { "itemID": 10025, "itemModule": 0, "itemType": 0, "num": 10 }
+          ],
+          "maxRank": 16,
+          "minRank": 9
+        },
+        {
+          "awardList": [
+            { "itemID": 10025, "itemModule": 0, "itemType": 0, "num": 8 }
+          ],
+          "maxRank": 32,
+          "minRank": 17
+        },
+        {
+          "awardList": [
+            { "itemID": 10025, "itemModule": 0, "itemType": 0, "num": 5 }
+          ],
+          "maxRank": 64,
+          "minRank": 33
+        }
+      ],
+      "signItemList": [
+        { "itemID": 10002, "itemModule": 0, "itemType": 0, "num": 5000 }
+      ],
+      "signNum": 28,
+      "signTimes": 0,
+      "signUpEndTime": 1711579800,
+      "signUpStartTime": 1711497055,
+      "startTime": 1711580400
+    },
+    {
+      "isSign": false,
+      "label": 0,
+      "matchJoinNum": 256,
+      "matchStage": 7,
+      "officialID": "635ba77e8d9a705521d92bd1",
+      "period": 2,
+      "playerCount": 4,
+      "qualifiedNum": 2,
+      "rankAwardList": [
+        {
+          "awardList": [
+            { "itemID": 10025, "itemModule": 0, "itemType": 0, "num": 300 }
+          ],
+          "maxRank": 1,
+          "minRank": 1
+        },
+        {
+          "awardList": [
+            { "itemID": 10025, "itemModule": 0, "itemType": 0, "num": 150 }
+          ],
+          "maxRank": 2,
+          "minRank": 2
+        },
+        {
+          "awardList": [
+            { "itemID": 10025, "itemModule": 0, "itemType": 0, "num": 70 }
+          ],
+          "maxRank": 3,
+          "minRank": 3
+        },
+        {
+          "awardList": [
+            { "itemID": 10025, "itemModule": 0, "itemType": 0, "num": 40 }
+          ],
+          "maxRank": 4,
+          "minRank": 4
+        },
+        {
+          "awardList": [
+            { "itemID": 10025, "itemModule": 0, "itemType": 0, "num": 20 }
+          ],
+          "maxRank": 8,
+          "minRank": 5
+        },
+        {
+          "awardList": [
+            { "itemID": 10025, "itemModule": 0, "itemType": 0, "num": 10 }
+          ],
+          "maxRank": 16,
+          "minRank": 9
+        },
+        {
+          "awardList": [
+            { "itemID": 10025, "itemModule": 0, "itemType": 0, "num": 8 }
+          ],
+          "maxRank": 32,
+          "minRank": 17
+        },
+        {
+          "awardList": [
+            { "itemID": 10025, "itemModule": 0, "itemType": 0, "num": 5 }
+          ],
+          "maxRank": 64,
+          "minRank": 33
+        }
+      ],
+      "signItemList": [
+        { "itemID": 10002, "itemModule": 0, "itemType": 0, "num": 5000 }
+      ],
+      "signNum": 227,
+      "signTimes": 0,
+      "signUpEndTime": 1711540200,
+      "signUpStartTime": 1711457313,
+      "startTime": 1711540800
+    },
+    {
+      "isSign": false,
+      "label": 0,
+      "matchJoinNum": 256,
+      "matchStage": 7,
+      "officialID": "635ba77e8d9a705521d92bd2",
+      "period": 1,
+      "playerCount": 4,
+      "qualifiedNum": 2,
+      "rankAwardList": [
+        {
+          "awardList": [
+            { "itemID": 10007, "itemModule": 0, "itemType": 0, "num": 10 }
+          ],
+          "maxRank": 1,
+          "minRank": 1
+        },
+        {
+          "awardList": [
+            { "itemID": 10007, "itemModule": 0, "itemType": 0, "num": 5 }
+          ],
+          "maxRank": 2,
+          "minRank": 2
+        },
+        {
+          "awardList": [
+            { "itemID": 10007, "itemModule": 0, "itemType": 0, "num": 3 }
+          ],
+          "maxRank": 3,
+          "minRank": 3
+        },
+        {
+          "awardList": [
+            { "itemID": 10007, "itemModule": 0, "itemType": 0, "num": 2 }
+          ],
+          "maxRank": 4,
+          "minRank": 4
+        },
+        {
+          "awardList": [
+            { "itemID": 10007, "itemModule": 0, "itemType": 0, "num": 1 }
+          ],
+          "maxRank": 8,
+          "minRank": 5
+        },
+        {
+          "awardList": [
+            { "itemID": 10001, "itemModule": 0, "itemType": 0, "num": 50 }
+          ],
+          "maxRank": 16,
+          "minRank": 9
+        },
+        {
+          "awardList": [
+            { "itemID": 10001, "itemModule": 0, "itemType": 0, "num": 40 }
+          ],
+          "maxRank": 32,
+          "minRank": 17
+        },
+        {
+          "awardList": [
+            { "itemID": 10001, "itemModule": 0, "itemType": 0, "num": 30 }
+          ],
+          "maxRank": 64,
+          "minRank": 33
+        }
+      ],
+      "signItemList": [
+        { "itemID": 10001, "itemModule": 0, "itemType": 0, "num": 30 }
+      ],
+      "signNum": 27,
+      "signTimes": 0,
+      "signUpEndTime": 1711799400,
+      "signUpStartTime": 1711197823,
+      "startTime": 1711800000
+    },
+    {
+      "isSign": false,
+      "label": 0,
+      "matchJoinNum": 256,
+      "matchStage": 7,
+      "officialID": "635ba77e8d9a705521d92bd3",
+      "period": 1,
+      "playerCount": 4,
+      "qualifiedNum": 2,
+      "rankAwardList": [
+        {
+          "awardList": [
+            { "itemID": 10007, "itemModule": 0, "itemType": 0, "num": 10 }
+          ],
+          "maxRank": 1,
+          "minRank": 1
+        },
+        {
+          "awardList": [
+            { "itemID": 10007, "itemModule": 0, "itemType": 0, "num": 5 }
+          ],
+          "maxRank": 2,
+          "minRank": 2
+        },
+        {
+          "awardList": [
+            { "itemID": 10007, "itemModule": 0, "itemType": 0, "num": 3 }
+          ],
+          "maxRank": 3,
+          "minRank": 3
+        },
+        {
+          "awardList": [
+            { "itemID": 10007, "itemModule": 0, "itemType": 0, "num": 2 }
+          ],
+          "maxRank": 4,
+          "minRank": 4
+        },
+        {
+          "awardList": [
+            { "itemID": 10007, "itemModule": 0, "itemType": 0, "num": 1 }
+          ],
+          "maxRank": 8,
+          "minRank": 5
+        },
+        {
+          "awardList": [
+            { "itemID": 10001, "itemModule": 0, "itemType": 0, "num": 50 }
+          ],
+          "maxRank": 16,
+          "minRank": 9
+        },
+        {
+          "awardList": [
+            { "itemID": 10001, "itemModule": 0, "itemType": 0, "num": 40 }
+          ],
+          "maxRank": 32,
+          "minRank": 17
+        },
+        {
+          "awardList": [
+            { "itemID": 10001, "itemModule": 0, "itemType": 0, "num": 30 }
+          ],
+          "maxRank": 64,
+          "minRank": 33
+        }
+      ],
+      "signItemList": [
+        { "itemID": 10001, "itemModule": 0, "itemType": 0, "num": 30 }
+      ],
+      "signNum": 19,
+      "signTimes": 0,
+      "signUpEndTime": 1711885800,
+      "signUpStartTime": 1711284547,
+      "startTime": 1711886400
+    }
+  ],
+  "message": "ok"
+}

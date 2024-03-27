@@ -1,0 +1,552 @@
+from pydantic import BaseModel
+from typing import Any
+
+
+# 友人戦の詳細のみ。一位率とかはフロントでやってる
+class Data(BaseModel):
+    addUpYiManCount: int
+    beiManCount: int
+    chiHuTotalCount: int
+    chongCardList: dict[str, int]
+    chongFuLouCount: int
+    chongLiZhiCount: int
+    chongMoTingCount: int
+    chongTotalCount: int
+    chongTotalScore: int
+    existFuLouCount: int
+    existLiZhiCount: int
+    fangList: dict[str, int]
+    firstTimes: int
+    flowCount: int
+    fourFangCount: int
+    fourthTimes: int
+    gameCount: int
+    heFuLouCount: int
+    heLiZhiCount: int
+    heMoTingCount: int
+    huCardList: dict[str, int]
+    huRoundTotal: int
+    huTotalCount: int
+    huTotalScore: int
+    huangFuLouCount: int
+    huangLiZhiCount: int
+    huangMoTingCount: int
+    keepLoseCount: int
+    keepWinCount: int
+    liZhiChiCount: int
+    liZhiSuccessCount: int
+    liZhiZiMoCount: int
+    manGuanCount: int
+    maxChongPoints: int
+    maxDealerCount: int
+    mingChiCount: int
+    mingZiMoCount: int
+    minusCount: int
+    moTingHuCount: int
+    oneFangCount: int
+    qingChiCount: int
+    qingZiMoCount: int
+    round: int
+    secondTimes: int
+    thirdTimes: int
+    threeBeiManCount: int
+    threeFangCount: int
+    tiaoManCount: int
+    totalEndTimes: int
+    twoFangCount: int
+    yiFaTotalCount: int
+    yiManCount: int
+    ziMoCount: int
+
+
+class UserDetailStatsV2Response(BaseModel):
+    code: int
+    data: list[Data]
+    message: str
+
+
+class CollectPaiPuResponse(BaseModel):
+    code: int
+    data: bool
+    message: str
+
+
+class GetGameDataResponse(BaseModel):
+    code: int
+    data: dict
+    message: str
+
+
+class UserBaseDataResponseData(BaseModel):
+    headTag: int
+    honorOpen: bool
+    isBlock: bool
+    isCanApply: bool
+    isNewerCertificated: bool
+    lastRankList: list[int]
+    lastScoreList: list[int]
+    maxHuAddUpYiMan: bool
+    maxHuBashPoints: int
+    maxHuCard: int
+    maxHuFang: int
+    maxHuFuLouList: list
+    maxHuHandCards: list[int]
+    maxHuPoints: int
+    medal: bool
+    model: int
+    nickname: str
+    paiFengDiDian: int
+    paiFengFang: int
+    paiFengFuLou: int
+    paiFengGaoDian: int
+    paiFengGong: int
+    paiFengLiZhi: int
+    paiFengMenQing: int
+    paiFengMoTing: int
+    profileFrameID: int
+    rValue: int
+    roleID: int
+    skinID: int
+    stageLevel: int
+    stageNextPt: int
+    stagePt: int
+    titleID: int
+
+
+class UserBaseDataResponse(BaseModel):
+    code: int
+    data: UserBaseDataResponseData
+    message: str
+
+
+class FavorRole(BaseModel):
+    cultivateStatus: int
+    feelValue: int
+    model: int
+    oathValue: int
+    roleId: int
+    skinId: int
+
+
+class Collect(BaseModel):
+    equipCount: int
+    roleCount: int
+    skinCount: int
+    titleCount: int
+
+
+class HighLightHu(BaseModel):
+    benChangShu: int
+    changCi: int
+    custom: bool
+    fangList: list[int]
+    handId: str
+    isExistYiMan: bool
+    maxHuBashPoints: int
+    maxHuCard: int
+    maxHuFang: int
+    maxHuFuLouList: list
+    maxHuHandCards: list[int]
+    maxHuPoints: int
+    paipuId: str
+    quanFeng: int
+
+
+class UserBriefData(BaseModel):
+    certificated: bool
+    championNum: int
+    collect: Collect
+    favorRoleList: list[FavorRole]
+    fourPt: int
+    fourStage: int
+    highLightHu: HighLightHu
+    isBlock: bool
+    isCanApply: bool
+    model: int
+    nickname: str
+    profileFrameID: int
+    roleID: int
+    sign: str
+    skinID: int
+    threePT: int
+    threeStage: int
+    titleID: int
+    userID: int
+
+
+class UserBriefResponse(BaseModel):
+    code: int
+    data: UserBriefData
+    message: str
+
+
+class EmailLoginResponseDataUser(BaseModel):
+    avatar: str
+    email: str
+    id: int
+    nickname: str
+    registerAt: int
+    status: int
+
+
+class EmailLoginResponseData(BaseModel):
+    banStartAt: int
+    banUntil: int
+    cancelContactEmail: str
+    cancelEndAt: int
+    country: str
+    honorRed: bool
+    init: bool
+    ipCountry: str  # CountryCode
+    isCompleteCourse: bool
+    isCompleteGive: bool
+    isCompleteNew: bool
+    isCompleteNewRole: bool
+    loginQueue: list[Any]
+    serverTime: int
+    tokenTypes: list[int]
+    user: EmailLoginResponseDataUser
+    violationAction: int
+
+
+class EmailLoginResponse(BaseModel):
+    code: int
+    data: EmailLoginResponseData
+    message: str
+
+
+class Award(BaseModel):
+    category: int
+    count: int
+    isEquip: bool
+    itemId: int
+
+
+class CollectTaskAwardResponse(BaseModel):
+    awards: list[Award]
+    boxAwards: list[Any]
+    code: int
+    message: str
+
+
+class collectTaskAwardRequest(BaseModel):
+    typelist: list[int]
+
+
+class DiscountBag(BaseModel):
+    pass
+
+
+class ProductList(BaseModel):
+    currencyID: int
+    currencyNum: int
+    discount: int
+    discountBag: list[DiscountBag]
+    exchangeLeft: int
+    iconType: int
+    isExchangeLimit: bool
+    isLimit: bool
+    itemID: int
+    labelType: int
+    leftTime: int
+    num: int
+    productID: int
+    productPrice: int
+    productSKU: str
+    secondLabel: int
+
+
+class GetProductListResponseData(BaseModel):
+    firstLabel: int
+    isExistSkin: bool
+    isFirstBag: bool
+    isShowDouble: bool
+    leftFreeTimes: int
+    leftTime: int
+    productList: list[ProductList]
+    refreshItemID: int
+    refreshItemNum: int
+    secondLabel: int
+    skinLabels: list[int]
+    storeActivity: int
+    version: int
+    versionNotify: bool
+
+
+class GetProductListResponse(BaseModel):
+    code: int
+    data: GetProductListResponseData
+    message: str
+
+
+class GiftContent(BaseModel):
+    pass
+
+
+class StoreBuyProductResponseData(BaseModel):
+    createTime: int
+    expiredAt: int
+    feelValue: int
+    giftContent: list[GiftContent]
+    isCanEquip: bool
+    isEquip: bool
+    isExpired: bool
+    isLock: bool
+    itemID: int
+    itemType: int
+    label: int
+    name: str
+    num: int
+    recycleNum: int
+    source: int
+
+
+class StoreBuyProductResponse(BaseModel):
+    code: int
+    data: list[StoreBuyProductResponseData]
+    message: str
+
+
+class Award(BaseModel):
+    itemID: int
+    itemModule: int
+    itemType: int
+    num: int
+
+
+class RankAwardList(BaseModel):
+    awardList: list[Award]
+    maxRank: int
+    minRank: int
+
+
+class PenaltyInfo(BaseModel):
+    num: int
+    pointsCount: int
+
+
+class ReadOfficialMatchResponseDataRule(BaseModel):
+    CardType: int
+    ChangBang: int
+    FangFu: int
+    IsAutoLi: bool
+    IsChangBang: bool
+    IsChiDuan: bool
+    IsChiTi: bool
+    IsFirstNotRand: bool
+    IsGeMu: bool
+    IsJinChiTi: bool
+    IsKaiLiZhi: bool
+    IsLastHeEnd: bool
+    IsLastTingEnd: bool
+    IsNotCompound: bool
+    IsNotEffect: bool
+    IsNotGrabNorth: bool
+    IsNotHandFondle: bool
+    IsNotKeepDealer: bool
+    IsNotShowHand: bool
+    IsOpenFace: bool
+    IsOpenVoice: bool
+    IsShaoJi: bool
+    IsTimeLimit: bool
+    LimitTime: int
+    NorthOperateType: int
+    ShaoJiPoint: int
+    ThreeZiMoType: int
+    TimeLimitType: int
+    fristReqPoints: int
+    initialPoints: int
+    isAddUpYakuman: bool
+    isBoxStick: bool
+    isConvenientTips: bool
+    isCutOff: bool
+    isEightContinuous: bool
+    isFourGang: bool
+    isFourGangPass: bool
+    isFourRiichi: bool
+    isFourRiichiPass: bool
+    isFourWinds: bool
+    isFourWindsPass: bool
+    isGangDora: bool
+    isGangLiDora: bool
+    isGangOpen: bool
+    isGangPay: bool
+    isKnock: bool
+    isLiDora: bool
+    isLuck: bool
+    isMinusRiichi: bool
+    isMultipleYakuman: bool
+    isNanXiRu: bool
+    isNineCards: bool
+    isNineCardsPass: bool
+    isOpenRiichi: bool
+    isPayYakuman: bool
+    isQiangGang: bool
+    isQieShang: bool
+    isRenHe: bool
+    isSameOrder: bool
+    isTailContinue: bool
+    isThreeHe: bool
+    isThreeHePass: bool
+    isTingPrompt: bool
+    isTopReward: bool
+    isYiFa: bool
+    lianFeng: int
+    luckRate: int
+    minimumPoints: int
+    numRedCard: int
+    operFixedTime: int
+    operVarTime: int
+    orderPoints: list[int]
+    orderPtValue: list[Any]
+    penaltyInfo: list[PenaltyInfo]
+    playerCount: int
+    round: int
+
+
+class ReadOfficialMatchResponseData(BaseModel):
+    isSign: bool
+    matchJoinNum: int
+    matchStage: int
+    name: str
+    officialID: str
+    qualifiedNum: int
+    rankAwardList: list[RankAwardList]
+    rule: ReadOfficialMatchResponseDataRule
+    signItemID: int
+    signItemNum: int
+    signNum: int
+    totalJoinNum: int
+
+
+class UserInfo(BaseModel):
+    timingStart: int
+
+
+class ReadOfficialMatchResponse(BaseModel):
+    code: int
+    data: list[ReadOfficialMatchResponseData]
+    message: str
+    userInfo: UserInfo
+
+
+class ReadyOfficialNextResponse(BaseModel):
+    code: int
+    data: bool
+    message: str
+
+
+class ReadTimingMatchRankAward(BaseModel):
+    itemID: int
+    itemModule: int
+    itemType: int
+    num: int
+
+
+class ReadTimingMatchRankAwardList(BaseModel):
+    awardList: list[ReadTimingMatchRankAward]
+    maxRank: int
+    minRank: int
+
+
+class ReadTimingMatchSignItemList(BaseModel):
+    itemID: int
+    itemModule: int
+    itemType: int
+    num: int
+
+
+class ReadTimingMatchResponseData(BaseModel):
+    isSign: bool
+    label: int
+    matchJoinNum: int
+    matchStage: int
+    officialID: str
+    period: int
+    playerCount: int
+    qualifiedNum: int
+    rankAwardList: list[ReadTimingMatchRankAwardList]
+    signItemList: list[ReadTimingMatchSignItemList]
+    signNum: int
+    signTimes: int
+    signUpEndTime: int
+    signUpStartTime: int
+    startTime: int
+
+
+class ReadTimingMatchResponse(BaseModel):
+    code: int
+    data: list[ReadTimingMatchResponseData]
+    message: str
+
+
+class SignOfficialMatchResponseData(BaseModel):
+    signNum: int
+    totalJoinNum: int
+
+
+class SignOfficialMatchResponse(BaseModel):
+    code: int
+    data: SignOfficialMatchResponseData
+    message: str
+
+
+class SignTimingMatchResponseData(BaseModel):
+    signCount: int
+    signTimes: int
+
+
+class SignTimingMatchResponse(BaseModel):
+    code: int
+    data: SignTimingMatchResponseData
+    message: str
+
+
+class MessageReceiveAward(BaseModel):
+    category: int
+    count: int
+    expireTime: int
+    itemId: int
+
+
+class MessageReceiveAwardResponse(BaseModel):
+    awards: list[MessageReceiveAward]
+    code: int
+    message: str
+
+
+class LobbysReadStageClassifiesResponseData(BaseModel):
+    highRank: int
+    id: str
+    isLock: bool
+    lowCoins: int
+    lowRank: int
+    lowRate: dict[str, int] = {}
+    onlinePlayers: int
+    playerCount: int
+    round: int
+    stageType: int
+
+
+class LobbysReadStageClassifiesResponseUserInfoStage(BaseModel):
+    isRedDot: bool
+    rValue: int
+    stageLevel: int
+    stageNextPt: int
+    stagePt: int
+    timingStart: int
+
+
+class LobbysReadStageClassifiesResponseUserInfo(BaseModel):
+    player_3: LobbysReadStageClassifiesResponseUserInfoStage = None
+    player_4: LobbysReadStageClassifiesResponseUserInfoStage = None
+
+    class Config:
+        fields = {"player_3": "3", "player_4": "4"}
+
+
+class LobbysReadStageClassifiesResponse(BaseModel):
+    code: int
+    data: list[LobbysReadStageClassifiesResponseData]
+    message: str
+    userInfo: LobbysReadStageClassifiesResponseUserInfo

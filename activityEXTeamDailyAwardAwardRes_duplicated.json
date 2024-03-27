@@ -1,0 +1,16 @@
+{
+  "code": 704,
+  "data": {
+    "awards": [],
+    "page": {
+      "dailyAwardRed": false,
+      "giftRed": false,
+      "guessRed": false,
+      "matchRed": false,
+      "storeRed": false,
+      "taskRed": false,
+      "user": { "exp": 0, "level": 0, "levelExp": 0, "title": 0, "userId": 0 }
+    }
+  },
+  "message": "conditions not met"
+}

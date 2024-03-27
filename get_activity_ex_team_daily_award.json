@@ -1,0 +1,25 @@
+{
+  "code": 0,
+  "data": {
+    "awards": [
+      { "category": 0, "count": 500, "isEquip": false, "itemId": 10041 },
+      { "category": 0, "count": 5, "isEquip": false, "itemId": 10040 }
+    ],
+    "page": {
+      "dailyAwardRed": false,
+      "giftRed": false,
+      "guessRed": true,
+      "matchRed": false,
+      "storeRed": true,
+      "taskRed": true,
+      "user": {
+        "exp": 15,
+        "level": 1,
+        "levelExp": 60,
+        "title": 1,
+        "userId": 615235015
+      }
+    }
+  },
+  "message": "ok"
+}

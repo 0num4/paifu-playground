@@ -263,15 +263,27 @@ def get_product_list(
 
 
 # 風林火山イベ
-def get_activity_ex_team_daily_award(headers: dict) -> dict:
+def get_activity_ex_team_daily_award(headers: dict) -> Types.stats.EXTeamDailyAwardResponse:
     payload = {}
     activityEXTeamDailyAwardRes = requests.post(
         "https://alicdn.mahjong-jp.net/activity/eXTeamDailyAward", json=payload, headers=headers
     )
     activityEXTeamDailyAwardAwardRes = activityEXTeamDailyAwardRes.json()
-    json.dump(activityEXTeamDailyAwardAwardRes, open("activityEXTeamDailyAwardAwardRes.json", "w"))
+    # json.dump(activityEXTeamDailyAwardAwardRes, open("get_activity_ex_team_daily_award.json", "w"))
     print(activityEXTeamDailyAwardAwardRes)
+    activityEXTeamDailyAwardRes = Types.stats.EXTeamDailyAwardResponse(**activityEXTeamDailyAwardAwardRes, strict=True)
     return activityEXTeamDailyAwardRes
+
+
+def activity_ex_team_task(headers: dict) -> dict:
+    payload = {}
+    activityEXTeamTaskRes = requests.post(
+        "https://alicdn.mahjong-jp.net/activity/eXTeamTask", json=payload, headers=headers
+    )
+    activityEXTeamTaskRes = activityEXTeamTaskRes.json()
+    json.dump(activityEXTeamTaskRes, open("activity_ex_team_task.json", "w"))
+    print(activityEXTeamTaskRes)
+    return activityEXTeamTaskRes
 
 
 def lobbys_read_official_match(headers: dict, lang: str = "ja") -> Types.stats.ReadOfficialMatchResponse:
@@ -575,8 +587,8 @@ def readAllPaiPu(headers: dict) -> list[Types.readPaiPuList.ReadPaiPuListType1 |
 def main():
     emailLoginRes = login_riichi_city()
     headers = get_headers(emailLoginRes)
-    dailybonus(headers)
-    # get_activity_ex_team_daily_award(headers)
+    # backpack_recycle_gift(headers)
+    get_activity_ex_team_daily_award(headers)
     # res = lobbys_read_stage_classifies(headers)
     # save_json(res, "get_activity_ex_team_daily_award.json")
     # dailybonus(headers) # 明日試す

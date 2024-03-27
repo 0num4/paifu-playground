@@ -551,3 +551,39 @@ class LobbysReadStageClassifiesResponse(BaseModel):
     data: list[LobbysReadStageClassifiesResponseData]
     message: str
     userInfo: LobbysReadStageClassifiesResponseUserInfo
+
+
+class EXTeamDailyAwardResponseDataAward(BaseModel):
+    category: int
+    count: int
+    isEquip: bool
+    itemId: int
+
+
+class EXTeamDailyAwardResponseDataAwardPageUser(BaseModel):
+    exp: int
+    level: int
+    levelExp: int
+    title: int
+    userId: int
+
+
+class EXTeamDailyAwardResponseDataAwardPage(BaseModel):
+    dailyAwardRed: bool
+    giftRed: bool
+    guessRed: bool
+    matchRed: bool
+    storeRed: bool
+    taskRed: bool
+    user: EXTeamDailyAwardResponseDataAwardPageUser
+
+
+class EXTeamDailyAwardResponseData(BaseModel):
+    awards: list[EXTeamDailyAwardResponseDataAward]
+    page: EXTeamDailyAwardResponseDataAwardPage
+
+
+class EXTeamDailyAwardResponse(BaseModel):
+    code: int
+    data: EXTeamDailyAwardResponseData
+    message: str

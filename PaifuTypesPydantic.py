@@ -5,8 +5,8 @@ import riichicity.Types.commonConsts
 import datetime
 
 KeyValueType: typing.TypeAlias = typing.Annotated[
-    str, pydantic.StringConstraints(pattern=r"^c[no][0-9a-f]{18,20}$")
-]  # cnの18桁は秋刀魚、coの20桁は四麻？
+    str, pydantic.StringConstraints(pattern=r"^c[no][0-9a-z]{18,20}$")
+]  # cnの18桁は秋刀魚。秋刀魚は0-9a-fまで？、coの20桁は四麻？
 benChangNumType: typing.TypeAlias = typing.Annotated[int, pydantic.Field(strict=True, ge=0, le=4)]
 UserIdType: typing.TypeAlias = Annotated[int, pydantic.Field(strict=True, ge=100000000, le=999999999)]
 eventTypeType: typing.TypeAlias = Annotated[int, pydantic.Field(strict=True, ge=1, le=11)]
@@ -77,7 +77,7 @@ class PaifuData(pydantic.BaseModel):
     matchStage: int
     matchType: int
     northOperateType: int
-    nowTime: datetime.date
+    nowTime: datetime.datetime  # unixtimeを受け取ってくれない…
     period: int
     playerCount: Literal[2, 3, 4]
     remark: str

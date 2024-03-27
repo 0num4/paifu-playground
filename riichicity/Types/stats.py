@@ -305,3 +305,126 @@ class StoreBuyProductResponse(BaseModel):
     code: int
     data: list[StoreBuyProductResponseData]
     message: str
+
+
+class Award(BaseModel):
+    itemID: int
+    itemModule: int
+    itemType: int
+    num: int
+
+
+class RankAwardList(BaseModel):
+    awardList: list[Award]
+    maxRank: int
+    minRank: int
+
+
+class PenaltyInfo(BaseModel):
+    num: int
+    pointsCount: int
+
+
+class ReadOfficialMatchResponseDataRule(BaseModel):
+    CardType: int
+    ChangBang: int
+    FangFu: int
+    IsAutoLi: bool
+    IsChangBang: bool
+    IsChiDuan: bool
+    IsChiTi: bool
+    IsFirstNotRand: bool
+    IsGeMu: bool
+    IsJinChiTi: bool
+    IsKaiLiZhi: bool
+    IsLastHeEnd: bool
+    IsLastTingEnd: bool
+    IsNotCompound: bool
+    IsNotEffect: bool
+    IsNotGrabNorth: bool
+    IsNotHandFondle: bool
+    IsNotKeepDealer: bool
+    IsNotShowHand: bool
+    IsOpenFace: bool
+    IsOpenVoice: bool
+    IsShaoJi: bool
+    IsTimeLimit: bool
+    LimitTime: int
+    NorthOperateType: int
+    ShaoJiPoint: int
+    ThreeZiMoType: int
+    TimeLimitType: int
+    fristReqPoints: int
+    initialPoints: int
+    isAddUpYakuman: bool
+    isBoxStick: bool
+    isConvenientTips: bool
+    isCutOff: bool
+    isEightContinuous: bool
+    isFourGang: bool
+    isFourGangPass: bool
+    isFourRiichi: bool
+    isFourRiichiPass: bool
+    isFourWinds: bool
+    isFourWindsPass: bool
+    isGangDora: bool
+    isGangLiDora: bool
+    isGangOpen: bool
+    isGangPay: bool
+    isKnock: bool
+    isLiDora: bool
+    isLuck: bool
+    isMinusRiichi: bool
+    isMultipleYakuman: bool
+    isNanXiRu: bool
+    isNineCards: bool
+    isNineCardsPass: bool
+    isOpenRiichi: bool
+    isPayYakuman: bool
+    isQiangGang: bool
+    isQieShang: bool
+    isRenHe: bool
+    isSameOrder: bool
+    isTailContinue: bool
+    isThreeHe: bool
+    isThreeHePass: bool
+    isTingPrompt: bool
+    isTopReward: bool
+    isYiFa: bool
+    lianFeng: int
+    luckRate: int
+    minimumPoints: int
+    numRedCard: int
+    operFixedTime: int
+    operVarTime: int
+    orderPoints: list[int]
+    orderPtValue: list[Any]
+    penaltyInfo: list[PenaltyInfo]
+    playerCount: int
+    round: int
+
+
+class ReadOfficialMatchResponseData(BaseModel):
+    isSign: bool
+    matchJoinNum: int
+    matchStage: int
+    name: str
+    officialID: str
+    qualifiedNum: int
+    rankAwardList: list[RankAwardList]
+    rule: ReadOfficialMatchResponseDataRule
+    signItemID: int
+    signItemNum: int
+    signNum: int
+    totalJoinNum: int
+
+
+class UserInfo(BaseModel):
+    timingStart: int
+
+
+class ReadOfficialMatchResponse(BaseModel):
+    code: int
+    data: list[ReadOfficialMatchResponseData]
+    message: str
+    userInfo: UserInfo

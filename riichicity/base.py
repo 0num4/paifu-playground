@@ -341,6 +341,38 @@ def get_message_receive_award(headers: dict, mailID: str, userID: str) -> dict:
     return messageReceiveAwardRes
 
 
+def lobbys_read_stage_classifies(
+    headers: dict,
+) -> dict[any]:
+    lobbysReadStageClassifiesRes = requests.post(
+        "https://alicdn.mahjong-jp.net/lobbys/readStageClassifies", headers=headers
+    )
+    lobbysReadStageClassifiesRes = lobbysReadStageClassifiesRes.json()
+    print(lobbysReadStageClassifiesRes)
+    json.dump(lobbysReadStageClassifiesRes, open("lobbys_read_stage_classifies.json", "w"))
+    # lobbysReadStageClassifiesRes = Types.stats.ReadStageClassifiesResponse(**lobbysReadStageClassifiesRes, strict=True)
+    return lobbysReadStageClassifiesRes
+
+
+def backpack_recycle_gift(headers: dict, isAll: bool = False, itemID: int = 11003, num: int = 1) -> dict:
+    payload = {
+        "isAll": isAll,
+        "items": [
+            {
+                "itemID": itemID,
+                "num": num,
+            }
+        ],
+    }
+    backpackRecycleGiftRes = requests.post(
+        "https://alicdn.mahjong-jp.net/backpack/recycleGift", json=payload, headers=headers
+    )
+    backpackRecycleGiftRes = backpackRecycleGiftRes.json()
+    print(backpackRecycleGiftRes)
+    json.dump(backpackRecycleGiftRes, open("backpack_recycle_gift.json", "w"))
+    return backpackRecycleGiftRes
+
+
 # その他/activity/achiveUserInfoなどがプロフ欄から飛べるやつ
 
 # -- 牌谱对局数据
@@ -476,7 +508,7 @@ def main():
     emailLoginRes = login_riichi_city()
     headers = get_headers(emailLoginRes)
     # get_activity_ex_team_daily_award(headers)
-    res = lobbys_read_official_match(headers)
+    res = lobbys_read_stage_classifies(headers)
     print(res)
     # save_json(res, "get_activity_ex_team_daily_award.json")
     # dailybonus(headers) # 明日試す

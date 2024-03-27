@@ -1,0 +1,240 @@
+{
+  "code": 0,
+  "data": [
+    {
+      "highRank": 13,
+      "id": "bvgn113gm5c5il7c48rg1",
+      "isLock": false,
+      "lowCoins": 0,
+      "lowRank": 1,
+      "lowRate": {},
+      "onlinePlayers": 1008,
+      "playerCount": 4,
+      "round": 1,
+      "stageType": 1
+    },
+    {
+      "highRank": 13,
+      "id": "bvgn113gm5c5il7c48rg2",
+      "isLock": false,
+      "lowCoins": 0,
+      "lowRank": 1,
+      "lowRate": {},
+      "onlinePlayers": 388,
+      "playerCount": 4,
+      "round": 2,
+      "stageType": 1
+    },
+    {
+      "highRank": 13,
+      "id": "bvgn113gm5c5il7c48rg31",
+      "isLock": false,
+      "lowCoins": 0,
+      "lowRank": 1,
+      "lowRate": {},
+      "onlinePlayers": 933,
+      "playerCount": 3,
+      "round": 1,
+      "stageType": 1
+    },
+    {
+      "highRank": 13,
+      "id": "bvgn113gm5c5il7c48rg32",
+      "isLock": false,
+      "lowCoins": 0,
+      "lowRank": 1,
+      "lowRate": {},
+      "onlinePlayers": 294,
+      "playerCount": 3,
+      "round": 2,
+      "stageType": 1
+    },
+    {
+      "highRank": 16,
+      "id": "bvgn113gm5c5il7c48rg4",
+      "isLock": true,
+      "lowCoins": 3000,
+      "lowRank": 11,
+      "lowRate": {},
+      "onlinePlayers": -1,
+      "playerCount": 4,
+      "round": 2,
+      "stageType": 2
+    },
+    {
+      "highRank": 16,
+      "id": "bvgn113gm5c5il7c48rg34",
+      "isLock": true,
+      "lowCoins": 3000,
+      "lowRank": 11,
+      "lowRate": {},
+      "onlinePlayers": -1,
+      "playerCount": 3,
+      "round": 2,
+      "stageType": 2
+    },
+    {
+      "highRank": 16,
+      "id": "bvgn113gm5c5il7c48rg3",
+      "isLock": true,
+      "lowCoins": 3000,
+      "lowRank": 11,
+      "lowRate": {},
+      "onlinePlayers": -1,
+      "playerCount": 4,
+      "round": 1,
+      "stageType": 2
+    },
+    {
+      "highRank": 16,
+      "id": "bvgn113gm5c5il7c48rg33",
+      "isLock": true,
+      "lowCoins": 3000,
+      "lowRank": 11,
+      "lowRate": {},
+      "onlinePlayers": -1,
+      "playerCount": 3,
+      "round": 1,
+      "stageType": 2
+    },
+    {
+      "highRank": 21,
+      "id": "bvgn113gm5c5il7c48rg5",
+      "isLock": true,
+      "lowCoins": 5000,
+      "lowRank": 14,
+      "lowRate": {},
+      "onlinePlayers": -1,
+      "playerCount": 4,
+      "round": 1,
+      "stageType": 3
+    },
+    {
+      "highRank": 21,
+      "id": "bvgn113gm5c5il7c48rg35",
+      "isLock": true,
+      "lowCoins": 5000,
+      "lowRank": 14,
+      "lowRate": {},
+      "onlinePlayers": -1,
+      "playerCount": 3,
+      "round": 1,
+      "stageType": 3
+    },
+    {
+      "highRank": 21,
+      "id": "bvgn113gm5c5il7c48rg6",
+      "isLock": true,
+      "lowCoins": 5000,
+      "lowRank": 14,
+      "lowRate": {},
+      "onlinePlayers": -1,
+      "playerCount": 4,
+      "round": 2,
+      "stageType": 3
+    },
+    {
+      "highRank": 21,
+      "id": "bvgn113gm5c5il7c48rg36",
+      "isLock": true,
+      "lowCoins": 5000,
+      "lowRank": 14,
+      "lowRate": {},
+      "onlinePlayers": -1,
+      "playerCount": 3,
+      "round": 2,
+      "stageType": 3
+    },
+    {
+      "highRank": 21,
+      "id": "bvgn113gm5c5il7c48rg8",
+      "isLock": true,
+      "lowCoins": 10000,
+      "lowRank": 17,
+      "lowRate": {
+        "17": 1800000,
+        "18": 1800000,
+        "19": 1800000,
+        "20": 1800000,
+        "21": 1800000
+      },
+      "onlinePlayers": -1,
+      "playerCount": 4,
+      "round": 2,
+      "stageType": 4
+    },
+    {
+      "highRank": 21,
+      "id": "bvgn113gm5c5il7c48rg38",
+      "isLock": true,
+      "lowCoins": 10000,
+      "lowRank": 17,
+      "lowRate": {
+        "17": 1800000,
+        "18": 1800000,
+        "19": 1800000,
+        "20": 1800000,
+        "21": 1800000
+      },
+      "onlinePlayers": -1,
+      "playerCount": 3,
+      "round": 2,
+      "stageType": 4
+    },
+    {
+      "highRank": 21,
+      "id": "bvgn113gm5c5il7c48rg7",
+      "isLock": true,
+      "lowCoins": 10000,
+      "lowRank": 17,
+      "lowRate": {
+        "17": 1800000,
+        "18": 1800000,
+        "19": 1800000,
+        "20": 1800000,
+        "21": 1800000
+      },
+      "onlinePlayers": -1,
+      "playerCount": 4,
+      "round": 1,
+      "stageType": 4
+    },
+    {
+      "highRank": 21,
+      "id": "bvgn113gm5c5il7c48rg37",
+      "isLock": true,
+      "lowCoins": 10000,
+      "lowRank": 17,
+      "lowRate": {
+        "17": 1800000,
+        "18": 1800000,
+        "19": 1800000,
+        "20": 1800000,
+        "21": 1800000
+      },
+      "onlinePlayers": -1,
+      "playerCount": 3,
+      "round": 1,
+      "stageType": 4
+    }
+  ],
+  "message": "ok",
+  "userInfo": {
+    "3": {
+      "isRedDot": false,
+      "rValue": 1533686,
+      "stageLevel": 3,
+      "stageNextPt": 30,
+      "stagePt": 0,
+      "timingStart": 0
+    },
+    "4": {
+      "isRedDot": false,
+      "rValue": 1500000,
+      "stageLevel": 1,
+      "stageNextPt": 40,
+      "stagePt": 0,
+      "timingStart": 0
+    }
+  }
+}

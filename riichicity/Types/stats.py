@@ -1,3 +1,4 @@
+import typing
 from pydantic import BaseModel
 from typing import Any
 
@@ -279,7 +280,7 @@ class GetProductListResponse(BaseModel):
     message: str
 
 
-class GiftContent(BaseModel):
+class StoreBuyProductResponseGiftContent(BaseModel):
     pass
 
 
@@ -287,7 +288,7 @@ class StoreBuyProductResponseData(BaseModel):
     createTime: int
     expiredAt: int
     feelValue: int
-    giftContent: list[GiftContent]
+    giftContent: list[StoreBuyProductResponseGiftContent]
     isCanEquip: bool
     isEquip: bool
     isExpired: bool
@@ -303,7 +304,7 @@ class StoreBuyProductResponseData(BaseModel):
 
 class StoreBuyProductResponse(BaseModel):
     code: int
-    data: list[StoreBuyProductResponseData]
+    data: typing.Optional[list[StoreBuyProductResponseData]]
     message: str
 
 

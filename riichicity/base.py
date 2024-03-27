@@ -253,6 +253,17 @@ def get_product_list(
     return productRes
 
 
+def get_activity_ex_team_daily_award(headers: dict) -> dict:
+    payload = {}
+    activityEXTeamDailyAwardRes = requests.post(
+        "https://alicdn.mahjong-jp.net/activity/eXTeamDailyAward", json=payload, headers=headers
+    )
+    activityEXTeamDailyAwardAwardRes = activityEXTeamDailyAwardRes.json()
+    json.dump(activityEXTeamDailyAwardAwardRes, open("activityEXTeamDailyAwardAwardRes.json", "w"))
+    print(activityEXTeamDailyAwardAwardRes)
+    return activityEXTeamDailyAwardRes
+
+
 # その他/activity/achiveUserInfoなどがプロフ欄から飛べるやつ
 
 # -- 牌谱对局数据
@@ -375,15 +386,23 @@ def save_json(data: dict, filename: str):
         f.close()
 
 
-def main():
-    emailLoginRes = login_riichi_city()
-    headers = get_headers(emailLoginRes)
+def dailybonus(headers: dict):
     res = get_product_list(headers)
     if res.code == 0:
         print("Successfully got product list")
         res2 = get_store_buy_product(headers, productID=579, num=1)
         print(res2)
         save_json(res2, "get_store_buy_product.json")
+
+
+def main():
+    emailLoginRes = login_riichi_city()
+    headers = get_headers(emailLoginRes)
+    get_activity_ex_team_daily_award(headers)
+    print("end")
+    # save_json(res, "get_activity_ex_team_daily_award.json")
+    # dailybonus(headers) # 明日試す
+
     print("end")
 
 

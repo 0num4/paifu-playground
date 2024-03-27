@@ -222,8 +222,12 @@ class Award(BaseModel):
     itemId: int
 
 
-class userTaskAwardResponse(BaseModel):
+class collectTaskAwardResponse(BaseModel):
     awards: list[Award]
     boxAwards: list[Any]
     code: int
     message: str
+
+
+class collectTaskAwardRequest(BaseModel):
+    typelist: list[int]

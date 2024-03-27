@@ -217,6 +217,18 @@ def get_user_task_award(headers: dict, taskId: int = 12004, type: int = 1) -> di
     return userTaskAwardRes
 
 
+# デイリークエスト一括で獲得する
+# 動作未確認
+def get_activity_collect_task_award(headers: dict, typeList: list[int] = [1, 3]) -> dict[any]:
+    payload = {"typeList": typeList}
+    activityCollectTaskAwardRes = requests.post(
+        "https://alicdn.mahjong-jp.net/activity/collectTaskAward", json=payload, headers=headers
+    )
+    activityCollectTaskAwardRes = activityCollectTaskAwardRes.json()
+    print(activityCollectTaskAwardRes)
+    return activityCollectTaskAwardRes
+
+
 # その他/activity/achiveUserInfoなどがプロフ欄から飛べるやつ
 
 # -- 牌谱对局数据

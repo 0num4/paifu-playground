@@ -239,6 +239,7 @@ def get_store_buy_product(headers: dict, productID: int = 579, num: int = 1) -> 
     storeBuyProductRes = requests.post("https://alicdn.mahjong-jp.net/store/buyProduct", json=payload, headers=headers)
     storeBuyProductRes = storeBuyProductRes.json()
     print(storeBuyProductRes)
+    json.dump(storeBuyProductRes, open("get_store_buy_product.json", "w"))
     return storeBuyProductRes
 
 
@@ -568,7 +569,7 @@ def readAllPaiPu(headers: dict) -> list[Types.readPaiPuList.ReadPaiPuListType1 |
 def main():
     emailLoginRes = login_riichi_city()
     headers = get_headers(emailLoginRes)
-    readAllPaiPu(headers)
+    dailybonus(headers)
     # get_activity_ex_team_daily_award(headers)
     # res = lobbys_read_stage_classifies(headers)
     # save_json(res, "get_activity_ex_team_daily_award.json")

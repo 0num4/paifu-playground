@@ -1,0 +1,40 @@
+{
+  "code": 0,
+  "data": [
+    {
+      "createTime": 0,
+      "expiredAt": 0,
+      "feelValue": 0,
+      "giftContent": [],
+      "isCanEquip": false,
+      "isEquip": false,
+      "isExpired": false,
+      "isLock": false,
+      "itemID": 10002,
+      "itemType": 0,
+      "label": 0,
+      "name": "",
+      "num": 600,
+      "recycleNum": 0,
+      "source": 0
+    },
+    {
+      "createTime": 0,
+      "expiredAt": 0,
+      "feelValue": 0,
+      "giftContent": [],
+      "isCanEquip": false,
+      "isEquip": false,
+      "isExpired": false,
+      "isLock": false,
+      "itemID": 0,
+      "itemType": 0,
+      "label": 0,
+      "name": "",
+      "num": 0,
+      "recycleNum": 0,
+      "source": 0
+    }
+  ],
+  "message": "ok"
+}

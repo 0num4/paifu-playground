@@ -1,0 +1,153 @@
+{
+  "code": 0,
+  "data": {
+    "monthly": [
+      {
+        "action": 208,
+        "award": [
+          { "category": 0, "count": 50, "isEquip": false, "itemId": 10040 },
+          { "category": 0, "count": 5000, "isEquip": false, "itemId": 10041 }
+        ],
+        "awardTimes": 10,
+        "id": 0,
+        "status": 1,
+        "times": 3
+      },
+      {
+        "action": 208,
+        "award": [
+          { "category": 0, "count": 100, "isEquip": false, "itemId": 10040 },
+          { "category": 0, "count": 10000, "isEquip": false, "itemId": 10041 }
+        ],
+        "awardTimes": 15,
+        "id": 1,
+        "status": 1,
+        "times": 3
+      },
+      {
+        "action": 2035,
+        "award": [
+          { "category": 0, "count": 30, "isEquip": false, "itemId": 10040 },
+          { "category": 0, "count": 3000, "isEquip": false, "itemId": 10041 }
+        ],
+        "awardTimes": 10,
+        "id": 2,
+        "status": 1,
+        "times": 3
+      },
+      {
+        "action": 2035,
+        "award": [
+          { "category": 0, "count": 80, "isEquip": false, "itemId": 10040 },
+          { "category": 0, "count": 8000, "isEquip": false, "itemId": 10041 }
+        ],
+        "awardTimes": 15,
+        "id": 3,
+        "status": 1,
+        "times": 3
+      },
+      {
+        "action": 2033,
+        "award": [
+          { "category": 0, "count": 50, "isEquip": false, "itemId": 10040 },
+          { "category": 0, "count": 5000, "isEquip": false, "itemId": 10041 }
+        ],
+        "awardTimes": 10,
+        "id": 4,
+        "status": 1,
+        "times": 2
+      },
+      {
+        "action": 2033,
+        "award": [
+          { "category": 0, "count": 150, "isEquip": false, "itemId": 10040 },
+          { "category": 0, "count": 15000, "isEquip": false, "itemId": 10041 }
+        ],
+        "awardTimes": 15,
+        "id": 5,
+        "status": 1,
+        "times": 2
+      },
+      {
+        "action": 2034,
+        "award": [
+          { "category": 0, "count": 50, "isEquip": false, "itemId": 10040 },
+          { "category": 0, "count": 5000, "isEquip": false, "itemId": 10041 }
+        ],
+        "awardTimes": 7,
+        "id": 6,
+        "status": 1,
+        "times": 2
+      }
+    ],
+    "week": [
+      {
+        "action": 208,
+        "award": [
+          { "category": 0, "count": 15, "isEquip": false, "itemId": 10040 },
+          { "category": 0, "count": 1500, "isEquip": false, "itemId": 10041 }
+        ],
+        "awardTimes": 3,
+        "id": 0,
+        "status": 1,
+        "times": 0
+      },
+      {
+        "action": 2033,
+        "award": [
+          { "category": 0, "count": 5, "isEquip": false, "itemId": 10040 },
+          { "category": 0, "count": 500, "isEquip": false, "itemId": 10041 }
+        ],
+        "awardTimes": 1,
+        "id": 1,
+        "status": 2,
+        "times": 1
+      },
+      {
+        "action": 2033,
+        "award": [
+          { "category": 0, "count": 15, "isEquip": false, "itemId": 10040 },
+          { "category": 0, "count": 1500, "isEquip": false, "itemId": 10041 }
+        ],
+        "awardTimes": 3,
+        "id": 2,
+        "status": 1,
+        "times": 2
+      },
+      {
+        "action": 2033,
+        "award": [
+          { "category": 0, "count": 25, "isEquip": false, "itemId": 10040 },
+          { "category": 0, "count": 2500, "isEquip": false, "itemId": 10041 }
+        ],
+        "awardTimes": 5,
+        "id": 3,
+        "status": 1,
+        "times": 2
+      },
+      {
+        "action": 2034,
+        "award": [
+          { "category": 0, "count": 10, "isEquip": false, "itemId": 10040 },
+          { "category": 0, "count": 1000, "isEquip": false, "itemId": 10041 }
+        ],
+        "awardTimes": 2,
+        "id": 4,
+        "status": 2,
+        "times": 2
+      },
+      {
+        "action": 2034,
+        "award": [
+          { "category": 0, "count": 20, "isEquip": false, "itemId": 10040 },
+          { "category": 0, "count": 2000, "isEquip": false, "itemId": 10041 }
+        ],
+        "awardTimes": 4,
+        "id": 5,
+        "status": 1,
+        "times": 2
+      }
+    ]
+  },
+  "message": "ok"
+}

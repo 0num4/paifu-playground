@@ -290,7 +290,7 @@ def lobbys_sign_official_match(headers: dict, isCancel: bool = False, officialID
     return lobbysSignOfficialMatchRes
 
 
-# 日時設定されてるグランプリ(週間大会とか)の情報を取得
+# 日時設定されてるグランプリ(週間大会とか)の情報を取得。定期的に取得して時間になったら多分こちらからつなぎに行くっぽい
 def lobbys_read_timing_match(headers: dict) -> Types.stats.ReadTimingMatchResponse:
     payload = {}
     lobbysReadTimingMatchRes = requests.post(
@@ -444,6 +444,28 @@ def read_pai_pu_list(
 #     local data = {paiPuId = paiPuId, isCancel = isCancel, remark = remark}
 #     HttpUtil.MjGamePost("record/collectPaiPu", data, RSP.collectPaiPu, data, true)
 # end
+
+
+# 未検証。段位開始時に使う。classifyIDはreadStageClassifiesから取れる
+def lobbys_start_stage(headers: dict, classifyID: str) -> dict:
+    payload = {"classifyID": classifyID}
+    lobbysStartStageRes = requests.post(
+        "https://alicdn.mahjong-jp.net/lobbys/startStage", json=payload, headers=headers
+    )
+    lobbysStartStageRes = lobbysStartStageRes.json()
+    print(lobbysStartStageRes)
+    return lobbysStartStageRes
+
+
+# 未検証。段位開始時に使う？
+def lobbys_cancel_stage(headers: dict, matchID: str) -> dict:
+    payload = {"matchID": matchID}
+    lobbysCancelStageRes = requests.post(
+        "https://alicdn.mahjong-jp.net/lobbys/cancelStage", json=payload, headers=headers
+    )
+    lobbysCancelStageRes = lobbysCancelStageRes.json()
+    print(lobbysCancelStageRes)
+    return lobbysCancelStageRes
 
 
 # ブックマーク。isCancelがtrueだとブックマーク解除。当然ですがisCollectの値はユーザー単位で見え方が違う(別のユーザーの別のブックマークは違うので)

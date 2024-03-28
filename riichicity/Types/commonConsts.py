@@ -297,6 +297,21 @@ EMjReplayEventType = {
     "Ting": 11,
 }
 
+
+class EMjReplayEventType2(enum.IntEnum):
+    GameStart = 1
+    SendCurrentAction = 2
+    SendOtherAction = 3
+    ActionBrc = 4
+    GameEnd = 5
+    RoomEnd = 6
+    GangBaoBrc = 7
+    LiZhiBrc = 8
+    UserZhenTing = 9
+    Pause = 10
+    Ting = 11
+
+
 EMjBaoCardType = {
     "BaoPaiIndicate": 1,  # 宝牌インジケータ
     "BaoPai": 2,  # 宝牌

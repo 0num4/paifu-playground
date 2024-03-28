@@ -2,7 +2,8 @@ from typing import Literal, Annotated
 import typing
 import pydantic
 import riichicity.Types.commonConsts
-import datetime
+
+# import datetime
 
 KeyValueType: typing.TypeAlias = typing.Annotated[
     str, pydantic.StringConstraints(pattern=r"^c[no][0-9a-z]{18,20}$")
@@ -77,7 +78,7 @@ class PaifuData(pydantic.BaseModel):
     matchStage: int
     matchType: int
     northOperateType: int
-    nowTime: datetime.datetime  # unixtimeを受け取ってくれない…
+    nowTime: int  # unixtimeを受け取ってくれない…
     period: int
     playerCount: Literal[2, 3, 4]
     remark: str

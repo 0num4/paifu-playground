@@ -135,6 +135,10 @@ class TingInfo(pydantic.BaseModel):
     ting_info: list[TingInfoInternal]
 
 
+class CardInfo(pydantic.BaseModel):
+    cards: list[int] | None
+
+
 class GameInfo(pydantic.BaseModel):
     user_data: list[UserData]
     pai_pu_id: str
@@ -151,13 +155,14 @@ HandEventRecordDataLiteral: TypeAlias = Union[
     UserInfo,
     IsAutoGangInfo,  # user_id & is_auto_gang
     TingInfo,  # ting_info
+    CardInfo,
 ]
 
 
 class HandEventRecord(pydantic.BaseModel):
     data: HandEventRecordDataLiteral
     eventPos: int
-    eventType: int
+    eventType: riichicity.Types.commonConsts.EMjReplayEventType2
     handId: str
     startTime: int
     userId: UserIdType
@@ -268,16 +273,17 @@ def parse_hand_record(hand_record: PaifuTypesPydantic.HandRecord) -> list[any]:
         # else:
         #     continue
         # continue
-        print(hand_event_record)
+        # print(hand_event_record)
         event_data_str: str = hand_event_record.data
         event_data = json.loads(event_data_str)
+        print(event_data)
         ada = pydantic.TypeAdapter(HandEventRecordDataLiteral)
         s = ada.validate_python(event_data)
         if isinstance(s, ActionInfo):
             # print("OperationInfo")
-            print(s.user_id)
-            print(s.hand_cards)
-            print(s.group_cards)
+            # print(s.user_id)
+            # print(s.hand_cards)
+            # print(s.group_cards)
             continue
             # elif isinstance(s, PaifuTypesPydanticWithInternal.HandInfo):
             #     print("HandInfo")
@@ -303,3 +309,5 @@ def parse_hand_record(hand_record: PaifuTypesPydantic.HandRecord) -> list[any]:
             print("IsAutoGangInfo")
         elif isinstance(s, TingInfo):
             print("TingInfo")
+        elif isinstance(s, CardInfo):
+            print("CardInfo")

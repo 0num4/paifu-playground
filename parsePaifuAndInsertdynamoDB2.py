@@ -15,38 +15,6 @@ from decimal import Decimal
 dotenv.load_dotenv()
 
 
-# def assignDictToHandEventRecordDataLiteral(handEventRecord: dict) -> HandEventRecordDataLiteral:
-def parse_hand_record(hand_record: PaifuTypesPydantic.HandRecord) -> list[any]:
-    HandRecordAdapter = pydantic.TypeAdapter(PaifuTypesPydantic.HandRecord)
-    hand_record = HandRecordAdapter.validate_python(hand_record)
-    for hand_event_record in hand_record.handEventRecord:
-        event_data_str: str = hand_event_record.data
-        event_data = json.loads(event_data_str)
-        if event_data == {}:
-            print("hand_event_record_data_json is null")
-            continue
-        ada = pydantic.TypeAdapter(PaifuTypesPydanticWithInternal.HandEventRecordDataLiteral)
-        s = ada.validate_python(event_data)
-        if isinstance(s, PaifuTypesPydanticWithInternal.HandInfo):
-            print("HandInfo")
-        elif isinstance(s, PaifuTypesPydanticWithInternal.OperationInfo):
-            print("OperationInfo")
-        elif isinstance(s, PaifuTypesPydanticWithInternal.ActionInfo):
-            print("ActionInfo")
-        elif isinstance(s, PaifuTypesPydanticWithInternal.OutCardInfo):
-            print("OutCardInfo")
-        elif isinstance(s, PaifuTypesPydanticWithInternal.GameResult):
-            print("GameResult")
-        elif isinstance(s, PaifuTypesPydanticWithInternal.GameInfo):
-            print("GameInfo")
-        elif isinstance(s, PaifuTypesPydanticWithInternal.UserInfo):
-            print("UserInfo")
-        elif isinstance(s, PaifuTypesPydanticWithInternal.IsAutoGangInfo):
-            print("IsAutoGangInfo")
-        elif isinstance(s, PaifuTypesPydanticWithInternal.TingInfo):
-            print("TingInfo")
-
-
 def decimal_default(obj):
     if isinstance(obj, Decimal):
         return float(obj)  # または str(obj) によって文字列に変換
@@ -87,7 +55,7 @@ dynamodb = boto3.resource("dynamodb")
 table = dynamodb.Table(table_name)
 
 
-paifu = "gameDataSample.json"
+paifu = "4ma_gin_han_sample.json"
 json_file = open(paifu, "r")
 json_data = json.load(json_file)
 
@@ -115,7 +83,7 @@ else:
 # exit(0)
 # hr = [hr for hr in paifu.data.handRecord]
 for hand_record in paifu.data.handRecord:
-    parse_hand_record(hand_record)
+    PaifuTypesPydanticWithInternal.parse_hand_record(hand_record)
 
 exit(0)
 
@@ -153,15 +121,16 @@ response = table.put_item(
         # "stageNum": paifu.data.stageNum, # 段位なら0
         # "stageType": paifu.data.stageType,  # もう銀半とかで分けて固定なので
         "handRecord": [
+            # 本当に必要なの、player.points、1局目1本場みたいなのと配山(paiShan)と
             {
-                "benChangNum": record.benChangNum,
-                "changCi": record.changCi,  # 巡目
-                "handCardEncode": record.handCardEncode,
+                "benChangNum": record.benChangNum,  # 一本場。0 based index
+                "changCi": record.changCi,  # 局数。東1とか。1,2,2,3,1,1,2,3,3のように親連するときは値が変わらない。また南入すると値が1からになる
+                "handCardEncode": record.handCardEncode,  # 牌山。局ごとに変わる。つまりHandRecordは局単位
                 # "handCardsSHA256": record.handCardsSHA256, sha256.pyで生成できることを確認
                 "handID": record.handID,
-                "handPos": record.handPos,
-                "paiShan": record.paiShan,
-                "quanFeng": record.quanFeng,
+                "handPos": record.handPos,  # ゲームが始まってからの局数のcount。1 based indexでcount++
+                "paiShan": record.paiShan,  # 牌山。の生データ。これだけでいい。
+                "quanFeng": record.quanFeng,  # 東か南か。bitで操作しており最悪。0x31（49）の場合、上位4ビットは3です。そこから2を引くと1が得られます。0x41（65）の場合、上位4ビットは4です。そこから2を引くと2が得られます。
                 "handEventRecord": [
                     {
                         "data": event.data,

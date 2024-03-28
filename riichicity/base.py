@@ -339,7 +339,6 @@ def lobbys_ready_official_next(
     return lobbysReadyOfficialNextRes
 
 
-# TODO: 検証
 def lobbys_sign_timing_match(
     headers: dict, isCancel: bool = False, signItemID: int = 10002, timingID: str = ""
 ) -> Types.stats.SignTimingMatchResponse:
@@ -363,6 +362,17 @@ def get_message_receive_award(headers: dict, mailID: str, userID: str) -> dict:
     messageReceiveAwardRes = messageReceiveAwardRes.json()
     print(messageReceiveAwardRes)
     return messageReceiveAwardRes
+
+
+def get_message_user_message(headers: dict, lang: str = "ja", userID: str = "") -> dict:
+    payload = {"lang": lang, "userID": userID}
+    messageUserMessageRes = requests.post(
+        "https://alicdn.mahjong-jp.net/message/userMessage", json=payload, headers=headers
+    )
+    messageUserMessageRes = messageUserMessageRes.json()
+    print(messageUserMessageRes)
+    json.dump(messageUserMessageRes, open("get_message_user_message.json", "w"))
+    return messageUserMessageRes
 
 
 # stageごとのオンラインの人数が取れる
@@ -638,7 +648,9 @@ def readAllPaiPu(headers: dict) -> list[Types.readPaiPuList.ReadPaiPuListType1 |
 def main():
     emailLoginRes = login_riichi_city()
     headers = get_headers(emailLoginRes)
-    signMatch_dev(headers)
+    res = get_message_user_message(headers, lang="ja", userID="615235015")
+    print(res)
+    # signMatch_dev(headers)
     # backpack_recycle_gift(headers)
     # activity_ex_team_task(headers)
     # activity_read_ranks(headers)

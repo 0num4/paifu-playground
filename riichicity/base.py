@@ -319,7 +319,7 @@ def lobbys_read_timing_match(headers: dict) -> Types.stats.ReadTimingMatchRespon
         "https://alicdn.mahjong-jp.net/lobbys/readTimingMatch", json=payload, headers=headers
     )
     lobbysReadTimingMatchRes = lobbysReadTimingMatchRes.json()
-    print(lobbysReadTimingMatchRes)
+    # print(lobbysReadTimingMatchRes)
     # json.dump(lobbysReadTimingMatchRes, open("lobbys_read_timing_match.json", "w"))
     lobbysReadTimingMatchRes = Types.stats.ReadTimingMatchResponse(**lobbysReadTimingMatchRes, strict=True)
     return lobbysReadTimingMatchRes
@@ -573,6 +573,24 @@ def save_json(data: dict, filename: str):
         f.close()
 
 
+def signMatch_dev(headers: dict):
+    lobbysReadTimingMatchRes = lobbys_read_timing_match(headers)
+    if lobbysReadTimingMatchRes.code == 0:
+        for item in lobbysReadTimingMatchRes.data:
+            print(item)
+            if item.isSign is False:
+                print(f"参加してない: {item.officialID}")
+                print(f"参加料: {item.signItemList[0].num}, ItemID: {item.signItemList[0].itemID}")
+                print(f"日時: {datetime.datetime.fromtimestamp(item.startTime)}")
+                if item.signItemList[0].itemID == 10002:
+                    res = lobbys_sign_timing_match(headers, isCancel=False, signItemID=10002, timingID=item.officialID)
+                    print(res)
+                    sleep_time = random.uniform(3, 5)
+                    time.sleep(sleep_time)
+    # res = lobbys_sign_official_match(headers)
+    # save_json(res, "lobbys_sign_official_match.json")
+
+
 def dailybonus(headers: dict):
     res = get_product_list(headers)
     if res.code == 0:
@@ -617,12 +635,12 @@ def readAllPaiPu(headers: dict) -> list[Types.readPaiPuList.ReadPaiPuListType1 |
 def main():
     emailLoginRes = login_riichi_city()
     headers = get_headers(emailLoginRes)
+    signMatch_dev(headers)
     # backpack_recycle_gift(headers)
     # activity_ex_team_task(headers)
-    activity_read_ranks(headers)
+    # activity_read_ranks(headers)
     # res = lobbys_read_stage_classifies(headers)
     # save_json(res, "get_activity_ex_team_daily_award.json")
-    # dailybonus(headers) # 明日試す
 
     print("end")
 

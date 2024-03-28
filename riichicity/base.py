@@ -342,13 +342,15 @@ def lobbys_ready_official_next(
 # TODO: 検証
 def lobbys_sign_timing_match(
     headers: dict, isCancel: bool = False, signItemID: int = 10002, timingID: str = ""
-) -> dict:
+) -> Types.stats.SignTimingMatchResponse:
     payload = {"isCancel": isCancel, "signItemID": signItemID, "timingID": timingID}
     lobbysSignTimingMatchRes = requests.post(
         "https://alicdn.mahjong-jp.net/lobbys/signTimingMatch", json=payload, headers=headers
     )
     lobbysSignTimingMatchRes = lobbysSignTimingMatchRes.json()
     print(lobbysSignTimingMatchRes)
+    # json.dump(lobbysSignTimingMatchRes, open("lobbys_sign_timing_match.json", "w"))
+    lobbysSignTimingMatchRes = Types.stats.SignTimingMatchResponse(**lobbysSignTimingMatchRes, strict=True)
     return lobbysSignTimingMatchRes
 
 
@@ -585,6 +587,7 @@ def signMatch_dev(headers: dict):
                 if item.signItemList[0].itemID == 10002:
                     res = lobbys_sign_timing_match(headers, isCancel=False, signItemID=10002, timingID=item.officialID)
                     print(res)
+                    print(f"参加しました: {item.officialID}")
                     sleep_time = random.uniform(3, 5)
                     time.sleep(sleep_time)
     # res = lobbys_sign_official_match(headers)

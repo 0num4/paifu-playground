@@ -433,3 +433,11 @@ MatchType = {
     "GrandPrix": 3,  # グランプリ
     "FLHSRace": 4,  # 風雷火山大会
 }
+
+
+class MatchType2(enum.IntEnum):
+    None_ = 0
+    SelfBuild = 1
+    Full = 2
+    GrandPrix = 3
+    FLHSRace = 4

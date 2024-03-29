@@ -375,6 +375,18 @@ def get_message_user_message(headers: dict, lang: str = "ja", userID: str = "") 
     return messageUserMessageRes
 
 
+# TODO: ちゃんとしたgiftコードが来たら検証
+def get_gift_code(headers: dict, code: str) -> dict:
+    payload = {"code": code}
+    giftCodeRes = requests.post(
+        "https://alicdn.mahjong-jp.net/activity/activateRedeemCode", json=payload, headers=headers
+    )
+    giftCodeRes = giftCodeRes.json()
+    print(giftCodeRes)
+    json.dump(giftCodeRes, open("get_gift_code.json", "w"))
+    return giftCodeRes
+
+
 # stageごとのオンラインの人数が取れる
 def lobbys_read_stage_classifies(
     headers: dict,
@@ -648,7 +660,7 @@ def readAllPaiPu(headers: dict) -> list[Types.readPaiPuList.ReadPaiPuListType1 |
 def main():
     emailLoginRes = login_riichi_city()
     headers = get_headers(emailLoginRes)
-    res = get_message_user_message(headers, lang="ja", userID="615235015")
+    # res = get_gift_code(headers, code="happybirthday03210")
     print(res)
     # signMatch_dev(headers)
     # backpack_recycle_gift(headers)

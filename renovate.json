@@ -1,6 +1,30 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    "config:recommended"
+  "timezone": "Asia/Tokyo",
+  "extends": ["config:recommended"],
+  "reviewers": ["0num4"],
+  "prConcurrentLimit": 4,
+  "prCreation": "not-pending",
+  "major": {
+    "stabilityDays": 7
+  },
+  "minor": {
+    "stabilityDays": 3
+    "automerge": true
+  },
+  "patch": {
+    "stabilityDays": 1,
+    "automerge": true
+  },
+  "separateMinorPatch": true,
+  "schedule": ["every weekday"],
+  "packageRules": [
+      {
+          "groupName": "boto3",
+          "matchPackagePatterns": [
+              "boto3",
+              "botocore"
+          ]
+      }
   ]
 }

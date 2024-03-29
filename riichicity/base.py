@@ -287,6 +287,19 @@ def activity_ex_team_task(headers: dict) -> Types.stats.EXTeamTaskResponse:
     return activityEXTeamTaskRes
 
 
+# TODO: 検証
+def activity_receive_ex_team_task(headers: dict, taskID: int = 3, type: int = 4) -> dict[any]:
+    payload = {"taskID": taskID, "type": type}
+    activityReceiveEXTeamTaskRes = requests.post(
+        "https://alicdn.mahjong-jp.net/activity/receiveEXTeamTask", json=payload, headers=headers
+    )
+    activityReceiveEXTeamTaskRes = activityReceiveEXTeamTaskRes.json()
+    # json.dump(activityReceiveEXTeamTaskRes, open("activity_receive_ex_team_task.json", "w"))
+    print(activityReceiveEXTeamTaskRes)
+    activityReceiveEXTeamTaskRes = Types.stats.EXTeamTaskAwardResponse(**activityReceiveEXTeamTaskRes, strict=True)
+    return activityReceiveEXTeamTaskRes
+
+
 def lobbys_read_official_match(headers: dict, lang: str = "ja") -> Types.stats.ReadOfficialMatchResponse:
     payload = {"lang": lang}
     lobbysReadOfficialMatchRes = requests.post(
@@ -661,6 +674,7 @@ def main():
     emailLoginRes = login_riichi_city()
     headers = get_headers(emailLoginRes)
     # res = get_gift_code(headers, code="happybirthday03210")
+    res = activity_receive_ex_team_task(headers)
     print(res)
     # signMatch_dev(headers)
     # backpack_recycle_gift(headers)

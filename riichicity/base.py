@@ -344,6 +344,17 @@ def activity_receive_sign_award(
     return activityReceiveSignAwardRes
 
 
+def activity_user_sign_progress(headers: dict, activityId: int = 10124) -> dict[any]:
+    payload = {"activityId": activityId}
+    activityUserSignProgressRes = requests.post(
+        "https://alicdn.mahjong-jp.net/activity/userSignProgress", json=payload, headers=headers
+    )
+    activityUserSignProgressRes = activityUserSignProgressRes.json()
+    json.dump(activityUserSignProgressRes, open("activity_user_sign_progress.json", "w"))
+    print(activityUserSignProgressRes)
+    return activityUserSignProgressRes
+
+
 def lobbys_read_official_match(headers: dict, lang: str = "ja") -> Types.stats.ReadOfficialMatchResponse:
     payload = {"lang": lang}
     lobbysReadOfficialMatchRes = requests.post(
@@ -686,6 +697,7 @@ def dailybonus(headers: dict):
 # /store/GetDraw
 # /users/initSession
 # /users/emailLogin
+# /activity/receiveSignAward
 
 
 # TODO:
@@ -732,7 +744,8 @@ def main():
     emailLoginRes = login_riichi_city()
     headers = get_headers(emailLoginRes)
     users_check_version(headers, channel="default", platform="ios", version="2.1.1")
-    res = activity_receive_sign_award(headers, activityId=10124, awardType=3)
+    res = activity_user_sign_progress(headers, activityId=10124)
+    # res = activity_receive_sign_award(headers, activityId=10124, awardType=3)
     # # res = get_gift_code(headers, code="happybirthday03210")
     # res = activity_receive_ex_team_task(headers)
     print(res)

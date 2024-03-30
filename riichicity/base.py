@@ -330,6 +330,18 @@ def activity_receive_ex_team_task(headers: dict, taskID: int = 3, type: int = 4)
     return activityReceiveEXTeamTaskRes
 
 
+def activity_receive_sign_award(headers: dict, activityId: int = 10124, awardType: int = 3) -> dict[any]:
+    payload = {"activityId": activityId, "awardType": awardType}
+    activityReceiveSignAwardRes = requests.post(
+        "https://alicdn.mahjong-jp.net/activity/receiveSignAward", json=payload, headers=headers
+    )
+    activityReceiveSignAwardRes = activityReceiveSignAwardRes.json()
+    json.dump(activityReceiveSignAwardRes, open("activity_receive_sign_award.json", "w"))
+    print(activityReceiveSignAwardRes)
+    # activityReceiveEXTeamTaskRes = Types.stats.EXTeamTaskAwardResponse(**activityReceiveEXTeamTaskRes, strict=True)
+    return activityReceiveSignAwardRes
+
+
 def lobbys_read_official_match(headers: dict, lang: str = "ja") -> Types.stats.ReadOfficialMatchResponse:
     payload = {"lang": lang}
     lobbysReadOfficialMatchRes = requests.post(
@@ -670,6 +682,8 @@ def dailybonus(headers: dict):
 # /release/notice/domain_name.ncc
 # /users/checkVersion
 # /store/GetDraw
+# /users/initSession
+# /users/emailLogin
 
 
 # TODO:
@@ -715,10 +729,11 @@ def main():
 
     emailLoginRes = login_riichi_city()
     headers = get_headers(emailLoginRes)
-    res = users_check_version(headers, channel="default", platform="ios", version="2.1.1")
+    users_check_version(headers, channel="default", platform="ios", version="2.1.1")
+    res = activity_receive_sign_award(headers, activityId=10124, awardType=3)
     # # res = get_gift_code(headers, code="happybirthday03210")
     # res = activity_receive_ex_team_task(headers)
-    # print(res)
+    print(res)
     # signMatch_dev(headers)
     # backpack_recycle_gift(headers)
     # activity_ex_team_task(headers)

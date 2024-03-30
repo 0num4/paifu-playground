@@ -22,7 +22,25 @@ def fetch_domain_name() -> Types.baseTypes.FetchDomainNameResponse:
     return response
 
 
+def users_check_version(
+    headers: dict, channel: str = "default", platform: str = "ios", version: str = "2.1.16.31622"
+) -> Types.baseTypes.CheckVersionResponse:
+    payload = {
+        "channel": channel,
+        "platform": platform,
+        "version": version,
+    }
+    checkVersionRes = requests.post("https://alicdn.mahjong-jp.net/users/checkVersion", json=payload, headers=headers)
+    checkVersionRes = checkVersionRes.json()
+    print(checkVersionRes)
+    # json.dump(checkVersionRes, open("users_check_version_latest.json", "w"))
+    checkVersionRes = Types.baseTypes.CheckVersionResponse(**checkVersionRes, strict=True)
+    return checkVersionRes
+
+
 def login_riichi_city() -> Types.stats.EmailLoginResponse:
+    # res = fetch_domain_name()
+    # print(res.domain_name)
     # リクエストヘッダーを設定
     headers = {
         "Content-Type": "application/json",
@@ -650,6 +668,7 @@ def dailybonus(headers: dict):
 
 
 # /release/notice/domain_name.ncc
+# /users/checkVersion
 # /store/GetDraw
 
 
@@ -694,8 +713,9 @@ def readAllPaiPu(headers: dict) -> list[Types.readPaiPuList.ReadPaiPuListType1 |
 
 def main():
 
-    # emailLoginRes = login_riichi_city()
-    # headers = get_headers(emailLoginRes)
+    emailLoginRes = login_riichi_city()
+    headers = get_headers(emailLoginRes)
+    res = users_check_version(headers, channel="default", platform="ios", version="2.1.1")
     # # res = get_gift_code(headers, code="happybirthday03210")
     # res = activity_receive_ex_team_task(headers)
     # print(res)

@@ -1,1 +1,13 @@
-{"code": 0, "data": {"isVip": false, "persistentDay": 1, "persistentStatusList": [1, 1, 1], "repairLeft": 1, "signDay": 1, "signStatusList": [3, 0, 0, 0, 0, 0, 0], "vipStatus": 1}, "message": "ok"}
+{
+  "code": 0,
+  "data": {
+    "isVip": false,
+    "persistentDay": 1,
+    "persistentStatusList": [1, 1, 1],
+    "repairLeft": 1,
+    "signDay": 1,
+    "signStatusList": [3, 0, 0, 0, 0, 0, 0],
+    "vipStatus": 1
+  },
+  "message": "ok"
+}

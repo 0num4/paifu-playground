@@ -344,7 +344,9 @@ def activity_receive_sign_award(
     return activityReceiveSignAwardRes
 
 
-def activity_user_sign_progress(headers: dict, activityId: int = 10124) -> dict[any]:
+def activity_user_sign_progress(
+    headers: dict, activityId: int = 10124
+) -> Types.baseTypes.UserSignProgressResponse[any]:
     payload = {"activityId": activityId}
     activityUserSignProgressRes = requests.post(
         "https://alicdn.mahjong-jp.net/activity/userSignProgress", json=payload, headers=headers
@@ -694,10 +696,22 @@ def dailybonus(headers: dict):
 
 # /release/notice/domain_name.ncc
 # /users/checkVersion
-# /store/GetDraw
+# /ping
 # /users/initSession
 # /users/emailLogin
+# /backpack/userEquip
+# /users/getRoleInfo
+# /mixed_content/redDot
+# /users/userBaseData
+# /activity/specialBag
+# /activity/userTask
+# /activity/activityList
+# /store/GetDraw
+# /store/storeRed
+# users/userSetting
+# /activity/userSignProgress
 # /activity/receiveSignAward
+# /activity/activityList
 
 
 # TODO:

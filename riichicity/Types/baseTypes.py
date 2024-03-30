@@ -34,6 +34,22 @@ class ReceiveSignAwardResponseData(BaseModel):
 
 
 class ReceiveSignAwardResponse(BaseModel):
-    awards: list[ReceiveSignAwardResponseData | None]
+    awards: list[ReceiveSignAwardResponseData | None]  # 7日ログインとかはここに出てくる
     code: int
+    message: str
+
+
+class UserSignProgressData(BaseModel):
+    isVip: bool
+    persistentDay: int
+    persistentStatusList: list[int]  # [3,3,1](vip)や[1,1,1]、下の方に出てるボーナス
+    repairLeft: int  # 1?
+    signDay: int  # ログインした日数
+    signStatusList: list[int]  # 7の固定配列、ログインすると3でそれ以外は0
+    vipStatus: int
+
+
+class UserSignProgressResponse(BaseModel):
+    code: int
+    data: UserSignProgressData
     message: str

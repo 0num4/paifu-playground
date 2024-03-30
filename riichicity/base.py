@@ -330,15 +330,17 @@ def activity_receive_ex_team_task(headers: dict, taskID: int = 3, type: int = 4)
     return activityReceiveEXTeamTaskRes
 
 
-def activity_receive_sign_award(headers: dict, activityId: int = 10124, awardType: int = 3) -> dict[any]:
+def activity_receive_sign_award(
+    headers: dict, activityId: int = 10124, awardType: int = 3
+) -> Types.baseTypes.ReceiveSignAwardResponse:
     payload = {"activityId": activityId, "awardType": awardType}
     activityReceiveSignAwardRes = requests.post(
         "https://alicdn.mahjong-jp.net/activity/receiveSignAward", json=payload, headers=headers
     )
     activityReceiveSignAwardRes = activityReceiveSignAwardRes.json()
-    json.dump(activityReceiveSignAwardRes, open("activity_receive_sign_award.json", "w"))
+    # json.dump(activityReceiveSignAwardRes, open("activity_receive_sign_award.json", "w"))
     print(activityReceiveSignAwardRes)
-    # activityReceiveEXTeamTaskRes = Types.stats.EXTeamTaskAwardResponse(**activityReceiveEXTeamTaskRes, strict=True)
+    activityReceiveSignAwardRes = Types.baseTypes.ReceiveSignAwardResponse(**activityReceiveSignAwardRes, strict=True)
     return activityReceiveSignAwardRes
 
 

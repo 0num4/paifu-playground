@@ -24,3 +24,16 @@ class CheckVersionResponse(BaseModel):
     code: int = 0
     data: CheckVersionResponseData
     message: str
+
+
+class ReceiveSignAwardResponseData(BaseModel):
+    category: int
+    count: int
+    isVip: bool
+    itemId: int
+
+
+class ReceiveSignAwardResponse(BaseModel):
+    awards: list[ReceiveSignAwardResponseData | None]
+    code: int
+    message: str

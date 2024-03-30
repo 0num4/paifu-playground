@@ -5,9 +5,21 @@ import requests
 import Types.stats
 import Types.commonConsts
 import Types.readPaiPuList
+import Types.baseTypes
 import datetime
 import time
 import pydantic
+
+
+#
+def fetch_domain_name() -> Types.baseTypes.FetchDomainNameResponse:
+    url = "https://d3qgi0t347dz44.cloudfront.net/release/notice/domain_name.ncc"
+    response = requests.get(url)
+    response.raise_for_status()
+    response = response.json()
+    json.dump(response, open("fetch_domain_name.json", "w"))
+    response = Types.baseTypes.FetchDomainNameResponse(**response, strict=True)
+    return response
 
 
 def login_riichi_city() -> Types.stats.EmailLoginResponse:
@@ -635,7 +647,17 @@ def dailybonus(headers: dict):
         print("Successfully got product list")
         res2 = get_store_buy_product(headers, productID=579, num=1)
         print(res2)
-        save_json(res2, "get_store_buy_product.json")
+
+
+# /release/notice/domain_name.ncc
+# /store/GetDraw
+
+
+# TODO:
+def get_daily(headers: dict):
+    dailybonus(headers)
+    daily_res = get_activity_collect_task_award(headers, typeList=[1, 3])
+    weekly_res = get_activity_collect_task_award(headers, typeList=[4, 5])
 
 
 def readAllPaiPu(headers: dict) -> list[Types.readPaiPuList.ReadPaiPuListType1 | None]:
@@ -671,11 +693,12 @@ def readAllPaiPu(headers: dict) -> list[Types.readPaiPuList.ReadPaiPuListType1 |
 
 
 def main():
-    emailLoginRes = login_riichi_city()
-    headers = get_headers(emailLoginRes)
-    # res = get_gift_code(headers, code="happybirthday03210")
-    res = activity_receive_ex_team_task(headers)
-    print(res)
+
+    # emailLoginRes = login_riichi_city()
+    # headers = get_headers(emailLoginRes)
+    # # res = get_gift_code(headers, code="happybirthday03210")
+    # res = activity_receive_ex_team_task(headers)
+    # print(res)
     # signMatch_dev(headers)
     # backpack_recycle_gift(headers)
     # activity_ex_team_task(headers)

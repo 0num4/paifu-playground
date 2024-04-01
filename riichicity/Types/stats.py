@@ -642,3 +642,67 @@ class ActivityReadRanksResponse(BaseModel):
     code: int
     data: ActivityReadRanksResponseData
     message: str
+
+
+class ActivityActivityListResponseDataActivitySignActivityListPersistentAwardListAward(BaseModel):
+    category: int
+    count: int
+    isEquip: bool
+    itemId: int
+
+
+class ActivityActivityListResponseDataActivitySignActivityListPersistentAwardList(BaseModel):
+    awardList: list[ActivityActivityListResponseDataActivitySignActivityListPersistentAwardListAward]
+    days: int
+    stage: int
+
+
+class ActivityActivityListResponseDataActivitySignActivityListSignResult(BaseModel):
+    isVip: bool
+    persistentDay: int
+    persistentStatusList: list[int]
+    repairLeft: int
+    signDay: int
+    signStatusList: list[int]
+    vipStatus: int
+
+
+class ActivityActivityListResponseDataActivitySignActivityList(BaseModel):
+    persistentAwardList: list[ActivityActivityListResponseDataActivitySignActivityListPersistentAwardList]
+    persistentAwardType: int
+    signAwardList: list[ActivityActivityListResponseDataActivitySignActivityListPersistentAwardListAward]
+    signResult: ActivityActivityListResponseDataActivitySignActivityListSignResult
+    vipAwardList: list[ActivityActivityListResponseDataActivitySignActivityListPersistentAwardListAward]
+
+
+class ActivityActivityListResponseDataActivity(BaseModel):
+    activityId: int
+    activityType: int
+    award: list[ActivityActivityListResponseDataActivitySignActivityListPersistentAwardListAward]
+    currentTime: int
+    describe: str
+    endTime: int
+    inviteActivity: list
+    isNew: bool
+    pop: bool
+    popUpLocation: int
+    popUpType: int
+    priority: int
+    receiveEndTime: int
+    receiveStartTime: int
+    redPoint: bool
+    returnActivity: list
+    sBtlActivity: list
+    signActivityList: list[ActivityActivityListResponseDataActivitySignActivityList]
+    startTime: int
+    title: str
+
+
+class ActivityActivityListResponseData(BaseModel):
+    list: list[ActivityActivityListResponseDataActivity]
+
+
+class ActivityActivityListResponse(BaseModel):
+    code: int
+    data: ActivityActivityListResponseData
+    message: str

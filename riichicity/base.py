@@ -341,14 +341,17 @@ def activity_receive_ex_team_task(headers: dict, taskID: int = 3, type: int = 4)
     return activityReceiveEXTeamTaskRes
 
 
-def activity_activity_list(headers: dict, lang: str = "ja", reqVersion: str = "v1") -> dict[any]:
+def activity_activity_list(
+    headers: dict, lang: str = "ja", reqVersion: str = "v1"
+) -> Types.stats.ActivityActivityListResponse:
     payload = {"lang": lang, "reqVersion": reqVersion}
     activityActivityListRes = requests.post(
         "https://alicdn.mahjong-jp.net/activity/activityList", json=payload, headers=headers
     )
     activityActivityListRes = activityActivityListRes.json()
     print(activityActivityListRes)
-    json.dump(activityActivityListRes, open("activity_activity_list.json", "w"))
+    # json.dump(activityActivityListRes, open("activity_activity_list.json", "w"))
+    activityActivityListRes = Types.stats.ActivityActivityListResponse(**activityActivityListRes, strict=True)
     return activityActivityListRes
 
 

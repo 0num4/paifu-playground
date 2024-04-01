@@ -38,6 +38,17 @@ def users_check_version(
     return checkVersionRes
 
 
+# checkVersionで差異があったら呼ばれる
+# wget https://d3qgi0t347dz44.cloudfront.net/release/ios/20240329002/version.txt
+def get_version():
+    # ここの日付は
+    getVersionRes = requests.get("https://d3qgi0t347dz44.cloudfront.net/release/ios/20240329002/version.txt")
+    if getVersionRes.status_code == 200:
+        print(getVersionRes.text)
+    else:
+        print(f"error! {getVersionRes.status_code} Failed to get version")
+
+
 def login_riichi_city() -> Types.stats.EmailLoginResponse:
     # res = fetch_domain_name()
     # print(res.domain_name)
@@ -344,9 +355,7 @@ def activity_receive_sign_award(
     return activityReceiveSignAwardRes
 
 
-def activity_user_sign_progress(
-    headers: dict, activityId: int = 10124
-) -> Types.baseTypes.UserSignProgressResponse[any]:
+def activity_user_sign_progress(headers: dict, activityId: int = 10124) -> Types.baseTypes.UserSignProgressResponse:
     payload = {"activityId": activityId}
     activityUserSignProgressRes = requests.post(
         "https://alicdn.mahjong-jp.net/activity/userSignProgress", json=payload, headers=headers
@@ -754,15 +763,14 @@ def readAllPaiPu(headers: dict) -> list[Types.readPaiPuList.ReadPaiPuListType1 |
 
 
 def main():
-
-    emailLoginRes = login_riichi_city()
-    headers = get_headers(emailLoginRes)
-    users_check_version(headers, channel="default", platform="ios", version="2.1.1")
-    res = activity_user_sign_progress(headers, activityId=10124)
+    get_version()
+    # emailLoginRes = login_riichi_city()
+    # headers = get_headers(emailLoginRes)
+    # users_check_version(headers, channel="default", platform="ios", version="2.1.1")
+    # res = activity_user_sign_progress(headers, activityId=10124)
     # res = activity_receive_sign_award(headers, activityId=10124, awardType=3)
     # # res = get_gift_code(headers, code="happybirthday03210")
     # res = activity_receive_ex_team_task(headers)
-    print(res)
     # signMatch_dev(headers)
     # backpack_recycle_gift(headers)
     # activity_ex_team_task(headers)

@@ -1,0 +1,306 @@
+{
+  "code": 0,
+  "data": {
+    "list": [
+      {
+        "activityId": 19001,
+        "activityType": 19,
+        "award": [],
+        "currentTime": 1711946307,
+        "describe": "",
+        "endTime": 0,
+        "inviteActivity": [],
+        "isNew": true,
+        "pop": false,
+        "popUpLocation": 0,
+        "popUpType": 1,
+        "priority": 6000,
+        "receiveEndTime": 0,
+        "receiveStartTime": 0,
+        "redPoint": true,
+        "returnActivity": [],
+        "sBtlActivity": [],
+        "signActivityList": [],
+        "startTime": 0,
+        "title": ""
+      },
+      {
+        "activityId": 105001,
+        "activityType": 105,
+        "award": [],
+        "currentTime": 1711946307,
+        "describe": "",
+        "endTime": 0,
+        "inviteActivity": [],
+        "isNew": true,
+        "pop": false,
+        "popUpLocation": 0,
+        "popUpType": 0,
+        "priority": 600,
+        "receiveEndTime": 0,
+        "receiveStartTime": 1696813200,
+        "redPoint": true,
+        "returnActivity": [],
+        "sBtlActivity": [],
+        "signActivityList": [],
+        "startTime": 1696813200,
+        "title": ""
+      },
+      {
+        "activityId": 87001,
+        "activityType": 87,
+        "award": [],
+        "currentTime": 1711946307,
+        "describe": "",
+        "endTime": 1714921199,
+        "inviteActivity": [],
+        "isNew": false,
+        "pop": false,
+        "popUpLocation": 0,
+        "popUpType": 0,
+        "priority": 600,
+        "receiveEndTime": 1714921199,
+        "receiveStartTime": 1692864900,
+        "redPoint": true,
+        "returnActivity": [],
+        "sBtlActivity": [],
+        "signActivityList": [],
+        "startTime": 1692864900,
+        "title": ""
+      },
+      {
+        "activityId": 222001,
+        "activityType": 222,
+        "award": [],
+        "currentTime": 1711946307,
+        "describe": "",
+        "endTime": 1712779199,
+        "inviteActivity": [],
+        "isNew": true,
+        "pop": false,
+        "popUpLocation": 0,
+        "popUpType": 0,
+        "priority": 570,
+        "receiveEndTime": 1712779199,
+        "receiveStartTime": 1710878400,
+        "redPoint": true,
+        "returnActivity": [],
+        "sBtlActivity": [],
+        "signActivityList": [],
+        "startTime": 1710878400,
+        "title": ""
+      },
+      {
+        "activityId": 71001,
+        "activityType": 71,
+        "award": [],
+        "currentTime": 1711946307,
+        "describe": "",
+        "endTime": 0,
+        "inviteActivity": [],
+        "isNew": true,
+        "pop": false,
+        "popUpLocation": 0,
+        "popUpType": 0,
+        "priority": 480,
+        "receiveEndTime": 0,
+        "receiveStartTime": 0,
+        "redPoint": true,
+        "returnActivity": [],
+        "sBtlActivity": [],
+        "signActivityList": [],
+        "startTime": 0,
+        "title": ""
+      },
+      {
+        "activityId": 69001,
+        "activityType": 69,
+        "award": [],
+        "currentTime": 1711946307,
+        "describe": "",
+        "endTime": 0,
+        "inviteActivity": [],
+        "isNew": true,
+        "pop": false,
+        "popUpLocation": 0,
+        "popUpType": 0,
+        "priority": 470,
+        "receiveEndTime": 1924963199,
+        "receiveStartTime": 1683662399,
+        "redPoint": true,
+        "returnActivity": [],
+        "sBtlActivity": [],
+        "signActivityList": [],
+        "startTime": 1681675199,
+        "title": ""
+      },
+      {
+        "activityId": 53001,
+        "activityType": 53,
+        "award": [
+          { "category": 0, "count": 1, "isEquip": false, "itemId": 15002 }
+        ],
+        "currentTime": 1711946307,
+        "describe": "",
+        "endTime": 2147443200,
+        "inviteActivity": [],
+        "isNew": true,
+        "pop": false,
+        "popUpLocation": 0,
+        "popUpType": 0,
+        "priority": 20,
+        "receiveEndTime": 2147443200,
+        "receiveStartTime": 1679544000,
+        "redPoint": true,
+        "returnActivity": [],
+        "sBtlActivity": [],
+        "signActivityList": [],
+        "startTime": 1679544000,
+        "title": ""
+      },
+      {
+        "activityId": 17001,
+        "activityType": 6,
+        "award": [
+          { "category": 0, "count": 1, "isEquip": false, "itemId": 30109 },
+          { "category": 0, "count": 1, "isEquip": false, "itemId": 14026 }
+        ],
+        "currentTime": 1711946307,
+        "describe": "",
+        "endTime": 2551968240,
+        "inviteActivity": [],
+        "isNew": true,
+        "pop": false,
+        "popUpLocation": 0,
+        "popUpType": 0,
+        "priority": 20,
+        "receiveEndTime": 2551968240,
+        "receiveStartTime": 1663617600,
+        "redPoint": false,
+        "returnActivity": [],
+        "sBtlActivity": [],
+        "signActivityList": [],
+        "startTime": 1663617600,
+        "title": ""
+      },
+      {
+        "activityId": 22001,
+        "activityType": 11,
+        "award": [],
+        "currentTime": 1711946307,
+        "describe": "",
+        "endTime": 0,
+        "inviteActivity": [],
+        "isNew": true,
+        "pop": false,
+        "popUpLocation": 0,
+        "popUpType": 0,
+        "priority": 10,
+        "receiveEndTime": 0,
+        "receiveStartTime": 1666040400,
+        "redPoint": false,
+        "returnActivity": [],
+        "sBtlActivity": [],
+        "signActivityList": [],
+        "startTime": 1666040400,
+        "title": ""
+      },
+      {
+        "activityId": 10125,
+        "activityType": 0,
+        "award": [],
+        "currentTime": 1711946307,
+        "describe": "\u30ed\u30b0\u30a4\u30f3\u30dc\u30fc\u30ca\u30b9\u66f4\u65b0\u6642\u9593\uff1a\u6bce\u9031\u6708\u66dc\u65e55\u6642\uff1b\u6bce\u65e5\u30ed\u30b0\u30a4\u30f3\u66f4\u65b0\u6642\u9593\uff1a5\u6642",
+        "endTime": 1712520000,
+        "inviteActivity": [],
+        "isNew": false,
+        "pop": false,
+        "popUpLocation": 0,
+        "popUpType": 0,
+        "priority": 0,
+        "receiveEndTime": 0,
+        "receiveStartTime": 0,
+        "redPoint": true,
+        "returnActivity": [],
+        "sBtlActivity": [],
+        "signActivityList": [
+          {
+            "persistentAwardList": [
+              {
+                "awardList": [
+                  {
+                    "category": 0,
+                    "count": 1,
+                    "isEquip": false,
+                    "itemId": 12003
+                  }
+                ],
+                "days": 2,
+                "stage": 1
+              },
+              {
+                "awardList": [
+                  {
+                    "category": 0,
+                    "count": 1,
+                    "isEquip": false,
+                    "itemId": 12004
+                  }
+                ],
+                "days": 4,
+                "stage": 2
+              },
+              {
+                "awardList": [
+                  {
+                    "category": 0,
+                    "count": 1,
+                    "isEquip": false,
+                    "itemId": 10007
+                  }
+                ],
+                "days": 6,
+                "stage": 3
+              }
+            ],
+            "persistentAwardType": 1,
+            "signAwardList": [
+              {
+                "category": 0,
+                "count": 500,
+                "isEquip": false,
+                "itemId": 10002
+              },
+              {
+                "category": 0,
+                "count": 1000,
+                "isEquip": false,
+                "itemId": 10002
+              },
+              { "category": 0, "count": 1, "isEquip": false, "itemId": 11002 },
+              { "category": 0, "count": 1, "isEquip": false, "itemId": 11004 },
+              { "category": 0, "count": 1, "isEquip": false, "itemId": 11006 },
+              { "category": 0, "count": 1, "isEquip": false, "itemId": 11008 },
+              { "category": 0, "count": 1, "isEquip": false, "itemId": 11010 }
+            ],
+            "signResult": {
+              "isVip": false,
+              "persistentDay": 0,
+              "persistentStatusList": [1, 1, 1],
+              "repairLeft": 1,
+              "signDay": 0,
+              "signStatusList": [1, 0, 0, 0, 0, 0, 0],
+              "vipStatus": 1
+            },
+            "vipAwardList": [
+              { "category": 0, "count": 70, "isEquip": false, "itemId": 10001 }
+            ]
+          }
+        ],
+        "startTime": 1711915200,
+        "title": "\u6bcf\u65e5\u7b7e\u5230"
+      }
+    ]
+  },
+  "message": "ok"
+}

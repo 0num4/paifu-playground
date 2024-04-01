@@ -4,7 +4,7 @@ from typing import Any
 
 
 # 友人戦の詳細のみ。一位率とかはフロントでやってる
-class Data(BaseModel):
+class UserDetailStatsV2ResponseData(BaseModel):
     addUpYiManCount: int
     beiManCount: int
     chiHuTotalCount: int
@@ -62,7 +62,7 @@ class Data(BaseModel):
 
 class UserDetailStatsV2Response(BaseModel):
     code: int
-    data: list[Data]
+    data: list[UserDetailStatsV2ResponseData]
     message: str
 
 

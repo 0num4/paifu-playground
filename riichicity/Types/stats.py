@@ -2,6 +2,9 @@ import typing
 from pydantic import BaseModel
 from typing import Any
 
+# from riichicity.Types.consts import ActivityType
+import riichicity.Types.consts
+
 
 # 友人戦の詳細のみ。一位率とかはフロントでやってる
 class UserDetailStatsV2ResponseData(BaseModel):
@@ -677,7 +680,7 @@ class ActivityActivityListResponseDataActivitySignActivityList(BaseModel):
 
 class ActivityActivityListResponseDataActivity(BaseModel):
     activityId: int
-    activityType: int
+    activityType: riichicity.Types.consts.ActivityType
     award: list[ActivityActivityListResponseDataActivitySignActivityListPersistentAwardListAward]
     currentTime: int
     describe: str

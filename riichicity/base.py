@@ -809,6 +809,22 @@ def daily_recycle_gift(headers: dict) -> bool:
     return recycled
 
 
+def lobbys_create_friend_match(headers: dict, rule: Types.stats.FrendMatchRule) -> dict:
+    payload = {
+        "rule": rule.model_dump(),
+    }
+    lobbysCreateFriendMatchRes = requests.post(
+        "https://alicdn.mahjong-jp.net/lobbys/createFriendMatch", json=payload, headers=headers
+    )
+    lobbysCreateFriendMatchRes = lobbysCreateFriendMatchRes.json()
+    print(lobbysCreateFriendMatchRes)
+    json.dump(lobbysCreateFriendMatchRes, open("lobbys_create_friend_match.json", "w"))
+    return lobbysCreateFriendMatchRes
+
+
+# def daily_friend_match(headers: dict):
+
+
 def get_daily(headers: dict):
     # 毎日ログイン
     activityList = activity_activity_list(headers)
@@ -912,8 +928,40 @@ def main():
     emailLoginRes = login_riichi_city()
     headers = get_headers(emailLoginRes)
     # get_daily(headers)
-    res = get_gift_code(headers, code="MQYFJCM")
-    print(res)
+    rule = Types.stats.FrendMatchRule(
+        FangFu=5,
+        IsAdvancedOptions=False,
+        IsChiDuan=False,
+        IsConvenientTips=False,
+        IsGeMu=False,
+        IsKaiLiZhi=False,
+        IsLuck=False,
+        IsMinusRiichi=False,
+        IsMoreoptions=False,
+        IsNanXiRu=False,
+        IsNotEffect=False,
+        IsNotShowHand=False,
+        IsOpenVoice=False,
+        IsRandSeat=False,
+        IsShaoJi=False,
+        RoomType=0,
+        ThreeZiMoType=1,
+        changBang="400",
+        fristReqPoints="30000",
+        initialPoints="25000",
+        isKnock=True,
+        isTopReward=True,
+        minimumPoints="30000",
+        numRedCard=4,
+        operFixedTime=20,
+        operVarTime=5,
+        orderPoints=[29, 19, -125],
+        playerCount=3,
+        round=1,
+    )
+    res = lobbys_create_friend_match(headers, rule=rule)
+    # res = get_gift_code(headers, code="MQYFJCM")
+    print(rule)
 
     # users_check_version(headers, channel="default", platform="ios", version="2.1.1")
     # res = activity_user_sign_progress(headers, activityId=10124)

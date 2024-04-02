@@ -1,6 +1,7 @@
 import typing
 from pydantic import BaseModel, Field
 from . import consts
+from . import commonConsts
 
 
 # 友人戦の詳細のみ。一位率とかはフロントでやってる
@@ -767,3 +768,35 @@ class GetGiftCodeResponse(BaseModel):
     awards: list[GetGiftCodeResponseAward]
     code: int
     message: str
+
+
+class FrendMatchRule(BaseModel):
+    FangFu: commonConsts.EMFanFuType2 = Field(...)
+    IsAdvancedOptions: bool = Field(...)
+    IsChiDuan: bool = Field(...)
+    IsConvenientTips: bool = Field(...)
+    IsGeMu: bool = Field(...)
+    IsKaiLiZhi: bool = Field(...)
+    IsLuck: bool = Field(...)
+    IsMinusRiichi: bool = Field(...)
+    IsMoreoptions: bool = Field(...)
+    IsNanXiRu: bool = Field(...)
+    IsNotEffect: bool = Field(...)
+    IsNotShowHand: bool = Field(...)
+    IsOpenVoice: bool = Field(...)
+    IsRandSeat: bool = Field(...)
+    IsShaoJi: bool = Field(...)
+    RoomType: int = Field(...)
+    ThreeZiMoType: int = Field(...)
+    changBang: str = Field(...)
+    fristReqPoints: int = Field(...)
+    initialPoints: int = Field(...)
+    isKnock: bool = Field(...)
+    isTopReward: bool = Field(...)
+    minimumPoints: int = Field(...)
+    numRedCard: int = Field(...)
+    operFixedTime: int = Field(...)
+    operVarTime: int = Field(...)
+    orderPoints: list[int] = Field(...)
+    playerCount: int = Field(...)
+    round: int = Field(...)

@@ -273,7 +273,7 @@ def get_activity_collect_task_award(
     )
     activityCollectTaskAwardRes = activityCollectTaskAwardRes.json()
     print(activityCollectTaskAwardRes)
-    json.dump(activityCollectTaskAwardRes, open("get_activity_collect_task_award.json", "w"))
+    # json.dump(activityCollectTaskAwardRes, open("get_activity_collect_task_award.json", "w"))
     activityCollectTaskAwardRes = Types.stats.CollectTaskAwardResponse(**activityCollectTaskAwardRes, strict=True)
     return activityCollectTaskAwardRes
 
@@ -529,7 +529,7 @@ def backpack_recycle_gift(
     )
     backpackRecycleGiftRes = backpackRecycleGiftRes.json()
     print(backpackRecycleGiftRes)
-    json.dump(backpackRecycleGiftRes, open("backpack_recycle_gift.json", "w"))
+    # json.dump(backpackRecycleGiftRes, open("backpack_recycle_gift.json", "w"))
     backpackRecycleGiftRes = Types.stats.BackpackRecycleGiftResponse(**backpackRecycleGiftRes, strict=True)
     return backpackRecycleGiftRes
 

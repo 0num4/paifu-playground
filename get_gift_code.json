@@ -1,0 +1,9 @@
+{
+  "awards": [
+    { "category": 0, "count": 11111, "isEquip": false, "itemId": 10002 },
+    { "category": 0, "count": 1, "isEquip": false, "itemId": 14102 },
+    { "category": 0, "count": 1, "isEquip": false, "itemId": 15041 }
+  ],
+  "code": 0,
+  "message": "ok"
+}

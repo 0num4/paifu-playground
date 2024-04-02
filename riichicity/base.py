@@ -345,7 +345,9 @@ def activity_receive_ex_team_task(headers: dict, taskID: int = 3, type: int = 4)
 
 
 # デイリークエストのキャラ見る用
-def activity_view_action(headers: dict, actionId: int = 2042) -> Types.stats.ActivityViewActionResponse:
+def activity_view_action(
+    headers: dict, actionId: Types.consts.EnumDefine.TaskActionServer = 2042
+) -> Types.stats.ActivityViewActionResponse:
     payload = {"actionId": actionId}
     activityViewActionRes = requests.post(
         "https://alicdn.mahjong-jp.net/activity/viewAction", json=payload, headers=headers

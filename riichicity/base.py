@@ -341,6 +341,18 @@ def activity_receive_ex_team_task(headers: dict, taskID: int = 3, type: int = 4)
     return activityReceiveEXTeamTaskRes
 
 
+# デイリークエストのキャラ見る用
+def activity_view_action(headers: dict, actionId: int = 2042) -> dict[any]:
+    payload = {"actionId": actionId}
+    activityViewActionRes = requests.post(
+        "https://alicdn.mahjong-jp.net/activity/viewAction", json=payload, headers=headers
+    )
+    activityViewActionRes = activityViewActionRes.json()
+    print(activityViewActionRes)
+    # json.dump(activityViewActionRes, open("activity_view_action.json", "w"))
+    return activityViewActionRes
+
+
 def activity_activity_list(
     headers: dict, lang: str = "ja", reqVersion: str = "v1"
 ) -> Types.stats.ActivityActivityListResponse:

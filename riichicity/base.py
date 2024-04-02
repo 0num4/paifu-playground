@@ -767,11 +767,104 @@ def dailybonus(headers: dict):
 # /activity/activityList
 
 
-# TODO:
+def print_item_list(items: list[Types.stats.BackpackUserItemListResponseUserItem]):
+    for item in items:
+        itemName = Types.consts.ItemName.search_by_value(item.itemID)
+        itemTypeName = Types.consts.EnumDefine.ItemType(item.itemType).name
+        print(
+            f"ItemType: {item.itemType}, ItemTypeName: {itemTypeName}, ItemID: {item.itemID}, ItemName: {itemName}, num: {item.num}"
+        )
+
+
+def daily_recycle_gift(headers: dict) -> bool:
+    res = backpack_user_item_list(headers)
+    gift_items: list[Types.stats.BackpackUserItemListResponseUserItem] = [
+        item for item in res.data if item.itemType == 11
+    ]
+    print_item_list(gift_items)
+    recycled = False
+    for item in gift_items:
+        itemName = Types.consts.ItemName.search_by_value(item.itemID)
+        # itemTypeName = Types.consts.EnumDefine.ItemType(item.itemType).name
+        # print(
+        #     f"ItemType: {item.itemType}, ItemTypeName: {itemTypeName}, ItemID: {item.itemID}, ItemName: {itemName}, num: {item.num}"
+        # )
+        if item.num > 1:
+            res = backpack_recycle_gift(headers, isAll=False, itemID=item.itemID, num=1)
+            if res.code == 0:
+                print(f"Successfully recycled {itemName}")
+                recycled = True
+                break  # 1回で終わり
+            else:
+                print(f"Failed to recycle {itemName}")
+    print(f"recycled: {recycled}")
+    return recycled
+
+
 def get_daily(headers: dict):
-    dailybonus(headers)
+    # 毎日ログイン
+    activityList = activity_activity_list(headers)
+    list = [activity for activity in activityList.data.list if activity.activityType == 0]
+    if len(list) == 1:
+        activityId = list[0].activityId
+    else:
+        print("Failed to get daily activity")
+        activityId = 10125
+    userSignProgress = activity_user_sign_progress(headers, activityId)
+    if userSignProgress.code == 0:
+        print(
+            f"Successfully got user sign progress. persistentDay: {userSignProgress.data.persistentDay}, persistentStatusList: {userSignProgress.data.persistentStatusList}, signDay: {userSignProgress.data.signDay}, signStatusList: {userSignProgress.data.signStatusList}"
+        )
+        receiveSignAward = activity_receive_sign_award(headers, activityId, 3)
+        if receiveSignAward.code == 0:
+            print("Successfully received sign award")
+            for item in receiveSignAward.awards:
+                try:
+                    itemName = Types.consts.EnumDefine.ItemID(item.itemID).name
+                    print(f"ItemID: {item.itemID}, ItemName: {itemName} num: {item.num}")
+                except (ValueError, KeyError):
+                    print(f"ItemID: {item.itemID}, unRegisterdItemName, num: {item.num}")
+        else:
+            print("Failed to receive sign award")
+    else:
+        print("Failed to get user sign progress")
+    # 雀士一覧を見る
+    res = activity_view_action(headers, actionId=Types.consts.EnumDefine.TaskActionServer["ViewCharsList"].value)
+    if res.code == 0:
+        print("Successfully 雀士一覧を見る action")
+    else:
+        print("Failed to 雀士一覧を見る action")
+    # キャラの育成を見る
+    res = activity_view_action(headers, actionId=Types.consts.EnumDefine.TaskActionServer["ViewShopRoleFeed"].value)
+    if res.code == 0:
+        print("Successfully キャラクター餌やりを見る action")
+    else:
+        print("Failed to キャラクター餌やりを見る action")
+    # ギフトの回収
+    if daily_recycle_gift(headers):
+        print("Successfully collected gift")
+    else:
+        print("Failed to collect gift")
+    # ストアの毎日無料アイテムを取得
+    res = get_product_list(headers)
+    if res.code == 0:
+        print("Successfully got product list")
+        res2 = get_store_buy_product(headers, productID=579, num=1)
+        if res2.code == 0:
+            print("Successfully get daily free item")
+        else:
+            print("Failed to get daily free item")
+    # 上記で完了した報酬の取得
     daily_res = get_activity_collect_task_award(headers, typeList=[1, 3])
+    if daily_res.code == 0:
+        print("Successfully got daily task")
+    else:
+        print("Failed to get daily task")
     weekly_res = get_activity_collect_task_award(headers, typeList=[4, 5])
+    if weekly_res.code == 0:
+        print("Successfully got weekly task")
+    else:
+        print("Failed to get weekly task")
 
 
 def readAllPaiPu(headers: dict) -> list[Types.readPaiPuList.ReadPaiPuListType1 | None]:

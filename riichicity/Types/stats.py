@@ -741,3 +741,8 @@ class BackpackUserItemListResponse(BaseModel):
     code: int
     data: list[BackpackUserItemListResponseUserItem]
     message: str
+
+
+class ActivityViewActionResponse(BaseModel):
+    code: int
+    message: str

@@ -800,3 +800,9 @@ class FrendMatchRule(BaseModel):
     orderPoints: list[int] = Field(...)
     playerCount: int = Field(...)
     round: int = Field(...)
+
+
+class lobbysCreateFriendMatchResponse(BaseModel):
+    code: int
+    data: str  # TODO: 6桁の数字の文字列
+    message: str

@@ -809,7 +809,9 @@ def daily_recycle_gift(headers: dict) -> bool:
     return recycled
 
 
-def lobbys_create_friend_match(headers: dict, rule: Types.stats.FrendMatchRule) -> dict:
+def lobbys_create_friend_match(
+    headers: dict, rule: Types.stats.FrendMatchRule
+) -> Types.stats.lobbysCreateFriendMatchResponse:
     payload = {
         "rule": rule.model_dump(),
     }
@@ -818,7 +820,8 @@ def lobbys_create_friend_match(headers: dict, rule: Types.stats.FrendMatchRule) 
     )
     lobbysCreateFriendMatchRes = lobbysCreateFriendMatchRes.json()
     print(lobbysCreateFriendMatchRes)
-    json.dump(lobbysCreateFriendMatchRes, open("lobbys_create_friend_match.json", "w"))
+    # json.dump(lobbysCreateFriendMatchRes, open("lobbys_create_friend_match.json", "w"))
+    lobbysCreateFriendMatchRes = Types.stats.lobbysCreateFriendMatchResponse(**lobbysCreateFriendMatchRes, strict=True)
     return lobbysCreateFriendMatchRes
 
 
@@ -960,6 +963,8 @@ def main():
         round=1,
     )
     res = lobbys_create_friend_match(headers, rule=rule)
+    if res.code == 0:
+        print("Successfully created friend match")
     # res = get_gift_code(headers, code="MQYFJCM")
     print(rule)
 

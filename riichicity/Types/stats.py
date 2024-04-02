@@ -713,3 +713,31 @@ class ActivityActivityListResponse(BaseModel):
     code: int
     data: ActivityActivityListResponseData
     message: str
+
+
+class BackpackUserItemListResponseUserItemGiftContent(BaseModel):
+    pass
+
+
+class BackpackUserItemListResponseUserItem(BaseModel):
+    createTime: int
+    expiredAt: int
+    feelValue: int
+    giftContent: list[BackpackUserItemListResponseUserItemGiftContent]
+    isCanEquip: bool
+    isEquip: bool
+    isExpired: bool
+    isLock: bool
+    itemID: int
+    itemType: int
+    label: int
+    name: str
+    num: int
+    recycleNum: int
+    source: int
+
+
+class BackpackUserItemListResponse(BaseModel):
+    code: int
+    data: list[BackpackUserItemListResponseUserItem]
+    message: str

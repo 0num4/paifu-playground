@@ -511,11 +511,11 @@ def backpack_recycle_gift(headers: dict, isAll: bool = False, itemID: int = 1100
     )
     backpackRecycleGiftRes = backpackRecycleGiftRes.json()
     print(backpackRecycleGiftRes)
-    json.dump(backpackRecycleGiftRes, open("backpack_recycle_gift.json", "w"))
+    # json.dump(backpackRecycleGiftRes, open("backpack_recycle_gift.json", "w"))
     return backpackRecycleGiftRes
 
 
-def backpack_user_item_list(headers: dict, isUserEquip: bool = False) -> dict:
+def backpack_user_item_list(headers: dict, isUserEquip: bool = False) -> Types.stats.BackpackUserItemListResponse:
     payload = {
         "isUserEquip": isUserEquip,
     }
@@ -524,7 +524,8 @@ def backpack_user_item_list(headers: dict, isUserEquip: bool = False) -> dict:
     )
     backpackUserItemListRes = backpackUserItemListRes.json()
     print(backpackUserItemListRes)
-    json.dump(backpackUserItemListRes, open("backpack_user_item_list.json", "w"))
+    # json.dump(backpackUserItemListRes, open("backpack_user_item_list.json", "w"))
+    backpackUserItemListRes = Types.stats.BackpackUserItemListResponse(**backpackUserItemListRes, strict=True)
     return backpackUserItemListRes
 
 

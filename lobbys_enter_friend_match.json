@@ -1,0 +1,60 @@
+{
+  "code": 0,
+  "data": {
+    "Id": "660c96b7da12284307206d27",
+    "createAt": 1712101047,
+    "players": [
+      {
+        "identity": 0,
+        "isOwner": true,
+        "location": 1,
+        "model": 0,
+        "nickName": "\u6697\u523b\u533a\u5f79\u6240",
+        "roleId": 10001,
+        "sequence": 1,
+        "skinId": 0,
+        "stageLevel": { "3": 3, "4": 1 },
+        "status": 1,
+        "titleID": 0,
+        "userID": 615235015
+      }
+    ],
+    "roomNum": "575576",
+    "rule": {
+      "CardType": 0,
+      "FangFu": 5,
+      "IsAdvancedOptions": false,
+      "IsAutoLi": false,
+      "IsChiDuan": false,
+      "IsConvenientTips": false,
+      "IsGeMu": false,
+      "IsKaiLiZhi": false,
+      "IsLuck": false,
+      "IsMinusRiichi": false,
+      "IsMoreoptions": false,
+      "IsNanXiRu": false,
+      "IsNotEffect": false,
+      "IsNotShowHand": false,
+      "IsOpenVoice": false,
+      "IsRandSeat": false,
+      "IsShaoJi": false,
+      "RoomType": 0,
+      "ShaoJiPoint": 10000,
+      "ThreeZiMoType": 1,
+      "UpdateTime": 0,
+      "changBang": 400,
+      "fristReqPoints": 30000,
+      "initialPoints": 25000,
+      "isKnock": true,
+      "isTopReward": true,
+      "minimumPoints": 30000,
+      "numRedCard": 4,
+      "operFixedTime": 20,
+      "operVarTime": 5,
+      "orderPoints": [29, 19, -125],
+      "playerCount": 3,
+      "round": 1
+    }
+  },
+  "message": "ok"
+}

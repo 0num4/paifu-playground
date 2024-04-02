@@ -746,3 +746,9 @@ class BackpackUserItemListResponse(BaseModel):
 class ActivityViewActionResponse(BaseModel):
     code: int
     message: str
+
+
+class BackpackRecycleGiftResponse(BaseModel):
+    code: int
+    data: bool
+    message: str

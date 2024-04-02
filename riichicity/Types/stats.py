@@ -754,3 +754,16 @@ class BackpackRecycleGiftResponse(BaseModel):
     code: int
     data: bool
     message: str
+
+
+class GetGiftCodeResponseAward(BaseModel):
+    category: int
+    count: int
+    isEquip: bool
+    itemId: int
+
+
+class GetGiftCodeResponse(BaseModel):
+    awards: list[GetGiftCodeResponseAward]
+    code: int
+    message: str

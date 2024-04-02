@@ -828,7 +828,7 @@ def get_daily(headers: dict):
             print("Successfully received sign award")
             for item in receiveSignAward.awards:
                 try:
-                    itemName = Types.consts.EnumDefine.ItemID(item.itemID).name
+                    itemName = Types.consts.EnumDefine.ItemID(item.itemId).name
                     print(f"ItemID: {item.itemID}, ItemName: {itemName} num: {item.num}")
                 except (ValueError, KeyError):
                     print(f"ItemID: {item.itemID}, unRegisterdItemName, num: {item.num}")

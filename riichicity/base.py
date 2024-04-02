@@ -4,6 +4,7 @@ import random
 import requests
 import Types.stats
 import Types.commonConsts
+import Types.consts
 import Types.readPaiPuList
 import Types.baseTypes
 import datetime
@@ -47,6 +48,15 @@ def get_version():
         print(getVersionRes.text)
     else:
         print(f"error! {getVersionRes.status_code} Failed to get version")
+
+
+# バイナリ差分をダウンロード。使う予定はない
+def get_res_bundle_data():
+    getResBundleData = requests.get("https://d3qgi0t347dz44.cloudfront.net/release/ios/20240329002/res_bundle_data.dat")
+    if getResBundleData.status_code == 200:
+        print(getResBundleData.text)
+    else:
+        print(f"error! {getResBundleData.status_code} Failed to get version")
 
 
 def login_riichi_city() -> Types.stats.EmailLoginResponse:
@@ -374,7 +384,7 @@ def activity_activity_list(
 
 
 def activity_receive_sign_award(
-    headers: dict, activityId: int = 10124, awardType: int = 3
+    headers: dict, activityId: int = 10124, awardType: Types.consts.AwardType = 3
 ) -> Types.baseTypes.ReceiveSignAwardResponse:
     payload = {"activityId": activityId, "awardType": awardType}
     activityReceiveSignAwardRes = requests.post(
@@ -395,6 +405,7 @@ def activity_user_sign_progress(headers: dict, activityId: int = 10124) -> Types
     activityUserSignProgressRes = activityUserSignProgressRes.json()
     json.dump(activityUserSignProgressRes, open("activity_user_sign_progress.json", "w"))
     print(activityUserSignProgressRes)
+    activityUserSignProgressRes = Types.baseTypes.UserSignProgressResponse(**activityUserSignProgressRes, strict=True)
     return activityUserSignProgressRes
 
 
@@ -744,14 +755,6 @@ def signMatch_dev(headers: dict):
     # save_json(res, "lobbys_sign_official_match.json")
 
 
-def dailybonus(headers: dict):
-    res = get_product_list(headers)
-    if res.code == 0:
-        print("Successfully got product list")
-        res2 = get_store_buy_product(headers, productID=579, num=1)
-        print(res2)
-
-
 # /release/notice/domain_name.ncc
 # /users/checkVersion
 # /ping
@@ -908,17 +911,7 @@ def main():
     # get_res_bundle_data()
     emailLoginRes = login_riichi_city()
     headers = get_headers(emailLoginRes)
-    # activity_activity_list(headers)
-    res = backpack_user_item_list(headers)
-    gift_items: list[Types.stats.BackpackUserItemListResponseUserItem] = [
-        item for item in res.data if item.itemType == 11
-    ]
-    for item in gift_items:
-        itemName = Types.consts.ItemName.search_by_value(item.itemID)
-        itemTypeName = Types.consts.EnumDefine.ItemType(item.itemType).name
-        print(
-            f"ItemType: {item.itemType}, ItemTypeName: {itemTypeName}, ItemID: {item.itemID}, ItemName: {itemName}, num: {item.num}"
-        )
+    get_daily(headers)
     # users_check_version(headers, channel="default", platform="ios", version="2.1.1")
     # res = activity_user_sign_progress(headers, activityId=10124)
     # res = activity_receive_sign_award(headers, activityId=10124, awardType=3)

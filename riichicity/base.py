@@ -264,14 +264,17 @@ def get_user_task_award(headers: dict, taskId: int = 12004, type: int = 1) -> di
 
 
 # デイリークエスト一括で獲得する
-# 動作未確認
-def get_activity_collect_task_award(headers: dict, typeList: list[int] = [1, 3]) -> dict[any]:
+def get_activity_collect_task_award(
+    headers: dict, typeList: list[int] = [1, 3]
+) -> Types.stats.CollectTaskAwardResponse:
     payload = {"typeList": typeList}
     activityCollectTaskAwardRes = requests.post(
         "https://alicdn.mahjong-jp.net/activity/collectTaskAward", json=payload, headers=headers
     )
     activityCollectTaskAwardRes = activityCollectTaskAwardRes.json()
     print(activityCollectTaskAwardRes)
+    json.dump(activityCollectTaskAwardRes, open("get_activity_collect_task_award.json", "w"))
+    activityCollectTaskAwardRes = Types.stats.CollectTaskAwardResponse(**activityCollectTaskAwardRes, strict=True)
     return activityCollectTaskAwardRes
 
 

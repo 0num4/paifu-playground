@@ -1,9 +1,6 @@
 import typing
-from pydantic import BaseModel
-from typing import Any
-
-# from riichicity.Types.consts import ActivityType
-import riichicity.Types.consts
+from pydantic import BaseModel, Field
+from . import consts
 
 
 # 友人戦の詳細のみ。一位率とかはフロントでやってる
@@ -193,6 +190,13 @@ class EmailLoginResponseDataUser(BaseModel):
     status: int
 
 
+class EmailLoginResponseDataLoginQueue(BaseModel):
+    wait_token: str = Field(..., description="待ちトークン")
+    wait_cnt: int = Field(..., description="待ち人数")
+    wait_rank: int = Field(..., description="待ち順位")
+    check_interval: int = Field(..., description="チェック間隔の秒数")
+
+
 class EmailLoginResponseData(BaseModel):
     banStartAt: int
     banUntil: int
@@ -206,7 +210,7 @@ class EmailLoginResponseData(BaseModel):
     isCompleteGive: bool
     isCompleteNew: bool
     isCompleteNewRole: bool
-    loginQueue: list[Any]
+    loginQueue: list[EmailLoginResponseDataLoginQueue | None]
     serverTime: int
     tokenTypes: list[int]
     user: EmailLoginResponseDataUser
@@ -228,7 +232,7 @@ class Award(BaseModel):
 
 class CollectTaskAwardResponse(BaseModel):
     awards: list[Award]
-    boxAwards: list[Any]
+    boxAwards: list[typing.Any]
     code: int
     message: str
 
@@ -402,7 +406,7 @@ class ReadOfficialMatchResponseDataRule(BaseModel):
     operFixedTime: int
     operVarTime: int
     orderPoints: list[int]
-    orderPtValue: list[Any]
+    orderPtValue: list[typing.Any]
     penaltyInfo: list[PenaltyInfo]
     playerCount: int
     round: int
@@ -680,7 +684,7 @@ class ActivityActivityListResponseDataActivitySignActivityList(BaseModel):
 
 class ActivityActivityListResponseDataActivity(BaseModel):
     activityId: int
-    activityType: riichicity.Types.consts.ActivityType
+    activityType: consts.ActivityType
     award: list[ActivityActivityListResponseDataActivitySignActivityListPersistentAwardListAward]
     currentTime: int
     describe: str

@@ -515,6 +515,19 @@ def backpack_recycle_gift(headers: dict, isAll: bool = False, itemID: int = 1100
     return backpackRecycleGiftRes
 
 
+def backpack_user_item_list(headers: dict, isUserEquip: bool = False) -> dict:
+    payload = {
+        "isUserEquip": isUserEquip,
+    }
+    backpackUserItemListRes = requests.post(
+        "https://alicdn.mahjong-jp.net/backpack/userItemList", json=payload, headers=headers
+    )
+    backpackUserItemListRes = backpackUserItemListRes.json()
+    print(backpackUserItemListRes)
+    json.dump(backpackUserItemListRes, open("backpack_user_item_list.json", "w"))
+    return backpackUserItemListRes
+
+
 # ランキングの情報を取得。デフォルト値は4麻
 def activity_read_ranks(
     headers: dict, index: int = 0, kind: int = 1, limit: int = 100, scope: int = 1, skip: int = 0

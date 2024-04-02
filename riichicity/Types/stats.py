@@ -728,8 +728,8 @@ class BackpackUserItemListResponseUserItem(BaseModel):
     isEquip: bool
     isExpired: bool
     isLock: bool
-    itemID: int
-    itemType: int
+    itemID: consts.EnumDefine.ItemID | int
+    itemType: consts.EnumDefine.ItemType
     label: int
     name: str
     num: int

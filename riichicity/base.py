@@ -791,9 +791,20 @@ def readAllPaiPu(headers: dict) -> list[Types.readPaiPuList.ReadPaiPuListType1 |
 
 
 def main():
-    get_version()
-    # emailLoginRes = login_riichi_city()
-    # headers = get_headers(emailLoginRes)
+    # get_res_bundle_data()
+    emailLoginRes = login_riichi_city()
+    headers = get_headers(emailLoginRes)
+    # activity_activity_list(headers)
+    res = backpack_user_item_list(headers)
+    gift_items: list[Types.stats.BackpackUserItemListResponseUserItem] = [
+        item for item in res.data if item.itemType == 11
+    ]
+    for item in gift_items:
+        itemName = Types.consts.ItemName.search_by_value(item.itemID)
+        itemTypeName = Types.consts.EnumDefine.ItemType(item.itemType).name
+        print(
+            f"ItemType: {item.itemType}, ItemTypeName: {itemTypeName}, ItemID: {item.itemID}, ItemName: {itemName}, num: {item.num}"
+        )
     # users_check_version(headers, channel="default", platform="ios", version="2.1.1")
     # res = activity_user_sign_progress(headers, activityId=10124)
     # res = activity_receive_sign_award(headers, activityId=10124, awardType=3)

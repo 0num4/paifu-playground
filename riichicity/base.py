@@ -509,7 +509,9 @@ def lobbys_read_stage_classifies(
     return lobbysReadStageClassifiesRes
 
 
-def backpack_recycle_gift(headers: dict, isAll: bool = False, itemID: int = 11003, num: int = 1) -> dict:
+def backpack_recycle_gift(
+    headers: dict, isAll: bool = False, itemID: int = 11003, num: int = 1
+) -> Types.stats.BackpackRecycleGiftResponse:
     payload = {
         "isAll": isAll,
         "items": [
@@ -524,7 +526,8 @@ def backpack_recycle_gift(headers: dict, isAll: bool = False, itemID: int = 1100
     )
     backpackRecycleGiftRes = backpackRecycleGiftRes.json()
     print(backpackRecycleGiftRes)
-    # json.dump(backpackRecycleGiftRes, open("backpack_recycle_gift.json", "w"))
+    json.dump(backpackRecycleGiftRes, open("backpack_recycle_gift.json", "w"))
+    backpackRecycleGiftRes = Types.stats.BackpackRecycleGiftResponse(**backpackRecycleGiftRes, strict=True)
     return backpackRecycleGiftRes
 
 

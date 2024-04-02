@@ -684,7 +684,9 @@ class ActivityActivityListResponseDataActivitySignActivityList(BaseModel):
 
 class ActivityActivityListResponseDataActivity(BaseModel):
     activityId: int
-    activityType: consts.ActivityType
+    activityType: (
+        consts.ActivityType | int
+    )  # 基本的にはActivityTypeなんだがactivity/activityListは全部返すので新しいのが来るときもあるので
     award: list[ActivityActivityListResponseDataActivitySignActivityListPersistentAwardListAward]
     currentTime: int
     describe: str

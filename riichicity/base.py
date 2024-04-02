@@ -497,15 +497,15 @@ def get_message_user_message(headers: dict, lang: str = "ja", userID: str = "") 
     return messageUserMessageRes
 
 
-# TODO: ちゃんとしたgiftコードが来たら検証
-def get_gift_code(headers: dict, code: str) -> dict:
+def get_gift_code(headers: dict, code: str) -> Types.stats.GetGiftCodeResponse:
     payload = {"code": code}
     giftCodeRes = requests.post(
         "https://alicdn.mahjong-jp.net/activity/activateRedeemCode", json=payload, headers=headers
     )
     giftCodeRes = giftCodeRes.json()
     print(giftCodeRes)
-    json.dump(giftCodeRes, open("get_gift_code.json", "w"))
+    # json.dump(giftCodeRes, open("get_gift_code.json", "w"))
+    giftCodeRes = Types.stats.GetGiftCodeResponse(**giftCodeRes, strict=True)
     return giftCodeRes
 
 
@@ -911,7 +911,10 @@ def main():
     # get_res_bundle_data()
     emailLoginRes = login_riichi_city()
     headers = get_headers(emailLoginRes)
-    get_daily(headers)
+    # get_daily(headers)
+    res = get_gift_code(headers, code="MQYFJCM")
+    print(res)
+
     # users_check_version(headers, channel="default", platform="ios", version="2.1.1")
     # res = activity_user_sign_progress(headers, activityId=10124)
     # res = activity_receive_sign_award(headers, activityId=10124, awardType=3)

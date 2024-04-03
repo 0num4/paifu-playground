@@ -837,7 +837,20 @@ def lobbys_enter_friend_match(headers: dict, roomNum: str) -> Types.stats.EnterF
     return lobbysEnterFriendMatchRes
 
 
-# def daily_friend_match(headers: dict):
+def lobbys_friend_player_action(
+    headers: dict, action: int = 8, matchId: str = ""  # 1: ゲーム開始, 8: CPU追加
+) -> Types.stats.lobbysFriendPlayerActionResponse:
+    payload = {"action": action, "matchId": matchId}
+    lobbysFriendPlayerActionRes = requests.post(
+        "https://alicdn.mahjong-jp.net/lobbys/friendPlayerAction", json=payload, headers=headers
+    )
+    lobbysFriendPlayerActionRes = lobbysFriendPlayerActionRes.json()
+    print(lobbysFriendPlayerActionRes)
+    # json.dump(lobbysFriendPlayerActionRes, open("lobbys_friend_player_action.json", "w"))
+    lobbysFriendPlayerActionRes = Types.stats.lobbysFriendPlayerActionResponse(
+        **lobbysFriendPlayerActionRes, strict=True
+    )
+    return lobbysFriendPlayerActionRes
 
 
 def get_daily(headers: dict):

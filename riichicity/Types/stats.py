@@ -806,3 +806,73 @@ class lobbysCreateFriendMatchResponse(BaseModel):
     code: int
     data: str  # TODO: 6桁の数字の文字列
     message: str
+
+
+class EnterFriendMatchResponseDataPlayerStageLevel(BaseModel):
+    _3: int = Field(..., alias="3")
+    _4: int = Field(..., alias="4")
+
+
+class EnterFriendMatchResponseDataPlayer(BaseModel):
+    identity: int
+    isOwner: bool
+    location: int
+    model: int
+    nickName: str
+    roleId: int
+    sequence: int
+    skinId: int
+    stageLevel: EnterFriendMatchResponseDataPlayerStageLevel
+    status: int
+    titleID: int
+    userID: int
+
+
+class EnterFriendMatchResponseDataRule(BaseModel):
+    CardType: int
+    FangFu: int
+    IsAdvancedOptions: bool
+    IsAutoLi: bool
+    IsChiDuan: bool
+    IsConvenientTips: bool
+    IsGeMu: bool
+    IsKaiLiZhi: bool
+    IsLuck: bool
+    IsMinusRiichi: bool
+    IsMoreoptions: bool
+    IsNanXiRu: bool
+    IsNotEffect: bool
+    IsNotShowHand: bool
+    IsOpenVoice: bool
+    IsRandSeat: bool
+    IsShaoJi: bool
+    RoomType: int
+    ShaoJiPoint: int
+    ThreeZiMoType: int
+    UpdateTime: int
+    changBang: int
+    fristReqPoints: int
+    initialPoints: int
+    isKnock: bool
+    isTopReward: bool
+    minimumPoints: int
+    numRedCard: int
+    operFixedTime: int
+    operVarTime: int
+    orderPoints: list[int]
+    playerCount: int
+    round: int
+
+
+class EnterFriendMatchResponseData(BaseModel):
+    Id: str
+    createAt: int
+    players: list[EnterFriendMatchResponseDataPlayer]
+    roomNum: str
+    rule: EnterFriendMatchResponseDataRule
+
+
+class EnterFriendMatchResponse(BaseModel):
+    code: int
+    data: EnterFriendMatchResponseData
+    message: str

@@ -825,14 +825,15 @@ def lobbys_create_friend_match(
     return lobbysCreateFriendMatchRes
 
 
-def lobbys_enter_friend_match(headers: dict, roomNum: str) -> dict:
+def lobbys_enter_friend_match(headers: dict, roomNum: str) -> Types.stats.EnterFriendMatchResponse:
     payload = {"roomNum": roomNum}
     lobbysEnterFriendMatchRes = requests.post(
         "https://alicdn.mahjong-jp.net/lobbys/enterFriendMatch", json=payload, headers=headers
     )
     lobbysEnterFriendMatchRes = lobbysEnterFriendMatchRes.json()
     print(lobbysEnterFriendMatchRes)
-    json.dump(lobbysEnterFriendMatchRes, open("lobbys_enter_friend_match.json", "w"))
+    # json.dump(lobbysEnterFriendMatchRes, open("lobbys_enter_friend_match.json", "w"))
+    lobbysEnterFriendMatchRes = Types.stats.EnterFriendMatchResponse(**lobbysEnterFriendMatchRes, strict=True)
     return lobbysEnterFriendMatchRes
 
 
@@ -978,7 +979,8 @@ def main():
         print("Successfully created friend match")
         # dataは6桁の数字
         res = lobbys_enter_friend_match(headers, roomNum=res.data)
-        print(res)
+        if res.code == 0:
+            print("Successfully entered friend match")
     # res = get_gift_code(headers, code="MQYFJCM")
     print(rule)
 

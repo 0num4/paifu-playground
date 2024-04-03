@@ -809,8 +809,8 @@ class lobbysCreateFriendMatchResponse(BaseModel):
 
 
 class EnterFriendMatchResponseDataPlayerStageLevel(BaseModel):
-    _3: int = Field(..., alias="3")
-    _4: int = Field(..., alias="4")
+    level_3: int = Field(..., alias="3")
+    level_4: int = Field(..., alias="4")
 
 
 class EnterFriendMatchResponseDataPlayer(BaseModel):
@@ -875,4 +875,9 @@ class EnterFriendMatchResponseData(BaseModel):
 class EnterFriendMatchResponse(BaseModel):
     code: int
     data: EnterFriendMatchResponseData
+    message: str
+
+
+class lobbysFriendPlayerActionResponse(BaseModel):
+    code: int
     message: str

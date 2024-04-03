@@ -853,6 +853,74 @@ def lobbys_friend_player_action(
     return lobbysFriendPlayerActionRes
 
 
+def daily_friend_match(headers: dict) -> bool:
+    # is_success = False
+    rule = Types.stats.FrendMatchRule(
+        FangFu=5,
+        IsAdvancedOptions=False,
+        IsChiDuan=False,
+        IsConvenientTips=False,
+        IsGeMu=False,
+        IsKaiLiZhi=False,
+        IsLuck=False,
+        IsMinusRiichi=False,
+        IsMoreoptions=False,
+        IsNanXiRu=False,
+        IsNotEffect=False,
+        IsNotShowHand=False,
+        IsOpenVoice=False,
+        IsRandSeat=True,
+        IsShaoJi=False,
+        RoomType=0,
+        ThreeZiMoType=0,
+        changBang="400",
+        fristReqPoints="40000",
+        initialPoints="35000",
+        isKnock=True,
+        isTopReward=True,
+        minimumPoints="40000",
+        numRedCard=4,
+        operFixedTime=3,
+        operVarTime=5,
+        orderPoints=[10, 0, -10],
+        playerCount=3,
+        round=3,  # 1: 東風, 2: 半荘 3: 一局
+    )
+    res = lobbys_create_friend_match(headers, rule=rule)
+    if res.code == 0:
+        print("Successfully created friend match")
+        # dataは6桁の数字
+        lobbysEnterFriendMatchRes = lobbys_enter_friend_match(headers, roomNum=res.data)
+        if lobbysEnterFriendMatchRes.code == 0:
+            print("Successfully entered friend match")
+            addCpuAction = lobbys_friend_player_action(headers, action=8, matchId=lobbysEnterFriendMatchRes.data.Id)
+            if addCpuAction.code == 0:
+                print("Successfully added CPU")
+            else:
+                print("Failed to add CPU")
+                return False
+            addCpuAction2 = lobbys_friend_player_action(headers, action=8, matchId=lobbysEnterFriendMatchRes.data.Id)
+            if addCpuAction2.code == 0:
+                print("Successfully added CPU2")
+            else:
+                print("Failed to add CPU2")
+                return False
+            time.sleep(1)
+            gameStartAction = lobbys_friend_player_action(headers, action=1, matchId=lobbysEnterFriendMatchRes.data.Id)
+            if gameStartAction.code == 0:
+                print("Successfully started game")
+                return True
+            else:
+                print("Failed to start game")
+                return False
+        else:
+            print("Failed to enter friend match")
+            return False
+    else:
+        print("Failed to create friend match")
+        return False
+
+
 def get_daily(headers: dict):
     # 毎日ログイン
     activityList = activity_activity_list(headers)
@@ -956,46 +1024,8 @@ def main():
     emailLoginRes = login_riichi_city()
     headers = get_headers(emailLoginRes)
     # get_daily(headers)
-    rule = Types.stats.FrendMatchRule(
-        FangFu=5,
-        IsAdvancedOptions=False,
-        IsChiDuan=False,
-        IsConvenientTips=False,
-        IsGeMu=False,
-        IsKaiLiZhi=False,
-        IsLuck=False,
-        IsMinusRiichi=False,
-        IsMoreoptions=False,
-        IsNanXiRu=False,
-        IsNotEffect=False,
-        IsNotShowHand=False,
-        IsOpenVoice=False,
-        IsRandSeat=False,
-        IsShaoJi=False,
-        RoomType=0,
-        ThreeZiMoType=1,
-        changBang="400",
-        fristReqPoints="30000",
-        initialPoints="25000",
-        isKnock=True,
-        isTopReward=True,
-        minimumPoints="30000",
-        numRedCard=4,
-        operFixedTime=20,
-        operVarTime=5,
-        orderPoints=[29, 19, -125],
-        playerCount=3,
-        round=1,
-    )
-    res = lobbys_create_friend_match(headers, rule=rule)
-    if res.code == 0:
-        print("Successfully created friend match")
-        # dataは6桁の数字
-        res = lobbys_enter_friend_match(headers, roomNum=res.data)
-        if res.code == 0:
-            print("Successfully entered friend match")
+    daily_friend_match(headers)
     # res = get_gift_code(headers, code="MQYFJCM")
-    print(rule)
 
     # users_check_version(headers, channel="default", platform="ios", version="2.1.1")
     # res = activity_user_sign_progress(headers, activityId=10124)

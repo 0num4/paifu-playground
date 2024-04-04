@@ -350,7 +350,7 @@ def activity_receive_ex_team_task(headers: dict, taskID: int = 3, type: int = 4)
     activityReceiveEXTeamTaskRes = activityReceiveEXTeamTaskRes.json()
     # json.dump(activityReceiveEXTeamTaskRes, open("activity_receive_ex_team_task.json", "w"))
     print(activityReceiveEXTeamTaskRes)
-    activityReceiveEXTeamTaskRes = Types.stats.EXTeamTaskAwardResponse(**activityReceiveEXTeamTaskRes, strict=True)
+    activityReceiveEXTeamTaskRes = Types.stats.EXTeamTaskResponse(**activityReceiveEXTeamTaskRes, strict=True)
     return activityReceiveEXTeamTaskRes
 
 
@@ -889,16 +889,19 @@ def daily_friend_match(headers: dict) -> bool:
     res = lobbys_create_friend_match(headers, rule=rule)
     if res.code == 0:
         print("Successfully created friend match")
+        time.sleep(0.5)
         # dataは6桁の数字
         lobbysEnterFriendMatchRes = lobbys_enter_friend_match(headers, roomNum=res.data)
         if lobbysEnterFriendMatchRes.code == 0:
             print("Successfully entered friend match")
+            time.sleep(0.5)
             addCpuAction = lobbys_friend_player_action(headers, action=8, matchId=lobbysEnterFriendMatchRes.data.Id)
             if addCpuAction.code == 0:
                 print("Successfully added CPU")
             else:
                 print("Failed to add CPU")
                 return False
+            time.sleep(0.5)
             addCpuAction2 = lobbys_friend_player_action(headers, action=8, matchId=lobbysEnterFriendMatchRes.data.Id)
             if addCpuAction2.code == 0:
                 print("Successfully added CPU2")
@@ -941,9 +944,9 @@ def get_daily(headers: dict):
             for item in receiveSignAward.awards:
                 try:
                     itemName = Types.consts.EnumDefine.ItemID(item.itemId).name
-                    print(f"ItemID: {item.itemID}, ItemName: {itemName} num: {item.num}")
+                    print(f"ItemID: {item.itemId}, ItemName: {itemName} num: {item.num}")
                 except (ValueError, KeyError):
-                    print(f"ItemID: {item.itemID}, unRegisterdItemName, num: {item.num}")
+                    print(f"ItemID: {item.itemId}, unRegisterdItemName, num: {item.num}")
         else:
             print("Failed to receive sign award")
     else:
@@ -974,6 +977,15 @@ def get_daily(headers: dict):
             print("Successfully get daily free item")
         else:
             print("Failed to get daily free item")
+    # if daily_friend_match(headers):
+    #     print("Successfully daily friend match")
+    # else:
+    #     print("Failed daily friend match")
+    # # 2回対局する必要がある
+    # if daily_friend_match(headers):
+    #     print("Successfully daily friend match")
+    # else:
+    #     print("Failed daily friend match")
     # 上記で完了した報酬の取得
     daily_res = get_activity_collect_task_award(headers, typeList=[1, 3])
     if daily_res.code == 0:
@@ -1023,15 +1035,18 @@ def main():
     # get_res_bundle_data()
     emailLoginRes = login_riichi_city()
     headers = get_headers(emailLoginRes)
-    # get_daily(headers)
-    daily_friend_match(headers)
+    get_daily(headers)
+
     # res = get_gift_code(headers, code="MQYFJCM")
 
     # users_check_version(headers, channel="default", platform="ios", version="2.1.1")
     # res = activity_user_sign_progress(headers, activityId=10124)
     # res = activity_receive_sign_award(headers, activityId=10124, awardType=3)
     # # res = get_gift_code(headers, code="happybirthday03210")
-    # res = activity_receive_ex_team_task(headers)
+    res = get_activity_ex_team_daily_award(headers)
+    if res.code == 0:
+        print("Successfully got activity ex team daily award")
+    res = activity_receive_ex_team_task(headers)
     # signMatch_dev(headers)
     # backpack_recycle_gift(headers)
     # activity_ex_team_task(headers)

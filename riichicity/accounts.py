@@ -31,11 +31,29 @@ def users_get_last_login(headers: dict, adid: str) -> Types.accountTypes.UserGet
     return userGetLastLoginRes
 
 
+def users_send_email_code(headers: dict, email: str, codeType: int = 0, lang: str = "ja") -> any:
+    payload = {"email": email, "codeType": codeType, "lang": lang}
+    res = requests.post("https://alicdn.mahjong-jp.net/users/sendEmailCode", json=payload, headers=headers)
+    res = res.json()
+    json.dump(res, open("users_send_email_code.json", "w"))
+    print(res)
+    return res
+
+
+def users_retrieve_account(headers: dict, content: str) -> any:
+    payload = {"content": content}
+    res = requests.post("https://alicdn.mahjong-jp.net/users/retrieveAccount", json=payload, headers=headers)
+    res = res.json()
+    json.dump(res, open("users_retrieve_account.json", "w"))
+    print(res)
+    return res
+
+
 def main():
     # get_res_bundle_data()
     emailLoginRes = base.login_riichi_city()
     headers = base.get_headers(emailLoginRes)
-    users_get_last_login(headers, "1")
+    users_retrieve_account(headers, content="loq")
 
     print("end")
 

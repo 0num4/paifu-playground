@@ -59,7 +59,7 @@ def get_res_bundle_data():
         print(f"error! {getResBundleData.status_code} Failed to get version")
 
 
-def login_riichi_city(adjustId: str | None) -> Types.stats.EmailLoginResponse:
+def login_riichi_city(adjustId: str | None = None) -> Types.stats.EmailLoginResponse:
     # res = fetch_domain_name()
     # print(res.domain_name)
     # リクエストヘッダーを設定

@@ -77,6 +77,5 @@ def get_from_riichi_city() -> list:
     return res
 
 
-get_from_riichi_city()
-
-
+if __name__ == "__main__":
+    get_from_riichi_city()

@@ -9,6 +9,7 @@ import Types.baseTypes
 import datetime
 import time
 import pydantic
+import Types.accountTypes
 
 
 #
@@ -111,9 +112,11 @@ def get_headers(emailLoginRes: dict) -> dict:
     return headers
 
 
-def ping_riichi_city(headers: dict):
+def ping_riichi_city(headers: dict) -> Types.accountTypes.PingResponse:
     res = requests.post("https://alicdn.mahjong-jp.net/ping", headers=headers)
     res = res.json()
+    json.dump(res, open("ping_riichi_city.json", "w"))
+    res = Types.accountTypes.PingResponse(**res, strict=True)
     print(res)
     return res
 

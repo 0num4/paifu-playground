@@ -124,12 +124,14 @@ def ping_riichi_city(headers: dict) -> Types.accountTypes.PingResponse:
 
 def users_get_last_login(headers: dict, adid: str) -> any:
     payload = {"adid": adid}
-    res = requests.post("https://alicdn.mahjong-jp.net/users/getLastLogin", json=payload, headers=headers)
-    res = res.json()
-    json.dump(res, open("users_get_last_login.json", "w"))
+    userGetLastLoginRes = requests.post(
+        "https://alicdn.mahjong-jp.net/users/getLastLogin", json=payload, headers=headers
+    )
+    userGetLastLoginRes = userGetLastLoginRes.json()
+    json.dump(userGetLastLoginRes, open("users_get_last_login.json", "w"))
     # res = Types.accountTypes.GetLastLoginResponse(**res, strict=True)
-    print(res)
-    return res
+    print(userGetLastLoginRes)
+    return userGetLastLoginRes
 
 
 def main():

@@ -8,6 +8,7 @@ import Types.readPaiPuList
 import Types.baseTypes
 import Types.accountTypes
 import base
+import hashlib
 
 
 # pingにはheadersが必要ない
@@ -140,6 +141,19 @@ def users_init_session(deviceId: uuid.UUID | None = None, sid: str | None = None
     return usersInitSessionRes
 
 
+def GetEncryptDeviceID(str):
+    len_str = len(str)
+    if len_str % 2 != 0:
+        len_str += 1
+
+    new_str = ""
+    for i in range(0, len_str, 2):
+        new_str += str[i]
+
+    md5 = hashlib.md5(new_str.encode("utf-8")).hexdigest()
+    return str + md5[:6]
+
+
 def create(deviceId: str, sid: str, adid: str) -> dict:
     deviceId = "9770F499-D93A-4100-B11E-0A4BB390D9BA"
     # res = users_init_session()
@@ -168,13 +182,14 @@ def create(deviceId: str, sid: str, adid: str) -> dict:
         logCreate=True,
         orinToken=deviceId,
         tokenType=1,
-        tokenValue=deviceId + "08b5b1",
+        tokenValue=GetEncryptDeviceID(deviceId),
     )
     print(res)
 
 
 def main():
     deviceId = "9770F499-D93A-4100-B11E-0A4BB390D9BA"
+    # deviceIdorig = "596E45DB-3BA1-4AA5-B539-583FEF8A6752"
     # res = users_init_session()
     sid = "co8etieai08cuuf8ja20dd5a8b"  # res["data"]
     adid = "15f2a866c599359054f937f89a43de46"  # 作り方がわからないので適当に作った。オリジナルは→ # "15f2a866c599359054f937f89a43de47"

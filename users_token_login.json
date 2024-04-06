@@ -1,0 +1,30 @@
+{
+  "code": 0,
+  "data": {
+    "banStartAt": 0,
+    "banUntil": 0,
+    "cancelContactEmail": "",
+    "cancelEndAt": 0,
+    "country": "jp",
+    "honorRed": false,
+    "init": true,
+    "ipCountry": "jp",
+    "isCompleteCourse": false,
+    "isCompleteGive": false,
+    "isCompleteNew": false,
+    "isCompleteNewRole": false,
+    "loginQueue": [],
+    "serverTime": 1712394840,
+    "tokenTypes": [1],
+    "user": {
+      "avatar": "",
+      "email": "",
+      "id": 115892010,
+      "nickname": "HM115892010",
+      "registerAt": 1712394840,
+      "status": 0
+    },
+    "violationAction": 0
+  },
+  "message": "ok"
+}

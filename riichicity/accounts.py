@@ -1,4 +1,5 @@
 import json
+import random
 import uuid
 import requests
 import Types.stats
@@ -7,7 +8,6 @@ import Types.consts
 import Types.readPaiPuList
 import Types.baseTypes
 import Types.accountTypes
-import base
 import hashlib
 
 
@@ -110,12 +110,14 @@ def create_cookie() -> dict:
     return {}
 
 
-def users_init_session(deviceId: uuid.UUID | None = None, sid: str | None = None) -> any:
+def users_init_session(
+    deviceId: uuid.UUID | None = None, sid: str | None = None
+) -> Types.accountTypes.UsersInitSessionResponse:
 
     if deviceId is None:
         uuidv4 = uuid.uuid4()
         deviceId = str(uuidv4).upper()
-    print(deviceId)
+        print(f"users_init_session deviceId: {deviceId}")
     cookie = {
         "platform": "ios",
         "channel": "default",
@@ -154,11 +156,27 @@ def GetEncryptDeviceID(str):
     return str + md5[:6]
 
 
-def create(deviceId: str, sid: str, adid: str) -> dict:
-    deviceId = "9770F499-D93A-4100-B11E-0A4BB390D9BA"
-    # res = users_init_session()
-    sid = "co8etieai08cuuf8ja20dd5a8b"  # res["data"]
-    adid = "15f2a866c599359054f937f89a43de46"
+def dummyadid():
+    # 1文字目を'1'に設定し、残り31文字をランダムな16進数で生成
+    random_hex = "".join(random.choices("0123456789abcdef", k=31))
+    adid = "1" + random_hex
+    return adid
+
+
+def create_user() -> dict:
+    uuidv4 = uuid.uuid4()
+    deviceId = str(uuidv4).upper()
+    print(f"deviceId: {deviceId}")
+    usersInitSessionRes = users_init_session(
+        deviceId=deviceId,
+    )
+    if usersInitSessionRes.code != 0:
+        print("initSession failed")
+        return {}
+    sid = usersInitSessionRes.data
+    print(f"sid: {sid}")
+    adid = dummyadid()  # "15f2a866c599359064f937f89a43de46"
+    print(f"adid: {adid}")
     cookie = {
         "platform": "ios",
         "channel": "default",
@@ -188,18 +206,10 @@ def create(deviceId: str, sid: str, adid: str) -> dict:
 
 
 def main():
-    deviceId = "9770F499-D93A-4100-B11E-0A4BB390D9BA"
-    # deviceIdorig = "596E45DB-3BA1-4AA5-B539-583FEF8A6752"
-    # res = users_init_session()
-    sid = "co8etieai08cuuf8ja20dd5a8b"  # res["data"]
-    adid = "15f2a866c599359054f937f89a43de46"  # 作り方がわからないので適当に作った。オリジナルは→ # "15f2a866c599359054f937f89a43de47"
-    create(deviceId, sid, adid)
+    create_user()
+    # create()
     # get_res_bundle_data()
     # emailLoginRes = base.login_riichi_city()
-    # headers = base.get_headers(emailLoginRes)
-    # users_retrieve_account(headers, content="loq")
-    # users_email_verify({}, "560546", 0)
-    # print("end")
 
 
 if __name__ == "__main__":

@@ -9,7 +9,7 @@
     "stabilityDays": 7
   },
   "minor": {
-    "stabilityDays": 3
+    "stabilityDays": 3,
     "automerge": true
   },
   "patch": {
@@ -19,12 +19,9 @@
   "separateMinorPatch": true,
   "schedule": ["every weekday"],
   "packageRules": [
-      {
-          "groupName": "boto3",
-          "matchPackagePatterns": [
-              "boto3",
-              "botocore"
-          ]
-      }
+    {
+      "groupName": "boto3",
+      "matchPackagePatterns": ["boto3", "botocore"]
+    }
   ]
 }

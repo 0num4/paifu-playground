@@ -1,5 +1,1 @@
-{
-  "code": 0,
-  "data": { "isAdidTwitter": false, "tokenType": 6 },
-  "message": "ok"
-}
+{"code": 0, "data": {"isAdidTwitter": false, "tokenType": 6}, "message": "ok"}

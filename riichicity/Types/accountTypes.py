@@ -23,7 +23,7 @@ class UserGetLastLoginResponse(BaseModel):
 
 
 class UsersRetrieveAccountResponseData(BaseModel):
-    mail: pydantic.EmailStr
+    mail: pydantic.EmailStr | typing.Literal[""]
     nickname: str
     profileFrameId: int
     roleID: int

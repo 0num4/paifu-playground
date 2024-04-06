@@ -9,7 +9,7 @@ import Types.accountTypes
 import base
 
 
-# TODO: pingにはheadersが必要ない
+# pingにはheadersが必要ない
 def ping_riichi_city(headers: dict) -> Types.accountTypes.PingResponse:
     res = requests.post("https://alicdn.mahjong-jp.net/ping", headers=headers)
     res = res.json()
@@ -43,11 +43,10 @@ def users_send_email_code(headers: dict, email: str, codeType: int = 0, lang: st
 
 def users_retrieve_account(headers: dict, content: str) -> Types.accountTypes.UsersRetrieveAccountResponse:
     payload = {"content": content}
-    usersRetrieveAccountRes = requests.post(
-        "https://alicdn.mahjong-jp.net/users/retrieveAccount", json=payload, headers=headers
-    )
+    # ログインしてなくてもOK
+    usersRetrieveAccountRes = requests.post("https://alicdn.mahjong-jp.net/users/retrieveAccount", json=payload)
     usersRetrieveAccountRes = usersRetrieveAccountRes.json()
-    json.dump(usersRetrieveAccountRes, open("users_retrieve_account.json", "w"))
+    # json.dump(usersRetrieveAccountRes, open("users_retrieve_account_root_s_a_gmail.json", "w"))
     usersRetrieveAccountRes = Types.accountTypes.UsersRetrieveAccountResponse(**usersRetrieveAccountRes, strict=True)
     print(usersRetrieveAccountRes)
     return usersRetrieveAccountRes

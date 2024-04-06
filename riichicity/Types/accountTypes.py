@@ -1,6 +1,6 @@
-import pydantic
-from pydantic import BaseModel, HttpUrl
+from pydantic import BaseModel
 import typing
+from . import consts
 
 
 class PingResponse(BaseModel):
@@ -11,7 +11,7 @@ class PingResponse(BaseModel):
 
 class UserGetLastLoginResponseData(BaseModel):
     isAdidTwitter: bool
-    tokenType: int
+    tokenType: consts.EnumDefine.UserTokenType
 
 
 class UserGetLastLoginResponse(BaseModel):

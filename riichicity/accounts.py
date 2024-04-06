@@ -9,53 +9,6 @@ import Types.accountTypes
 import base
 
 
-#
-def fetch_domain_name() -> Types.baseTypes.FetchDomainNameResponse:
-    url = "https://d3qgi0t347dz44.cloudfront.net/release/notice/domain_name.ncc"
-    response = requests.get(url)
-    response.raise_for_status()
-    response = response.json()
-    json.dump(response, open("fetch_domain_name.json", "w"))
-    response = Types.baseTypes.FetchDomainNameResponse(**response, strict=True)
-    return response
-
-
-def users_check_version(
-    headers: dict, channel: str = "default", platform: str = "ios", version: str = "2.1.16.31622"
-) -> Types.baseTypes.CheckVersionResponse:
-    payload = {
-        "channel": channel,
-        "platform": platform,
-        "version": version,
-    }
-    checkVersionRes = requests.post("https://alicdn.mahjong-jp.net/users/checkVersion", json=payload, headers=headers)
-    checkVersionRes = checkVersionRes.json()
-    print(checkVersionRes)
-    # json.dump(checkVersionRes, open("users_check_version_latest.json", "w"))
-    checkVersionRes = Types.baseTypes.CheckVersionResponse(**checkVersionRes, strict=True)
-    return checkVersionRes
-
-
-# checkVersionで差異があったら呼ばれる
-# wget https://d3qgi0t347dz44.cloudfront.net/release/ios/20240329002/version.txt
-def get_version():
-    # ここの日付は
-    getVersionRes = requests.get("https://d3qgi0t347dz44.cloudfront.net/release/ios/20240329002/version.txt")
-    if getVersionRes.status_code == 200:
-        print(getVersionRes.text)
-    else:
-        print(f"error! {getVersionRes.status_code} Failed to get version")
-
-
-# バイナリ差分をダウンロード。使う予定はない
-def get_res_bundle_data():
-    getResBundleData = requests.get("https://d3qgi0t347dz44.cloudfront.net/release/ios/20240329002/res_bundle_data.dat")
-    if getResBundleData.status_code == 200:
-        print(getResBundleData.text)
-    else:
-        print(f"error! {getResBundleData.status_code} Failed to get version")
-
-
 # TODO: pingにはheadersが必要ない
 def ping_riichi_city(headers: dict) -> Types.accountTypes.PingResponse:
     res = requests.post("https://alicdn.mahjong-jp.net/ping", headers=headers)

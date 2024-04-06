@@ -36,3 +36,9 @@ class UsersRetrieveAccountResponse(BaseModel):
     code: int
     data: UsersRetrieveAccountResponseData
     message: str
+
+
+class UsersInitSessionResponse(BaseModel):
+    code: int
+    data: str
+    message: str

@@ -1,4 +1,5 @@
 import json
+import uuid
 import requests
 import Types.stats
 import Types.commonConsts
@@ -102,13 +103,48 @@ def users_token_login(
     return usersTokenLoginRes
 
 
+def create_cookie() -> dict:
+    # fetchDomainNameRes = base.fetch_domain_name()
+    # checkVersionRes = base.users_check_version()
+    return {}
+
+
+def users_init_session() -> any:
+    uuidv4 = uuid.uuid4()
+    deviceId = str(uuidv4).upper()
+    print(deviceId)
+    cookie = {
+        "platform": "ios",
+        "channel": "default",
+        "lang": "ja",
+        "version": "2.1.1.40364",
+        "deviceid": deviceId,
+    }
+    headers = {
+        "accept": "*/*",
+        "accept-encoding": "gzip, deflate, br",
+        "x-unity-version": "2021.3.42f1c1",
+        "cookies": json.dumps(cookie),
+        "user-agent": "ProductName/44 CFNetwork/1490.0.4 Darwin/23.2.0",
+        "accept-language": "ja",
+    }
+    usersInitSessionRes = requests.post("https://alicdn.mahjong-jp.net/users/initSession", headers=headers)
+    usersInitSessionRes = usersInitSessionRes.json()
+    json.dump(usersInitSessionRes, open("users_init_session.json", "w"))
+    # usersInitSessionRes = Types.accountTypes.UsersInitSessionResponse(**usersInitSessionRes, strict=True)
+    print(usersInitSessionRes)
+    return usersInitSessionRes
+
+
 def main():
+    res = users_init_session()
+    print(res)
     # get_res_bundle_data()
     # emailLoginRes = base.login_riichi_city()
     # headers = base.get_headers(emailLoginRes)
     # users_retrieve_account(headers, content="loq")
-    users_email_verify({}, "560546", 0)
-    print("end")
+    # users_email_verify({}, "560546", 0)
+    # print("end")
 
 
 if __name__ == "__main__":

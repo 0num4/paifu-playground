@@ -112,6 +112,7 @@ def get_headers(emailLoginRes: dict) -> dict:
     return headers
 
 
+# TODO: pingにはheadersが必要ない
 def ping_riichi_city(headers: dict) -> Types.accountTypes.PingResponse:
     res = requests.post("https://alicdn.mahjong-jp.net/ping", headers=headers)
     res = res.json()
@@ -121,11 +122,21 @@ def ping_riichi_city(headers: dict) -> Types.accountTypes.PingResponse:
     return res
 
 
+def users_get_last_login(headers: dict, adid: str) -> any:
+    payload = {"adid": adid}
+    res = requests.post("https://alicdn.mahjong-jp.net/users/getLastLogin", json=payload, headers=headers)
+    res = res.json()
+    json.dump(res, open("users_get_last_login.json", "w"))
+    # res = Types.accountTypes.GetLastLoginResponse(**res, strict=True)
+    print(res)
+    return res
+
+
 def main():
     # get_res_bundle_data()
     emailLoginRes = login_riichi_city()
     headers = get_headers(emailLoginRes)
-    ping_riichi_city(headers)
+    users_get_last_login(headers, "1")
 
     print("end")
 

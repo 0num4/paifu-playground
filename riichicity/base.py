@@ -18,7 +18,7 @@ def fetch_domain_name() -> Types.baseTypes.FetchDomainNameResponse:
     response = requests.get(url)
     response.raise_for_status()
     response = response.json()
-    json.dump(response, open("fetch_domain_name.json", "w"))
+    # json.dump(response, open("fetch_domain_name.json", "w"))
     response = Types.baseTypes.FetchDomainNameResponse(**response, strict=True)
     return response
 
@@ -106,7 +106,7 @@ def get_headers(emailLoginRes: dict) -> dict:
         "Content-Type": "application/json",
         "Cookies": json.dumps(cookies),
         "Accept": "application/json",
-        "X-Unity-Version": "2020.3.42f1c1",
+        "X-Unity-Version": "2020.3.42f1c1",  # TODO: ここが変わっていく
     }
     return headers
 

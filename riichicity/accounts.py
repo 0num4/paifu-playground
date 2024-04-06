@@ -78,7 +78,7 @@ def users_retrieve_account(headers: dict, content: str) -> Types.accountTypes.Us
 # 2. users/tokenLogin
 
 
-# TODO: 検証
+# TODO: エラーが出た
 # response EmailLoginResponse
 def users_token_login(
     headers: dict,
@@ -98,7 +98,7 @@ def users_token_login(
     usersTokenLoginRes = requests.post("https://alicdn.mahjong-jp.net/users/tokenLogin", json=payload, headers=headers)
     usersTokenLoginRes = usersTokenLoginRes.json()
     json.dump(usersTokenLoginRes, open("users_token_login.json", "w"))
-    usersTokenLoginRes = Types.accountTypes.UsersTokenLoginResponse(**usersTokenLoginRes, strict=True)
+    # usersTokenLoginRes = Types.accountTypes.UsersTokenLoginResponse(**usersTokenLoginRes, strict=True)
     print(usersTokenLoginRes)
     return usersTokenLoginRes
 
@@ -109,9 +109,11 @@ def create_cookie() -> dict:
     return {}
 
 
-def users_init_session() -> any:
-    uuidv4 = uuid.uuid4()
-    deviceId = str(uuidv4).upper()
+def users_init_session(deviceId: uuid.UUID | None = None, sid: str | None = None) -> any:
+
+    if deviceId is None:
+        uuidv4 = uuid.uuid4()
+        deviceId = str(uuidv4).upper()
     print(deviceId)
     cookie = {
         "platform": "ios",
@@ -120,6 +122,8 @@ def users_init_session() -> any:
         "version": "2.1.1.40364",
         "deviceid": deviceId,
     }
+    if sid is not None:
+        cookie["sid"] = sid
     headers = {
         "accept": "*/*",
         "accept-encoding": "gzip, deflate, br",
@@ -130,15 +134,51 @@ def users_init_session() -> any:
     }
     usersInitSessionRes = requests.post("https://alicdn.mahjong-jp.net/users/initSession", headers=headers)
     usersInitSessionRes = usersInitSessionRes.json()
-    json.dump(usersInitSessionRes, open("users_init_session.json", "w"))
-    # usersInitSessionRes = Types.accountTypes.UsersInitSessionResponse(**usersInitSessionRes, strict=True)
+    # json.dump(usersInitSessionRes, open("users_init_session.json", "w"))
+    usersInitSessionRes = Types.accountTypes.UsersInitSessionResponse(**usersInitSessionRes, strict=True)
     print(usersInitSessionRes)
     return usersInitSessionRes
 
 
-def main():
-    res = users_init_session()
+def create(deviceId: str, sid: str, adid: str) -> dict:
+    deviceId = "9770F499-D93A-4100-B11E-0A4BB390D9BA"
+    # res = users_init_session()
+    sid = "co8etieai08cuuf8ja20dd5a8b"  # res["data"]
+    adid = "15f2a866c599359054f937f89a43de46"
+    cookie = {
+        "platform": "ios",
+        "channel": "default",
+        "lang": "ja",
+        "version": "2.1.1.40364",
+        "deviceid": deviceId,
+        "sid": sid,
+    }
+    headers = {
+        "accept": "*/*",
+        "accept-encoding": "gzip, deflate, br",
+        "x-unity-version": "2021.3.42f1c1",
+        "cookies": json.dumps(cookie),
+        "user-agent": "ProductName/44 CFNetwork/1490.0.4 Darwin/23.2.0",
+        "accept-language": "ja",
+    }
+    print(headers)
+    res = users_token_login(
+        headers,
+        adjustId=adid,
+        logCreate=True,
+        orinToken=deviceId,
+        tokenType=1,
+        tokenValue=deviceId + "08b5b1",
+    )
     print(res)
+
+
+def main():
+    deviceId = "9770F499-D93A-4100-B11E-0A4BB390D9BA"
+    # res = users_init_session()
+    sid = "co8etieai08cuuf8ja20dd5a8b"  # res["data"]
+    adid = "15f2a866c599359054f937f89a43de46"  # 作り方がわからないので適当に作った。オリジナルは→ # "15f2a866c599359054f937f89a43de47"
+    create(deviceId, sid, adid)
     # get_res_bundle_data()
     # emailLoginRes = base.login_riichi_city()
     # headers = base.get_headers(emailLoginRes)

@@ -1,0 +1,30 @@
+{
+  "code": 2,
+  "data": {
+    "banStartAt": 0,
+    "banUntil": 0,
+    "cancelContactEmail": "",
+    "cancelEndAt": 0,
+    "country": "",
+    "honorRed": false,
+    "init": false,
+    "ipCountry": "",
+    "isCompleteCourse": false,
+    "isCompleteGive": false,
+    "isCompleteNew": false,
+    "isCompleteNewRole": false,
+    "loginQueue": [],
+    "serverTime": 0,
+    "tokenTypes": [],
+    "user": {
+      "avatar": "",
+      "email": "",
+      "id": 0,
+      "nickname": "",
+      "registerAt": 0,
+      "status": 0
+    },
+    "violationAction": 0
+  },
+  "message": "internal error"
+}

@@ -59,7 +59,7 @@ def get_res_bundle_data():
         print(f"error! {getResBundleData.status_code} Failed to get version")
 
 
-def login_riichi_city() -> Types.stats.EmailLoginResponse:
+def login_riichi_city(adjustId: str | None) -> Types.stats.EmailLoginResponse:
     # res = fetch_domain_name()
     # print(res.domain_name)
     # リクエストヘッダーを設定
@@ -68,15 +68,14 @@ def login_riichi_city() -> Types.stats.EmailLoginResponse:
         "Cookies": f'{{"channel":"default","deviceid":"{os.environ["deviceid"]}","lang":"en","sid":"{os.environ["sid"]}","version":"2.0.6.31622","platform":"linux"}}',
     }
 
-    # リクエストボディを設定(.envから読み取る)
     payload = {"passwd": os.environ["passwd"], "email": os.environ["email"]}
 
-    # リクエストを送信
+    if adjustId is not None:
+        payload["adjustId"] = adjustId
     response = requests.post("https://alicdn.mahjong-jp.net/users/emailLogin", json=payload, headers=headers)
 
-    # レスポンスを表示
-    print(response.text)
     emailLoginRes = response.json()
+    print(emailLoginRes)
     # json.dump(emailLoginRes, open("emailLoginRes.json", "w"))
     if emailLoginRes["code"] == 0:
         print("Logged into Riichi city as " + emailLoginRes["data"]["user"]["nickname"])

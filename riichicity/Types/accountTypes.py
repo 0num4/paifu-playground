@@ -1,5 +1,7 @@
 from pydantic import BaseModel
 import typing
+
+import pydantic
 from . import consts
 
 
@@ -17,4 +19,20 @@ class UserGetLastLoginResponseData(BaseModel):
 class UserGetLastLoginResponse(BaseModel):
     code: int
     data: UserGetLastLoginResponseData
+    message: str
+
+
+class UsersRetrieveAccountResponseData(BaseModel):
+    mail: pydantic.EmailStr
+    nickname: str
+    profileFrameId: int
+    roleID: int
+    roleModule: int
+    skinID: int
+    uidStr: str
+
+
+class UsersRetrieveAccountResponse(BaseModel):
+    code: int
+    data: UsersRetrieveAccountResponseData
     message: str

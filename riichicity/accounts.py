@@ -41,13 +41,14 @@ def users_send_email_code(headers: dict, email: str, codeType: int = 0, lang: st
     return res
 
 
-def users_retrieve_account(headers: dict, content: str) -> any:
+def users_retrieve_account(headers: dict, content: str) -> Types.accountTypes.UsersRetrieveAccountResponse:
     payload = {"content": content}
     usersRetrieveAccountRes = requests.post(
         "https://alicdn.mahjong-jp.net/users/retrieveAccount", json=payload, headers=headers
     )
     usersRetrieveAccountRes = usersRetrieveAccountRes.json()
     json.dump(usersRetrieveAccountRes, open("users_retrieve_account.json", "w"))
+    usersRetrieveAccountRes = Types.accountTypes.UsersRetrieveAccountResponse(**usersRetrieveAccountRes, strict=True)
     print(usersRetrieveAccountRes)
     return usersRetrieveAccountRes
 

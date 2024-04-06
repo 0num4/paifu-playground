@@ -547,11 +547,8 @@ class LobbysReadStageClassifiesResponseUserInfoStage(BaseModel):
 
 
 class LobbysReadStageClassifiesResponseUserInfo(BaseModel):
-    player_3: LobbysReadStageClassifiesResponseUserInfoStage = None
-    player_4: LobbysReadStageClassifiesResponseUserInfoStage = None
-
-    class Config:
-        fields = {"player_3": "3", "player_4": "4"}
+    player_3: LobbysReadStageClassifiesResponseUserInfoStage = Field(None, alias="3")
+    player_4: LobbysReadStageClassifiesResponseUserInfoStage = Field(None, alias="4")
 
 
 class LobbysReadStageClassifiesResponse(BaseModel):

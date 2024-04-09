@@ -1,0 +1,18 @@
+{
+  "code": 0,
+  "data": {
+    "area": "jp",
+    "downloadInfo": {
+      "APK": "https://d3qgi0t347dz44.cloudfront.net/release/apks/android_prod_official_2.1.3.apk",
+      "Apple": "https://apps.apple.com/app/riichi-city-japanese-mahjong/id1578816591",
+      "Google": "https://play.google.com/store/apps/details?id=com.riichicity.happywoods",
+      "Linux": "https://d3qgi0t347dz44.cloudfront.net/release/linuxpack/default_prod_Linux_2.1.3.zip",
+      "Mac": "https://d3qgi0t347dz44.cloudfront.net/release/macpack/riichicity_2.1.3_mac_official.zip",
+      "Steam": "https://store.steampowered.com/app/1954420/_/",
+      "Windows": "https://d3qgi0t347dz44.cloudfront.net/release/windowspack/prod_windows_2.1.3.zip"
+    },
+    "ip": "150.249.249.241",
+    "millisecond": 1712636566735
+  },
+  "message": "ok"
+}

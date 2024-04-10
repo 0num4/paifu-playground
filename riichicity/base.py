@@ -340,7 +340,7 @@ def activity_ex_team_task(headers: dict) -> Types.stats.EXTeamTaskResponse:
     return activityEXTeamTaskRes
 
 
-# TODO: 検証
+# TODO: 検証 壊れてるかも
 def activity_receive_ex_team_task(headers: dict, taskID: int = 3, type: int = 4) -> dict[any]:
     payload = {"taskID": taskID, "type": type}
     activityReceiveEXTeamTaskRes = requests.post(
@@ -1034,7 +1034,7 @@ def main():
     # get_res_bundle_data()
     emailLoginRes = login_riichi_city()
     headers = get_headers(emailLoginRes)
-    get_daily(headers)
+    # get_daily(headers)
 
     # res = get_gift_code(headers, code="MQYFJCM")
 

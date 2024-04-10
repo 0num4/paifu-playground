@@ -681,6 +681,17 @@ def lobbys_cancel_stage(headers: dict, matchID: str) -> dict:
     return lobbysCancelStageRes
 
 
+def lobbys_read_public_room(headers: dict, playerCount: int, round: int) -> dict:
+    payload = {"playerCount": playerCount, "round": round}
+    lobbysReadPublicRoomRes = requests.post(
+        "https://alicdn.mahjong-jp.net/lobbys/readPublicRoom", json=payload, headers=headers
+    )
+    lobbysReadPublicRoomRes = lobbysReadPublicRoomRes.json()
+    print(lobbysReadPublicRoomRes)
+    json.dump(lobbysReadPublicRoomRes, open("lobbys_read_public_room.json", "w"))
+    return lobbysReadPublicRoomRes
+
+
 # ブックマーク。isCancelがtrueだとブックマーク解除。当然ですがisCollectの値はユーザー単位で見え方が違う(別のユーザーの別のブックマークは違うので)
 def collect_pai_pu(headers: dict, paiPuId: str, isCancel: bool, remark: str) -> Types.stats.CollectPaiPuResponse:
     payload = {"paiPuId": paiPuId, "isCancel": isCancel, "remark": remark}
@@ -1034,6 +1045,7 @@ def main():
     # get_res_bundle_data()
     emailLoginRes = login_riichi_city()
     headers = get_headers(emailLoginRes)
+    lobbys_read_public_room(headers, playerCount=3, round=0)
     # get_daily(headers)
 
     # res = get_gift_code(headers, code="MQYFJCM")
@@ -1042,10 +1054,10 @@ def main():
     # res = activity_user_sign_progress(headers, activityId=10124)
     # res = activity_receive_sign_award(headers, activityId=10124, awardType=3)
     # # res = get_gift_code(headers, code="happybirthday03210")
-    res = get_activity_ex_team_daily_award(headers)
-    if res.code == 0:
-        print("Successfully got activity ex team daily award")
-    res = activity_receive_ex_team_task(headers)
+    # res = get_activity_ex_team_daily_award(headers)
+    # if res.code == 0:
+    #     print("Successfully got activity ex team daily award")
+    # res = activity_receive_ex_team_task(headers)
     # signMatch_dev(headers)
     # backpack_recycle_gift(headers)
     # activity_ex_team_task(headers)

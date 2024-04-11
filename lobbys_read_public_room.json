@@ -1,1 +1,21 @@
-{"code": 0, "data": {"list": []}, "message": "ok"}
+{
+  "code": 0,
+  "data": {
+    "list": [
+      {
+        "Id": "6617d14e8b8afbc3bbeeeb3f",
+        "IsGeMu": false,
+        "isLuck": false,
+        "isShaoJi": false,
+        "ownerId": 813942315,
+        "ownerName": "levena_evenas",
+        "playerCount": 3,
+        "roomNum": "652150",
+        "roomPlayerCount": 1,
+        "round": 3,
+        "updateTime": 1712836942
+      }
+    ]
+  },
+  "message": "ok"
+}

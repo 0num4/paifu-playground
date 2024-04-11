@@ -878,3 +878,56 @@ class EnterFriendMatchResponse(BaseModel):
 class lobbysFriendPlayerActionResponse(BaseModel):
     code: int
     message: str
+
+
+class lobbysReadPublicRoomResponseUser(BaseModel):
+    avatar: str
+    email: str
+    id: int
+    nickname: str
+    registerAt: int
+    status: int
+
+
+class lobbysReadPublicRoomResponseLoginResponse(BaseModel):
+    banStartAt: int
+    banUntil: int
+    cancelContactEmail: str
+    cancelEndAt: int
+    country: str
+    honorRed: bool
+    init: bool
+    ipCountry: str
+    isCompleteCourse: bool
+    isCompleteGive: bool
+    isCompleteNew: bool
+    isCompleteNewRole: bool
+    loginQueue: list[typing.Any]
+    serverTime: int
+    tokenTypes: list[int]
+    user: lobbysReadPublicRoomResponseUser
+    violationAction: int
+
+
+class lobbysReadPublicRoomResponseRoomListResponseRoom(BaseModel):
+    Id: str
+    IsGeMu: bool
+    isLuck: bool
+    isShaoJi: bool
+    ownerId: int
+    ownerName: str
+    playerCount: int
+    roomNum: str
+    roomPlayerCount: int
+    round: int
+    updateTime: int
+
+
+class lobbysReadPublicRoomResponseRoomListResponse(BaseModel):
+    list: list[lobbysReadPublicRoomResponseRoomListResponseRoom]
+
+
+class lobbysReadPublicRoomResponse(BaseModel):
+    code: int
+    data: lobbysReadPublicRoomResponseLoginResponse | lobbysReadPublicRoomResponseRoomListResponse
+    message: str

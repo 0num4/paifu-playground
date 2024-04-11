@@ -681,14 +681,15 @@ def lobbys_cancel_stage(headers: dict, matchID: str) -> dict:
     return lobbysCancelStageRes
 
 
-def lobbys_read_public_room(headers: dict, playerCount: int, round: int) -> dict:
+def lobbys_read_public_room(headers: dict, playerCount: int, round: int) -> Types.stats.lobbysReadPublicRoomResponse:
     payload = {"playerCount": playerCount, "round": round}
     lobbysReadPublicRoomRes = requests.post(
         "https://alicdn.mahjong-jp.net/lobbys/readPublicRoom", json=payload, headers=headers
     )
     lobbysReadPublicRoomRes = lobbysReadPublicRoomRes.json()
     print(lobbysReadPublicRoomRes)
-    json.dump(lobbysReadPublicRoomRes, open("lobbys_read_public_room.json", "w"))
+    # json.dump(lobbysReadPublicRoomRes, open("lobbys_read_public_room.json", "w"))
+    lobbysReadPublicRoomRes = Types.stats.lobbysReadPublicRoomResponse(**lobbysReadPublicRoomRes, strict=True)
     return lobbysReadPublicRoomRes
 
 

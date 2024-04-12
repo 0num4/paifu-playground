@@ -681,6 +681,7 @@ def lobbys_cancel_stage(headers: dict, matchID: str) -> dict:
     return lobbysCancelStageRes
 
 
+# 友人戦のpublic roomを取得、その他更新ボタンもこれ。クイック参加はjoinPublicRoom
 def lobbys_read_public_room(headers: dict, playerCount: int, round: int) -> Types.stats.lobbysReadPublicRoomResponse:
     payload = {"playerCount": playerCount, "round": round}
     lobbysReadPublicRoomRes = requests.post(
@@ -818,6 +819,12 @@ def daily_recycle_gift(headers: dict) -> bool:
                 print(f"Failed to recycle {itemName}")
     print(f"recycled: {recycled}")
     return recycled
+
+
+def lobbys_get_friend_match_rule(headers: dict) -> any:
+    # 友人戦のルール一覧を取得
+    # TODO: 実装
+    pass
 
 
 def lobbys_create_friend_match(
@@ -1046,7 +1053,9 @@ def main():
     # get_res_bundle_data()
     emailLoginRes = login_riichi_city()
     headers = get_headers(emailLoginRes)
-    lobbys_read_public_room(headers, playerCount=3, round=0)
+    res = get_live_info_from_riichi_city(headers)
+    print(res)
+    # lobbys_read_public_room(headers, playerCount=3, round=0)
     # get_daily(headers)
 
     # res = get_gift_code(headers, code="MQYFJCM")

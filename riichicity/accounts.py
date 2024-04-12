@@ -9,6 +9,15 @@ import Types.readPaiPuList
 import Types.baseTypes
 import Types.accountTypes
 import hashlib
+import boto3
+
+
+# def insert_dynamo_user():
+#     dynamodb = boto3.resource("dynamodb")
+#     table = dynamodb.Table("users")
+#     table.put_item(
+#         Item={
+#             "email":
 
 
 # pingにはheadersが必要ない
@@ -79,7 +88,6 @@ def users_retrieve_account(headers: dict, content: str) -> Types.accountTypes.Us
 # 2. users/tokenLogin
 
 
-# TODO: エラーが出た
 # response EmailLoginResponse
 def users_token_login(
     headers: dict,
@@ -88,7 +96,7 @@ def users_token_login(
     orinToken: str = "",
     tokenType: int = 1,
     tokenValue: str = "",  # uuidv4
-) -> any:
+) -> Types.stats.EmailLoginResponse:
     payload = {
         "adjustId": adjustId,
         "logCreate": logCreate,
@@ -98,18 +106,13 @@ def users_token_login(
     }
     usersTokenLoginRes = requests.post("https://alicdn.mahjong-jp.net/users/tokenLogin", json=payload, headers=headers)
     usersTokenLoginRes = usersTokenLoginRes.json()
-    json.dump(usersTokenLoginRes, open("users_token_login.json", "w"))
-    # usersTokenLoginRes = Types.accountTypes.UsersTokenLoginResponse(**usersTokenLoginRes, strict=True)
+    # json.dump(usersTokenLoginRes, open("users_token_login.json", "w"))
+    usersTokenLoginRes = Types.stats.EmailLoginResponse(**usersTokenLoginRes, strict=True)
     print(usersTokenLoginRes)
     return usersTokenLoginRes
 
 
-def create_cookie() -> dict:
-    # fetchDomainNameRes = base.fetch_domain_name()
-    # checkVersionRes = base.users_check_version()
-    return {}
-
-
+# deviceIDさえ持っておけばsidは降ってくる
 def users_init_session(
     deviceId: uuid.UUID | None = None, sid: str | None = None
 ) -> Types.accountTypes.UsersInitSessionResponse:
@@ -143,7 +146,7 @@ def users_init_session(
     return usersInitSessionRes
 
 
-def GetEncryptDeviceID(str):
+def GetEncryptDeviceID(str) -> str:
     len_str = len(str)
     if len_str % 2 != 0:
         len_str += 1
@@ -156,7 +159,7 @@ def GetEncryptDeviceID(str):
     return str + md5[:6]
 
 
-def dummyadid():
+def dummyadid() -> str:
     # 1文字目を'1'に設定し、残り31文字をランダムな16進数で生成
     random_hex = "".join(random.choices("0123456789abcdef", k=31))
     adid = "1" + random_hex
@@ -194,7 +197,7 @@ def create_user() -> dict:
         "accept-language": "ja",
     }
     print(headers)
-    res = users_token_login(
+    userTokenLoginRes = users_token_login(
         headers,
         adjustId=adid,
         logCreate=True,
@@ -202,9 +205,32 @@ def create_user() -> dict:
         tokenType=1,
         tokenValue=GetEncryptDeviceID(deviceId),
     )
-    print(res)
+    if userTokenLoginRes.code != 0:
+        print("tokenLogin failed")
+        return {}
+
+    dynamodb = boto3.resource("dynamodb")
+    table = dynamodb.Table("create-account")
+    response = table.put_item(
+        Item={
+            "id": str(userTokenLoginRes.data.user.id),  # uid
+            "device_id": deviceId,
+            "sid": sid,
+            "adid": adid,
+            "nickname": userTokenLoginRes.data.user.nickname,
+            "res": userTokenLoginRes.model_dump(),
+            "cookie": cookie,
+            "headers": headers,
+        }
+    )
+    if response["ResponseMetadata"]["HTTPStatusCode"] != 200:
+        return {"statusCode": 500, "body": "Failed to create account."}
+    print("Account created.")
+
+    print(userTokenLoginRes)
 
 
+# AWS_PROFILE=ankokuyakusyo python riichicity/accounts.py
 def main():
     create_user()
     # create()

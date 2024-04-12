@@ -929,5 +929,6 @@ class lobbysReadPublicRoomResponseRoomListResponse(BaseModel):
 
 class lobbysReadPublicRoomResponse(BaseModel):
     code: int
+    # TODO: loginResponseいらなくない？
     data: lobbysReadPublicRoomResponseLoginResponse | lobbysReadPublicRoomResponseRoomListResponse
     message: str

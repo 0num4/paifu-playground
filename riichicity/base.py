@@ -316,13 +316,13 @@ def get_product_list(
 
 
 # ガチャ引くリスト？
-def store_get_draw(headers: dict) -> any:
+def store_get_draw(headers: dict) -> Types.stats.StoreGetDrawResponse:
     payload = {}
     storeGetDrawRes = requests.post("https://alicdn.mahjong-jp.net/store/getDraw", json=payload, headers=headers)
     storeGetDrawRes = storeGetDrawRes.json()
+    # json.dump(storeGetDrawRes, open("store_get_draw.json", "w"))
+    storeGetDrawRes = Types.stats.StoreGetDrawResponse(**storeGetDrawRes, strict=True)
     print(storeGetDrawRes)
-    json.dump(storeGetDrawRes, open("store_get_draw.json", "w"))
-    # storeGetDrawRes = Types.stats.StoreGetDrawResponse(**storeGetDrawRes, strict=True)
     return storeGetDrawRes
 
 

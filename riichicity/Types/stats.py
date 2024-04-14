@@ -932,3 +932,40 @@ class lobbysReadPublicRoomResponse(BaseModel):
     # TODO: loginResponseいらなくない？
     data: lobbysReadPublicRoomResponseLoginResponse | lobbysReadPublicRoomResponseRoomListResponse
     message: str
+
+
+class StoreGetDrawResponseDataPoolItemDrawProduct(BaseModel):
+    itemId: int
+    type: int
+
+
+class StoreGetDrawResponseDataPoolItem(BaseModel):
+    drawProductList: list[StoreGetDrawResponseDataPoolItemDrawProduct]
+    exchangeNum: int
+    leftTime: int
+    limits: list
+    pool: int
+    poolSkinId: int
+    ups: list
+
+
+class StoreGetDrawResponseData(BaseModel):
+    drawActivity: int
+    drawProductList: list
+    drawTicket: int
+    equipRate: int
+    exchangeCurrency: int
+    newerPoolCoupon: int
+    oneDrawItemID: int
+    oneDrawNum: int
+    poolList: list[StoreGetDrawResponseDataPoolItem]
+    propRate: int
+    roleSkinRate: int
+    tenDrawItemID: int
+    tenDrawNum: int
+
+
+class StoreGetDrawResponse(BaseModel):
+    code: int
+    data: StoreGetDrawResponseData
+    message: str

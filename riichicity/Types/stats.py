@@ -977,7 +977,7 @@ class StoreUserDrawDataItem(BaseModel):
     type: int
 
 
-class StoreUserDrawData(BaseModel):
+class StoreUserDrawResponse(BaseModel):
     code: int
     data: list[StoreUserDrawDataItem]
     message: str

@@ -326,13 +326,13 @@ def store_get_draw(headers: dict) -> Types.stats.StoreGetDrawResponse:
     return storeGetDrawRes
 
 
-# TODO: 検証
-def store_user_draw(headers: dict, pool: int = 38, type: int = 1) -> any:
+def store_user_draw(headers: dict, pool: int = 38, type: int = 1) -> Types.stats.StoreUserDrawResponse:
     payload = {"pool": pool, "type": type}
     storeUserDrawRes = requests.post("https://alicdn.mahjong-jp.net/store/userDraw", json=payload, headers=headers)
     storeUserDrawRes = storeUserDrawRes.json()
     print(storeUserDrawRes)
-    json.dump(storeUserDrawRes, open("store_user_draw.json", "w"))
+    # json.dump(storeUserDrawRes, open("store_user_draw.json", "w"))
+    storeUserDrawRes = Types.stats.StoreUserDrawResponse(**storeUserDrawRes, strict=True)
     return storeUserDrawRes
 
 
@@ -1074,7 +1074,8 @@ def main():
     # get_res_bundle_data()
     emailLoginRes = login_riichi_city()
     headers = get_headers(emailLoginRes)
-    store_get_draw(headers)
+    # res = store_get_draw(headers)
+    store_user_draw(headers)
     # res = get_live_info_from_riichi_city(headers)
     # print(res)
     # lobbys_read_public_room(headers, playerCount=3, round=0)

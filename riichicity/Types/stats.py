@@ -936,7 +936,7 @@ class lobbysReadPublicRoomResponse(BaseModel):
 
 class StoreGetDrawResponseDataPoolItemDrawProduct(BaseModel):
     itemId: int
-    type: int
+    type: int  # 1: キャラ(role?) role_name_10010 = [[深瀬アリス]], 2: アイテム, 3: equip(リーチbgmとか)
 
 
 class StoreGetDrawResponseDataPoolItem(BaseModel):
@@ -958,7 +958,7 @@ class StoreGetDrawResponseData(BaseModel):
     newerPoolCoupon: int
     oneDrawItemID: int
     oneDrawNum: int
-    poolList: list[StoreGetDrawResponseDataPoolItem]
+    poolList: list[StoreGetDrawResponseDataPoolItem]  # ガチャリスト
     propRate: int
     roleSkinRate: int
     tenDrawItemID: int

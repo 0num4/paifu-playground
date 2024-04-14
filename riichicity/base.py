@@ -315,6 +315,27 @@ def get_product_list(
     return productRes
 
 
+# ガチャ引くリスト？
+def store_get_draw(headers: dict) -> any:
+    payload = {}
+    storeGetDrawRes = requests.post("https://alicdn.mahjong-jp.net/store/getDraw", json=payload, headers=headers)
+    storeGetDrawRes = storeGetDrawRes.json()
+    print(storeGetDrawRes)
+    json.dump(storeGetDrawRes, open("store_get_draw.json", "w"))
+    # storeGetDrawRes = Types.stats.StoreGetDrawResponse(**storeGetDrawRes, strict=True)
+    return storeGetDrawRes
+
+
+# TODO: 検証
+def store_user_draw(headers: dict, pool: int = 38, type: int = 1) -> any:
+    payload = {"pool": pool, "type": type}
+    storeUserDrawRes = requests.post("https://alicdn.mahjong-jp.net/store/userDraw", json=payload, headers=headers)
+    storeUserDrawRes = storeUserDrawRes.json()
+    print(storeUserDrawRes)
+    json.dump(storeUserDrawRes, open("store_user_draw.json", "w"))
+    return storeUserDrawRes
+
+
 # 風林火山イベ
 def get_activity_ex_team_daily_award(headers: dict) -> Types.stats.EXTeamDailyAwardResponse:
     payload = {}
@@ -1053,8 +1074,9 @@ def main():
     # get_res_bundle_data()
     emailLoginRes = login_riichi_city()
     headers = get_headers(emailLoginRes)
-    res = get_live_info_from_riichi_city(headers)
-    print(res)
+    store_get_draw(headers)
+    # res = get_live_info_from_riichi_city(headers)
+    # print(res)
     # lobbys_read_public_room(headers, playerCount=3, round=0)
     # get_daily(headers)
 

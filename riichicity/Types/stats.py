@@ -969,3 +969,15 @@ class StoreGetDrawResponse(BaseModel):
     code: int
     data: StoreGetDrawResponseData
     message: str
+
+
+class StoreUserDrawDataItem(BaseModel):
+    ItemID: int
+    exist: bool
+    type: int
+
+
+class StoreUserDrawData(BaseModel):
+    code: int
+    data: list[StoreUserDrawDataItem]
+    message: str

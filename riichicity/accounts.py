@@ -166,6 +166,53 @@ def dummyadid() -> str:
     return adid
 
 
+def store_create_payment_order(
+    headers: dict,
+    amount: int = 0.99,
+    area: str = "jp",
+    channel: str = "steam",
+    email: str = "a@a.com",
+    itemNum: int = 80,
+    item_id: int = 10001,
+    item_name: str = "一番券",
+    lang: str = "ja",
+    payer: str = "steam",
+    productSKU: str = "com.riichicity.happywoods_1000108",
+    site_type: int = 3,
+    token_id: str = "76561199017366274",  # ここの値は何回かリクエストを送ってみても変わらない
+    version: str = "2.1.3.41302",
+) -> any:
+    payload = {
+        "amount": amount,
+        "area": area,
+        "channel": channel,
+        "email": email,
+        "itemNum": itemNum,
+        "item_id": item_id,
+        "item_name": item_name,
+        "lang": lang,
+        "payer": payer,
+        "productSKU": productSKU,
+        "site_type": site_type,
+        "token_id": token_id,
+        "version": version,
+    }
+    res = ""  # requests.post("https://alicdn.mahjong-jp.net/store/createPaymentOrder", json=payload, headers=headers)
+    res = res.json()
+    json.dump(res, open("store_create_payment_order.json", "w"))
+    print(res)
+    return res
+
+
+def store_complete_payment_order(headers: dict, orderID: str) -> any:
+    payload = {"orderID": orderID}
+    res = ""  # requests.post("https://alicdn.mahjong-jp.net/store/completePaymentOrder", json=payload, headers=headers)
+    res = res.json()
+    json.dump(res, open("store_complete_payment_order.json", "w"))
+    print(res)
+    return res
+
+
 def create_user() -> dict:
     uuidv4 = uuid.uuid4()
     deviceId = str(uuidv4).upper()

@@ -166,6 +166,14 @@ def dummyadid() -> str:
     return adid
 
 
+# 流れ
+# 1. store_create_payment_order
+
+# logsuccessfulpurchase(steam)
+# 2. store_complete_payment_order
+# 3. get_product_list(いらないけどui的に)
+
+
 def store_create_payment_order(
     headers: dict,
     amount: int = 0.99,

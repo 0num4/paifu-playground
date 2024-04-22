@@ -182,6 +182,60 @@ class UserBriefResponse(BaseModel):
     message: str
 
 
+class ActivityUserTasksResponseTaskAward(BaseModel):
+    category: int
+    count: int
+    isEquip: bool
+    itemId: int
+
+
+class ActivityUserTasksResponseTask(BaseModel):
+    action: int
+    activeNum: int
+    award: list[ActivityUserTasksResponseTaskAward]
+    isVip: bool
+    status: int
+    taskId: int
+    taskTimes: int
+    usetTimes: int
+
+
+class ActivityUserTasksResponseBox(BaseModel):
+    activeNum: int
+    boxId: int
+    boxType: int
+    status: int
+
+
+class ActivityUserTasksResponseDataDailyDetail(BaseModel):
+    boxs: list[ActivityUserTasksResponseBox]
+    dailyActiveNum: int
+    tasks: list[ActivityUserTasksResponseTask]
+    weekActiveNum: int
+
+
+class ActivityUserTasksResponseDataGrowthDetail(BaseModel):
+    tasks: list[ActivityUserTasksResponseTask] = []
+
+
+class ActivityUserTasksResponseDataWeeklyDetail(BaseModel):
+    boxs: list[ActivityUserTasksResponseBox]
+    tasks: list[ActivityUserTasksResponseTask]
+    weekActiveNum: int
+
+
+class ActivityUserTasksResponseData(BaseModel):
+    dailyDetail: ActivityUserTasksResponseDataDailyDetail
+    growthDetail: ActivityUserTasksResponseDataGrowthDetail
+    weeklyDetail: ActivityUserTasksResponseDataWeeklyDetail
+
+
+class ActivityUserTasksResponse(BaseModel):
+    code: int
+    data: ActivityUserTasksResponseData
+    message: str
+
+
 class EmailLoginResponseDataUser(BaseModel):
     avatar: str
     email: str

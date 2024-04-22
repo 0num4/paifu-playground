@@ -252,11 +252,12 @@ def get_user_brief(headers: dict, userId: str) -> Types.stats.UserBriefResponse:
     return userBriefRes
 
 
-def get_user_tasks(headers: dict) -> dict[any]:
+def get_user_tasks(headers: dict) -> Types.stats.ActivityUserTasksResponse:
     userTasksRes = requests.post("https://alicdn.mahjong-jp.net/activity/userTask", headers=headers)
     userTasksRes = userTasksRes.json()
     print(userTasksRes)
-    # userBriefRes = Types.stats.UserBriefResponse(**userBriefRes, strict=True)
+    # json.dump(userTasksRes, open("get_user_tasks2.json", "w"))
+    userTasksRes = Types.stats.ActivityUserTasksResponse(**userTasksRes, strict=True)
     return userTasksRes
 
 
@@ -1074,8 +1075,10 @@ def main():
     # get_res_bundle_data()
     emailLoginRes = login_riichi_city()
     headers = get_headers(emailLoginRes)
+    res = get_user_tasks(headers)
+    print(res)
     # res = store_get_draw(headers)
-    store_user_draw(headers)
+    # store_user_draw(headers)
     # res = get_live_info_from_riichi_city(headers)
     # print(res)
     # lobbys_read_public_room(headers, playerCount=3, round=0)

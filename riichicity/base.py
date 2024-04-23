@@ -2,6 +2,7 @@ import os
 import json
 import random
 import requests
+import Types.accountTypes
 import Types.stats
 import Types.commonConsts
 import Types.consts
@@ -59,7 +60,7 @@ def get_res_bundle_data():
         print(f"error! {getResBundleData.status_code} Failed to get version")
 
 
-def login_riichi_city(adjustId: str | None = None) -> Types.stats.EmailLoginResponse:
+def login_riichi_city(adjustId: str | None = None) -> Types.stats.EmailLoginResponse | None:
     # res = fetch_domain_name()
     # print(res.domain_name)
     # リクエストヘッダーを設定
@@ -76,9 +77,10 @@ def login_riichi_city(adjustId: str | None = None) -> Types.stats.EmailLoginResp
 
     emailLoginRes = response.json()
     print(emailLoginRes)
+    emailLoginRes = Types.stats.EmailLoginResponse(**emailLoginRes, strict=True)
     # json.dump(emailLoginRes, open("emailLoginRes.json", "w"))
-    if emailLoginRes["code"] == 0:
-        print("Logged into Riichi city as " + emailLoginRes["data"]["user"]["nickname"])
+    if emailLoginRes.code == 0:
+        print(f"Logged into Riichi city as {emailLoginRes.data.user.nickname}")
 
         return emailLoginRes
     else:
@@ -86,28 +88,24 @@ def login_riichi_city(adjustId: str | None = None) -> Types.stats.EmailLoginResp
         return None
 
 
-def get_headers(emailLoginRes: dict) -> dict:
+def get_headers(email_login_res: Types.stats.EmailLoginResponse) -> Types.accountTypes.Headers:
     deviceid = os.environ["deviceid"]
-    SID = os.environ["sid"]
-    UID = emailLoginRes["data"]["user"]["id"]
+    sid = os.environ["sid"]
+
+    uid = email_login_res.data.user.id
     version = "2.0.6.31622"
-    cookies = {
-        "channel": "default",
-        "lang": "en",
-        "deviceid": deviceid,
-        "sid": SID,
-        "uid": UID,
-        "region": "cn",
-        "platform": "pc",
-        "version": version,
-    }
-    headers = {
-        "User-Agent": "UnityPlayer/2020.3.42f1c1 (UnityWebRequest/1.0, libcurl/7.52.0-DEV)",
-        "Content-Type": "application/json",
-        "Cookies": json.dumps(cookies),
-        "Accept": "application/json",
-        "X-Unity-Version": "2020.3.42f1c1",  # TODO: ここが変わっていく
-    }
+
+    cookies = Types.accountTypes.HeaderCookies(
+        deviceid=deviceid,
+        sid=sid,
+        uid=uid,
+        version=version,
+    )
+
+    headers = Types.accountTypes.Headers(
+        Cookies=cookies.model_dump_json(),
+    )
+
     return headers
 
 
@@ -1075,6 +1073,7 @@ def main():
     # get_res_bundle_data()
     emailLoginRes = login_riichi_city()
     headers = get_headers(emailLoginRes)
+    headers = headers.model_dump()
     res = get_user_tasks(headers)
     print(res)
     # res = store_get_draw(headers)

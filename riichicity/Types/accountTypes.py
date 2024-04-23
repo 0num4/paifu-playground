@@ -5,6 +5,31 @@ import pydantic
 from . import consts
 
 
+class HeaderCookies(BaseModel):
+    channel: str = "default"
+    lang: str = "en"
+    deviceid: str
+    sid: str
+    uid: int
+    region: str = "cn"
+    platform: str = "pc"
+    version: str
+
+
+class Headers(BaseModel):
+    User_Agent: str = "UnityPlayer/2020.3.42f1c1 (UnityWebRequest/1.0, libcurl/7.52.0-DEV)"
+    Content_Type: str = "application/json"
+    Cookies: str
+    Accept: str = "application/json"
+    X_Unity_Version: str = "2020.3.42f1c1"  # TODO: ここが変わっていく
+
+    # @pydantic.field_serializer("Cookies")
+    # @classmethod
+    # def serialize_cookies(self, c: HeaderCookies) -> str:
+    #     cookieObj = HeaderCookies(**c, strict=True)
+    #     return cookieObj.model_dump_json()
+
+
 class PingResponse(BaseModel):
     code: int
     data: typing.Literal["post pong"]

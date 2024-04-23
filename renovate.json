@@ -23,5 +23,9 @@
       "groupName": "boto3",
       "matchPackagePatterns": ["boto3", "botocore"]
     }
-  ]
+  ],
+  "poetry": {
+    "enabled": true,
+    "schedule": ["every weekend"]
+  }
 }

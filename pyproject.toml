@@ -20,6 +20,10 @@ pytz = "^2024.1"
 pydantic = {extras = ["email"], version = "^2.6.4"}
 
 
+[tool.poetry.group.dev.dependencies]
+mypy = "^1.9.0"
+ruff = "^0.4.1"
+
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"

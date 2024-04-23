@@ -26,6 +26,6 @@
   ],
   "poetry": {
     "enabled": true,
-    "schedule": ["every weekend"]
+    "schedule": ["every weekday"]
   }
 }

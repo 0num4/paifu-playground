@@ -250,8 +250,8 @@ def get_user_brief(headers: dict, userId: str) -> Types.stats.UserBriefResponse:
     return userBriefRes
 
 
-def get_user_tasks(headers: dict) -> Types.stats.ActivityUserTasksResponse:
-    userTasksRes = requests.post("https://alicdn.mahjong-jp.net/activity/userTask", headers=headers)
+def get_user_tasks(headers: Types.accountTypes.Headers) -> Types.stats.ActivityUserTasksResponse:
+    userTasksRes = requests.post("https://alicdn.mahjong-jp.net/activity/userTask", headers=headers.model_dump_json())
     userTasksRes = userTasksRes.json()
     print(userTasksRes)
     # json.dump(userTasksRes, open("get_user_tasks2.json", "w"))
@@ -1073,7 +1073,6 @@ def main():
     # get_res_bundle_data()
     emailLoginRes = login_riichi_city()
     headers = get_headers(emailLoginRes)
-    headers = headers.model_dump()
     res = get_user_tasks(headers)
     print(res)
     # res = store_get_draw(headers)

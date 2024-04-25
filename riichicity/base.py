@@ -454,10 +454,10 @@ def lobbys_sign_official_match(headers: dict, isCancel: bool = False, officialID
 
 
 # 日時設定されてるグランプリ(週間大会とか)の情報を取得。定期的に取得して時間になったら多分こちらからつなぎに行くっぽい
-def lobbys_read_timing_match(headers: dict) -> Types.stats.ReadTimingMatchResponse:
+def lobbys_read_timing_match(headers: Types.accountTypes.Headers) -> Types.stats.ReadTimingMatchResponse:
     payload = {}
     lobbysReadTimingMatchRes = requests.post(
-        "https://alicdn.mahjong-jp.net/lobbys/readTimingMatch", json=payload, headers=headers
+        "https://alicdn.mahjong-jp.net/lobbys/readTimingMatch", json=payload, headers=headers.model_dump()
     )
     lobbysReadTimingMatchRes = lobbysReadTimingMatchRes.json()
     # print(lobbysReadTimingMatchRes)
@@ -768,7 +768,7 @@ def save_json(data: dict, filename: str):
         f.close()
 
 
-def signMatch_dev(headers: dict):
+def signMatch_dev(headers: Types.accountTypes.Headers):
     lobbysReadTimingMatchRes = lobbys_read_timing_match(headers)
     if lobbysReadTimingMatchRes.code == 0:
         for item in lobbysReadTimingMatchRes.data:
@@ -783,8 +783,8 @@ def signMatch_dev(headers: dict):
                     print(f"参加しました: {item.officialID}")
                     sleep_time = random.uniform(3, 5)
                     time.sleep(sleep_time)
-    # res = lobbys_sign_official_match(headers)
-    # save_json(res, "lobbys_sign_official_match.json")
+    res = lobbys_sign_official_match(headers)
+    save_json(res, "lobbys_sign_official_match.json")
 
 
 # /release/notice/domain_name.ncc
@@ -1072,8 +1072,12 @@ def readAllPaiPu(headers: dict) -> list[Types.readPaiPuList.ReadPaiPuListType1 |
 def main():
     # get_res_bundle_data()
     emailLoginRes = login_riichi_city()
+    if emailLoginRes is None:
+        print("Failed to login")
+        return
     headers = get_headers(emailLoginRes)
-    res = get_user_tasks(headers)
+
+    signMatch_dev(headers)
     print(res)
     # res = store_get_draw(headers)
     # store_user_draw(headers)

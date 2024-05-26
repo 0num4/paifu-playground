@@ -1,8 +1,9 @@
 [tool.poetry]
 name = "paifu-playground"
 version = "0.1.0"
-description = ""
-authors = ["Your Name <you@example.com>"]
+description = "paifu_playground"
+authors = ["0num4 <r.oonuma@matsuri-tech.com>"]
+license = "MIT"
 readme = "README.md"
 packages = [{include = "paifu_playground"}]
 

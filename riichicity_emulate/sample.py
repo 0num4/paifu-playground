@@ -1,4 +1,4 @@
-import matplotlib.pyplot as plt
+import matplotlib.pyplot
 import pandas as pd
 import os
 import random
@@ -7,7 +7,9 @@ import random
 def main():
     df = readcsv()
     if df is not None:
-        simulate_games(df, num_games=2000, initial_score=3800)
+        plt = simulate_games(df, num_games=2000, initial_score=3800)
+        plt.legend()
+        plt.show()
 
 
 def readcsv() -> pd.DataFrame | None:
@@ -54,17 +56,16 @@ def simulate_games(df, num_games, initial_score):
 
         results[place] = scores
 
-    plt.figure(figsize=(10, 6))
+    matplotlib.pyplot.figure(figsize=(10, 6))
     for place, scores in results.items():
-        plt.plot(range(num_games + 1), scores, label=place)
-    plt.axhline(y=initial_score, color="black", linestyle="--", label="initial score")
-    plt.axhline(y=7600, color="red", linestyle="--", label="goal")
-    plt.xlabel("Game")
-    plt.ylabel("Score")
-    plt.ylim(0, 20000)
-    plt.title("Score Transition")
-    plt.legend()
-    plt.show()
+        matplotlib.pyplot.plot(range(num_games + 1), scores, label=place)
+    matplotlib.pyplot.axhline(y=initial_score, color="black", linestyle="--", label="initial score")
+    matplotlib.pyplot.axhline(y=7600, color="red", linestyle="--", label="goal")
+    matplotlib.pyplot.xlabel("Game")
+    matplotlib.pyplot.ylabel("Score")
+    matplotlib.pyplot.ylim(0, 20000)
+    matplotlib.pyplot.title("Score Transition")
+    return matplotlib.pyplot
 
 
 if __name__ == "__main__":

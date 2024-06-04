@@ -1,6 +1,5 @@
 import streamlit as st
 import sample
-import matplotlib.pyplot as plt
 
 st.set_page_config(layout="wide")
 st.title("rcity 10dan saka Sampling")

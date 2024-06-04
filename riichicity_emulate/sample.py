@@ -57,6 +57,8 @@ def simulate_games(df, num_games, initial_score):
     plt.figure(figsize=(10, 6))
     for place, scores in results.items():
         plt.plot(range(num_games + 1), scores, label=place)
+    plt.axhline(y=initial_score, color="black", linestyle="--", label="initial score")
+    plt.axhline(y=7600, color="red", linestyle="--", label="goal")
     plt.xlabel("Game")
     plt.ylabel("Score")
     plt.title("Score Transition")

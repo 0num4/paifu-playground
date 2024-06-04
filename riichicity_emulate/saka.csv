@@ -1,0 +1,17 @@
+dan,place,win,draw,lose
+10,enton,90,0,-120
+10,enhan,135,0,-180
+10,ginton,160,0,-180
+10,ginhan,240,0,-270
+7,ginton,160,0,-150
+8,ginton,160,0,-160
+9,ginton,160,0,-170
+7,ginhan,240,0,-225
+8,ginhan,240,0,-240
+9,ginhan,240,0,-255
+7,enton,90,0,-90
+8,enton,90,0,-100
+9,enton,90,0,-110
+7,enhan,135,0,-135
+8,enhan,135,0,-150
+9,enhan,135,0,-165

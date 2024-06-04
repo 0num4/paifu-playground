@@ -61,6 +61,7 @@ def simulate_games(df, num_games, initial_score):
     plt.axhline(y=7600, color="red", linestyle="--", label="goal")
     plt.xlabel("Game")
     plt.ylabel("Score")
+    plt.ylim(0, 20000)
     plt.title("Score Transition")
     plt.legend()
     plt.show()

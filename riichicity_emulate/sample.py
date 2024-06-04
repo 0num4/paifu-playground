@@ -1,15 +1,13 @@
 import matplotlib.pyplot as plt
-import numpy as np
 import pandas as pd
 import os
+import random
 
 
 def main():
-    readcsv()
-    # x = np.linspace(0, 10, 100)
-    # y = np.sin(x)
-    # plt.plot(x, y)
-    # plt.show()
+    df = readcsv()
+    if df is not None:
+        simulate_games(df, num_games=2000, initial_score=3800)
 
 
 def readcsv() -> pd.DataFrame | None:
@@ -30,6 +28,40 @@ def readcsv() -> pd.DataFrame | None:
     # フィルター後のデータフレームを表示
     print(filtered_df)
     return filtered_df
+
+
+def simulate_games(df, num_games, initial_score):
+    results = {}
+
+    for _, row in df.iterrows():
+        place = row["place"]
+        win_score = row["win"]
+        lose_score = row["lose"]
+        draw_score = row["draw"]
+        win_rate = row["win_rate"]
+        lose_rate = row["lose_rate"]
+        draw_rate = row["draw_rate"]
+
+        scores = [initial_score]
+        for _ in range(num_games):
+            result = random.choices([1, 2, 3], weights=[win_rate, lose_rate, draw_rate])[0]
+            if result == 1:
+                scores.append(scores[-1] + win_score)
+            elif result == 2:
+                scores.append(scores[-1] + lose_score)
+            else:
+                scores.append(scores[-1] + draw_score)
+
+        results[place] = scores
+
+    plt.figure(figsize=(10, 6))
+    for place, scores in results.items():
+        plt.plot(range(num_games + 1), scores, label=place)
+    plt.xlabel("Game")
+    plt.ylabel("Score")
+    plt.title("Score Transition")
+    plt.legend()
+    plt.show()
 
 
 if __name__ == "__main__":

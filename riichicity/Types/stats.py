@@ -796,6 +796,12 @@ class BackpackUserItemListResponse(BaseModel):
     data: list[BackpackUserItemListResponseUserItem]
     message: str
 
+    def get_item_by_id(self, item_id: consts.EnumDefine.ItemID | int) -> BackpackUserItemListResponseUserItem | None:
+        for item in self.data:
+            if item.itemID == item_id:
+                return item
+        return None
+
 
 class ActivityViewActionResponse(BaseModel):
     code: int

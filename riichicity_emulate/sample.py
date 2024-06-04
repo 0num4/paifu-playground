@@ -31,7 +31,7 @@ def readcsv(filter: int = 10) -> pd.DataFrame | None:
     return filtered_df
 
 
-def simulate_games(df, num_games: int = 1000):
+def simulate_games(df, num_games: int = 1000, max_score: int = 20000):
     results = {}
 
     for _, row in df.iterrows():
@@ -63,7 +63,7 @@ def simulate_games(df, num_games: int = 1000):
     matplotlib.pyplot.axhline(y=df.iloc[0]["rank_up_score"], color="red", linestyle="--", label="goal")
     matplotlib.pyplot.xlabel("Game")
     matplotlib.pyplot.ylabel("Score")
-    matplotlib.pyplot.ylim(0, 20000)
+    matplotlib.pyplot.ylim(0, max_score)
     matplotlib.pyplot.title("Score Transition")
     return matplotlib.pyplot
 

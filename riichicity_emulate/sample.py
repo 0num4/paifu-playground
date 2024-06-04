@@ -12,14 +12,14 @@ def main():
     # plt.show()
 
 
-def readcsv():
+def readcsv() -> pd.DataFrame | None:
     # CSVファイルの存在確認
     csv_file = "saka.csv"
     current_dir = os.path.dirname(os.path.abspath(__file__))
     csv_path = os.path.join(current_dir, csv_file)
     if not os.path.isfile(csv_path):
         print(f"Error: {csv_file} does not exist.")
-        return
+        return None
 
     # CSVファイルの読み込み
     df = pd.read_csv(csv_path)
@@ -29,6 +29,7 @@ def readcsv():
 
     # フィルター後のデータフレームを表示
     print(filtered_df)
+    return filtered_df
 
 
 if __name__ == "__main__":

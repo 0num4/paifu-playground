@@ -7,7 +7,7 @@ import random
 def main():
     df = readcsv(10)
     if df is not None:
-        plt = simulate_games(df, num_games=2000, initial_score=3800)
+        plt = simulate_games(df, num_games=2000)
         plt.legend()
         plt.show()
 
@@ -31,7 +31,7 @@ def readcsv(filter: int = 10) -> pd.DataFrame | None:
     return filtered_df
 
 
-def simulate_games(df, num_games, initial_score):
+def simulate_games(df, num_games: int = 1000):
     results = {}
 
     for _, row in df.iterrows():
@@ -42,8 +42,9 @@ def simulate_games(df, num_games, initial_score):
         win_rate = row["win_rate"]
         lose_rate = row["lose_rate"]
         draw_rate = row["draw_rate"]
+        init_score = row["init_score"]
 
-        scores = [initial_score]
+        scores = [init_score]
         for _ in range(num_games):
             result = random.choices([1, 2, 3], weights=[win_rate, lose_rate, draw_rate])[0]
             if result == 1:
@@ -58,8 +59,8 @@ def simulate_games(df, num_games, initial_score):
     matplotlib.pyplot.figure(figsize=(10, 6))
     for place, scores in results.items():
         matplotlib.pyplot.plot(range(num_games + 1), scores, label=place)
-    matplotlib.pyplot.axhline(y=initial_score, color="black", linestyle="--", label="initial score")
-    matplotlib.pyplot.axhline(y=7600, color="red", linestyle="--", label="goal")
+    matplotlib.pyplot.axhline(y=df.iloc[0]["init_score"], color="black", linestyle="--", label="initial score")
+    matplotlib.pyplot.axhline(y=df.iloc[0]["rank_up_score"], color="red", linestyle="--", label="goal")
     matplotlib.pyplot.xlabel("Game")
     matplotlib.pyplot.ylabel("Score")
     matplotlib.pyplot.ylim(0, 20000)

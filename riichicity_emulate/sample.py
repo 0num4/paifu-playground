@@ -8,7 +8,6 @@ def main():
     df = readcsv(10)
     if df is not None:
         plt = simulate_games(df, num_games=2000)
-        plt.legend()
         plt.show()
 
 
@@ -65,6 +64,7 @@ def simulate_games(df, num_games: int = 1000, max_score: int = 20000):
     matplotlib.pyplot.ylabel("Score")
     matplotlib.pyplot.ylim(0, max_score)
     matplotlib.pyplot.title("Score Transition")
+    matplotlib.pyplot.legend()
     return matplotlib.pyplot
 
 

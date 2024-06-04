@@ -5,14 +5,14 @@ import random
 
 
 def main():
-    df = readcsv()
+    df = readcsv(10)
     if df is not None:
         plt = simulate_games(df, num_games=2000, initial_score=3800)
         plt.legend()
         plt.show()
 
 
-def readcsv() -> pd.DataFrame | None:
+def readcsv(filter: int = 10) -> pd.DataFrame | None:
     # CSVファイルの存在確認
     csv_file = "saka.csv"
     current_dir = os.path.dirname(os.path.abspath(__file__))
@@ -24,8 +24,7 @@ def readcsv() -> pd.DataFrame | None:
     # CSVファイルの読み込み
     df = pd.read_csv(csv_path)
 
-    # 最初の列が10のもののみにフィルター
-    filtered_df = df[df.iloc[:, 0] == 10]
+    filtered_df = df[df.iloc[:, 0] == filter]
 
     # フィルター後のデータフレームを表示
     print(filtered_df)

@@ -33,7 +33,7 @@ def readcsv(filter: int = 10) -> pd.DataFrame | None:
 def simulate_games(df, num_games: int = 1000, max_score: int = 20000):
     results = {}
 
-    for _, row in df.iterrows():
+    for index, row in df.iterrows():
         place = row["place"]
         win_score = row["win"]
         lose_score = row["lose"]
@@ -54,6 +54,8 @@ def simulate_games(df, num_games: int = 1000, max_score: int = 20000):
                 scores.append(scores[-1] + draw_score)
 
         results[place] = scores
+        df.at[index, "reached_goal"] = any([score >= row["rank_up_score"] for score in scores])
+        df.at[index, "rank_down"] = any([score <= 0 for score in scores])
 
     matplotlib.pyplot.figure(figsize=(10, 6))
     for place, scores in results.items():

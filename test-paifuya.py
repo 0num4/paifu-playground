@@ -23,10 +23,14 @@ def check_nickname_in_api(nickname):
         return False
 
 
-# ここでニックネームをチェック
-nickname_to_check = "ぺいぺいちゃん"
-exists = check_nickname_in_api(nickname_to_check)
-if exists:
-    print(f"ニックネーム '{nickname_to_check}' はAPIデータに存在します。")
-else:
-    print(f"ニックネーム '{nickname_to_check}' はAPIデータに存在しません。")
+def main():
+    nickname_to_check = "ぺいぺいちゃん"
+    exists = check_nickname_in_api(nickname_to_check)
+    if exists:
+        print(f"ニックネーム '{nickname_to_check}' はAPIデータに存在します。")
+    else:
+        print(f"ニックネーム '{nickname_to_check}' はAPIデータに存在しません。")
+
+
+if __name__ == "__main__":
+    main()

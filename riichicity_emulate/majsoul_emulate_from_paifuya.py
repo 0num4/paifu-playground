@@ -2,7 +2,10 @@
 import requests
 import streamlit as st
 import datetime
+import sys
 import pydantic
+
+import paifuya_utils.util
 
 endpoints = [
     "https://5-data.amae-koromo.com/api/v2/pl3/player_records/73425222/1700007119999/1262304000000?limit=153&mode=22&descending=true&tag=53",
@@ -11,6 +14,8 @@ endpoints = [
     "https://5-data.amae-koromo.com/api/v2/pl3/player_extended_stats/73425222/1262304000000/1700007119999?mode=22&tag=472224",
     "https://5-data.amae-koromo.com/api/v2/pl3/player_stats/73425222/1262304000000/1700007119999?mode=22&tag=472224",
 ]
+
+print(sys.path)
 
 
 class PlayerLevel(pydantic.BaseModel):
@@ -37,6 +42,10 @@ def getplayerIds(name, game_mode=3) -> list[PlayerData] | None:
     print(res)
     playerdatas = pydantic.TypeAdapter(list[PlayerData])
     pdatas = playerdatas.validate_python(res)
+    for pdata in pdatas:
+        print(pdata.latest_timestamp)
+        print(pdata.nickname)
+        print(paifuya_utils.util.parse_dan(pdata.level.id))
     print(pdatas)
     # date = pdata
     # date = datetime.datetime.fromtimestamp(date)
@@ -48,7 +57,7 @@ def getplayerIds(name, game_mode=3) -> list[PlayerData] | None:
 st.title("majsoul sanma sampling")
 num_games = st.selectbox("Number of games", [100, 500, 1000, 2000, 3000], index=1)
 player_name = st.text_input("Player name", "みちよん")
-player_id = getplayerId(player_name)
+player_id = getplayerIds(player_name)
 num_dan = st.selectbox(
     "坂を選んでください",
     ("豪1", "豪2", "豪3"))
@@ -57,4 +66,4 @@ st.write(num_dan)
 st.write("Player ID: ", player_id)
 
 if __name__ == "__main__":
-    getplayerId("みちよん")
+    getplayerIds("みちよん")

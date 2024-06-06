@@ -5,7 +5,9 @@ description = "paifu_playground"
 authors = ["0num4 <r.oonuma@matsuri-tech.com>"]
 license = "MIT"
 readme = "README.md"
-packages = [{include = "paifu_playground"}]
+packages = [
+    {include = "paifuya_utils", from = "."},
+]
 
 [tool.poetry.dependencies]
 python = "^3.11"

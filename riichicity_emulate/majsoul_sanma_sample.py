@@ -11,7 +11,7 @@ def main():
         plt.show()
 
 
-def readcsv() -> pd.DataFrame | None:
+def readcsv(dan_filter: str | None = "gou3") -> pd.DataFrame | None:
     # CSVファイルの存在確認
     csv_file = "majsoul_sanma.csv"
     current_dir = os.path.dirname(os.path.abspath(__file__))
@@ -23,11 +23,13 @@ def readcsv() -> pd.DataFrame | None:
     # CSVファイルの読み込み
     df = pd.read_csv(csv_path)
 
-    # filtered_df = df[df.iloc[:, 0] == dan_filter]
+    if dan_filter == "all":
+        return df
+    filtered_df = df[df.iloc[:, 0] == dan_filter]
 
     # フィルター後のデータフレームを表示
-    print(df)
-    return df
+    print(filtered_df)
+    return filtered_df
 
 
 def simulate_games(df, num_games: int = 1000, max_score: int = 20000):

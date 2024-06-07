@@ -11,7 +11,7 @@ def main():
         plt.show()
 
 
-def readcsv(dan_filter: str = "gou3") -> pd.DataFrame | None:
+def readcsv() -> pd.DataFrame | None:
     # CSVファイルの存在確認
     csv_file = "majsoul_sanma.csv"
     current_dir = os.path.dirname(os.path.abspath(__file__))
@@ -23,18 +23,19 @@ def readcsv(dan_filter: str = "gou3") -> pd.DataFrame | None:
     # CSVファイルの読み込み
     df = pd.read_csv(csv_path)
 
-    filtered_df = df[df.iloc[:, 0] == dan_filter]
+    # filtered_df = df[df.iloc[:, 0] == dan_filter]
 
     # フィルター後のデータフレームを表示
-    print(filtered_df)
-    return filtered_df
+    print(df)
+    return df
 
 
 def simulate_games(df, num_games: int = 1000, max_score: int = 20000):
     results = {}
-
+    matplotlib.pyplot.figure(figsize=(10, 6))
     for index, row in df.iterrows():
-        place = row["place"]
+        dan = row["dan"]
+        # place = row["place"]
         win_score = row["win"]
         lose_score = row["lose"]
         draw_score = row["draw"]
@@ -42,7 +43,9 @@ def simulate_games(df, num_games: int = 1000, max_score: int = 20000):
         lose_rate = row["lose_rate"]
         draw_rate = row["draw_rate"]
         init_score = row["init_score"]
-
+        rank_up_score = row["rank_up_score"]
+        matplotlib.pyplot.axhline(y=init_score, color="black", linestyle="--", label=f"{dan} initial score")
+        matplotlib.pyplot.axhline(y=rank_up_score, color="red", linestyle="--", label=f"{dan} goal")
         scores = [init_score]
         for _ in range(num_games):
             result = random.choices([1, 2, 3], weights=[win_rate, lose_rate, draw_rate])[0]
@@ -53,15 +56,14 @@ def simulate_games(df, num_games: int = 1000, max_score: int = 20000):
             else:
                 scores.append(scores[-1] + draw_score)
 
-        results[place] = scores
+        results[dan] = scores
         df.at[index, "reached_goal"] = any([score >= row["rank_up_score"] for score in scores])
         df.at[index, "rank_down"] = any([score <= 0 for score in scores])
 
-    matplotlib.pyplot.figure(figsize=(10, 6))
-    for place, scores in results.items():
-        matplotlib.pyplot.plot(range(num_games + 1), scores, label=place)
-    matplotlib.pyplot.axhline(y=df.iloc[0]["init_score"], color="black", linestyle="--", label="initial score")
-    matplotlib.pyplot.axhline(y=df.iloc[0]["rank_up_score"], color="red", linestyle="--", label="goal")
+
+    for dan, scores in results.items():
+        matplotlib.pyplot.plot(range(num_games + 1), scores, label=dan)
+
     matplotlib.pyplot.xlabel("Game")
     matplotlib.pyplot.ylabel("Score")
     matplotlib.pyplot.ylim(0, max_score)

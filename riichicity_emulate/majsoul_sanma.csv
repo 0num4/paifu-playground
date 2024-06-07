@@ -1,0 +1,5 @@
+dan,place,win,draw,lose,win_rate,draw_rate,lose_rate,init_score,rank_up_score
+gou1,3tamanan,160,0,-165,0.3589,0.3563,0.2848,1400,2800
+gou2,3tamanan,160,0,-190,0.3589,0.3563,0.2848,1600,3200
+gou3,3tamanan,160,0,-215,0.3589,0.3563,0.2848,1800,3600
+sei1,3tamanan,160,0,-240,0.3589,0.3563,0.2848,2000,4000

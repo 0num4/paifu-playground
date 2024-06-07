@@ -31,7 +31,7 @@ class PlayerData(pydantic.BaseModel):
     latest_timestamp: datetime.datetime
 
 
-def getplayerIds(name, game_mode=3) -> list[PlayerData] | None:
+def getplayers(name, game_mode=3) -> list[PlayerData] | None:
     if game_mode == 3:
         s0 = "https://5-data.amae-koromo.com/api/v2/pl3/"
     elif game_mode == 4:
@@ -54,16 +54,21 @@ def getplayerIds(name, game_mode=3) -> list[PlayerData] | None:
     # return pdata["id"]
 
 
+def filter_high_rank_players(playerdatas: list[PlayerData]) -> PlayerData:
+    return max(playerdatas, key=lambda player: player.level.id)
+
+
 st.title("majsoul sanma sampling")
 num_games = st.selectbox("Number of games", [100, 500, 1000, 2000, 3000], index=1)
 player_name = st.text_input("Player name", "みちよん")
-player_id = getplayerIds(player_name)
+players = getplayers(player_name)
+player = filter_high_rank_players(players)
 num_dan = st.selectbox(
     "坂を選んでください",
     ("豪1", "豪2", "豪3"))
 
 st.write(num_dan)
-st.write("Player ID: ", player_id)
+st.write("Player ID: ", player.id)
 
 if __name__ == "__main__":
-    getplayerIds("みちよん")
+    getplayers("みちよん")

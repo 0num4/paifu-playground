@@ -7,6 +7,7 @@ license = "MIT"
 readme = "README.md"
 packages = [
     {include = "paifuya_utils", from = "."},
+    {include = "riichirity_emulate", from = "."},
 ]
 
 [tool.poetry.dependencies]

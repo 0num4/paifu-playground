@@ -2,6 +2,7 @@ import matplotlib.pyplot
 import pandas as pd
 import os
 import random
+import enum
 
 
 def main():
@@ -11,9 +12,20 @@ def main():
         plt.show()
 
 
-def readcsv(filter: int = 10) -> pd.DataFrame | None:
+class Platform(enum.IntEnum):
+    rcity = 1
+    tenhou = 2
+
+
+def readcsv(
+    filter: int = 10,
+    platform: Platform = Platform.rcity,
+) -> pd.DataFrame | None:
     # CSVファイルの存在確認
-    csv_file = "rcity_sanma.csv"
+    if platform == Platform.rcity:
+        csv_file = "rcity_sanma.csv"
+    elif platform == Platform.tenhou:
+        csv_file = "tenho_sanma.csv"
     current_dir = os.path.dirname(os.path.abspath(__file__))
     csv_path = os.path.join(current_dir, csv_file)
     if not os.path.isfile(csv_path):

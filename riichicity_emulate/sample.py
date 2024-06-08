@@ -13,7 +13,7 @@ def main():
 
 def readcsv(filter: int = 10) -> pd.DataFrame | None:
     # CSVファイルの存在確認
-    csv_file = "saka.csv"
+    csv_file = "rcity_sanma.csv"
     current_dir = os.path.dirname(os.path.abspath(__file__))
     csv_path = os.path.join(current_dir, csv_file)
     if not os.path.isfile(csv_path):
@@ -45,7 +45,9 @@ def simulate_games(df, num_games: int = 1000, max_score: int = 20000):
 
         scores = [init_score]
         for _ in range(num_games):
-            result = random.choices([1, 2, 3], weights=[win_rate, lose_rate, draw_rate])[0]
+            result = random.choices(
+                [1, 2, 3], weights=[win_rate, lose_rate, draw_rate]
+            )[0]
             if result == 1:
                 scores.append(scores[-1] + win_score)
             elif result == 2:
@@ -54,14 +56,20 @@ def simulate_games(df, num_games: int = 1000, max_score: int = 20000):
                 scores.append(scores[-1] + draw_score)
 
         results[place] = scores
-        df.at[index, "reached_goal"] = any([score >= row["rank_up_score"] for score in scores])
+        df.at[index, "reached_goal"] = any(
+            [score >= row["rank_up_score"] for score in scores]
+        )
         df.at[index, "rank_down"] = any([score <= 0 for score in scores])
 
     matplotlib.pyplot.figure(figsize=(10, 6))
     for place, scores in results.items():
         matplotlib.pyplot.plot(range(num_games + 1), scores, label=place)
-    matplotlib.pyplot.axhline(y=df.iloc[0]["init_score"], color="black", linestyle="--", label="initial score")
-    matplotlib.pyplot.axhline(y=df.iloc[0]["rank_up_score"], color="red", linestyle="--", label="goal")
+    matplotlib.pyplot.axhline(
+        y=df.iloc[0]["init_score"], color="black", linestyle="--", label="initial score"
+    )
+    matplotlib.pyplot.axhline(
+        y=df.iloc[0]["rank_up_score"], color="red", linestyle="--", label="goal"
+    )
     matplotlib.pyplot.xlabel("Game")
     matplotlib.pyplot.ylabel("Score")
     matplotlib.pyplot.ylim(0, max_score)

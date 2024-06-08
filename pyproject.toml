@@ -30,6 +30,7 @@ streamlit = "^1.35.0"
 mypy = "^1.9.0"
 ruff = "^0.4.1"
 flake8 = "^7.0.0"
+pytest = "^8.2.2"
 
 
 [tool.poetry.group.riichi-emu.dependencies]

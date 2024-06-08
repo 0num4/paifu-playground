@@ -64,3 +64,6 @@ lint-pyright:
 
 st:
 	poetry run streamlit run riichicity_emulate/streamlitsample.py
+
+test-st:
+	python riichicity_emulate/test_streamlitplayground.py 

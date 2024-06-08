@@ -1,5 +1,5 @@
 import streamlit as st
-import riichicity_emulate.rcity_tenho_sampling as rcity_tenho_sampling
+import rcity_tenho_sampling
 
 # import yonma_sample
 
@@ -8,7 +8,7 @@ st.title("tenho or rcity 10dan saka Sampling")
 
 num_games = st.selectbox("Number of games", [100, 500, 1000, 2000, 3000], index=1)
 num_dan = st.selectbox("Number of dan", [7, 8, 9, 10], index=3)
-platform = st.selectbox("platform", ("rcity", "tenhou"))
+platform = st.selectbox("platform", ("rcity", "tenhou"), key="platform")
 print(f"platform: {platform}, enum: {rcity_tenho_sampling.Platform[platform]}")
 num_max_pt = st.selectbox("Number of max points", [9000, 10000, 15000, 20000], index=3)
 col1, col2, col3 = st.columns(3)

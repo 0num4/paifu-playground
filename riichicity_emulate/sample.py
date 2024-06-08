@@ -42,7 +42,12 @@ def readcsv(
     return filtered_df
 
 
-def simulate_games(df, num_games: int = 1000, max_score: int = 20000):
+def simulate_games(
+    df,
+    num_games: int = 1000,
+    max_score: int = 20000,
+    custom_rates: None | list[int, int, int] = None,
+):
     results = {}
 
     for index, row in df.iterrows():
@@ -54,7 +59,8 @@ def simulate_games(df, num_games: int = 1000, max_score: int = 20000):
         lose_rate = row["lose_rate"]
         draw_rate = row["draw_rate"]
         init_score = row["init_score"]
-
+        if custom_rates is not None:
+            win_rate, lose_rate, draw_rate = custom_rates
         scores = [init_score]
         for _ in range(num_games):
             result = random.choices(

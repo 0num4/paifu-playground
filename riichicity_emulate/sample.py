@@ -3,6 +3,7 @@ import pandas as pd
 import os
 import random
 import enum
+import pydantic
 
 
 def main():
@@ -96,5 +97,89 @@ def simulate_games(
     return matplotlib.pyplot
 
 
+class Result(pydantic.BaseModel):
+    place: str
+    is_reached_goal: bool
+    is_koudan: bool
+
+
+def simulate_games_core(
+    df,
+    num_games: int = 1000,
+    custom_rates: None | list[int, int, int] = None,
+) -> list[Result]:
+    results = []
+
+    for _, row in df.iterrows():
+        place = row["place"]
+        win_score = row["win"]
+        lose_score = row["lose"]
+        draw_score = row["draw"]
+        win_rate = row["win_rate"]
+        lose_rate = row["lose_rate"]
+        draw_rate = row["draw_rate"]
+        init_score = row["init_score"]
+        rank_up_score = row["rank_up_score"]
+
+        if custom_rates is not None:
+            win_rate, lose_rate, draw_rate = custom_rates
+
+        score = init_score
+        is_reached_goal = False
+        is_koudan = False
+
+        for _ in range(num_games):
+            result = random.choices(
+                [1, 2, 3], weights=[win_rate, lose_rate, draw_rate]
+            )[0]
+            if result == 1:
+                score += win_score
+            elif result == 2:
+                score += lose_score
+            else:
+                score += draw_score
+
+            if score >= rank_up_score:
+                is_reached_goal = True
+                break
+            if score <= 0:
+                is_koudan = True
+                break
+
+        results.append(
+            {"place": place, "is_reached_goal": is_reached_goal, "is_koudan": is_koudan}
+        )
+
+    return results
+
+
+def testing(num: int = 20):
+    """
+    simulate_gamesをn回回して、結果を表示する
+    """
+    df = readcsv(10)
+
+    if df is not None:
+        place_stats = {}
+
+        for _ in range(num):
+            results = simulate_games_core(df, num_games=2000)
+            for res in results:
+                place = res["place"]
+                if place not in place_stats:
+                    place_stats[place] = {"promotions": [], "demotions": []}
+                place_stats[place]["promotions"].append(res["is_reached_goal"])
+                place_stats[place]["demotions"].append(res["is_koudan"])
+
+        for place, stats in place_stats.items():
+            print("-----")
+            print(f"place: {place}")
+            print(f"回した回数: {num}")
+            print(f"昇段: {stats['promotions']}")
+            print(f"後段: {stats['demotions']}")
+            print(f"合計昇段回数: {sum(stats['promotions'])}")
+            print(f"合計後段回数: {sum(stats['demotions'])}")
+
+
 if __name__ == "__main__":
-    main()
+    testing()

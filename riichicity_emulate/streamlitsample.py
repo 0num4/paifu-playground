@@ -4,7 +4,7 @@ import sample
 # import yonma_sample
 
 st.set_page_config(layout="wide")
-st.title("rcity 10dan saka Sampling")
+st.title("tenho or rcity 10dan saka Sampling")
 
 num_games = st.selectbox("Number of games", [100, 500, 1000, 2000, 3000], index=1)
 num_dan = st.selectbox("Number of dan", [7, 8, 9, 10], index=3)

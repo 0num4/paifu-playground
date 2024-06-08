@@ -1,5 +1,5 @@
 import streamlit as st
-import sample
+import riichicity_emulate.rcity_tenho_sampling as rcity_tenho_sampling
 
 # import yonma_sample
 
@@ -9,7 +9,7 @@ st.title("tenho or rcity 10dan saka Sampling")
 num_games = st.selectbox("Number of games", [100, 500, 1000, 2000, 3000], index=1)
 num_dan = st.selectbox("Number of dan", [7, 8, 9, 10], index=3)
 platform = st.selectbox("platform", ("rcity", "tenhou"))
-print(f"platform: {platform}, enum: {sample.Platform[platform]}")
+print(f"platform: {platform}, enum: {rcity_tenho_sampling.Platform[platform]}")
 num_max_pt = st.selectbox("Number of max points", [9000, 10000, 15000, 20000], index=3)
 col1, col2, col3 = st.columns(3)
 with col1:
@@ -25,11 +25,13 @@ if custom_1st_p + custom_2nd_p + custom_3rd_p == 1.0:
 print(f"1st: {custom_1st_p}, 2nd: {custom_2nd_p}, 3rd: {custom_3rd_p}")
 if num_games is None or num_dan is None:
     st.stop()
-df = sample.readcsv(filter=num_dan, platform=sample.Platform[platform])
+df = rcity_tenho_sampling.readcsv(
+    filter=num_dan, platform=rcity_tenho_sampling.Platform[platform]
+)
 if df is not None:
     if st.button("再計算") or num_games is not None:
         col1, col2 = st.columns(2)
-        plt = sample.simulate_games(
+        plt = rcity_tenho_sampling.simulate_games(
             df, num_games=num_games, max_score=num_max_pt, custom_rates=custom_rates
         )
         with col1:

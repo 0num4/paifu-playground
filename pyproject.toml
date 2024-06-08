@@ -36,6 +36,10 @@ pytest = "^8.2.2"
 [tool.poetry.group.riichi-emu.dependencies]
 pandas = "^2.2.2"
 
+
+[tool.poetry.group.types.dependencies]
+types-protobuf = "^5.26.0.20240422"
+
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"

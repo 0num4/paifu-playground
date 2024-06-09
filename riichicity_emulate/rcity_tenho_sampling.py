@@ -16,6 +16,7 @@ def main():
 class Platform(enum.IntEnum):
     rcity = 1
     tenhou = 2
+    majsoul = 3
 
 
 def readcsv(
@@ -27,6 +28,8 @@ def readcsv(
         csv_file = "rcity_sanma.csv"
     elif platform == Platform.tenhou:
         csv_file = "tenho_sanma.csv"
+    # majsoulは根本的に処理が違うので別ファイルで処理している
+
     current_dir = os.path.dirname(os.path.abspath(__file__))
     csv_path = os.path.join(current_dir, csv_file)
     if not os.path.isfile(csv_path):

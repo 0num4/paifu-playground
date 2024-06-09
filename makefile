@@ -63,7 +63,7 @@ lint-pyright:
 # 	aws lambda invoke --function-name cost-notificator-pythonfunction --profile ankokuyakusyo --log-type Tail --payload '{}' /dev/stdout
 
 st:
-	poetry run streamlit run riichicity_emulate/streamlitsample.py
+	poetry run streamlit run riichicity_emulate/streamlit_sampling.py
 
 test-st:
 	python riichicity_emulate/test_streamlitplayground.py 

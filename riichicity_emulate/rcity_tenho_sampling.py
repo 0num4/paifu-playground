@@ -4,6 +4,8 @@ import os
 import random
 import enum
 import pydantic
+import streamlit
+import typing
 
 
 def main():
@@ -156,13 +158,14 @@ def simulate_games_core(
     return results
 
 
-def testing(num: int = 20):
+def testing(
+    st: typing.ModuleType | None, df: pd.DataFrame | None, num: int = 20
+) -> None:
     """
     simulate_gamesをn回回して、結果を表示する
     """
-    df = readcsv(10)
 
-    if df is not None:
+    if df is not None and df["dan"].nunique() == 1:
         place_stats = {}
 
         for _ in range(num):
@@ -182,6 +185,14 @@ def testing(num: int = 20):
             print(f"後段: {stats['demotions']}")
             print(f"合計昇段回数: {sum(stats['promotions'])}")
             print(f"合計後段回数: {sum(stats['demotions'])}")
+            if st is not None:
+                st.write("-----")
+                st.write(f"place: {place}")
+                st.write(f"回した回数: {num}")
+                st.write(f"昇段: {stats['promotions']}")
+                st.write(f"後段: {stats['demotions']}")
+                st.write(f"合計昇段回数: {sum(stats['promotions'])}")
+                st.write(f"合計後段回数: {sum(stats['demotions'])}")
 
 
 if __name__ == "__main__":

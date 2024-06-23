@@ -1,13 +1,14 @@
 # https://gist.github.com/nullpos/d6a10e1f4b1f906d8b6d
 # そもそもhttp://e.mjv.jp/0/log/archived.cgi?"が死んでいるので、
 
+import gzip
+import os
+
 # -*- coding: utf-8 -*-
 import re
 
 # import urllib
 import urllib.request
-import gzip
-import os
 
 archive_url = "http://e.mjv.jp/0/log/archived.cgi?"
 plain_url = "http://e.mjv.jp/0/log/plainfiles.cgi?"

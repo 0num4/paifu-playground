@@ -9,7 +9,7 @@ endif
 
 # コマンド定義
 ISORT_CMD := $(RUN_PREFIX) isort --skip .venv --skip cdk.out --skip cdk
-RUFF_CMD := $(RUN_PREFIX) ruff check .
+RUFF_CMD := $(RUN_PREFIX) ruff check
 FLAKE8_CMD := $(RUN_PREFIX) flake8 --max-line-length=300
 MYPY_CMD := $(RUN_PREFIX) mypy --explicit-package-bases
 PYRIGHT_CMD := $(RUN_PREFIX) pyright

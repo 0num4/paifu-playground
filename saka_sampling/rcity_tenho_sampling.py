@@ -1,11 +1,12 @@
-import matplotlib.pyplot
-import pandas as pd
+import enum
 import os
 import random
-import enum
+import typing
+
+import matplotlib.pyplot
+import pandas as pd
 import pydantic
 import streamlit
-import typing
 
 
 def main():

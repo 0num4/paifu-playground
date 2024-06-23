@@ -1,8 +1,8 @@
-from pydantic import BaseModel
 import typing
 
-import pydantic
 import consts
+import pydantic
+from pydantic import BaseModel
 
 
 class HeaderCookies(BaseModel):

@@ -1,7 +1,8 @@
-import matplotlib.pyplot
-import pandas as pd
 import os
 import random
+
+import matplotlib.pyplot
+import pandas as pd
 
 
 def main():

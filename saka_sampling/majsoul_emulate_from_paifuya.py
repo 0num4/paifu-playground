@@ -1,9 +1,10 @@
 # paifuya-stats.py
-import requests
-import streamlit as st
 import datetime
 import sys
+
 import pydantic
+import requests
+import streamlit as st
 
 import paifuya_utils.util
 

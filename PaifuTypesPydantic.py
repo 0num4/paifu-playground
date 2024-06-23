@@ -1,6 +1,8 @@
-from typing import Literal, Annotated
 import typing
+from typing import Annotated, Literal
+
 import pydantic
+
 import riichicity.Types.commonConsts
 
 # import datetime

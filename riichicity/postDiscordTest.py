@@ -1,5 +1,6 @@
-import requests
 import json
+
+import requests
 
 
 def post_discord_test(message: str):

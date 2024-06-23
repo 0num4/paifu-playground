@@ -1,12 +1,15 @@
-import PaifuTypesPydantic
-import PaifuTypesPydanticWithInternal
-import PaifuType
 import json
 import os
-from typing import Any, Literal, Mapping, Type, TypedDict, get_type_hints, Union, Never
+from typing import (Any, Literal, Mapping, Never, Type, TypedDict, Union,
+                    get_type_hints)
+
+import boto3
 import pydantic
 from pydantic import ValidationError
-import boto3
+
+import PaifuType
+import PaifuTypesPydantic
+import PaifuTypesPydanticWithInternal
 
 dynamodb = boto3.resource("dynamodb")
 hand_event_playground_table = dynamodb.Table("paifu_hands_event_playground2")

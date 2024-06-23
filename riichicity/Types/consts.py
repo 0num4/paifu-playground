@@ -1,6 +1,6 @@
 # 7c9bc09e9eb29703a4a50f9c3edfc410.lua
-from enum import Enum, IntEnum, StrEnum
 import typing
+from enum import Enum, IntEnum, StrEnum
 
 
 class Award:

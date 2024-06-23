@@ -1,7 +1,8 @@
 import typing
-from pydantic import BaseModel, Field
-import consts
+
 import commonConsts
+import consts
+from pydantic import BaseModel, Field
 
 
 # 友人戦の詳細のみ。一位率とかはフロントでやってる

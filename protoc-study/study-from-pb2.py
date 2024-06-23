@@ -1,6 +1,5 @@
 import helloworld_pb2
 
-
 a = helloworld_pb2.Person()
 a.name = "Alice"
 a.id = 123

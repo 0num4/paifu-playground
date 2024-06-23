@@ -1,8 +1,10 @@
+import decimal
+import json
+
 import boto3
 from boto3.dynamodb.conditions import Key
+
 import PaifuTypesPydanticWithInternal
-import json
-import decimal
 
 
 def get_hand_event_record_data(table, key_value):

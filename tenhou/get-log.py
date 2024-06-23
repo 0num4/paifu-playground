@@ -15,6 +15,7 @@ plain_url = "http://e.mjv.jp/0/log/plainfiles.cgi?"
 
 
 def gz(filename):
+    """Gzipファイルに変換して元のファイルを削除する."""
     f_in = open("./log/" + filename + ".xml", "rb")
     f_out = gzip.open("./log/" + filename + ".mjlog", "wb")
     f_out.writelines(f_in)
@@ -25,6 +26,7 @@ def gz(filename):
 
 
 def download():
+    """ログファイルをダウンロードする."""
     f_url = open("urls.txt", "r")
     for row in f_url:
         urlidand = re.sub(r".*log\=(.*)\n", r"\1", row)

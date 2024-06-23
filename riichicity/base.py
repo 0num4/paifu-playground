@@ -1,20 +1,23 @@
-import os
+"""Riichi city API wrapper."""
+
+import datetime
 import json
+import os
 import random
+import time
+
+import pydantic
 import requests
 import Types.accountTypes
-import Types.stats
+import Types.baseTypes
 import Types.commonConsts
 import Types.consts
 import Types.readPaiPuList
-import Types.baseTypes
-import datetime
-import time
-import pydantic
+import Types.stats
 
 
-#
 def fetch_domain_name() -> Types.baseTypes.FetchDomainNameResponse:
+    """Fetch domain name."""
     url = "https://d3qgi0t347dz44.cloudfront.net/release/notice/domain_name.ncc"
     response = requests.get(url)
     response.raise_for_status()
@@ -30,6 +33,7 @@ def users_check_version(
     platform: str = "ios",
     version: str = "2.1.16.31622",
 ) -> Types.baseTypes.CheckVersionResponse:
+    """Users/checkVersionのwrapper."""
     payload = {
         "channel": channel,
         "platform": platform,
@@ -49,10 +53,8 @@ def users_check_version(
     return checkVersionRes
 
 
-# checkVersionで差異があったら呼ばれる
-# wget https://d3qgi0t347dz44.cloudfront.net/release/ios/20240329002/version.txt
 def get_version():
-    # ここの日付は
+    """checkVersionで差異があったら呼ばれる."""
     getVersionRes = requests.get(
         "https://d3qgi0t347dz44.cloudfront.net/release/ios/20240329002/version.txt"
     )
@@ -62,8 +64,8 @@ def get_version():
         print(f"error! {getVersionRes.status_code} Failed to get version")
 
 
-# バイナリ差分をダウンロード。使う予定はない
 def get_res_bundle_data():
+    """バイナリ差分をダウンロード。使う予定はない."""
     getResBundleData = requests.get(
         "https://d3qgi0t347dz44.cloudfront.net/release/ios/20240329002/res_bundle_data.dat"
     )
@@ -131,6 +133,7 @@ def get_headers(
 def get_live_info_from_riichi_city(
     headers: dict, playerCount: int = 3, round: int = 2, stageType: int = 4
 ) -> list[str]:
+    """Record/readOnlineRoomのwrapper."""
     payload = {
         "stageType": stageType,
         "round": round,
@@ -177,6 +180,7 @@ def get_live_info_from_riichi_city(
 def get_user_detail_stats(
     headers: dict, userID: str, gameplay: int, playerCount: int
 ) -> Types.stats.UserDetailStatsV2Response:
+    """stats/userDetailStatsのwrapper."""
     payload = {"userID": userID, "playerCount": playerCount, "gameplay": gameplay}
     userDetailStatsRes = requests.post(
         "https://alicdn.mahjong-jp.net/stats/userDetailStats",
@@ -198,6 +202,7 @@ def get_user_detail_stats_v2(
     stageType: list[int] = [1, 2, 3, 4],
     dataType: int = 0,
 ) -> Types.stats.UserDetailStatsV2Response:
+    """stats/userDetailStatsV2のwrapper."""
     if gameplay == 1001:
         payload = {
             "userID": userID,
@@ -229,6 +234,7 @@ def get_user_detail_stats_v2_info(
     round: int = 2,
     stageType: int = 4,
 ) -> dict:
+    """stats/userDetailStatsV2Infoのwrapper."""
     payload = {
         "userID": userID,
         "playerCount": playerCount,
@@ -255,6 +261,7 @@ def get_user_detail_stats_v2_info(
 def get_user_base_data(
     headers: dict, userID: str, gameplay: int, playerCount: int
 ) -> Types.stats.UserBaseDataResponse:
+    """users/userBaseDataのwrapper."""
     payload = {"userID": userID, "gameplay": gameplay, "playerCount": playerCount}
     userBaseDataRes = requests.post(
         "https://alicdn.mahjong-jp.net/users/userBaseData",
@@ -274,6 +281,7 @@ def get_user_base_data(
 
 
 def get_user_brief(headers: dict, userId: str) -> Types.stats.UserBriefResponse:
+    """users/userBriefのwrapper."""
     payload = {"userId": userId}
     userBriefRes = requests.post(
         "https://alicdn.mahjong-jp.net/users/userBrief", json=payload, headers=headers
@@ -287,6 +295,7 @@ def get_user_brief(headers: dict, userId: str) -> Types.stats.UserBriefResponse:
 def get_user_tasks(
     headers: Types.accountTypes.Headers,
 ) -> Types.stats.ActivityUserTasksResponse:
+    """activity/userTaskのwrapper."""
     userTasksRes = requests.post(
         "https://alicdn.mahjong-jp.net/activity/userTask",
         headers=headers.model_dump_json(),
@@ -301,6 +310,7 @@ def get_user_tasks(
 # get_user_tasksでtaskを持ってきて個別のawardはget_user_task_awardで獲得できる。
 # ログインしてないので動作未確認
 def get_user_task_award(headers: dict, taskId: int = 12004, type: int = 1) -> dict[any]:
+    """activity/userTaskAwardのwrapper."""
     payload = {"taskId": taskId, "type": type}
     userTaskAwardRes = requests.post(
         "https://alicdn.mahjong-jp.net/activity/userTaskAward",
@@ -316,6 +326,7 @@ def get_user_task_award(headers: dict, taskId: int = 12004, type: int = 1) -> di
 def get_activity_collect_task_award(
     headers: dict, typeList: list[int] = [1, 3]
 ) -> Types.stats.CollectTaskAwardResponse:
+    """activity/collectTaskAwardのwrapper."""
     payload = {"typeList": typeList}
     activityCollectTaskAwardRes = requests.post(
         "https://alicdn.mahjong-jp.net/activity/collectTaskAward",
@@ -335,6 +346,7 @@ def get_activity_collect_task_award(
 def get_store_buy_product(
     headers: dict, productID: int = 579, num: int = 1
 ) -> Types.stats.StoreBuyProductResponse:  # 579は毎日の無料ボーナス
+    """store/buyProductのwrapper."""
     payload = {"productID": productID, "num": num}
     storeBuyProductRes = requests.post(
         "https://alicdn.mahjong-jp.net/store/buyProduct", json=payload, headers=headers
@@ -351,6 +363,7 @@ def get_store_buy_product(
 def get_product_list(
     headers: dict, firstLabel: int = 3, isCheckSkin: bool = True, secondLabel: int = 0
 ) -> Types.stats.GetProductListResponse:
+    """store/getProductListのwrapper."""
     payload = {
         "firstLabel": firstLabel,
         "isCheckSkin": isCheckSkin,
@@ -369,6 +382,7 @@ def get_product_list(
 
 # ガチャ引くリスト？
 def store_get_draw(headers: dict) -> Types.stats.StoreGetDrawResponse:
+    """store/getDrawのwrapper."""
     payload = {}
     storeGetDrawRes = requests.post(
         "https://alicdn.mahjong-jp.net/store/getDraw", json=payload, headers=headers
@@ -383,6 +397,7 @@ def store_get_draw(headers: dict) -> Types.stats.StoreGetDrawResponse:
 def store_user_draw(
     headers: dict, pool: int = 38, type: int = 1
 ) -> Types.stats.StoreUserDrawResponse:
+    """store/userDrawのwrapper."""
     payload = {"pool": pool, "type": type}
     storeUserDrawRes = requests.post(
         "https://alicdn.mahjong-jp.net/store/userDraw", json=payload, headers=headers
@@ -400,6 +415,7 @@ def store_user_draw(
 def get_activity_ex_team_daily_award(
     headers: dict,
 ) -> Types.stats.EXTeamDailyAwardResponse:
+    """activity/eXTeamDailyAwardのwrapper."""
     payload = {}
     activityEXTeamDailyAwardRes = requests.post(
         "https://alicdn.mahjong-jp.net/activity/eXTeamDailyAward",
@@ -416,6 +432,7 @@ def get_activity_ex_team_daily_award(
 
 
 def activity_ex_team_task(headers: dict) -> Types.stats.EXTeamTaskResponse:
+    """activity/eXTeamTaskのwrapper."""
     payload = {}
     activityEXTeamTaskRes = requests.post(
         "https://alicdn.mahjong-jp.net/activity/eXTeamTask",
@@ -435,6 +452,7 @@ def activity_ex_team_task(headers: dict) -> Types.stats.EXTeamTaskResponse:
 def activity_receive_ex_team_task(
     headers: dict, taskID: int = 3, type: int = 4
 ) -> dict[any]:
+    """activity/receiveEXTeamTaskのwrapper."""
     payload = {"taskID": taskID, "type": type}
     activityReceiveEXTeamTaskRes = requests.post(
         "https://alicdn.mahjong-jp.net/activity/receiveEXTeamTask",
@@ -454,6 +472,7 @@ def activity_receive_ex_team_task(
 def activity_view_action(
     headers: dict, actionId: Types.consts.EnumDefine.TaskActionServer = 2042
 ) -> Types.stats.ActivityViewActionResponse:
+    """activity/viewActionのwrapper."""
     payload = {"actionId": actionId}
     activityViewActionRes = requests.post(
         "https://alicdn.mahjong-jp.net/activity/viewAction",
@@ -472,6 +491,7 @@ def activity_view_action(
 def activity_activity_list(
     headers: dict, lang: str = "ja", reqVersion: str = "v1"
 ) -> Types.stats.ActivityActivityListResponse:
+    """activity/activityListのwrapper."""
     payload = {"lang": lang, "reqVersion": reqVersion}
     activityActivityListRes = requests.post(
         "https://alicdn.mahjong-jp.net/activity/activityList",
@@ -490,6 +510,7 @@ def activity_activity_list(
 def activity_receive_sign_award(
     headers: dict, activityId: int = 10124, awardType: Types.consts.AwardType = 3
 ) -> Types.baseTypes.ReceiveSignAwardResponse:
+    """activity/receiveSignAwardのwrapper."""
     payload = {"activityId": activityId, "awardType": awardType}
     activityReceiveSignAwardRes = requests.post(
         "https://alicdn.mahjong-jp.net/activity/receiveSignAward",
@@ -508,6 +529,7 @@ def activity_receive_sign_award(
 def activity_user_sign_progress(
     headers: dict, activityId: int = 10124
 ) -> Types.baseTypes.UserSignProgressResponse:
+    """activity/userSignProgressのwrapper."""
     payload = {"activityId": activityId}
     activityUserSignProgressRes = requests.post(
         "https://alicdn.mahjong-jp.net/activity/userSignProgress",
@@ -528,6 +550,7 @@ def activity_user_sign_progress(
 def lobbys_read_official_match(
     headers: dict, lang: str = "ja"
 ) -> Types.stats.ReadOfficialMatchResponse:
+    """lobbys/readOfficialMatchのwrapper."""
     payload = {"lang": lang}
     lobbysReadOfficialMatchRes = requests.post(
         "https://alicdn.mahjong-jp.net/lobbys/readOfficialMatch",
@@ -547,6 +570,7 @@ def lobbys_read_official_match(
 def lobbys_sign_official_match(
     headers: dict, isCancel: bool = False, officialID: str = ""
 ) -> dict[any]:
+    """lobbys/signOfficialMatchのwrapper."""
     payload = {"isCancel": isCancel, "officialID": officialID}
     lobbysSignOfficialMatchRes = requests.post(
         "https://alicdn.mahjong-jp.net/lobbys/signOfficialMatch",
@@ -560,8 +584,8 @@ def lobbys_sign_official_match(
     return lobbysSignOfficialMatchRes
 
 
-# 日時設定されてるグランプリ(週間大会とか)の情報を取得。定期的に取得して時間になったら多分こちらからつなぎに行くっぽい
 def lobbys_read_timing_match(headers: dict) -> Types.stats.ReadTimingMatchResponse:
+    """日時設定されてるグランプリ(週間大会とか)の情報を取得。定期的に取得して時間になったら多分こちらからつなぎに行くっぽい."""
     payload = {}
     lobbysReadTimingMatchRes = requests.post(
         "https://alicdn.mahjong-jp.net/lobbys/readTimingMatch",
@@ -581,6 +605,7 @@ def lobbys_read_timing_match(headers: dict) -> Types.stats.ReadTimingMatchRespon
 def lobbys_ready_official_next(
     headers: dict, matchID: str = "", matchStage: int = 2, officialID: str = ""
 ) -> Types.stats.ReadyOfficialNextResponse:
+    """lobbys/readyOfficialNextのwrapper."""
     payload = {"matchID": matchID, "matchStage": matchStage, "officialID": officialID}
     lobbysReadyOfficialNextRes = requests.post(
         "https://alicdn.mahjong-jp.net/lobbys/readyOfficialNext",
@@ -596,6 +621,7 @@ def lobbys_ready_official_next(
 def lobbys_sign_timing_match(
     headers: dict, isCancel: bool = False, signItemID: int = 10002, timingID: str = ""
 ) -> Types.stats.SignTimingMatchResponse:
+    """lobbys/signTimingMatchのwrapper."""
     payload = {"isCancel": isCancel, "signItemID": signItemID, "timingID": timingID}
     lobbysSignTimingMatchRes = requests.post(
         "https://alicdn.mahjong-jp.net/lobbys/signTimingMatch",
@@ -613,6 +639,7 @@ def lobbys_sign_timing_match(
 
 # TODO: 検証
 def get_message_receive_award(headers: dict, mailID: str, userID: str) -> dict:
+    """message/receiveAwardのwrapper."""
     payload = {"mailID": mailID, "userID": userID}
     messageReceiveAwardRes = requests.post(
         "https://alicdn.mahjong-jp.net/message/receiveAward",
@@ -625,6 +652,7 @@ def get_message_receive_award(headers: dict, mailID: str, userID: str) -> dict:
 
 
 def get_message_user_message(headers: dict, lang: str = "ja", userID: str = "") -> dict:
+    """message/userMessageのwrapper."""
     payload = {"lang": lang, "userID": userID}
     messageUserMessageRes = requests.post(
         "https://alicdn.mahjong-jp.net/message/userMessage",
@@ -638,6 +666,7 @@ def get_message_user_message(headers: dict, lang: str = "ja", userID: str = "") 
 
 
 def get_gift_code(headers: dict, code: str) -> Types.stats.GetGiftCodeResponse:
+    """activity/activateRedeemCodeのwrapper."""
     payload = {"code": code}
     giftCodeRes = requests.post(
         "https://alicdn.mahjong-jp.net/activity/activateRedeemCode",
@@ -655,6 +684,7 @@ def get_gift_code(headers: dict, code: str) -> Types.stats.GetGiftCodeResponse:
 def lobbys_read_stage_classifies(
     headers: dict,
 ) -> Types.stats.LobbysReadStageClassifiesResponse:
+    """lobbys/readStageClassifies"のwrapper."""
     lobbysReadStageClassifiesRes = requests.post(
         "https://alicdn.mahjong-jp.net/lobbys/readStageClassifies", headers=headers
     )
@@ -670,6 +700,7 @@ def lobbys_read_stage_classifies(
 def backpack_recycle_gift(
     headers: dict, isAll: bool = False, itemID: int = 11003, num: int = 1
 ) -> Types.stats.BackpackRecycleGiftResponse:
+    """backpack/recycleGiftのwrapper."""
     payload = {
         "isAll": isAll,
         "items": [
@@ -696,6 +727,7 @@ def backpack_recycle_gift(
 def backpack_user_item_list(
     headers: dict, isUserEquip: bool = False
 ) -> Types.stats.BackpackUserItemListResponse:
+    """backpack/userItemListのwrapper."""
     payload = {
         "isUserEquip": isUserEquip,
     }
@@ -713,7 +745,6 @@ def backpack_user_item_list(
     return backpackUserItemListRes
 
 
-# ランキングの情報を取得。デフォルト値は4麻
 def activity_read_ranks(
     headers: dict,
     index: int = 0,
@@ -722,6 +753,7 @@ def activity_read_ranks(
     scope: int = 1,
     skip: int = 0,
 ) -> Types.stats.ActivityReadRanksResponse:
+    """ランキングの情報を取得。デフォルト値は4麻."""
     payload = {
         "index": index,
         "kind": kind,
@@ -766,8 +798,8 @@ def activity_read_ranks(
 # end
 
 
-# 動かない、ログインしたユーザーの牌譜しか取れない
 def get_paipu_user_games(headers: dict, paipuId: str) -> dict:
+    """stats/getPaipuUserGamesのwrapper.動かない、ログインしたユーザーの牌譜しか取れない."""
     payload = {"paipuId": paipuId}
     getPaipuUserGamesRes = requests.post(
         "https://alicdn.mahjong-jp.net/stats/getPaipuUserGames",
@@ -803,6 +835,7 @@ def read_pai_pu_list(
     stageType: int,
     matchType: int,
 ) -> dict:
+    """!!core function!! record/readPaiPuListのwrapper."""
     payload = {
         "startTime": startTime,
         "endTime": enTime,
@@ -831,8 +864,8 @@ def read_pai_pu_list(
 # end
 
 
-# 未検証。段位開始時に使う。classifyIDはreadStageClassifiesから取れる
 def lobbys_start_stage(headers: dict, classifyID: str) -> dict:
+    """未検証。段位開始時に使う。classifyIDはreadStageClassifiesから取れる."""
     payload = {"classifyID": classifyID}
     lobbysStartStageRes = requests.post(
         "https://alicdn.mahjong-jp.net/lobbys/startStage", json=payload, headers=headers

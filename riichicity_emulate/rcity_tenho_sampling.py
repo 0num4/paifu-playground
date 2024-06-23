@@ -158,9 +158,7 @@ def simulate_games_core(
     return results
 
 
-def testing(
-    st: typing.ModuleType | None, df: pd.DataFrame | None, num: int = 20
-) -> None:
+def testing(st, df: pd.DataFrame | None, num: int = 20) -> None:
     """
     simulate_gamesをn回回して、結果を表示する
     """

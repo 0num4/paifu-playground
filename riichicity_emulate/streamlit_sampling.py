@@ -12,19 +12,19 @@ num_dan = st.selectbox("Number of dan", [7, 8, 9, 10], index=3)
 platform = st.selectbox("platform", ("rcity", "tenhou", "majsoul"), key="platform")
 print(f"platform: {platform}, enum: {rcity_tenho_sampling.Platform[platform]}")
 num_max_pt = st.selectbox("Number of max points", [9000, 10000, 15000, 20000], index=3)
-col1, col2, col3, col4 = st.columns(4)
+col1, col2, col3 = st.columns(3)
 with col1:
     custom_1st_p = st.number_input("1st rate(custom)", min_value=0.0, max_value=1.0)
 with col2:
     custom_2nd_p = st.number_input("2nd rate(custom)", min_value=0.0, max_value=1.0)
 with col3:
     custom_3rd_p = st.number_input("3rd rate(custom)", min_value=0.0, max_value=1.0)
-with col4:
-    reset_rate = st.button(
-        "reset",
-    )
-if reset_rate:
-    custom_1st_p = custom_2nd_p = custom_3rd_p = 0.0
+# with col4:
+#     reset_rate = st.button(
+#         "reset",
+#     )
+# if reset_rate:
+#     custom_1st_p = custom_2nd_p = custom_3rd_p = 0.0
 custom_rates = None
 if custom_1st_p + custom_2nd_p + custom_3rd_p == 1.0:
     st.info("custom rating enabled")

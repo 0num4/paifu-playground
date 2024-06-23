@@ -16,7 +16,7 @@ jobs:
       # - uses: 0num4/riichi-city-live3@main
       - uses: 0num4/riichi-city-live3/.github/actions/setup@main
         with:
-          with-args: "dev, types"
+          with-args: "dev,types"
       # - uses: koki-develop/private-github-actions-example/.github/actions/hello@main
       # - name: Set up Python
       #   uses: actions/setup-python@v5

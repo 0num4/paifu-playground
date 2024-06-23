@@ -16,6 +16,8 @@
   protoc に関するスクリプト(helloworld と ts と go の実装がある)
 - riichicity/
   riichicity 関係のスクリプト(Python)、メイン実装
+- saka_sampling/
+  シミュレーター関連のスクリプト、天鳳、一番街、雀魂の坂の傾斜を可視化(秋刀魚のみ)
 - tenhou/
   tenhou 関係のスクリプト(Python)
 - /

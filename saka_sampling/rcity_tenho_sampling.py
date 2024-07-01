@@ -1,12 +1,9 @@
 import enum
 import os
 import random
-import typing
 
-import matplotlib.pyplot
 import pandas as pd
 import pydantic
-import streamlit
 
 
 def main():
@@ -17,6 +14,8 @@ def main():
 
 
 class Platform(enum.IntEnum):
+    """ゲームプラットフォームを表す列挙型."""
+
     rcity = 1
     tenhou = 2
     majsoul = 3
@@ -160,10 +159,7 @@ def simulate_games_core(
 
 
 def testing(st, df: pd.DataFrame | None, num: int = 20) -> None:
-    """
-    simulate_gamesをn回回して、結果を表示する
-    """
-
+    """simulate_gamesをn回回して、結果を表示する."""
     if df is not None and df["dan"].nunique() == 1:
         place_stats = {}
 

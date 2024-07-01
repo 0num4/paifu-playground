@@ -55,11 +55,13 @@ target-version = "py312"
 
 [tool.ruff.lint]
 select = [
-    "E", # error
-    "W", # warning
-    "I", # isort
-    "D", # docstring
-    "F", # pyflakes
+    "E",  # error
+    "W",  # warning
+    "I",  # isort
+    "D",  # docstring
+    "F",  # pyflakes
+    "UP", # pyupgrade
+    "C",  # complexity
 ]
 ignore = ["E501"]
 

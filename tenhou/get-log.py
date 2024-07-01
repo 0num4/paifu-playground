@@ -27,7 +27,7 @@ def gz(filename):
 
 def download():
     """ログファイルをダウンロードする."""
-    f_url = open("urls.txt", "r")
+    f_url = open("urls.txt")
     for row in f_url:
         urlidand = re.sub(r".*log\=(.*)\n", r"\1", row)
         urlid = re.sub(r"(.*)&.*", r"\1", urlidand)

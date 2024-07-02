@@ -36,6 +36,7 @@ def main() -> None:
     print(f"1回大会出場するのに必要なガチャ券の枚数: {tournament_fee}")
     print(f"27人大会で1位になる確率は約{top(0.33): 5f}です。")  # 3人麻雀で3回連続でトップを取る確率
     print(f"27人大会で1位か2位になる確率は約{top_and_2nd(0.33): 5f}です。")  # 3人麻雀で3回連続でトップを取る確率
+    print(f"ガチャで当たる確率は約{atari: 5f}です。")
     return None
 
 

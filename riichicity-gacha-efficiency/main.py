@@ -60,6 +60,26 @@ def top_and_2nd(rate: int = 0.33, last_rate: int = 0.66) -> float:
     return ret
 
 
+def yonma_top(rate: int = 0.5, last_rate: int = 0.33) -> float:
+    """4人麻雀で1位or2位になる確率.
+
+    0.5^4=0.0625
+    つまり、4人麻雀で4回連続で1位または2位になる確率は6.25%です。
+    """
+    ret = rate * rate * rate * rate
+    return ret
+
+
+def yonma_top_or_2nd(rate: int = 0.5, last_rate: int = 0.25) -> float:
+    """4人麻雀で1位or2位になる確率.
+
+    0.5^4=0.0625
+    つまり、4人麻雀で4回連続で1位または2位になる確率は6.25%です。
+    """
+    ret = rate * rate * rate * last_rate
+    return ret
+
+
 # 10回ガチャを引いてあたりが出る確率
 
 if __name__ == "__main__":

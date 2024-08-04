@@ -1,9 +1,12 @@
 # 7c9bc09e9eb29703a4a50f9c3edfc410.lua
+import typing
 from enum import Enum, IntEnum, StrEnum
 
 
 class Award:
-    def __init__(self, itemId: int, category: any, count: int):  # category: Category
+    def __init__(
+        self, itemId: int, category: typing.Any, count: int
+    ):  # category: Category
         self.itemId = itemId
         self.category = category
         self.count = count
@@ -27,7 +30,9 @@ class SceneType(Enum):
     NormalGame = "NormalGame"
     LotteryScene = "paomian"
     TablePreview = "TablePreview"
-    TournamentMatchingResult = "TournamentMatchingResult"  # 公式戦マッチング完了後の3Dシーン
+    TournamentMatchingResult = (
+        "TournamentMatchingResult"  # 公式戦マッチング完了後の3Dシーン
+    )
     MusicGame = "MusicGame"
 
 
@@ -366,7 +371,9 @@ class EnumDefine:
         GiftBag = 31  # ギフトパック
         OptionalGift = 32  # 自由選択ギフト
         ProbGiftBag = 34  # 確率ギフトパック
-        SpecialBag = 35  # 特別ギフトパック（ギフトパック-縁結びの狐、ギフトパック-純白の恋歌）
+        SpecialBag = (
+            35  # 特別ギフトパック（ギフトパック-縁結びの狐、ギフトパック-純白の恋歌）
+        )
         TableEdge = 36  # テーブルエッジ
 
     class OfficialSign(IntEnum):
@@ -441,7 +448,9 @@ class EnumDefine:
         GameOutCard = "discard_tile"  # 打牌
         GameChiPengGang = "oper_chi_peng_gang"  # ゲーム中のチー、ポン、カンのトリガー効果（手牌を移動させるとき）
         GameResultSingle = "game_result_single"
-        GameResultSingleSpecialFan = "game_result_single_special_fan"  # 単局画面で特殊な役が出現
+        GameResultSingleSpecialFan = (
+            "game_result_single_special_fan"  # 単局画面で特殊な役が出現
+        )
         GameResultFinal = "game_result_final"
         GameResultScore = "game_result_score"
         GameResultScoreBao = "game_result_score_bao"  # 供託点棒払い音声
@@ -776,7 +785,9 @@ class EnumDefine:
 
     class AdjustEventToken(StrEnum):
         FirstDayFinishOneRank = "8fcrs0"  # 新規ユーザーが初日に段位戦を1回クリア
-        FirstDayRankUpgrade = "symflc"  # 新規ユーザーが初日に最初の段位アップを達成したユーザー数
+        FirstDayRankUpgrade = (
+            "symflc"  # 新規ユーザーが初日に最初の段位アップを達成したユーザー数
+        )
         ChargeTryFirstDay = "7bqj43"  # 商品をクリック、月間パスの購入ボタンをクリック、初回課金ギフトパックの【チャージへ】ボタンをクリック
 
     class arenaPhase(IntEnum):
@@ -1258,11 +1269,21 @@ class EnumDefine:
         FourStageTop2 = 1312  # 段位戦で、四人麻雀で2位以上を獲得
         ThreeStageTop2 = 1313  # 段位戦で、三人麻雀で2位以上を獲得
 
-        StageHeOnceAllBaoPai4 = 1330  # 段位戦で、一回の和了で4枚以上の宝牌を使用（表裏赤抜き北宝牌を含む）
-        StageHeOnceAllBaoPai8 = 1331  # 段位戦で、一回の和了で8枚以上の宝牌を使用（表裏赤抜き北宝牌を含む）
-        StageHeOnceAllBaoPai12 = 1332  # 段位戦で、一回の和了で12枚以上の宝牌を使用（表裏赤抜き北宝牌を含む）
-        StageHeOnceAllBaoPai13 = 1333  # 段位戦で、一回の和了で13枚以上の宝牌を使用（表裏赤抜き北宝牌を含む）
-        StageHeAllBaoPai = 1334  # 段位戦で、和了で使用した宝牌の枚数の累計（表裏赤抜き北宝牌を含む）
+        StageHeOnceAllBaoPai4 = (
+            1330  # 段位戦で、一回の和了で4枚以上の宝牌を使用（表裏赤抜き北宝牌を含む）
+        )
+        StageHeOnceAllBaoPai8 = (
+            1331  # 段位戦で、一回の和了で8枚以上の宝牌を使用（表裏赤抜き北宝牌を含む）
+        )
+        StageHeOnceAllBaoPai12 = (
+            1332  # 段位戦で、一回の和了で12枚以上の宝牌を使用（表裏赤抜き北宝牌を含む）
+        )
+        StageHeOnceAllBaoPai13 = (
+            1333  # 段位戦で、一回の和了で13枚以上の宝牌を使用（表裏赤抜き北宝牌を含む）
+        )
+        StageHeAllBaoPai = (
+            1334  # 段位戦で、和了で使用した宝牌の枚数の累計（表裏赤抜き北宝牌を含む）
+        )
         StageKnockOut = 1335  # 段位戦で、累計飛ばした人数
         StageOnceKnockOut2 = 1336  # 段位戦で、一局で2人を同時に飛ばした
         StageShuangLiZhiChong = 1337  # 段位戦で、両立直和了せず放銃
@@ -1329,10 +1350,18 @@ class EnumDefine:
         FeelValue1000 = 2102  # 任意のキャラクターの好感度が1000に到達（レベル3）
         FeelValue2000 = 2103  # 任意のキャラクターの好感度が2000に到達（レベル4）
         FeelValue5000 = 2104  # 任意のキャラクターの好感度が5000に到達（レベル5）
-        DailyActiveNum50 = 2110  # デイリータスクのアクティブ宝箱値（今日の里程）が50に到達
-        DailyActiveNum100 = 2111  # デイリータスクのアクティブ宝箱値（今日の里程）が100に到達
-        DailyActiveNum150 = 2112  # デイリータスクのアクティブ宝箱値（今日の里程）が150に到達
-        DailyActiveNum210 = 2113  # デイリータスクのアクティブ宝箱値（今日の里程）が210に到達
+        DailyActiveNum50 = (
+            2110  # デイリータスクのアクティブ宝箱値（今日の里程）が50に到達
+        )
+        DailyActiveNum100 = (
+            2111  # デイリータスクのアクティブ宝箱値（今日の里程）が100に到達
+        )
+        DailyActiveNum150 = (
+            2112  # デイリータスクのアクティブ宝箱値（今日の里程）が150に到達
+        )
+        DailyActiveNum210 = (
+            2113  # デイリータスクのアクティブ宝箱値（今日の里程）が210に到達
+        )
         Login = 3000  # ログイン
         Recharge = 3001  # チャージ
         Share = 3002  # シェア

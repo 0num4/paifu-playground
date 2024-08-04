@@ -1,8 +1,8 @@
-import matplotlib.pyplot
-import pandas as pd
+import enum
 import os
 import random
-import enum
+
+import pandas as pd
 import pydantic
 
 
@@ -14,8 +14,11 @@ def main():
 
 
 class Platform(enum.IntEnum):
+    """ゲームプラットフォームを表す列挙型."""
+
     rcity = 1
     tenhou = 2
+    majsoul = 3
 
 
 def readcsv(
@@ -27,6 +30,8 @@ def readcsv(
         csv_file = "rcity_sanma.csv"
     elif platform == Platform.tenhou:
         csv_file = "tenho_sanma.csv"
+    # majsoulは根本的に処理が違うので別ファイルで処理している
+
     current_dir = os.path.dirname(os.path.abspath(__file__))
     csv_path = os.path.join(current_dir, csv_file)
     if not os.path.isfile(csv_path):
@@ -153,13 +158,9 @@ def simulate_games_core(
     return results
 
 
-def testing(num: int = 20):
-    """
-    simulate_gamesをn回回して、結果を表示する
-    """
-    df = readcsv(10)
-
-    if df is not None:
+def testing(st, df: pd.DataFrame | None, num: int = 20) -> None:
+    """simulate_gamesをn回回して、結果を表示する."""
+    if df is not None and df["dan"].nunique() == 1:
         place_stats = {}
 
         for _ in range(num):
@@ -179,6 +180,14 @@ def testing(num: int = 20):
             print(f"後段: {stats['demotions']}")
             print(f"合計昇段回数: {sum(stats['promotions'])}")
             print(f"合計後段回数: {sum(stats['demotions'])}")
+            if st is not None:
+                st.write("-----")
+                st.write(f"place: {place}")
+                st.write(f"回した回数: {num}")
+                st.write(f"昇段: {stats['promotions']}")
+                st.write(f"後段: {stats['demotions']}")
+                st.write(f"合計昇段回数: {sum(stats['promotions'])}")
+                st.write(f"合計後段回数: {sum(stats['demotions'])}")
 
 
 if __name__ == "__main__":

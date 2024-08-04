@@ -1,6 +1,7 @@
 # baseTypes?commonTypes?とりあえずログイン系などの基盤となる型
-from pydantic import BaseModel, HttpUrl
 import typing
+
+from pydantic import BaseModel, HttpUrl
 
 
 class FetchDomainNameResponse(BaseModel):

@@ -2,7 +2,6 @@
 # discordに投稿する
 
 import discord
-
 import requests
 
 # API endpoint URL

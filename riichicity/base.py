@@ -1,20 +1,23 @@
-import os
+"""Riichi city API wrapper."""
+
+import datetime
 import json
+import os
 import random
+import time
+
+import pydantic
 import requests
 import Types.accountTypes
-import Types.stats
+import Types.baseTypes
 import Types.commonConsts
 import Types.consts
 import Types.readPaiPuList
-import Types.baseTypes
-import datetime
-import time
-import pydantic
+import Types.stats
 
 
-#
 def fetch_domain_name() -> Types.baseTypes.FetchDomainNameResponse:
+    """Fetch domain name."""
     url = "https://d3qgi0t347dz44.cloudfront.net/release/notice/domain_name.ncc"
     response = requests.get(url)
     response.raise_for_status()
@@ -25,42 +28,56 @@ def fetch_domain_name() -> Types.baseTypes.FetchDomainNameResponse:
 
 
 def users_check_version(
-    headers: dict, channel: str = "default", platform: str = "ios", version: str = "2.1.16.31622"
+    headers: dict,
+    channel: str = "default",
+    platform: str = "ios",
+    version: str = "2.1.16.31622",
 ) -> Types.baseTypes.CheckVersionResponse:
+    """Users/checkVersionのwrapper."""
     payload = {
         "channel": channel,
         "platform": platform,
         "version": version,
     }
-    checkVersionRes = requests.post("https://alicdn.mahjong-jp.net/users/checkVersion", json=payload, headers=headers)
+    checkVersionRes = requests.post(
+        "https://alicdn.mahjong-jp.net/users/checkVersion",
+        json=payload,
+        headers=headers,
+    )
     checkVersionRes = checkVersionRes.json()
     print(checkVersionRes)
     # json.dump(checkVersionRes, open("users_check_version_latest.json", "w"))
-    checkVersionRes = Types.baseTypes.CheckVersionResponse(**checkVersionRes, strict=True)
+    checkVersionRes = Types.baseTypes.CheckVersionResponse(
+        **checkVersionRes, strict=True
+    )
     return checkVersionRes
 
 
-# checkVersionで差異があったら呼ばれる
-# wget https://d3qgi0t347dz44.cloudfront.net/release/ios/20240329002/version.txt
 def get_version():
-    # ここの日付は
-    getVersionRes = requests.get("https://d3qgi0t347dz44.cloudfront.net/release/ios/20240329002/version.txt")
+    """checkVersionで差異があったら呼ばれる."""
+    getVersionRes = requests.get(
+        "https://d3qgi0t347dz44.cloudfront.net/release/ios/20240329002/version.txt"
+    )
     if getVersionRes.status_code == 200:
         print(getVersionRes.text)
     else:
         print(f"error! {getVersionRes.status_code} Failed to get version")
 
 
-# バイナリ差分をダウンロード。使う予定はない
 def get_res_bundle_data():
-    getResBundleData = requests.get("https://d3qgi0t347dz44.cloudfront.net/release/ios/20240329002/res_bundle_data.dat")
+    """バイナリ差分をダウンロード。使う予定はない."""
+    getResBundleData = requests.get(
+        "https://d3qgi0t347dz44.cloudfront.net/release/ios/20240329002/res_bundle_data.dat"
+    )
     if getResBundleData.status_code == 200:
         print(getResBundleData.text)
     else:
         print(f"error! {getResBundleData.status_code} Failed to get version")
 
 
-def login_riichi_city(adjustId: str | None = None) -> Types.stats.EmailLoginResponse | None:
+def login_riichi_city(
+    adjustId: str | None = None,
+) -> Types.stats.EmailLoginResponse | None:
     # res = fetch_domain_name()
     # print(res.domain_name)
     # リクエストヘッダーを設定
@@ -73,7 +90,9 @@ def login_riichi_city(adjustId: str | None = None) -> Types.stats.EmailLoginResp
 
     if adjustId is not None:
         payload["adjustId"] = adjustId
-    response = requests.post("https://alicdn.mahjong-jp.net/users/emailLogin", json=payload, headers=headers)
+    response = requests.post(
+        "https://alicdn.mahjong-jp.net/users/emailLogin", json=payload, headers=headers
+    )
 
     emailLoginRes = response.json()
     print(emailLoginRes)
@@ -88,7 +107,9 @@ def login_riichi_city(adjustId: str | None = None) -> Types.stats.EmailLoginResp
         return None
 
 
-def get_headers(email_login_res: Types.stats.EmailLoginResponse) -> Types.accountTypes.Headers:
+def get_headers(
+    email_login_res: Types.stats.EmailLoginResponse,
+) -> Types.accountTypes.Headers:
     deviceid = os.environ["deviceid"]
     sid = os.environ["sid"]
 
@@ -112,7 +133,7 @@ def get_headers(email_login_res: Types.stats.EmailLoginResponse) -> Types.accoun
 def get_live_info_from_riichi_city(
     headers: dict, playerCount: int = 3, round: int = 2, stageType: int = 4
 ) -> list[str]:
-
+    """Record/readOnlineRoomのwrapper."""
     payload = {
         "stageType": stageType,
         "round": round,
@@ -121,7 +142,9 @@ def get_live_info_from_riichi_city(
         "frends": False,
     }
     readOnlineRoomRes = requests.post(
-        "https://alicdn.mahjong-jp.net/record/readOnlineRoom", json=payload, headers=headers
+        "https://alicdn.mahjong-jp.net/record/readOnlineRoom",
+        json=payload,
+        headers=headers,
     )
     readOnlineRoomResJson = readOnlineRoomRes.json()
     print(readOnlineRoomResJson)
@@ -157,9 +180,12 @@ def get_live_info_from_riichi_city(
 def get_user_detail_stats(
     headers: dict, userID: str, gameplay: int, playerCount: int
 ) -> Types.stats.UserDetailStatsV2Response:
+    """stats/userDetailStatsのwrapper."""
     payload = {"userID": userID, "playerCount": playerCount, "gameplay": gameplay}
     userDetailStatsRes = requests.post(
-        "https://alicdn.mahjong-jp.net/stats/userDetailStats", json=payload, headers=headers
+        "https://alicdn.mahjong-jp.net/stats/userDetailStats",
+        json=payload,
+        headers=headers,
     )
     userDetailStatsRes = userDetailStatsRes.json()
 
@@ -176,6 +202,7 @@ def get_user_detail_stats_v2(
     stageType: list[int] = [1, 2, 3, 4],
     dataType: int = 0,
 ) -> Types.stats.UserDetailStatsV2Response:
+    """stats/userDetailStatsV2のwrapper."""
     if gameplay == 1001:
         payload = {
             "userID": userID,
@@ -188,7 +215,9 @@ def get_user_detail_stats_v2(
     else:
         payload = {"userID": userID, "playerCount": playerCount, "gameplay": gameplay}
     userDetailStatsRes = requests.post(
-        "https://alicdn.mahjong-jp.net/stats/userDetailStatsV2", json=payload, headers=headers
+        "https://alicdn.mahjong-jp.net/stats/userDetailStatsV2",
+        json=payload,
+        headers=headers,
     )
     userDetailStatsRes = userDetailStatsRes.json()
     # userDetailStatsRes = Types.stats.UserDetailStatsV2Response(**userDetailStatsRes, strict=True)
@@ -205,6 +234,7 @@ def get_user_detail_stats_v2_info(
     round: int = 2,
     stageType: int = 4,
 ) -> dict:
+    """stats/userDetailStatsV2Infoのwrapper."""
     payload = {
         "userID": userID,
         "playerCount": playerCount,
@@ -213,7 +243,9 @@ def get_user_detail_stats_v2_info(
         "stageType": stageType,
     }
     userDetailStatsV2InfoRes = requests.post(
-        "https://alicdn.mahjong-jp.net/stats/userDetailStatsV2Info", json=payload, headers=headers
+        "https://alicdn.mahjong-jp.net/stats/userDetailStatsV2Info",
+        json=payload,
+        headers=headers,
     )
     userDetailStatsV2InfoRes = userDetailStatsV2InfoRes.json()
     print(userDetailStatsV2InfoRes)
@@ -226,9 +258,16 @@ def get_user_detail_stats_v2_info(
 # end
 
 
-def get_user_base_data(headers: dict, userID: str, gameplay: int, playerCount: int) -> Types.stats.UserBaseDataResponse:
+def get_user_base_data(
+    headers: dict, userID: str, gameplay: int, playerCount: int
+) -> Types.stats.UserBaseDataResponse:
+    """users/userBaseDataのwrapper."""
     payload = {"userID": userID, "gameplay": gameplay, "playerCount": playerCount}
-    userBaseDataRes = requests.post("https://alicdn.mahjong-jp.net/users/userBaseData", json=payload, headers=headers)
+    userBaseDataRes = requests.post(
+        "https://alicdn.mahjong-jp.net/users/userBaseData",
+        json=payload,
+        headers=headers,
+    )
     userBaseDataRes = userBaseDataRes.json()
     print(userBaseDataRes)
     userBaseDataRes = Types.stats.UserBaseDataResponse(**userBaseDataRes, strict=True)
@@ -242,16 +281,25 @@ def get_user_base_data(headers: dict, userID: str, gameplay: int, playerCount: i
 
 
 def get_user_brief(headers: dict, userId: str) -> Types.stats.UserBriefResponse:
+    """users/userBriefのwrapper."""
     payload = {"userId": userId}
-    userBriefRes = requests.post("https://alicdn.mahjong-jp.net/users/userBrief", json=payload, headers=headers)
+    userBriefRes = requests.post(
+        "https://alicdn.mahjong-jp.net/users/userBrief", json=payload, headers=headers
+    )
     userBriefRes = userBriefRes.json()
     print(userBriefRes)
     userBriefRes = Types.stats.UserBriefResponse(**userBriefRes, strict=True)
     return userBriefRes
 
 
-def get_user_tasks(headers: Types.accountTypes.Headers) -> Types.stats.ActivityUserTasksResponse:
-    userTasksRes = requests.post("https://alicdn.mahjong-jp.net/activity/userTask", headers=headers.model_dump_json())
+def get_user_tasks(
+    headers: Types.accountTypes.Headers,
+) -> Types.stats.ActivityUserTasksResponse:
+    """activity/userTaskのwrapper."""
+    userTasksRes = requests.post(
+        "https://alicdn.mahjong-jp.net/activity/userTask",
+        headers=headers.model_dump_json(),
+    )
     userTasksRes = userTasksRes.json()
     print(userTasksRes)
     # json.dump(userTasksRes, open("get_user_tasks2.json", "w"))
@@ -262,9 +310,12 @@ def get_user_tasks(headers: Types.accountTypes.Headers) -> Types.stats.ActivityU
 # get_user_tasksでtaskを持ってきて個別のawardはget_user_task_awardで獲得できる。
 # ログインしてないので動作未確認
 def get_user_task_award(headers: dict, taskId: int = 12004, type: int = 1) -> dict[any]:
+    """activity/userTaskAwardのwrapper."""
     payload = {"taskId": taskId, "type": type}
     userTaskAwardRes = requests.post(
-        "https://alicdn.mahjong-jp.net/activity/userTaskAward", json=payload, headers=headers
+        "https://alicdn.mahjong-jp.net/activity/userTaskAward",
+        json=payload,
+        headers=headers,
     )
     userTaskAwardRes = userTaskAwardRes.json()
     print(userTaskAwardRes)
@@ -275,14 +326,19 @@ def get_user_task_award(headers: dict, taskId: int = 12004, type: int = 1) -> di
 def get_activity_collect_task_award(
     headers: dict, typeList: list[int] = [1, 3]
 ) -> Types.stats.CollectTaskAwardResponse:
+    """activity/collectTaskAwardのwrapper."""
     payload = {"typeList": typeList}
     activityCollectTaskAwardRes = requests.post(
-        "https://alicdn.mahjong-jp.net/activity/collectTaskAward", json=payload, headers=headers
+        "https://alicdn.mahjong-jp.net/activity/collectTaskAward",
+        json=payload,
+        headers=headers,
     )
     activityCollectTaskAwardRes = activityCollectTaskAwardRes.json()
     print(activityCollectTaskAwardRes)
     # json.dump(activityCollectTaskAwardRes, open("get_activity_collect_task_award.json", "w"))
-    activityCollectTaskAwardRes = Types.stats.CollectTaskAwardResponse(**activityCollectTaskAwardRes, strict=True)
+    activityCollectTaskAwardRes = Types.stats.CollectTaskAwardResponse(
+        **activityCollectTaskAwardRes, strict=True
+    )
     return activityCollectTaskAwardRes
 
 
@@ -290,11 +346,16 @@ def get_activity_collect_task_award(
 def get_store_buy_product(
     headers: dict, productID: int = 579, num: int = 1
 ) -> Types.stats.StoreBuyProductResponse:  # 579は毎日の無料ボーナス
+    """store/buyProductのwrapper."""
     payload = {"productID": productID, "num": num}
-    storeBuyProductRes = requests.post("https://alicdn.mahjong-jp.net/store/buyProduct", json=payload, headers=headers)
+    storeBuyProductRes = requests.post(
+        "https://alicdn.mahjong-jp.net/store/buyProduct", json=payload, headers=headers
+    )
     storeBuyProductRes = storeBuyProductRes.json()
     print(storeBuyProductRes)
-    storeBuyProductRes = Types.stats.StoreBuyProductResponse(**storeBuyProductRes, strict=True)
+    storeBuyProductRes = Types.stats.StoreBuyProductResponse(
+        **storeBuyProductRes, strict=True
+    )
     # json.dump(storeBuyProductRes, open("get_store_buy_product.json", "w"))
     return storeBuyProductRes
 
@@ -302,12 +363,17 @@ def get_store_buy_product(
 def get_product_list(
     headers: dict, firstLabel: int = 3, isCheckSkin: bool = True, secondLabel: int = 0
 ) -> Types.stats.GetProductListResponse:
+    """store/getProductListのwrapper."""
     payload = {
         "firstLabel": firstLabel,
         "isCheckSkin": isCheckSkin,
         "secondLabel": secondLabel,
     }
-    productRes = requests.post("https://alicdn.mahjong-jp.net/store/getProductList", json=payload, headers=headers)
+    productRes = requests.post(
+        "https://alicdn.mahjong-jp.net/store/getProductList",
+        json=payload,
+        headers=headers,
+    )
     productRes = productRes.json()
     productRes = Types.stats.GetProductListResponse(**productRes, strict=True)
     print(productRes)
@@ -316,8 +382,11 @@ def get_product_list(
 
 # ガチャ引くリスト？
 def store_get_draw(headers: dict) -> Types.stats.StoreGetDrawResponse:
+    """store/getDrawのwrapper."""
     payload = {}
-    storeGetDrawRes = requests.post("https://alicdn.mahjong-jp.net/store/getDraw", json=payload, headers=headers)
+    storeGetDrawRes = requests.post(
+        "https://alicdn.mahjong-jp.net/store/getDraw", json=payload, headers=headers
+    )
     storeGetDrawRes = storeGetDrawRes.json()
     # json.dump(storeGetDrawRes, open("store_get_draw.json", "w"))
     storeGetDrawRes = Types.stats.StoreGetDrawResponse(**storeGetDrawRes, strict=True)
@@ -325,51 +394,77 @@ def store_get_draw(headers: dict) -> Types.stats.StoreGetDrawResponse:
     return storeGetDrawRes
 
 
-def store_user_draw(headers: dict, pool: int = 38, type: int = 1) -> Types.stats.StoreUserDrawResponse:
+def store_user_draw(
+    headers: dict, pool: int = 38, type: int = 1
+) -> Types.stats.StoreUserDrawResponse:
+    """store/userDrawのwrapper."""
     payload = {"pool": pool, "type": type}
-    storeUserDrawRes = requests.post("https://alicdn.mahjong-jp.net/store/userDraw", json=payload, headers=headers)
+    storeUserDrawRes = requests.post(
+        "https://alicdn.mahjong-jp.net/store/userDraw", json=payload, headers=headers
+    )
     storeUserDrawRes = storeUserDrawRes.json()
     print(storeUserDrawRes)
     # json.dump(storeUserDrawRes, open("store_user_draw.json", "w"))
-    storeUserDrawRes = Types.stats.StoreUserDrawResponse(**storeUserDrawRes, strict=True)
+    storeUserDrawRes = Types.stats.StoreUserDrawResponse(
+        **storeUserDrawRes, strict=True
+    )
     return storeUserDrawRes
 
 
 # 風林火山イベ
-def get_activity_ex_team_daily_award(headers: dict) -> Types.stats.EXTeamDailyAwardResponse:
+def get_activity_ex_team_daily_award(
+    headers: dict,
+) -> Types.stats.EXTeamDailyAwardResponse:
+    """activity/eXTeamDailyAwardのwrapper."""
     payload = {}
     activityEXTeamDailyAwardRes = requests.post(
-        "https://alicdn.mahjong-jp.net/activity/eXTeamDailyAward", json=payload, headers=headers
+        "https://alicdn.mahjong-jp.net/activity/eXTeamDailyAward",
+        json=payload,
+        headers=headers,
     )
     activityEXTeamDailyAwardAwardRes = activityEXTeamDailyAwardRes.json()
     # json.dump(activityEXTeamDailyAwardAwardRes, open("get_activity_ex_team_daily_award.json", "w"))
     print(activityEXTeamDailyAwardAwardRes)
-    activityEXTeamDailyAwardRes = Types.stats.EXTeamDailyAwardResponse(**activityEXTeamDailyAwardAwardRes, strict=True)
+    activityEXTeamDailyAwardRes = Types.stats.EXTeamDailyAwardResponse(
+        **activityEXTeamDailyAwardAwardRes, strict=True
+    )
     return activityEXTeamDailyAwardRes
 
 
 def activity_ex_team_task(headers: dict) -> Types.stats.EXTeamTaskResponse:
+    """activity/eXTeamTaskのwrapper."""
     payload = {}
     activityEXTeamTaskRes = requests.post(
-        "https://alicdn.mahjong-jp.net/activity/eXTeamTask", json=payload, headers=headers
+        "https://alicdn.mahjong-jp.net/activity/eXTeamTask",
+        json=payload,
+        headers=headers,
     )
     activityEXTeamTaskRes = activityEXTeamTaskRes.json()
     # json.dump(activityEXTeamTaskRes, open("activity_ex_team_task.json", "w"))
     print(activityEXTeamTaskRes)
-    activityEXTeamTaskRes = Types.stats.EXTeamTaskResponse(**activityEXTeamTaskRes, strict=True)
+    activityEXTeamTaskRes = Types.stats.EXTeamTaskResponse(
+        **activityEXTeamTaskRes, strict=True
+    )
     return activityEXTeamTaskRes
 
 
 # TODO: 検証 壊れてるかも
-def activity_receive_ex_team_task(headers: dict, taskID: int = 3, type: int = 4) -> dict[any]:
+def activity_receive_ex_team_task(
+    headers: dict, taskID: int = 3, type: int = 4
+) -> dict[any]:
+    """activity/receiveEXTeamTaskのwrapper."""
     payload = {"taskID": taskID, "type": type}
     activityReceiveEXTeamTaskRes = requests.post(
-        "https://alicdn.mahjong-jp.net/activity/receiveEXTeamTask", json=payload, headers=headers
+        "https://alicdn.mahjong-jp.net/activity/receiveEXTeamTask",
+        json=payload,
+        headers=headers,
     )
     activityReceiveEXTeamTaskRes = activityReceiveEXTeamTaskRes.json()
     # json.dump(activityReceiveEXTeamTaskRes, open("activity_receive_ex_team_task.json", "w"))
     print(activityReceiveEXTeamTaskRes)
-    activityReceiveEXTeamTaskRes = Types.stats.EXTeamTaskResponse(**activityReceiveEXTeamTaskRes, strict=True)
+    activityReceiveEXTeamTaskRes = Types.stats.EXTeamTaskResponse(
+        **activityReceiveEXTeamTaskRes, strict=True
+    )
     return activityReceiveEXTeamTaskRes
 
 
@@ -377,74 +472,110 @@ def activity_receive_ex_team_task(headers: dict, taskID: int = 3, type: int = 4)
 def activity_view_action(
     headers: dict, actionId: Types.consts.EnumDefine.TaskActionServer = 2042
 ) -> Types.stats.ActivityViewActionResponse:
+    """activity/viewActionのwrapper."""
     payload = {"actionId": actionId}
     activityViewActionRes = requests.post(
-        "https://alicdn.mahjong-jp.net/activity/viewAction", json=payload, headers=headers
+        "https://alicdn.mahjong-jp.net/activity/viewAction",
+        json=payload,
+        headers=headers,
     )
     activityViewActionRes = activityViewActionRes.json()
     print(activityViewActionRes)
     # json.dump(activityViewActionRes, open("activity_view_action.json", "w"))
-    activityViewActionRes = Types.stats.ActivityViewActionResponse(**activityViewActionRes, strict=True)
+    activityViewActionRes = Types.stats.ActivityViewActionResponse(
+        **activityViewActionRes, strict=True
+    )
     return activityViewActionRes
 
 
 def activity_activity_list(
     headers: dict, lang: str = "ja", reqVersion: str = "v1"
 ) -> Types.stats.ActivityActivityListResponse:
+    """activity/activityListのwrapper."""
     payload = {"lang": lang, "reqVersion": reqVersion}
     activityActivityListRes = requests.post(
-        "https://alicdn.mahjong-jp.net/activity/activityList", json=payload, headers=headers
+        "https://alicdn.mahjong-jp.net/activity/activityList",
+        json=payload,
+        headers=headers,
     )
     activityActivityListRes = activityActivityListRes.json()
     print(activityActivityListRes)
     # json.dump(activityActivityListRes, open("activity_activity_list.json", "w"))
-    activityActivityListRes = Types.stats.ActivityActivityListResponse(**activityActivityListRes, strict=True)
+    activityActivityListRes = Types.stats.ActivityActivityListResponse(
+        **activityActivityListRes, strict=True
+    )
     return activityActivityListRes
 
 
 def activity_receive_sign_award(
     headers: dict, activityId: int = 10124, awardType: Types.consts.AwardType = 3
 ) -> Types.baseTypes.ReceiveSignAwardResponse:
+    """activity/receiveSignAwardのwrapper."""
     payload = {"activityId": activityId, "awardType": awardType}
     activityReceiveSignAwardRes = requests.post(
-        "https://alicdn.mahjong-jp.net/activity/receiveSignAward", json=payload, headers=headers
+        "https://alicdn.mahjong-jp.net/activity/receiveSignAward",
+        json=payload,
+        headers=headers,
     )
     activityReceiveSignAwardRes = activityReceiveSignAwardRes.json()
     # json.dump(activityReceiveSignAwardRes, open("activity_receive_sign_award.json", "w"))
     print(activityReceiveSignAwardRes)
-    activityReceiveSignAwardRes = Types.baseTypes.ReceiveSignAwardResponse(**activityReceiveSignAwardRes, strict=True)
+    activityReceiveSignAwardRes = Types.baseTypes.ReceiveSignAwardResponse(
+        **activityReceiveSignAwardRes, strict=True
+    )
     return activityReceiveSignAwardRes
 
 
-def activity_user_sign_progress(headers: dict, activityId: int = 10124) -> Types.baseTypes.UserSignProgressResponse:
+def activity_user_sign_progress(
+    headers: dict, activityId: int = 10124
+) -> Types.baseTypes.UserSignProgressResponse:
+    """activity/userSignProgressのwrapper."""
     payload = {"activityId": activityId}
     activityUserSignProgressRes = requests.post(
-        "https://alicdn.mahjong-jp.net/activity/userSignProgress", json=payload, headers=headers
+        "https://alicdn.mahjong-jp.net/activity/userSignProgress",
+        json=payload,
+        headers=headers,
     )
     activityUserSignProgressRes = activityUserSignProgressRes.json()
-    json.dump(activityUserSignProgressRes, open("activity_user_sign_progress.json", "w"))
+    json.dump(
+        activityUserSignProgressRes, open("activity_user_sign_progress.json", "w")
+    )
     print(activityUserSignProgressRes)
-    activityUserSignProgressRes = Types.baseTypes.UserSignProgressResponse(**activityUserSignProgressRes, strict=True)
+    activityUserSignProgressRes = Types.baseTypes.UserSignProgressResponse(
+        **activityUserSignProgressRes, strict=True
+    )
     return activityUserSignProgressRes
 
 
-def lobbys_read_official_match(headers: dict, lang: str = "ja") -> Types.stats.ReadOfficialMatchResponse:
+def lobbys_read_official_match(
+    headers: dict, lang: str = "ja"
+) -> Types.stats.ReadOfficialMatchResponse:
+    """lobbys/readOfficialMatchのwrapper."""
     payload = {"lang": lang}
     lobbysReadOfficialMatchRes = requests.post(
-        "https://alicdn.mahjong-jp.net/lobbys/readOfficialMatch", json=payload, headers=headers
+        "https://alicdn.mahjong-jp.net/lobbys/readOfficialMatch",
+        json=payload,
+        headers=headers,
     )
     lobbysReadOfficialMatchRes = lobbysReadOfficialMatchRes.json()
     print(lobbysReadOfficialMatchRes)
     # json.dump(lobbysReadOfficialMatchRes, open("lobbys_read_official_match.json", "w"))
-    lobbysReadOfficialMatchRes = Types.stats.ReadOfficialMatchResponse(**lobbysReadOfficialMatchRes, strict=True)
+    lobbysReadOfficialMatchRes = Types.stats.ReadOfficialMatchResponse(
+        **lobbysReadOfficialMatchRes, strict=True
+    )
     return lobbysReadOfficialMatchRes
 
 
 # TODO: やる。型をつける
-def lobbys_sign_official_match(headers: dict, isCancel: bool = False, officialID: str = "") -> dict[any]:
+def lobbys_sign_official_match(
+    headers: dict, isCancel: bool = False, officialID: str = ""
+) -> dict[any]:
+    """lobbys/signOfficialMatchのwrapper."""
     payload = {"isCancel": isCancel, "officialID": officialID}
     lobbysSignOfficialMatchRes = requests.post(
-        "https://alicdn.mahjong-jp.net/lobbys/signOfficialMatch", json=payload, headers=headers
+        "https://alicdn.mahjong-jp.net/lobbys/signOfficialMatch",
+        json=payload,
+        headers=headers,
     )
     lobbysSignOfficialMatchRes = lobbysSignOfficialMatchRes.json()
     print(lobbysSignOfficialMatchRes)
@@ -453,16 +584,20 @@ def lobbys_sign_official_match(headers: dict, isCancel: bool = False, officialID
     return lobbysSignOfficialMatchRes
 
 
-# 日時設定されてるグランプリ(週間大会とか)の情報を取得。定期的に取得して時間になったら多分こちらからつなぎに行くっぽい
 def lobbys_read_timing_match(headers: dict) -> Types.stats.ReadTimingMatchResponse:
+    """日時設定されてるグランプリ(週間大会とか)の情報を取得。定期的に取得して時間になったら多分こちらからつなぎに行くっぽい."""
     payload = {}
     lobbysReadTimingMatchRes = requests.post(
-        "https://alicdn.mahjong-jp.net/lobbys/readTimingMatch", json=payload, headers=headers
+        "https://alicdn.mahjong-jp.net/lobbys/readTimingMatch",
+        json=payload,
+        headers=headers,
     )
     lobbysReadTimingMatchRes = lobbysReadTimingMatchRes.json()
     # print(lobbysReadTimingMatchRes)
     # json.dump(lobbysReadTimingMatchRes, open("lobbys_read_timing_match.json", "w"))
-    lobbysReadTimingMatchRes = Types.stats.ReadTimingMatchResponse(**lobbysReadTimingMatchRes, strict=True)
+    lobbysReadTimingMatchRes = Types.stats.ReadTimingMatchResponse(
+        **lobbysReadTimingMatchRes, strict=True
+    )
     return lobbysReadTimingMatchRes
 
 
@@ -470,9 +605,12 @@ def lobbys_read_timing_match(headers: dict) -> Types.stats.ReadTimingMatchRespon
 def lobbys_ready_official_next(
     headers: dict, matchID: str = "", matchStage: int = 2, officialID: str = ""
 ) -> Types.stats.ReadyOfficialNextResponse:
+    """lobbys/readyOfficialNextのwrapper."""
     payload = {"matchID": matchID, "matchStage": matchStage, "officialID": officialID}
     lobbysReadyOfficialNextRes = requests.post(
-        "https://alicdn.mahjong-jp.net/lobbys/readyOfficialNext", json=payload, headers=headers
+        "https://alicdn.mahjong-jp.net/lobbys/readyOfficialNext",
+        json=payload,
+        headers=headers,
     )
     lobbysReadyOfficialNextRes = lobbysReadyOfficialNextRes.json()
     print(lobbysReadyOfficialNextRes)
@@ -483,22 +621,30 @@ def lobbys_ready_official_next(
 def lobbys_sign_timing_match(
     headers: dict, isCancel: bool = False, signItemID: int = 10002, timingID: str = ""
 ) -> Types.stats.SignTimingMatchResponse:
+    """lobbys/signTimingMatchのwrapper."""
     payload = {"isCancel": isCancel, "signItemID": signItemID, "timingID": timingID}
     lobbysSignTimingMatchRes = requests.post(
-        "https://alicdn.mahjong-jp.net/lobbys/signTimingMatch", json=payload, headers=headers
+        "https://alicdn.mahjong-jp.net/lobbys/signTimingMatch",
+        json=payload,
+        headers=headers,
     )
     lobbysSignTimingMatchRes = lobbysSignTimingMatchRes.json()
     print(lobbysSignTimingMatchRes)
     # json.dump(lobbysSignTimingMatchRes, open("lobbys_sign_timing_match.json", "w"))
-    lobbysSignTimingMatchRes = Types.stats.SignTimingMatchResponse(**lobbysSignTimingMatchRes, strict=True)
+    lobbysSignTimingMatchRes = Types.stats.SignTimingMatchResponse(
+        **lobbysSignTimingMatchRes, strict=True
+    )
     return lobbysSignTimingMatchRes
 
 
 # TODO: 検証
 def get_message_receive_award(headers: dict, mailID: str, userID: str) -> dict:
+    """message/receiveAwardのwrapper."""
     payload = {"mailID": mailID, "userID": userID}
     messageReceiveAwardRes = requests.post(
-        "https://alicdn.mahjong-jp.net/message/receiveAward", json=payload, headers=headers
+        "https://alicdn.mahjong-jp.net/message/receiveAward",
+        json=payload,
+        headers=headers,
     )
     messageReceiveAwardRes = messageReceiveAwardRes.json()
     print(messageReceiveAwardRes)
@@ -506,9 +652,12 @@ def get_message_receive_award(headers: dict, mailID: str, userID: str) -> dict:
 
 
 def get_message_user_message(headers: dict, lang: str = "ja", userID: str = "") -> dict:
+    """message/userMessageのwrapper."""
     payload = {"lang": lang, "userID": userID}
     messageUserMessageRes = requests.post(
-        "https://alicdn.mahjong-jp.net/message/userMessage", json=payload, headers=headers
+        "https://alicdn.mahjong-jp.net/message/userMessage",
+        json=payload,
+        headers=headers,
     )
     messageUserMessageRes = messageUserMessageRes.json()
     print(messageUserMessageRes)
@@ -517,9 +666,12 @@ def get_message_user_message(headers: dict, lang: str = "ja", userID: str = "") 
 
 
 def get_gift_code(headers: dict, code: str) -> Types.stats.GetGiftCodeResponse:
+    """activity/activateRedeemCodeのwrapper."""
     payload = {"code": code}
     giftCodeRes = requests.post(
-        "https://alicdn.mahjong-jp.net/activity/activateRedeemCode", json=payload, headers=headers
+        "https://alicdn.mahjong-jp.net/activity/activateRedeemCode",
+        json=payload,
+        headers=headers,
     )
     giftCodeRes = giftCodeRes.json()
     print(giftCodeRes)
@@ -532,6 +684,7 @@ def get_gift_code(headers: dict, code: str) -> Types.stats.GetGiftCodeResponse:
 def lobbys_read_stage_classifies(
     headers: dict,
 ) -> Types.stats.LobbysReadStageClassifiesResponse:
+    """lobbys/readStageClassifies"のwrapper."""
     lobbysReadStageClassifiesRes = requests.post(
         "https://alicdn.mahjong-jp.net/lobbys/readStageClassifies", headers=headers
     )
@@ -547,6 +700,7 @@ def lobbys_read_stage_classifies(
 def backpack_recycle_gift(
     headers: dict, isAll: bool = False, itemID: int = 11003, num: int = 1
 ) -> Types.stats.BackpackRecycleGiftResponse:
+    """backpack/recycleGiftのwrapper."""
     payload = {
         "isAll": isAll,
         "items": [
@@ -557,34 +711,56 @@ def backpack_recycle_gift(
         ],
     }
     backpackRecycleGiftRes = requests.post(
-        "https://alicdn.mahjong-jp.net/backpack/recycleGift", json=payload, headers=headers
+        "https://alicdn.mahjong-jp.net/backpack/recycleGift",
+        json=payload,
+        headers=headers,
     )
     backpackRecycleGiftRes = backpackRecycleGiftRes.json()
     print(backpackRecycleGiftRes)
     # json.dump(backpackRecycleGiftRes, open("backpack_recycle_gift.json", "w"))
-    backpackRecycleGiftRes = Types.stats.BackpackRecycleGiftResponse(**backpackRecycleGiftRes, strict=True)
+    backpackRecycleGiftRes = Types.stats.BackpackRecycleGiftResponse(
+        **backpackRecycleGiftRes, strict=True
+    )
     return backpackRecycleGiftRes
 
 
-def backpack_user_item_list(headers: dict, isUserEquip: bool = False) -> Types.stats.BackpackUserItemListResponse:
+def backpack_user_item_list(
+    headers: dict, isUserEquip: bool = False
+) -> Types.stats.BackpackUserItemListResponse:
+    """backpack/userItemListのwrapper."""
     payload = {
         "isUserEquip": isUserEquip,
     }
     backpackUserItemListRes = requests.post(
-        "https://alicdn.mahjong-jp.net/backpack/userItemList", json=payload, headers=headers
+        "https://alicdn.mahjong-jp.net/backpack/userItemList",
+        json=payload,
+        headers=headers,
     )
     backpackUserItemListRes = backpackUserItemListRes.json()
     print(backpackUserItemListRes)
     # json.dump(backpackUserItemListRes, open("backpack_user_item_list.json", "w"))
-    backpackUserItemListRes = Types.stats.BackpackUserItemListResponse(**backpackUserItemListRes, strict=True)
+    backpackUserItemListRes = Types.stats.BackpackUserItemListResponse(
+        **backpackUserItemListRes, strict=True
+    )
     return backpackUserItemListRes
 
 
-# ランキングの情報を取得。デフォルト値は4麻
 def activity_read_ranks(
-    headers: dict, index: int = 0, kind: int = 1, limit: int = 100, scope: int = 1, skip: int = 0
+    headers: dict,
+    index: int = 0,
+    kind: int = 1,
+    limit: int = 100,
+    scope: int = 1,
+    skip: int = 0,
 ) -> Types.stats.ActivityReadRanksResponse:
-    payload = {"index": index, "kind": kind, "limit": limit, "scope": scope, "skip": skip}
+    """ランキングの情報を取得。デフォルト値は4麻."""
+    payload = {
+        "index": index,
+        "kind": kind,
+        "limit": limit,
+        "scope": scope,
+        "skip": skip,
+    }
     # payload_4ma = {
     #     "index": 0,
     #     "kind": 1,
@@ -600,12 +776,16 @@ def activity_read_ranks(
     #     "skip": 0,
     # }
     activityReadRanksRes = requests.post(
-        "https://alicdn.mahjong-jp.net/activity/readRanks", json=payload, headers=headers
+        "https://alicdn.mahjong-jp.net/activity/readRanks",
+        json=payload,
+        headers=headers,
     )
     activityReadRanksRes = activityReadRanksRes.json()
     # json.dump(activityReadRanksRes, open("activity_read_ranks_3ma.json", "w"))
     print(activityReadRanksRes)
-    activityReadRanksRes = Types.stats.ActivityReadRanksResponse(**activityReadRanksRes, strict=True)
+    activityReadRanksRes = Types.stats.ActivityReadRanksResponse(
+        **activityReadRanksRes, strict=True
+    )
     return activityReadRanksRes
 
 
@@ -618,11 +798,13 @@ def activity_read_ranks(
 # end
 
 
-# 動かない、ログインしたユーザーの牌譜しか取れない
 def get_paipu_user_games(headers: dict, paipuId: str) -> dict:
+    """stats/getPaipuUserGamesのwrapper.動かない、ログインしたユーザーの牌譜しか取れない."""
     payload = {"paipuId": paipuId}
     getPaipuUserGamesRes = requests.post(
-        "https://alicdn.mahjong-jp.net/stats/getPaipuUserGames", json=payload, headers=headers
+        "https://alicdn.mahjong-jp.net/stats/getPaipuUserGames",
+        json=payload,
+        headers=headers,
     )
     getPaipuUserGamesRes = getPaipuUserGamesRes.json()
     print(getPaipuUserGamesRes)
@@ -653,6 +835,7 @@ def read_pai_pu_list(
     stageType: int,
     matchType: int,
 ) -> dict:
+    """!!core function!! record/readPaiPuListのwrapper."""
     payload = {
         "startTime": startTime,
         "endTime": enTime,
@@ -666,7 +849,9 @@ def read_pai_pu_list(
         "matchType": matchType,
     }
     readPaiPuListRes = requests.post(
-        "https://alicdn.mahjong-jp.net/record/readPaiPuList", json=payload, headers=headers
+        "https://alicdn.mahjong-jp.net/record/readPaiPuList",
+        json=payload,
+        headers=headers,
     )
     readPaiPuListRes = readPaiPuListRes.json()
     print(readPaiPuListRes)
@@ -679,8 +864,8 @@ def read_pai_pu_list(
 # end
 
 
-# 未検証。段位開始時に使う。classifyIDはreadStageClassifiesから取れる
 def lobbys_start_stage(headers: dict, classifyID: str) -> dict:
+    """未検証。段位開始時に使う。classifyIDはreadStageClassifiesから取れる."""
     payload = {"classifyID": classifyID}
     lobbysStartStageRes = requests.post(
         "https://alicdn.mahjong-jp.net/lobbys/startStage", json=payload, headers=headers
@@ -694,7 +879,9 @@ def lobbys_start_stage(headers: dict, classifyID: str) -> dict:
 def lobbys_cancel_stage(headers: dict, matchID: str) -> dict:
     payload = {"matchID": matchID}
     lobbysCancelStageRes = requests.post(
-        "https://alicdn.mahjong-jp.net/lobbys/cancelStage", json=payload, headers=headers
+        "https://alicdn.mahjong-jp.net/lobbys/cancelStage",
+        json=payload,
+        headers=headers,
     )
     lobbysCancelStageRes = lobbysCancelStageRes.json()
     print(lobbysCancelStageRes)
@@ -702,22 +889,34 @@ def lobbys_cancel_stage(headers: dict, matchID: str) -> dict:
 
 
 # 友人戦のpublic roomを取得、その他更新ボタンもこれ。クイック参加はjoinPublicRoom
-def lobbys_read_public_room(headers: dict, playerCount: int, round: int) -> Types.stats.lobbysReadPublicRoomResponse:
+def lobbys_read_public_room(
+    headers: dict, playerCount: int, round: int
+) -> Types.stats.lobbysReadPublicRoomResponse:
     payload = {"playerCount": playerCount, "round": round}
     lobbysReadPublicRoomRes = requests.post(
-        "https://alicdn.mahjong-jp.net/lobbys/readPublicRoom", json=payload, headers=headers
+        "https://alicdn.mahjong-jp.net/lobbys/readPublicRoom",
+        json=payload,
+        headers=headers,
     )
     lobbysReadPublicRoomRes = lobbysReadPublicRoomRes.json()
     print(lobbysReadPublicRoomRes)
     # json.dump(lobbysReadPublicRoomRes, open("lobbys_read_public_room.json", "w"))
-    lobbysReadPublicRoomRes = Types.stats.lobbysReadPublicRoomResponse(**lobbysReadPublicRoomRes, strict=True)
+    lobbysReadPublicRoomRes = Types.stats.lobbysReadPublicRoomResponse(
+        **lobbysReadPublicRoomRes, strict=True
+    )
     return lobbysReadPublicRoomRes
 
 
 # ブックマーク。isCancelがtrueだとブックマーク解除。当然ですがisCollectの値はユーザー単位で見え方が違う(別のユーザーの別のブックマークは違うので)
-def collect_pai_pu(headers: dict, paiPuId: str, isCancel: bool, remark: str) -> Types.stats.CollectPaiPuResponse:
+def collect_pai_pu(
+    headers: dict, paiPuId: str, isCancel: bool, remark: str
+) -> Types.stats.CollectPaiPuResponse:
     payload = {"paiPuId": paiPuId, "isCancel": isCancel, "remark": remark}
-    collectPaiPuRes = requests.post("https://alicdn.mahjong-jp.net/record/collectPaiPu", json=payload, headers=headers)
+    collectPaiPuRes = requests.post(
+        "https://alicdn.mahjong-jp.net/record/collectPaiPu",
+        json=payload,
+        headers=headers,
+    )
     collectPaiPuRes = collectPaiPuRes.json()
     print(collectPaiPuRes)
     collectPaiPuRes = Types.stats.CollectPaiPuResponse(**collectPaiPuRes, strict=True)
@@ -738,7 +937,11 @@ def collect_pai_pu(headers: dict, paiPuId: str, isCancel: bool, remark: str) -> 
 # いつもの牌譜データ取得のやつ！！
 def get_room_data(headers: dict, isObserve: bool, keyValue: str, handID: str) -> dict:
     payload = {"isObserve": isObserve, "keyValue": keyValue, "handID": handID}
-    getRoomDataRes = requests.post("https://alicdn.mahjong-jp.net/record/getRoomData", json=payload, headers=headers)
+    getRoomDataRes = requests.post(
+        "https://alicdn.mahjong-jp.net/record/getRoomData",
+        json=payload,
+        headers=headers,
+    )
     getRoomDataRes = getRoomDataRes.json()
     print(getRoomDataRes)
     return getRoomDataRes
@@ -747,7 +950,11 @@ def get_room_data(headers: dict, isObserve: bool, keyValue: str, handID: str) ->
 # 動いたけど、[]になってる
 def get_game_data(headers: dict, roomId: str, eventStartPos: int) -> dict:
     payload = {"roomId": roomId, "eventStartPos": eventStartPos}
-    getGameDataRes = requests.post("https://alicdn.mahjong-jp.net/record/getGameData", json=payload, headers=headers)
+    getGameDataRes = requests.post(
+        "https://alicdn.mahjong-jp.net/record/getGameData",
+        json=payload,
+        headers=headers,
+    )
     getGameDataRes = getGameDataRes.json()
     print(getGameDataRes)
     return getGameDataRes
@@ -775,10 +982,17 @@ def signMatch_dev(headers: dict):
             print(item)
             if item.isSign is False:
                 print(f"参加してない: {item.officialID}")
-                print(f"参加料: {item.signItemList[0].num}, ItemID: {item.signItemList[0].itemID}")
+                print(
+                    f"参加料: {item.signItemList[0].num}, ItemID: {item.signItemList[0].itemID}"
+                )
                 print(f"日時: {datetime.datetime.fromtimestamp(item.startTime)}")
                 if item.signItemList[0].itemID == 10002:
-                    res = lobbys_sign_timing_match(headers, isCancel=False, signItemID=10002, timingID=item.officialID)
+                    res = lobbys_sign_timing_match(
+                        headers,
+                        isCancel=False,
+                        signItemID=10002,
+                        timingID=item.officialID,
+                    )
                     print(res)
                     print(f"参加しました: {item.officialID}")
                     sleep_time = random.uniform(3, 5)
@@ -854,33 +1068,47 @@ def lobbys_create_friend_match(
         "rule": rule.model_dump(),
     }
     lobbysCreateFriendMatchRes = requests.post(
-        "https://alicdn.mahjong-jp.net/lobbys/createFriendMatch", json=payload, headers=headers
+        "https://alicdn.mahjong-jp.net/lobbys/createFriendMatch",
+        json=payload,
+        headers=headers,
     )
     lobbysCreateFriendMatchRes = lobbysCreateFriendMatchRes.json()
     print(lobbysCreateFriendMatchRes)
     # json.dump(lobbysCreateFriendMatchRes, open("lobbys_create_friend_match.json", "w"))
-    lobbysCreateFriendMatchRes = Types.stats.lobbysCreateFriendMatchResponse(**lobbysCreateFriendMatchRes, strict=True)
+    lobbysCreateFriendMatchRes = Types.stats.lobbysCreateFriendMatchResponse(
+        **lobbysCreateFriendMatchRes, strict=True
+    )
     return lobbysCreateFriendMatchRes
 
 
-def lobbys_enter_friend_match(headers: dict, roomNum: str) -> Types.stats.EnterFriendMatchResponse:
+def lobbys_enter_friend_match(
+    headers: dict, roomNum: str
+) -> Types.stats.EnterFriendMatchResponse:
     payload = {"roomNum": roomNum}
     lobbysEnterFriendMatchRes = requests.post(
-        "https://alicdn.mahjong-jp.net/lobbys/enterFriendMatch", json=payload, headers=headers
+        "https://alicdn.mahjong-jp.net/lobbys/enterFriendMatch",
+        json=payload,
+        headers=headers,
     )
     lobbysEnterFriendMatchRes = lobbysEnterFriendMatchRes.json()
     print(lobbysEnterFriendMatchRes)
     # json.dump(lobbysEnterFriendMatchRes, open("lobbys_enter_friend_match.json", "w"))
-    lobbysEnterFriendMatchRes = Types.stats.EnterFriendMatchResponse(**lobbysEnterFriendMatchRes, strict=True)
+    lobbysEnterFriendMatchRes = Types.stats.EnterFriendMatchResponse(
+        **lobbysEnterFriendMatchRes, strict=True
+    )
     return lobbysEnterFriendMatchRes
 
 
 def lobbys_friend_player_action(
-    headers: dict, action: int = 8, matchId: str = ""  # 1: ゲーム開始, 8: CPU追加
+    headers: dict,
+    action: int = 8,
+    matchId: str = "",  # 1: ゲーム開始, 8: CPU追加
 ) -> Types.stats.lobbysFriendPlayerActionResponse:
     payload = {"action": action, "matchId": matchId}
     lobbysFriendPlayerActionRes = requests.post(
-        "https://alicdn.mahjong-jp.net/lobbys/friendPlayerAction", json=payload, headers=headers
+        "https://alicdn.mahjong-jp.net/lobbys/friendPlayerAction",
+        json=payload,
+        headers=headers,
     )
     lobbysFriendPlayerActionRes = lobbysFriendPlayerActionRes.json()
     print(lobbysFriendPlayerActionRes)
@@ -933,21 +1161,27 @@ def daily_friend_match(headers: dict) -> bool:
         if lobbysEnterFriendMatchRes.code == 0:
             print("Successfully entered friend match")
             time.sleep(0.5)
-            addCpuAction = lobbys_friend_player_action(headers, action=8, matchId=lobbysEnterFriendMatchRes.data.Id)
+            addCpuAction = lobbys_friend_player_action(
+                headers, action=8, matchId=lobbysEnterFriendMatchRes.data.Id
+            )
             if addCpuAction.code == 0:
                 print("Successfully added CPU")
             else:
                 print("Failed to add CPU")
                 return False
             time.sleep(0.5)
-            addCpuAction2 = lobbys_friend_player_action(headers, action=8, matchId=lobbysEnterFriendMatchRes.data.Id)
+            addCpuAction2 = lobbys_friend_player_action(
+                headers, action=8, matchId=lobbysEnterFriendMatchRes.data.Id
+            )
             if addCpuAction2.code == 0:
                 print("Successfully added CPU2")
             else:
                 print("Failed to add CPU2")
                 return False
             time.sleep(1)
-            gameStartAction = lobbys_friend_player_action(headers, action=1, matchId=lobbysEnterFriendMatchRes.data.Id)
+            gameStartAction = lobbys_friend_player_action(
+                headers, action=1, matchId=lobbysEnterFriendMatchRes.data.Id
+            )
             if gameStartAction.code == 0:
                 print("Successfully started game")
                 return True
@@ -965,7 +1199,9 @@ def daily_friend_match(headers: dict) -> bool:
 def get_daily(headers: dict):
     # 毎日ログイン
     activityList = activity_activity_list(headers)
-    list = [activity for activity in activityList.data.list if activity.activityType == 0]
+    list = [
+        activity for activity in activityList.data.list if activity.activityType == 0
+    ]
     if len(list) == 1:
         activityId = list[0].activityId
     else:
@@ -982,21 +1218,31 @@ def get_daily(headers: dict):
             for item in receiveSignAward.awards:
                 try:
                     itemName = Types.consts.EnumDefine.ItemID(item.itemId).name
-                    print(f"ItemID: {item.itemId}, ItemName: {itemName} num: {item.num}")
+                    print(
+                        f"ItemID: {item.itemId}, ItemName: {itemName} num: {item.num}"
+                    )
                 except (ValueError, KeyError):
-                    print(f"ItemID: {item.itemId}, unRegisterdItemName, num: {item.num}")
+                    print(
+                        f"ItemID: {item.itemId}, unRegisterdItemName, num: {item.num}"
+                    )
         else:
             print("Failed to receive sign award")
     else:
         print("Failed to get user sign progress")
     # 雀士一覧を見る
-    res = activity_view_action(headers, actionId=Types.consts.EnumDefine.TaskActionServer["ViewCharsList"].value)
+    res = activity_view_action(
+        headers,
+        actionId=Types.consts.EnumDefine.TaskActionServer["ViewCharsList"].value,
+    )
     if res.code == 0:
         print("Successfully 雀士一覧を見る action")
     else:
         print("Failed to 雀士一覧を見る action")
     # キャラの育成を見る
-    res = activity_view_action(headers, actionId=Types.consts.EnumDefine.TaskActionServer["ViewShopRoleFeed"].value)
+    res = activity_view_action(
+        headers,
+        actionId=Types.consts.EnumDefine.TaskActionServer["ViewShopRoleFeed"].value,
+    )
     if res.code == 0:
         print("Successfully キャラクター餌やりを見る action")
     else:
@@ -1046,7 +1292,9 @@ def readAllPaiPu(headers: dict) -> list[Types.readPaiPuList.ReadPaiPuListType1 |
             "endTime": end_time,
         }
         readPaiPuListRes = requests.post(
-            "https://alicdn.mahjong-jp.net/record/readPaiPuList", json=payload, headers=headers
+            "https://alicdn.mahjong-jp.net/record/readPaiPuList",
+            json=payload,
+            headers=headers,
         )
         readPaiPuListRes = readPaiPuListRes.json()
         if len(readPaiPuListRes["data"]) == 0:
@@ -1059,9 +1307,15 @@ def readAllPaiPu(headers: dict) -> list[Types.readPaiPuList.ReadPaiPuListType1 |
         earliest_date = min(data["endTime"] for data in readPaiPuListRes["data"])
         latest_date = max(data["endTime"] for data in readPaiPuListRes["data"])
         print(f"readPaiPuListRes count {len(readPaiPuListRes['data'])}")
-        print(f"earliest_date: {datetime.datetime.fromtimestamp(earliest_date)} {earliest_date}")
-        print(f"latest_date: {datetime.datetime.fromtimestamp(latest_date)} {latest_date}")
-        readPaiPuListRes = Types.readPaiPuList.ReadPaiPuListType1(**readPaiPuListRes, strict=True)
+        print(
+            f"earliest_date: {datetime.datetime.fromtimestamp(earliest_date)} {earliest_date}"
+        )
+        print(
+            f"latest_date: {datetime.datetime.fromtimestamp(latest_date)} {latest_date}"
+        )
+        readPaiPuListRes = Types.readPaiPuList.ReadPaiPuListType1(
+            **readPaiPuListRes, strict=True
+        )
         all_pai_pu.append(readPaiPuListRes)
         end_time = earliest_date - 1
         time.sleep(random.uniform(3, 5))

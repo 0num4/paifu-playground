@@ -1,16 +1,16 @@
+import hashlib
 import json
 import random
 import uuid
+
+import boto3
 import requests
-import Types.stats
+import Types.accountTypes
+import Types.baseTypes
 import Types.commonConsts
 import Types.consts
 import Types.readPaiPuList
-import Types.baseTypes
-import Types.accountTypes
-import hashlib
-import boto3
-
+import Types.stats
 
 # def insert_dynamo_user():
 #     dynamodb = boto3.resource("dynamodb")

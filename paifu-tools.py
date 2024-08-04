@@ -28,11 +28,13 @@ Produced by IrisCat ( https://twitter.com/iriscatx ), Thanks to 雀魂( https://
 """
 
 
-import requests, json, time
-import matplotlib.pyplot as plt
+import json
+import time
 
 # !pip -q -q -q install japanize-matplotlib
 import japanize_matplotlib
+import matplotlib.pyplot as plt
+import requests
 from tqdm import tqdm
 
 # @markdown ####以下にプレイヤー名を入力し、左部の再生ボタン(▷)を押してください。
@@ -115,9 +117,10 @@ plt.xlim([左端, min(右端, i + 1)])
 plt.ylim([0, 上端 + 100])
 plt.show()
 
-import numpy as np
-from collections import Counter
 import datetime
+from collections import Counter
+
+import numpy as np
 
 # @markdown #段位戦履歴表示
 # @markdown ####ポイントグラフ作成後にフォーム左部の再生ボタン(▷)を押すと、各段位区間の日付、順位内訳、対戦数、平均順位、最高pt、最低pt、卓の内訳の一覧を表示させることができます。

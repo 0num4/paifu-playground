@@ -1,10 +1,10 @@
-import requests
 import json
-import dotenv
 import os
 import random
 import time
 
+import dotenv
+import requests
 
 dotenv.load_dotenv()
 

@@ -1,4 +1,4 @@
-from typing import TypedDict, Optional, Union
+from typing import Optional, TypedDict, Union
 
 
 class UserInfo(TypedDict):

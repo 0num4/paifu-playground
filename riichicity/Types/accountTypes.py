@@ -1,8 +1,8 @@
-from pydantic import BaseModel
 import typing
 
+import consts
 import pydantic
-from . import consts
+from pydantic import BaseModel
 
 
 class HeaderCookies(BaseModel):
@@ -17,7 +17,9 @@ class HeaderCookies(BaseModel):
 
 
 class Headers(BaseModel):
-    User_Agent: str = "UnityPlayer/2020.3.42f1c1 (UnityWebRequest/1.0, libcurl/7.52.0-DEV)"
+    User_Agent: str = (
+        "UnityPlayer/2020.3.42f1c1 (UnityWebRequest/1.0, libcurl/7.52.0-DEV)"
+    )
     Content_Type: str = "application/json"
     Cookies: str
     Accept: str = "application/json"

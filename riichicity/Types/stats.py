@@ -1,7 +1,8 @@
 import typing
+
+import commonConsts
+import consts
 from pydantic import BaseModel, Field
-from . import consts
-from . import commonConsts
 
 
 # 友人戦の詳細のみ。一位率とかはフロントでやってる
@@ -703,15 +704,21 @@ class ActivityReadRanksResponse(BaseModel):
     message: str
 
 
-class ActivityActivityListResponseDataActivitySignActivityListPersistentAwardListAward(BaseModel):
+class ActivityActivityListResponseDataActivitySignActivityListPersistentAwardListAward(
+    BaseModel
+):
     category: int
     count: int
     isEquip: bool
     itemId: int
 
 
-class ActivityActivityListResponseDataActivitySignActivityListPersistentAwardList(BaseModel):
-    awardList: list[ActivityActivityListResponseDataActivitySignActivityListPersistentAwardListAward]
+class ActivityActivityListResponseDataActivitySignActivityListPersistentAwardList(
+    BaseModel
+):
+    awardList: list[
+        ActivityActivityListResponseDataActivitySignActivityListPersistentAwardListAward
+    ]
     days: int
     stage: int
 
@@ -727,11 +734,17 @@ class ActivityActivityListResponseDataActivitySignActivityListSignResult(BaseMod
 
 
 class ActivityActivityListResponseDataActivitySignActivityList(BaseModel):
-    persistentAwardList: list[ActivityActivityListResponseDataActivitySignActivityListPersistentAwardList]
+    persistentAwardList: list[
+        ActivityActivityListResponseDataActivitySignActivityListPersistentAwardList
+    ]
     persistentAwardType: int
-    signAwardList: list[ActivityActivityListResponseDataActivitySignActivityListPersistentAwardListAward]
+    signAwardList: list[
+        ActivityActivityListResponseDataActivitySignActivityListPersistentAwardListAward
+    ]
     signResult: ActivityActivityListResponseDataActivitySignActivityListSignResult
-    vipAwardList: list[ActivityActivityListResponseDataActivitySignActivityListPersistentAwardListAward]
+    vipAwardList: list[
+        ActivityActivityListResponseDataActivitySignActivityListPersistentAwardListAward
+    ]
 
 
 class ActivityActivityListResponseDataActivity(BaseModel):
@@ -739,7 +752,9 @@ class ActivityActivityListResponseDataActivity(BaseModel):
     activityType: (
         consts.ActivityType | int
     )  # 基本的にはActivityTypeなんだがactivity/activityListは全部返すので新しいのが来るときもあるので
-    award: list[ActivityActivityListResponseDataActivitySignActivityListPersistentAwardListAward]
+    award: list[
+        ActivityActivityListResponseDataActivitySignActivityListPersistentAwardListAward
+    ]
     currentTime: int
     describe: str
     endTime: int
@@ -796,7 +811,9 @@ class BackpackUserItemListResponse(BaseModel):
     data: list[BackpackUserItemListResponseUserItem]
     message: str
 
-    def get_item_by_id(self, item_id: consts.EnumDefine.ItemID | int) -> BackpackUserItemListResponseUserItem | None:
+    def get_item_by_id(
+        self, item_id: consts.EnumDefine.ItemID | int
+    ) -> BackpackUserItemListResponseUserItem | None:
         for item in self.data:
             if item.itemID == item_id:
                 return item
@@ -990,7 +1007,10 @@ class lobbysReadPublicRoomResponseRoomListResponse(BaseModel):
 class lobbysReadPublicRoomResponse(BaseModel):
     code: int
     # TODO: loginResponseいらなくない？
-    data: lobbysReadPublicRoomResponseLoginResponse | lobbysReadPublicRoomResponseRoomListResponse
+    data: (
+        lobbysReadPublicRoomResponseLoginResponse
+        | lobbysReadPublicRoomResponseRoomListResponse
+    )
     message: str
 
 

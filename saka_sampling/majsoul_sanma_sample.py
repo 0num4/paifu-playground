@@ -1,7 +1,8 @@
-import matplotlib.pyplot
-import pandas as pd
 import os
 import random
+
+import matplotlib.pyplot
+import pandas as pd
 
 
 def main():
@@ -32,7 +33,12 @@ def readcsv(dan_filter: str | None = "gou3") -> pd.DataFrame | None:
     return filtered_df
 
 
-def simulate_games(df, num_games: int = 1000, max_score: int = 20000):
+def simulate_games(
+    df,
+    num_games: int = 1000,
+    max_score: int = 7000,
+    custom_rates: None | list[int, int, int] = None,
+):
     results = {}
     matplotlib.pyplot.figure(figsize=(10, 6))
     for index, row in df.iterrows():
@@ -46,11 +52,19 @@ def simulate_games(df, num_games: int = 1000, max_score: int = 20000):
         draw_rate = row["draw_rate"]
         init_score = row["init_score"]
         rank_up_score = row["rank_up_score"]
-        matplotlib.pyplot.axhline(y=init_score, color="black", linestyle="--", label=f"{dan} initial score")
-        matplotlib.pyplot.axhline(y=rank_up_score, color="red", linestyle="--", label=f"{dan} goal")
+        if custom_rates is not None:
+            win_rate, lose_rate, draw_rate = custom_rates
+        matplotlib.pyplot.axhline(
+            y=init_score, color="black", linestyle="--", label=f"{dan} initial score"
+        )
+        matplotlib.pyplot.axhline(
+            y=rank_up_score, color="red", linestyle="--", label=f"{dan} goal"
+        )
         scores = [init_score]
         for _ in range(num_games):
-            result = random.choices([1, 2, 3], weights=[win_rate, lose_rate, draw_rate])[0]
+            result = random.choices(
+                [1, 2, 3], weights=[win_rate, lose_rate, draw_rate]
+            )[0]
             if result == 1:
                 scores.append(scores[-1] + win_score)
             elif result == 2:
@@ -59,9 +73,10 @@ def simulate_games(df, num_games: int = 1000, max_score: int = 20000):
                 scores.append(scores[-1] + draw_score)
 
         results[dan] = scores
-        df.at[index, "reached_goal"] = any([score >= row["rank_up_score"] for score in scores])
+        df.at[index, "reached_goal"] = any(
+            [score >= row["rank_up_score"] for score in scores]
+        )
         df.at[index, "rank_down"] = any([score <= 0 for score in scores])
-
 
     for dan, scores in results.items():
         matplotlib.pyplot.plot(range(num_games + 1), scores, label=dan)

@@ -1,10 +1,12 @@
-import json
-from typing import Literal, Union, TypeAlias, Optional, Annotated
-import riichicity.Types.commonConsts
-import pydantic
-import PaifuTypesPydantic
-import boto3.dynamodb.types
 import datetime
+import json
+from typing import Annotated, Literal, Optional, TypeAlias, Union
+
+import boto3.dynamodb.types
+import pydantic
+
+import PaifuTypesPydantic
+import riichicity.Types.commonConsts
 
 UserIdType: TypeAlias = Annotated[int, pydantic.Field(strict=True, ge=100000000, le=999999999)]
 

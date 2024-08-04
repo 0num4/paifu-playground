@@ -9,7 +9,7 @@ endif
 
 # コマンド定義
 ISORT_CMD := $(RUN_PREFIX) isort --skip .venv --skip cdk.out --skip cdk
-RUFF_CMD := $(RUN_PREFIX) ruff check .
+RUFF_CMD := $(RUN_PREFIX) ruff check
 FLAKE8_CMD := $(RUN_PREFIX) flake8 --max-line-length=300
 MYPY_CMD := $(RUN_PREFIX) mypy --explicit-package-bases
 PYRIGHT_CMD := $(RUN_PREFIX) pyright
@@ -63,7 +63,7 @@ lint-pyright:
 # 	aws lambda invoke --function-name cost-notificator-pythonfunction --profile ankokuyakusyo --log-type Tail --payload '{}' /dev/stdout
 
 st:
-	poetry run streamlit run riichicity_emulate/streamlitsample.py
+	poetry run streamlit run riichicity_emulate/streamlit_sampling.py
 
 test-st:
 	python riichicity_emulate/test_streamlitplayground.py 
